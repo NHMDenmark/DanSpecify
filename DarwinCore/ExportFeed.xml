@@ -1,8 +1,16 @@
 <channel>
     <title>NHMD Collections DarwinCore RSS Feed</title>
     <description>RSS Feed for collection data of the Natural Museum of Denmark, Copenhagen</description>
-    <item collectionId="425985" userId="64" notifyUserId="64" definition="DarwinCoreTypesIV" metadata="DwCA-IV-meta" days="1" filename="DwCA-IV-types.zip" publish="true">
-      <title>DarwinCore Invertebrate Zoology Types</title>
-      <id>f8f8ec92-6b09-11eb-9439-0242ac130002</id>
+    <item collectionId="425985" userId="64" notifyUserId="64" definition="DwCA IV Types" metadata="DwCA IV.eml" days="1" filename="DwCA-IV-types.zip" publish="true">
+      <title>NHMD Invertebrate Zoology Holotypes</title>
+      <id>0d74d65c-6bc5-11eb-9439-0242ac130002</id>
+    </item>
+    <item collectionId="425985" userId="64" notifyUserId="64" definition="DwCA IV" metadata="DwCA IV.eml" days="1" filename="DwCA-IV-full.zip" publish="true">
+      <title>NHMD Invertebrate Zoology Collection</title>
+      <id>c8ff8346-e7eb-4b30-86e7-ab58eee98e2d</id>
+    </item>
+    <item collectionId="786432" userId="64" notifyUserId="64" definition="DwCA-AM-types" metadata="DwCA-AM.eml" days="1" filename="DwCA-AM-types.zip" publish="true">
+      <title>NHMD Amber Collection</title>
+      <id>a5325c5f-0705-4d07-86d5-6dd79050739a</id>
     </item>
 </channel>

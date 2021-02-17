@@ -25,37 +25,49 @@
             <!-- Collecting event -->
             <field term="http://rs.tdwg.org/dwc/terms/EarliestDateCollected" isNot="false" isRelFld="false" oper="1"  stringId="1,10.collectingevent.startDate" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/eventRemarks"          isNot="false" isRelFld="false" oper="11" stringId="1,10.collectingevent.remarks" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/recordedBy"            isNot="false" isRelFld="true"  oper="11" stringId="1,10,30-collectors.collector.collectors" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/recordedBy"            isNot="false" isRelFld="true"  oper="11" stringId="1,10,30-collectors.collector.collectors" value=""/> 
             <!-- Locality & Geography -->
             <field term="http://rs.tdwg.org/dwc/terms/locality"              isNot="false" isRelFld="false" oper="11" stringId="1,10,2.locality.localityName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/locationRemarks"       isNot="false" isRelFld="false" oper="11" stringId="1,10,2.locality.remarks" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/geodeticDatum"         isNot="false" isRelFld="false" oper="1"  stringId="1,10,2.locality.datum" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude"       isNot="false" isRelFld="false" oper="1"  stringId="1,10,2.locality.latitude1" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/decimalLongitude"      isNot="false" isRelFld="false" oper="1"  stringId="1,10,2.locality.longitude1" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/coordinatePrecision"   isNot="false" isRelFld="false" oper="1"  stringId="1,10,2.locality.latLongAccuracy" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/continent"             isNot="false" isRelFld="false" oper="11" stringId="1,10,2,3.geography.Continent" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/country"               isNot="false" isRelFld="false" oper="11" stringId="1,10,2,3.geography.Country" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/stateProvince"         isNot="false" isRelFld="false" oper="11" stringId="1,10,2,3.geography.State" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="11" stringId="1,10,2,3.geography.County" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="11" stringId="1,10,2,3.geography.fullName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/island"                isNot="false" isRelFld="false" oper="11" stringId="1,10,2,124-localityDetails.localitydetail.island" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/islandGroup"           isNot="false" isRelFld="false" oper="11" stringId="1,10,2,124-localityDetails.localitydetail.islandGroup" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/waterBody"             isNot="false" isRelFld="false" oper="11" stringId="1,10,2,124-localityDetails.localitydetail.waterBody" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1"  stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/georeferenceRemarks"   isNot="false" isRelFld="false" oper="11" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefRemarks" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/georeferenceSources"   isNot="false" isRelFld="false" oper="11" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.source" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1"  stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>  
             <!-- Determination & Taxonomy -->
-            <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Class" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Order" value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Family" value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus" value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Species" value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Order"      value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/iri/typeStatus"              isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations.determination.typeStatusName" value="Holotype"/>
-            <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/>
+            <field term="http://rs.tdwg.org/dwc/iri/typeStatus"              isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations.determination.typeStatusName"      value="Holotype"/>
+            <field                                                           isNot="false" isRelFld="false" oper="6"  stringId="1,9-determinations.determination.isCurrent"           value=""/> 
+            <!-- Preparations -->
+            <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>  -->
+            <!-- Publishable
+            <field isNot="false" isRelFld="false" oper="6" stringId="1.collectionobject.yesNo1" value=""/>  -->
         </query>
     </queries>
   </core>
+    
+    <!-- Literature References 
+    <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
+        <queries>
+            <query contextTableId="69" name="References.csv">
+                <id term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
+                <field term="http://purl.org/dc/terms/creator" isNot="false" isRelFld="true" oper="1" stringId="69,17-authors.author.authors" value=""/>
+                <field term="http://purl.org/dc/terms/date" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
+                <field term="http://purl.org/dc/terms/title" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
+                <field term="http://purl.org/dc/terms/source" isNot="false" isRelFld="true" oper="1" stringId="69,51.journal.journal" value=""/>
+                <field term="http://purl.org/dc/terms/identifier" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
+            </query>
+        </queries>
+    </extension> -->
+    
 </archive>
