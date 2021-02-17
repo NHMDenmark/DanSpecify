@@ -1,0 +1,8 @@
+<channel>
+    <title>NHMD Collections DarwinCore RSS Feed</title>
+    <description>RSS Feed for collection data of the Natural Museum of Denmark, Copenhagen</description>
+    <item collectionId="425985" userId="64" notifyUserId="64" definition="DarwinCoreTypesIV" metadata="DwCA-IV-meta" days="1" filename="DwCA-IV-types.zip" publish="true">
+      <title>DarwinCore Invertebrate Zoology Types</title>
+      <id>f8f8ec92-6b09-11eb-9439-0242ac130002</id>
+    </item>
+</channel>

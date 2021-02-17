@@ -1,0 +1,174 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="ded0cf22-ac64-497d-bb44-2beb12ae9933" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
+    <!-- <alternateIdentifier></alternateIdentifier> -->
+    <title xml:lang="eng">NHMD Invertebrate Zoology Collection Holotypes</title>
+    <creator>
+      <individualName>
+        <givenName>Fedor</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Fedor</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Tom</givenName>
+        <surName>Schiøtte</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
+      <role>digitization</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para></para>
+    </abstract>
+    <keywordSet>
+      <keyword>invertebrate</keyword>
+      <keyword>zoology</keyword>
+      <keyword>Denmark</keyword>
+      <keyword>Copenhagen</keyword>
+      <keyword>Mollusca</keyword>
+      <keyword>Echinodermata</keyword>
+      <keyword>molluscs</keyword>
+      <keyword>echinoderms</keyword>
+      <keyword>holotype</keyword>
+      <keywordThesaurus>n/a</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Occurrence</keyword>
+      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para></para>
+    </intellectualRights>
+    <!-- <distribution scope="document">
+      <online>
+        <url function="information"></url>
+      </online>
+    </distribution> 
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>The fish collection has representation from 79 countries including Ecuador, Fiji, Mexico, Nepal, Nicaragua and various marine localities.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-180</westBoundingCoordinate>
+          <eastBoundingCoordinate>180</eastBoundingCoordinate>
+          <northBoundingCoordinate>90</northBoundingCoordinate>
+          <southBoundingCoordinate>-90</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1890</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>present</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Actinistia</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Actinopterygii</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Cephalaspidomorphi</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Elasmobranchii</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Myxini</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>class</taxonRankName>
+          <taxonRankValue>Sarcopterygii</taxonRankValue>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Andrew</givenName>
+        <surName>Bentley</surName>
+      </individualName>
+      <organizationName>KU Biodiversity Institute</organizationName>
+      <positionName>Collection Manager</positionName>
+      <address>
+        <deliveryPoint>1345 Jayhawk Blvd.</deliveryPoint>
+        <city>Lawrence</city>
+        <administrativeArea>KS</administrativeArea>
+        <postalCode>66045</postalCode>
+        <country>US</country>
+      </address>
+      <phone>+01 785-864-3863</phone>
+      <electronicMailAddress>abentley@ku.edu</electronicMailAddress>
+      <onlineUrl>http://ichthyology.biodiversity.ku.edu/</onlineUrl>
+    </contact>
+    <project>
+      <title>University of Kansas Biodiversity Institute Fish collection</title>
+      <personnel>
+        <individualName>
+          <givenName>Andrew</givenName>
+          <surName>Bentley</surName>
+        </individualName>
+        <role>contentProvider</role>
+      </personnel>
+      <funding>
+        <para />
+      </funding>
+      <studyAreaDescription>
+        <descriptor citableClassificationSystem="false" name="generic">
+          <descriptorValue />
+        </descriptor>
+      </studyAreaDescription>
+      <designDescription>
+        <description>
+          <para />
+        </description>
+      </designDescription>
+    </project>-->
+  <pubDate>2021-02-11</pubDate></dataset>
+</eml:eml>
