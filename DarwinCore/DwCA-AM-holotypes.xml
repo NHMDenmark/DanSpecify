@@ -3,11 +3,11 @@
   <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">  
     <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>    
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
-    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="IV"/>
+    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AM"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
-    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Invertebrate Zoology Types"/>
+    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Amber Types"/>
     <queries>
-        <query contextTableId="1" name="DarwinCoreTypesIV.csv">
+        <query contextTableId="1" name="DwCA-AM-types.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Institution -->
             <field term="http://rs.tdwg.org/dwc/terms/institutionCode"       isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.code" value=""/>
@@ -47,9 +47,40 @@
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Species" value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/iri/typeStatus"              isNot="false" isRelFld="false" oper="0"  stringId="1,9-determinations.determination.typeStatusName" value="type"/>
+            <field term="http://rs.tdwg.org/dwc/iri/typeStatus"              isNot="false" isRelFld="false" oper="0"  stringId="1,9-determinations.determination.typeStatusName" value="%type"/>
             <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/> 
         </query>
     </queries>
   </core>
+
+    <!-- Reference Extension -->
+    <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
+        <queries>
+            <query contextTableId="69" name="References.csv">
+                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
+                <field term="http://purl.org/dc/terms/creator"          isNot="false" isRelFld="true"  oper="1" stringId="69,17-authors.author.authors" value=""/>
+                <field term="http://purl.org/dc/terms/date"             isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
+                <field term="http://purl.org/dc/terms/title"            isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
+                <field term="http://purl.org/dc/terms/source"           isNot="false" isRelFld="true"  oper="1" stringId="69,51.journal.journal" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"       isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
+            </query>
+        </queries>
+    </extension>
+    
+    <!-- Simple Multimedia Extension -->
+    <extension rowType="gbif:Multimedia">
+        <queries>
+            <query contextTableId="41" name="Media.csv">
+                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID"   isNot="true"  isRelFld="false" oper="12" stringId="41,111-collectionobjectattachments,1.collectionobject.guid" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"  isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1.collectionobject.catalogNumber" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/collectionCode" isNot="false" isRelFld="false" oper="1" stringId="41,111-collectionobjectattachments,1,23.collection.code" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.attachmentLocation" value=""/>
+                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.mimeType" value=""/>
+                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.title" value=""/>
+                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.credit" value=""/>
+                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1,23,26,96,94.institution.copyright" value=""/>
+                <field term="" isNot="false" isRelFld="false" oper="6" stringId="41.attachment.isPublic" value=""/>
+            </query>
+        </queries>
+    </extension>
 </archive>

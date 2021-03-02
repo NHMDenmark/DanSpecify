@@ -60,12 +60,29 @@
     <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
         <queries>
             <query contextTableId="69" name="References.csv">
-                <id term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
-                <field term="http://purl.org/dc/terms/creator" isNot="false" isRelFld="true" oper="1" stringId="69,17-authors.author.authors" value=""/>
-                <field term="http://purl.org/dc/terms/date" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
-                <field term="http://purl.org/dc/terms/title" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
-                <field term="http://purl.org/dc/terms/source" isNot="false" isRelFld="true" oper="1" stringId="69,51.journal.journal" value=""/>
-                <field term="http://purl.org/dc/terms/identifier" isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
+                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
+                <field term="http://purl.org/dc/terms/creator"          isNot="false" isRelFld="true"  oper="1" stringId="69,17-authors.author.authors" value=""/>
+                <field term="http://purl.org/dc/terms/date"             isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
+                <field term="http://purl.org/dc/terms/title"            isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
+                <field term="http://purl.org/dc/terms/source"           isNot="false" isRelFld="true"  oper="1" stringId="69,51.journal.journal" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"       isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
+            </query>
+        </queries>
+    </extension>
+    
+    <!-- Simple Multimedia Extension -->
+    <extension rowType="gbif:Multimedia">
+        <queries>
+            <query contextTableId="41" name="Media.csv">
+                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID"   isNot="true"  isRelFld="false" oper="12" stringId="41,111-collectionobjectattachments,1.collectionobject.guid" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"  isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1.collectionobject.catalogNumber" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/collectionCode" isNot="false" isRelFld="false" oper="1" stringId="41,111-collectionobjectattachments,1,23.collection.code" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.attachmentLocation" value=""/>
+                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.mimeType" value=""/>
+                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.title" value=""/>
+                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.credit" value=""/>
+                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1,23,26,96,94.institution.copyright" value=""/>
+                <field term="" isNot="false" isRelFld="false" oper="6" stringId="41.attachment.isPublic" value=""/>
             </query>
         </queries>
     </extension>
