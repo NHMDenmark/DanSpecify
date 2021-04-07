@@ -1,8 +1,12 @@
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="ded0cf22-ac64-497d-bb44-2beb12ae9933" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <!-- <alternateIdentifier></alternateIdentifier> -->
     <title xml:lang="eng">NHMD Invertebrate Zoology Collection Holotypes</title>
+	<description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+      <section xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</section>
+      <para xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</para>
+      <markdown>A preliminary dataset export for <i>testing</i> purposes limited to Holotypes only.</markdown>
+    </description>
     <creator>
       <individualName>
         <givenName>Fedor</givenName>
@@ -52,7 +56,7 @@
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para></para>
+      <para />
     </abstract>
     <keywordSet>
       <keyword>invertebrate</keyword>
@@ -75,100 +79,13 @@
       <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
     </keywordSet>
     <intellectualRights>
-      <para></para>
-    </intellectualRights>
-    <!-- <distribution scope="document">
-      <online>
-        <url function="information"></url>
-      </online>
-    </distribution> 
-    <coverage>
-      <geographicCoverage>
-        <geographicDescription>The fish collection has representation from 79 countries including Ecuador, Fiji, Mexico, Nepal, Nicaragua and various marine localities.</geographicDescription>
-        <boundingCoordinates>
-          <westBoundingCoordinate>-180</westBoundingCoordinate>
-          <eastBoundingCoordinate>180</eastBoundingCoordinate>
-          <northBoundingCoordinate>90</northBoundingCoordinate>
-          <southBoundingCoordinate>-90</southBoundingCoordinate>
-        </boundingCoordinates>
-      </geographicCoverage>
-      <temporalCoverage>
-        <rangeOfDates>
-          <beginDate>
-            <calendarDate>1890</calendarDate>
-          </beginDate>
-          <endDate>
-            <calendarDate>present</calendarDate>
-          </endDate>
-        </rangeOfDates>
-      </temporalCoverage>
-      <taxonomicCoverage>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Actinistia</taxonRankValue>
-        </taxonomicClassification>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Actinopterygii</taxonRankValue>
-        </taxonomicClassification>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Cephalaspidomorphi</taxonRankValue>
-        </taxonomicClassification>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Elasmobranchii</taxonRankValue>
-        </taxonomicClassification>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Myxini</taxonRankValue>
-        </taxonomicClassification>
-        <taxonomicClassification>
-          <taxonRankName>class</taxonRankName>
-          <taxonRankValue>Sarcopterygii</taxonRankValue>
-        </taxonomicClassification>
-      </taxonomicCoverage>
-    </coverage>
-    <contact>
-      <individualName>
-        <givenName>Andrew</givenName>
-        <surName>Bentley</surName>
-      </individualName>
-      <organizationName>KU Biodiversity Institute</organizationName>
-      <positionName>Collection Manager</positionName>
-      <address>
-        <deliveryPoint>1345 Jayhawk Blvd.</deliveryPoint>
-        <city>Lawrence</city>
-        <administrativeArea>KS</administrativeArea>
-        <postalCode>66045</postalCode>
-        <country>US</country>
-      </address>
-      <phone>+01 785-864-3863</phone>
-      <electronicMailAddress>abentley@ku.edu</electronicMailAddress>
-      <onlineUrl>http://ichthyology.biodiversity.ku.edu/</onlineUrl>
-    </contact>
-    <project>
-      <title>University of Kansas Biodiversity Institute Fish collection</title>
-      <personnel>
-        <individualName>
-          <givenName>Andrew</givenName>
-          <surName>Bentley</surName>
-        </individualName>
-        <role>contentProvider</role>
-      </personnel>
-      <funding>
-        <para />
-      </funding>
-      <studyAreaDescription>
-        <descriptor citableClassificationSystem="false" name="generic">
-          <descriptorValue />
-        </descriptor>
-      </studyAreaDescription>
-      <designDescription>
-        <description>
-          <para />
-        </description>
-      </designDescription>
-    </project>-->
-  <pubDate>2021-02-11</pubDate></dataset>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>   
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+      <identifier>CC-BY</identifier>
+    </licensed>
+  <pubDate>2021-03-30</pubDate>
+</dataset>
 </eml:eml>

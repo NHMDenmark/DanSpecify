@@ -5,18 +5,19 @@
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
     <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="IV"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
-    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Invertebrate Zoology Types"/>
+    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Invertebrate Zoology Types"/> 
+    <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
     <queries>
         <query contextTableId="1" name="DarwinCoreTypesIV.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
-            <!-- Institution -->
-            <field term="http://rs.tdwg.org/dwc/terms/institutionCode"       isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.code" value=""/>
-            <field term="http://purl.org/dc/terms/accessRights"              isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.termsOfUse" value=""/>
-            <field term="http://purl.org/dc/terms/license"                   isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.copyright" value=""/>
-            <!-- Collection -->
-            <field term="http://rs.tdwg.org/dwc/terms/collectionCode"        isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.code" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord"         isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.collectionType" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/datasetName"           isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.description" value=""/>
+            <!--
+            <field term="http://rs.tdwg.org/dwc/terms/institutionCode"       isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.code" value="NHMD"/>
+            <field term="http://purl.org/dc/terms/accessRights"              isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.termsOfUse" value="All Rights Reserved"/>
+            <field term="http://purl.org/dc/terms/license"                   isNot="false" isRelFld="false" oper="11" stringId="1,23,26,96,94.institution.copyright" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
+            <field term="http://rs.tdwg.org/dwc/terms/collectionCode"        isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.code" value="IV"/>
+            <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord"         isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.collectionType" value="PreservedSpecimen"/>
+            <field term="http://rs.tdwg.org/dwc/terms/datasetName"           isNot="false" isRelFld="false" oper="11" stringId="1,23.collection.description" value="Natural History Museum Denmark Invertebrate Zoology Types"/> 
+			-->
             <!-- Collection object -->
             <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.catalogNumber" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"   isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.altCatalogNumber" value=""/>
@@ -44,12 +45,12 @@
             <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/>
-            <field term="http://rs.tdwg.org/dwc/iri/typeStatus"              isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations.determination.typeStatusName"      value="Holotype"/>
-            <field                                                           isNot="false" isRelFld="false" oper="6"  stringId="1,9-determinations.determination.isCurrent"           value=""/> 
-            <!-- Preparations -->
-            <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations.determination.typeStatusName"      value="Holotype"/>
+            <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent" value=""/>
+            <!-- Preparations --> 
+            <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>
             <!-- Publishable -->
             <field isNot="false" isRelFld="false" oper="6" stringId="1.collectionobject.yesNo1" value=""/> 
         </query>
@@ -60,7 +61,7 @@
     <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
         <queries>
             <query contextTableId="69" name="References.csv">
-                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
+                <id                                                     isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
                 <field term="http://purl.org/dc/terms/creator"          isNot="false" isRelFld="true"  oper="1" stringId="69,17-authors.author.authors" value=""/>
                 <field term="http://purl.org/dc/terms/date"             isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
                 <field term="http://purl.org/dc/terms/title"            isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
@@ -73,18 +74,15 @@
     <!-- Simple Multimedia Extension -->
     <extension rowType="gbif:Multimedia">
         <queries>
-            <query contextTableId="41" name="Media.csv">
-                <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID"   isNot="true"  isRelFld="false" oper="12" stringId="41,111-collectionobjectattachments,1.collectionobject.guid" value=""/>
-                <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"  isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1.collectionobject.catalogNumber" value=""/>
-                <field term="http://rs.tdwg.org/dwc/terms/collectionCode" isNot="false" isRelFld="false" oper="1" stringId="41,111-collectionobjectattachments,1,23.collection.code" value=""/>
-                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.attachmentLocation" value=""/>
-                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.mimeType" value=""/>
-                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.title" value=""/>
-                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.credit" value=""/>
-                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionobjectattachments,1,23,26,96,94.institution.copyright" value=""/>
-                <field term="" isNot="false" isRelFld="false" oper="6" stringId="41.attachment.isPublic" value=""/>
+            <query contextTableId="111" name="Media.csv">
+                <id                                                       isNot="false" isRelFld="false" oper="1"  stringId="111,1.collectionobject.guid"             value=""/>
+                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="true"  oper="1"  stringId="111,41.attachment.attachment" value=""   formatName="AttachmentURI"/>
+                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.mimeType"              value=""/>
+                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.title"                 value=""/>
+                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.credit"                value=""/>
+                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="111,1,23,26,96,94.institution.copyright" value=""/>
             </query>
         </queries>
     </extension>
     
-</archive>
+</archive> 	 	
