@@ -1,0 +1,91 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
+    <title xml:lang="eng">NHMD Amber Collection Holotypes</title>
+      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+         <section xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</section>
+         <para xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</para>
+         <markdown>A preliminary dataset export for <i>testing</i> purposes limited to Holotypes only.</markdown>
+       </description>
+    <creator>
+      <individualName>
+        <givenName>Fedor</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Fedor</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Sree</givenName>
+        <surName>Selvantharan</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Project Worker</positionName>
+      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/entomology/amber-collection/</onlineUrl>
+      <role>digitization</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para />
+    </abstract>
+    <keywordSet>
+      <keyword>amber</keyword>
+      <keyword>zoology</keyword>
+      <keyword>Denmark</keyword>
+      <keyword>Copenhagen</keyword>
+      <keyword>Insecta</keyword>
+      <keyword>entomology</keyword>
+      <keyword>arachnida</keyword>
+      <keyword>insects</keyword>
+      <keyword>holotype</keyword>
+      <keywordThesaurus>n/a</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Occurrence</keyword>
+      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>   
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+      <identifier>CC-BY</identifier>
+    </licensed>
+  <pubDate>2021-04-13</pubDate>
+</dataset>
+</eml:eml>
