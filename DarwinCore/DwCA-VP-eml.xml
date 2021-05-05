@@ -1,12 +1,12 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Vertebrate Paleontoology Collection</title>
-      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
-         <section xml:lang="EN">A preliminary dataset export for testing purposes.</section>
-         <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
-         <markdown>A preliminary dataset export for <i>testing</i> purposes.</markdown>
-       </description>
+    <title xml:lang="eng">NHMD Vertebrate Paleontology Collection</title>
+    <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+       <section xml:lang="EN">A preliminary dataset export for testing purposes.</section>
+       <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
+       <markdown>A preliminary dataset export for <i>testing</i> purposes.</markdown>
+    </description>
     <creator>
       <individualName>
         <givenName>Fedor</givenName>
@@ -56,14 +56,17 @@
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para />
+      <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
     </abstract>
     <keywordSet>
       <keyword>vertebrate</keyword>
       <keyword>paleontology</keyword>
       <keyword>zoology</keyword>
+      <keyword>geology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>
+      <keyword>Greenland</keyword>
+      <keyword>Denmark</keyword>
     </keywordSet>
     <keywordSet>
       <keyword>Specimen</keyword>
@@ -81,6 +84,6 @@
       <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
       <identifier>CC-BY</identifier>
     </licensed>
-  <pubDate>2021-03-30</pubDate>
+  <pubDate>2021-04-14</pubDate>
 </dataset>
 </eml:eml>

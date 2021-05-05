@@ -1,12 +1,8 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
-    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Amber Collection Holotypes</title>
-      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
-         <section xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</section>
-         <para xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</para>
-         <markdown>A preliminary dataset export for <i>testing</i> purposes limited to Holotypes only.</markdown>
-       </description>
+    <alternateIdentifier>6f730412-2326-48c3-a10c-b2b10d33b811</alternateIdentifier>
+    <title xml:lang="eng">NHMD Ornithology Collection</title>
+    <description />
     <creator>
       <individualName>
         <givenName>Fedor</givenName>
@@ -27,11 +23,11 @@
     </creator>
     <metadataProvider>
       <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
+        <givenName>Peter Andrew</givenName>
+        <surName>Hosner</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
+      <positionName>Curator and Assistant Professor</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
         <city>Copenhagen</city>
@@ -39,36 +35,40 @@
         <postalCode>1500</postalCode>
         <country>DK</country>
       </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <electronicMailAddress>peter.hosner@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/637347</onlineUrl>
+      <role>Curator</role>
     </metadataProvider>
     <associatedParty>
       <individualName>
-        <givenName>Sree</givenName>
-        <surName>Selvantharan</surName>
+        <givenName>Jan Bolding</givenName>
+        <surName>Kristensen</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Project Worker</positionName>
-      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/entomology/amber-collection/</onlineUrl>
-      <role>digitization</role>
+      <positionName>Collection Manager</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 35321032</phone>
+      <electronicMailAddress>Jtbkristensen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl />
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
+      <para xml:lang="EN">The ornithological collections comprise approximately 120,000 skins of 5,700 species of which half are from Denmark and the North Atlantic area. The egg collection comprises c. 17,000 clutches, primarily collected in the Nordic countries but also includes some non-catalogued exotic clutches. The anatomical collection comprises c. 11,000 specimens in ethanol and 15,500 skeletons (for half of these the skin is also preserved). The tissue collection comprises c. 35,000 samples of 3,600 species, with broad geographical coverage. We have 6,000 mounted specimens collected worldwide, primarily from former exhibits.</para>
+      <para xml:lang="EN">Rarities include a skull and other type material of the Dodo (Raphus cucullatus) and sub-fossil material of Dodo and Rodrigues Solitaire (Pezophaps solitaria); two mounted specimens, an egg, soft tissue (in ethanol) and skeleton parts of Great Auk (Pinguinus impennis); a Crested Shelduck (Tadorna cristata) and 69 type specimens.</para>
+      <para xml:lang="EN">Nearly all specimens are identified to species, 85% are catalogued and the tissue collection is digitized. Extensive regional and global databases on birds as well as African vertebrates (1.5 million records) have been prepared as part of the curatorial work.</para>
     </abstract>
     <keywordSet>
-      <keyword>amber</keyword>
+      <keyword>birds</keyword>
+      <keyword>ornithology</keyword>
       <keyword>zoology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>
-      <keyword>Insecta</keyword>
-      <keyword>entomology</keyword>
-      <keyword>arachnida</keyword>
-      <keyword>insects</keyword>
-      <keyword>holotype</keyword>
-      <keywordThesaurus>n/a</keywordThesaurus>
     </keywordSet>
     <keywordSet>
       <keyword>Specimen</keyword>
@@ -86,6 +86,6 @@
       <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
       <identifier>CC-BY</identifier>
     </licensed>
-  <pubDate>2021-04-13</pubDate>
+  <pubDate>2021-03-30</pubDate>
 </dataset>
 </eml:eml>

@@ -1,16 +1,24 @@
 <channel>
     <title>NHMD Collections DarwinCore RSS Feed</title>
     <description>RSS Feed for collection data of the Natural Museum of Denmark, Copenhagen</description>
-    <item collectionId="425985" userId="64" notifyUserId="64" definition="DwCA IV Types" metadata="DwCA IV.eml" days="1" filename="DwCA-IV-types.zip" publish="true">
-      <title>NHMD Invertebrate Zoology Holotypes</title>
-      <id>0d74d65c-6bc5-11eb-9439-0242ac130002</id>
-    </item>
     <item collectionId="786432" userId="64" notifyUserId="64" definition="DwCA-AM-types" metadata="DwCA-AM.eml" days="1" filename="DwCA-AM-types.zip" publish="true">
       <title>NHMD Amber Collection</title>
       <id>a5325c5f-0705-4d07-86d5-6dd79050739a</id>
     </item>
+    <item collectionId="4" userId="64" notifyUserId="64" definition="DwCA VP" metadata="DwCA VP.eml" days="1" filename="DwCA-VP.zip" publish="true">
+      <title>NHMD Vertebrate Paleontology Collection</title>
+      <id>4159fce0-b720-425d-8020-7c76d1636490</id>
+    </item>
+    <item collectionId="753665" userId="64" notifyUserId="64" definition="DwCA DK" metadata="DwCA DK.eml" days="1" filename="DwCA-DK.zip" publish="true">
+      <title>NHMD Danekræ Fossil Trove Collection</title>
+      <id>d9c16c4c-7102-4783-9225-4eb0ab079eb2</id>
+    </item>
+    <item collectionId="491522" userId="64" notifyUserId="64" definition="DwCA MM" metadata="DwCA MM.eml" days="1" filename="DwCA-MM.zip" publish="true">
+      <title>NHMD Mammalogy Collection</title>
+      <id>c37f3fc6-919b-4e82-aa9f-fc815512422e</id>
+    </item> 
     <item collectionId="425985" userId="64" notifyUserId="64" definition="DwCA IV" metadata="DwCA IV.eml" days="1" filename="DwCA-IV-full.zip" publish="true">
       <title>NHMD Invertebrate Zoology Collection</title>
-      <id>c8ff8346-e7eb-4b30-86e7-ab58eee98e2d</id>
-    </item>
+      <id>e2f4fb1b-ec2e-4cb4-9fd3-cc569b9ced30</id>
+    </item> 
 </channel>

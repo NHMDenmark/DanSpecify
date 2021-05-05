@@ -1,11 +1,11 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
-    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Amber Collection Holotypes</title>
+    <alternateIdentifier>6f730412-2326-48c3-a10c-b2b10d33b811</alternateIdentifier>
+    <title xml:lang="eng">NHMD Mammalogy Collection</title>
       <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
-         <section xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</section>
-         <para xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</para>
-         <markdown>A preliminary dataset export for <i>testing</i> purposes limited to Holotypes only.</markdown>
+         <section xml:lang="EN">A preliminary dataset export for testing purposes.</section>
+         <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
+         <markdown>A preliminary dataset export for <i>testing</i> purposes.</markdown>
        </description>
     <creator>
       <individualName>
@@ -45,30 +45,25 @@
     </metadataProvider>
     <associatedParty>
       <individualName>
-        <givenName>Sree</givenName>
-        <surName>Selvantharan</surName>
+        <givenName>Peter Rask</givenName>
+        <surName>Møller</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Project Worker</positionName>
-      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/entomology/amber-collection/</onlineUrl>
-      <role>digitization</role>
+      <positionName>Collection Worker</positionName>
+      <electronicMailAddress>lindow@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://samlinger.snm.ku.dk/toer-og-vaadsamlinger/zoologi/mammal-collections/</onlineUrl>
+      <role>curator</role>
     </associatedParty>
     <language>eng</language>
     <abstract>
       <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
     </abstract>
     <keywordSet>
-      <keyword>amber</keyword>
+      <keyword>mammals</keyword>
+      <keyword>mammalogy</keyword>
       <keyword>zoology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>
-      <keyword>Insecta</keyword>
-      <keyword>entomology</keyword>
-      <keyword>arachnida</keyword>
-      <keyword>insects</keyword>
-      <keyword>holotype</keyword>
-      <keywordThesaurus>n/a</keywordThesaurus>
     </keywordSet>
     <keywordSet>
       <keyword>Specimen</keyword>
@@ -86,6 +81,6 @@
       <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
       <identifier>CC-BY</identifier>
     </licensed>
-  <pubDate>2021-04-13</pubDate>
+  <pubDate>2021-03-30</pubDate>
 </dataset>
 </eml:eml>

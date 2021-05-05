@@ -56,7 +56,7 @@
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para />
+      <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
     </abstract>
     <keywordSet>
       <keyword>invertebrate</keyword>
