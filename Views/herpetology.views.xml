@@ -98,6 +98,7 @@
   </views>
 
   <viewdefs>
+
     <viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Accession Items]]></desc>
       <definition>AccessionItems</definition>
@@ -253,11 +254,15 @@
         <row>
           <cell type="label" labelfor="1"/>
           <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-          <cell type="label" labelfor="4"/>
+		  <cell type="label" labelfor="4"/>
           <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
           <cell type="label" labelfor="5"/>
-          <cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" colspan="3" default="today"/>
+          <cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today" colspan="3"/>
         </row>
+		<row>
+		  <cell type="label" labelfor="2"/>
+          <cell type="field" id="2" name="altCatalogNumber" uitype="text" colspan="2"/>
+		</row>
         <row>
           <cell type="label" labelfor="3"/>
           <cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
