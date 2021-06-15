@@ -38,7 +38,7 @@
             <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
+      <!--  <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> -->
             <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName"      value=""/>
             <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"           value=""/> 

@@ -45,7 +45,7 @@
             <!-- Preparations --> 
             <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>
             <!-- Publishable -->
-            <field isNot="false" isRelFld="false" oper="6" stringId="1.collectionobject.yesNo1" value=""/>
+            <field isNot="false" isRelFld="false" oper="6" stringId="1.collectionobject.yesNo1" value=""/> 
         </query>
     </queries>
   </core>
@@ -77,7 +77,7 @@
             </query>
         </queries>
     </extension>
-
+ 
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>

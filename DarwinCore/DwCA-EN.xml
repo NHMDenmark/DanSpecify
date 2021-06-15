@@ -32,16 +32,16 @@
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
             <!-- Determination & Taxonomy -->
-            <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Order"      value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>  
+            <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Order"      value=""/>  
             <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName"      value=""/>
-            <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"           value=""/> 
+            <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"          value=""/> 
             <!-- Preparations --> 
             <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>
             <!-- Publishable -->
