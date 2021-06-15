@@ -1,12 +1,8 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Invertebrate Zoology Collection Holotypes</title>
-	<description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
-      <section xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</section>
-      <para xml:lang="EN">A preliminary dataset export for testing purposes limited to Holotypes only.</para>
-      <markdown>A preliminary dataset export for <i>testing</i> purposes limited to Holotypes only.</markdown>
-    </description>
+    <title xml:lang="eng">NHMD Invertebrate Zoology Collection</title>
+    <description />
     <creator>
       <individualName>
         <givenName>Fedor</givenName>
@@ -45,6 +41,39 @@
     </metadataProvider>
     <associatedParty>
       <individualName>
+        <givenName>Martin Vinther</givenName>
+        <surName>Sørensen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Mollusca, Plathyhelminthes, Cnidaria - Ctenophora and Porifera</positionName>
+      <electronicMailAddress>mvsorensen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Laura</givenName>
+        <surName>Pavesi</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>collection manager</role>
+    </associatedParty>
+	<associatedParty>
+      <individualName>
+        <givenName>Jørgen</givenName>
+        <surName>Olesen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Echinodermata - Tentaculata, Crustacea and Vermes (Polychaeta etc)</positionName>
+      <electronicMailAddress>jolesen@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
         <givenName>Tom</givenName>
         <surName>Schiøtte</surName>
       </individualName>
@@ -52,11 +81,23 @@
       <positionName>Collection Manager</positionName>
       <electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
       <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
-      <role>digitization</role>
+      <role>collection manager</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Danny</givenName>
+        <surName>Eibye-Jacobsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <electronicMailAddress>dejacobsen@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role></role>
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para xml:lang="EN">A preliminary dataset export for testing purposes.</para>
+      <para xml:lang="EN">The invertebrate collection (excepting insects and some other arthropods) is for historical reasons very much focused on marine fauna. The geographical representation is especially good for areas where Denmark has been present as a nation: Danish marine territory, Greenland, the North Atlantic in general, and our former, tropical colonies. The collection contains large amounts of original and type material from the period 1760 to about a hundred years later, when the description of the animal kingdom was really gaining speed. From later, important initiatives it is relevant to mention material from the “Dana” plankton expeditions, the “Galathea” Deep Sea Expedition, and from recent years large amounts of previously poorly known or undescribed, so called meiofauna animals. </para>
+      <para xml:lang="DA">Samlingen af hvirvelløse dyr (undtagen insekter og visse andre leddyr) har af historiske grunde specielt fokus på den marine fauna. Geografisk er repræsentationen særligt god for områder, hvor Danmark har været nationalt til stede: dansk havområde, Grønland, Nordatlanten generelt og vore tidligere tropekolonier. Samlingen rummer store mængder original- og typemateriale fra perioden 1760 og hundrede år frem, hvor dyrerigets beskrivelse virkelig tog fart. Af senere, vigtige indsatser kan nævnes “Dana”-ekspeditionernes plankton, “Galathea” Dybhavsekspeditionens indsamlinger og fra de senere år de store materialer af tidligere ret ukendte eller helt ubeskrevne, såkaldte meiofauna-dyr. </para>
     </abstract>
     <keywordSet>
       <keyword>invertebrate</keyword>
@@ -67,7 +108,6 @@
       <keyword>Echinodermata</keyword>
       <keyword>molluscs</keyword>
       <keyword>echinoderms</keyword>
-      <keyword>holotype</keyword>
       <keywordThesaurus>n/a</keywordThesaurus>
     </keywordSet>
     <keywordSet>
