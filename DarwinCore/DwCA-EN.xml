@@ -31,6 +31,7 @@
             <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.maxUncertaintyEst" value=""/>
             <!-- Determination & Taxonomy -->
             <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>  
