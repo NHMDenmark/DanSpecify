@@ -3,42 +3,6 @@
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
     <title xml:lang="eng">NHMD Invertebrate Zoology Collection</title>
     <description />
-    <creator>
-      <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
-    </creator>
-    <metadataProvider>
-      <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
-    </metadataProvider>
     <associatedParty>
       <individualName>
         <givenName>Martin Vinther</givenName>
@@ -52,47 +16,85 @@
     </associatedParty>
     <associatedParty>
       <individualName>
-        <givenName>Laura</givenName>
-        <surName>Pavesi</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager</positionName>
-      <electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>collection manager</role>
-    </associatedParty>
-	<associatedParty>
-      <individualName>
         <givenName>Jørgen</givenName>
         <surName>Olesen</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Curator of Echinodermata - Tentaculata, Crustacea and Vermes (Polychaeta etc)</positionName>
+      <positionName>Curator of Echinodermata 'Tentaculata', Crustacea and 'Vermes'</positionName>
       <electronicMailAddress>jolesen@snm.ku.dk </electronicMailAddress>
       <onlineUrl></onlineUrl>
       <role>curator</role>
     </associatedParty>
-    <associatedParty>
+    <metadataProvider>
+      <individualName>
+        <givenName>Laura</givenName>
+        <surName>Pavesi</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager of Plathyhelminthes, Cnidaria, Ctenophora and Porifera</positionName>
+      <electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>collection manager</role>
+    </metadataProvider>
+    <metadataProvider>
       <individualName>
         <givenName>Tom</givenName>
         <surName>Schiøtte</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection Manager</positionName>
+      <positionName>Collection manager of Mollusca, Echinodermata, 'Tentaculata' and Tunicata </positionName>
       <electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
       <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
       <role>collection manager</role>
-    </associatedParty>
-    <associatedParty>
+    </metadataProvider>
+    <metadataProvider>
       <individualName>
         <givenName>Danny</givenName>
         <surName>Eibye-Jacobsen</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection Manager</positionName>
+      <positionName>Collection manager of Crustacea and 'Vermes'</positionName>
       <electronicMailAddress>dejacobsen@snm.ku.dk </electronicMailAddress>
       <onlineUrl></onlineUrl>
-      <role></role>
+      <role>collection manager</role>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
     </associatedParty>
     <language>eng</language>
     <abstract>

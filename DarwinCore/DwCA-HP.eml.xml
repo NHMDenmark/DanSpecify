@@ -1,55 +1,66 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>c37f3fc6-919b-4e82-aa9f-fc815512422e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Mammalogy Collection</title>
+    <title xml:lang="eng">NHMD Herpetology Collection</title>
       <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
        </description>
     <creator>
       <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
-    </creator>
-    <metadataProvider>
-      <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
-    </metadataProvider>
-    <associatedParty>
-      <individualName>
-        <givenName>Daniel Klingenberg</givenName>
+        <givenName>Daniel Klingberg</givenName>
         <surName>Johansson</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Mammalogy</positionName>
+      <positionName>Collection Manager of Mammalogy</positionName>
       <electronicMailAddress>dkjohansson@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/toer-og-vaadsamlinger/zoologi/mammal-collections/</onlineUrl>
       <role>collection manager</role>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Daniel Klingberg</givenName>
+        <surName>Johansson</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <electronicMailAddress>dkjohansson@snm.ku.dk</electronicMailAddress>
+      <role>collection manager</role>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
     </associatedParty>
     <language>eng</language>
     <abstract>
@@ -61,8 +72,13 @@
       <para xml:lang="DA">Vi har en stor samling af hvaler fra Grønland og Danmark, og store serier af sædhval, narhval, hvidhval, marsvin og hvidnæbbet delfin. </para>      
     </abstract>
     <keywordSet>
-      <keyword>mammals</keyword>
-      <keyword>mammalogy</keyword>
+      <keyword>Africa</keyword>
+      <keyword>Anura</keyword>
+      <keyword>Amphibia</keyword>
+      <keyword>Reptilia</keyword>
+      <keyword>amphibians</keyword>
+      <keyword>reptiles</keyword>
+      <keyword>herpetology</keyword>
       <keyword>zoology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>

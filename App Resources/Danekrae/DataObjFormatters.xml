@@ -255,11 +255,10 @@
         <switch single="true">
             <fields>
                 <field formatter="Agent">agent</field>
-                <field sep=", ">agent.lastName</field>
             </fields>
         </switch>
     </format>
-
+    
     <format
         name="Collectors Last Name"
         title="Collectors Last Name"
@@ -328,6 +327,7 @@
         name="Determination"
         title="Determination"
         class="edu.ku.brc.specify.datamodel.Determination"
+        default="true"
         >
         <switch single="false" field="isCurrent">
             <fields value="true">
@@ -336,6 +336,19 @@
             </fields>
             <fields value="false">
                 <field>taxon.fullName</field>
+            </fields>
+        </switch>
+    </format>
+
+    <format
+        name="DeterminationCitation"
+        title="DeterminationCitation"
+        class="edu.ku.brc.specify.datamodel.DeterminationCitation"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field formatter="ReferenceWork">referenceWork</field>
             </fields>
         </switch>
     </format>
@@ -621,7 +634,7 @@
             </fields>
         </switch>
     </format>
-
+    
     <format
         name="Parasites"
         title="Parasites"
@@ -677,6 +690,18 @@
     </format>
 
     <format
+        name="Public Media"
+        title="Public Media"
+        class="edu.ku.brc.specify.datamodel.Attachment"
+        >
+        <switch single="false" field="isPublic">
+            <fields value="true">
+                <field>attachmentLocation</field>
+            </fields>
+        </switch>
+    </format>
+
+    <format
         name="ReferenceWork"
         title="ReferenceWork"
         class="edu.ku.brc.specify.datamodel.ReferenceWork"
@@ -684,7 +709,11 @@
         >
         <switch single="true">
             <fields>
-                <field>title</field>
+                <field sep="'">title</field>
+                <field sep=" (">workDate</field>
+                <field sep=") ">journal</field>
+                <field sep=" ">volume</field>
+                <field sep=" pp. ">pages</field>
             </fields>
         </switch>
     </format>
@@ -752,6 +781,7 @@
         <switch single="true">
             <fields>
                 <field>fullName</field>
+                <field sep=" ">author</field>
             </fields>
         </switch>
     </format>
@@ -980,6 +1010,28 @@
                 ending=""
                 count="1"
                 format="Determination"
+                orderfieldname=""
+               />
+
+    <aggregator name="DeterminationCitation"
+                title="DeterminationCitation"
+                class="edu.ku.brc.specify.datamodel.DeterminationCitation"
+                default="true"
+                separator=" | "
+                ending=""
+                count="1"
+                format="DeterminationCitation"
+                orderfieldname=""
+               />
+
+    <aggregator name="DwC Media"
+                title="DwC Media"
+                class="edu.ku.brc.specify.datamodel.Attachment"
+                default="true"
+                separator="|"
+                ending=""
+                count="0"
+                format="Public Media"
                 orderfieldname=""
                />
 

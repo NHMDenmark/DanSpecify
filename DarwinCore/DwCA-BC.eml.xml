@@ -1,0 +1,128 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
+    <title xml:lang="eng">NHMD Biocultural Botany Collection</title>
+    <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+    </description>
+    <creator>		
+      <individualName>
+        <givenName>Sam</givenName>
+        <surName>Bruun-Lund</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>External Consultant</positionName>
+      <address>
+        <country>DK</country>
+      </address>
+	  <phone>+45 22445903</phone>
+      <electronicMailAddress>sam.bruunlund@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0001-8735-8555</userId>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Sam</givenName>
+        <surName>Bruun-Lund</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>External Consultant</positionName>
+      <address>
+        <country>DK</country>
+      </address>
+	  <phone>+45 22445903</phone>
+      <electronicMailAddress>sam.bruunlund@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0001-8735-8555</userId>    
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para xml:lang="EN">The biocultural collection (the collection of useful plants) consists of plant products and ethnographical objects made of plant material, mostly donated gifts to the museum or bought on market places in different parts of the world. Biocultural collections provide a unique link between botanical specimens and peoples use of plants for food, medicine, building material, clothes and ritual purposes. The biocultural collection has been photographed and the information digitized, thanks to a donation from Apothecary Povl M. Assens Foundation. </para>
+      <para xml:lang="DA">Den biokulturelle samling (samlingen af nyttige planter) består af planteprodukter og etnografiske genstande lavet af plantemateriale. Den består hovedsageligt af donerede gaver til museet eller genstande, som er købt på markedspladser i forskellige dele af verden. Biokulturelle samlinger danner en unik forbindelse mellem botaniske prøver og folks brug af planter til mad, medicin, byggemateriale, tøj og rituelle formål. Den biokulturelle samling er blevet fotograferet og oplysningerne digitaliseret takket være en donation fra Cand. Farm. Povl M. Assens Fonden. </para>
+    </abstract>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keyword>Biocultural collection</keyword>
+      <keyword>botany</keyword>
+      <keyword>ethno botany</keyword>
+      <keyword>medicinal plants</keyword>
+      <keyword>ritual plants</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <distribution scope="document">
+      <online>
+        <url function="information">https://samlinger.snm.ku.dk/toer-og-vaadsamlinger/botanik/general-herbarium/the-collection-of-useful-plants/</url>
+      </online>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+          <geographicDescription>Global</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-180</westBoundingCoordinate>
+          <eastBoundingCoordinate>180</eastBoundingCoordinate>
+          <northBoundingCoordinate>90</northBoundingCoordinate>
+          <southBoundingCoordinate>-90</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <taxonomicCoverage>
+              <taxonomicClassification>
+                  <taxonRankName>kingdom</taxonRankName>
+                <taxonRankValue>Plantae</taxonRankValue>
+                  <commonName>Plants</commonName>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <keywordSet>
+    <keyword>Occurrence</keyword>
+    <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+  </keywordSet>
+  <keywordSet>
+    <keyword>Specimen</keyword>
+    <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+  </keywordSet>
+    <intellectualRights>
+      <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+    </intellectualRights>  
+  <licensed>
+    <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+    <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+    <identifier>CC-BY</identifier>
+  </licensed>
+  <pubDate>2021-04-14</pubDate>
+</dataset>
+</eml:eml>

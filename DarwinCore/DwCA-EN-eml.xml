@@ -6,25 +6,116 @@
        </description>
     <creator>
       <individualName>
-        <givenName>Fedor</givenName>
-        <surName>Steeman</surName>
+        <givenName>Nikolaj </givenName>
+        <surName>Scharff</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
+      <positionName>Curator of Arachnida</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
         <city>Copenhagen</city>
         <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
+        <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <phone></phone>
+      <electronicMailAddress>nscharff@snm.ku.dk</electronicMailAddress>
     </creator>
     <metadataProvider>
       <individualName>
-        <givenName>Fedor</givenName>
+        <givenName>Anders Alexander</givenName>
+        <surName>Illum</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>andersaillum@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Sree Gayathree</givenName>
+        <surName>Selvantharan</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Jan</givenName>
+        <surName>Pedersen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>japedersen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Nikolaj </givenName>
+        <surName>Scharff</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Arachnida</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>nscharff@snm.ku.dk</electronicMailAddress>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Thomas</givenName>
+        <surName>Pape</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Diptera and Lepidoptera</positionName>
+      <electronicMailAddress>tpape@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Alexey</givenName>
+        <surName>Solodovnikov</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Coleoptera</positionName>
+      <electronicMailAddress>asolodovnikov@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Hymenoptera, Hemiptera and lesser orders</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Henrik</givenName>
+        <surName>Enghoff</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Myriapoda</positionName>
+      <electronicMailAddress>henghoff@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
         <surName>Steeman</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
@@ -33,24 +124,33 @@
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
         <city>Copenhagen</city>
         <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
+        <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
       <phone>+45 22369539</phone>
       <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
       <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
-    </metadataProvider>
-    <!-- <associatedParty>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
       <individualName>
-        <givenName>Sree</givenName>
-        <surName>Selvantharan</surName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Project Worker</positionName>
-      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/entomology/amber-collection/</onlineUrl>
-      <role>digitization</role>
-    </associatedParty> -->
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
+    </associatedParty>
     <language>eng</language>
     <abstract>
       <para xml:lang="EN">The entomological collection (including myriapods and arachnids) is the largest in the museum. It includes ca. NN dry insect specimens on pins in ca. NN drawers, and ca. NN specimens in alcohol in multiple containers. There is a growing DNA-grade insect tissue collection (mainly beetles) kept at low temperatures. The entomological collection has global coverage with particularly good representation of the Palearctic material and samples from East Africa. The Danish fauna is also very well represented. The collection includes many historical and recent nomenclatural types which are kept under particular care, where the material by Fabricius is the most notable. </para>
@@ -60,9 +160,11 @@
       <keyword>zoology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>
-      <keyword>Insecta</keyword>
+      <keyword>insecta</keyword>
       <keyword>entomology</keyword>
       <keyword>arachnida</keyword>
+      <keyword>myriapoda</keyword>
+      <keyword>crustacea</keyword>
       <keyword>insects</keyword>
       <keywordThesaurus>n/a</keywordThesaurus>
     </keywordSet>

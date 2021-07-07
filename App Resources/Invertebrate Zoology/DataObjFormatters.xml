@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
+
+    <format
+        name="AttachmentURI"
+        title="AttachmentURI"
+        class="edu.ku.brc.specify.datamodel.Attachment">
+        <switch single="false" field="isPublic">
+            <fields value="true">
+                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Vertebrate_Paleontology/originals/">attachmentLocation</field>
+            </fields>
+        </switch>
+    </format>
+
     <format
         name="Accession"
         title="Accession"
@@ -94,18 +106,6 @@
     </format>
 
     <format
-        name="AttachmentURI"
-        title="AttachmentURI"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        >
-        <switch single="false" field="isPublic">
-            <fields value="true">
-                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Invertebrate_Zoology/originals/">attachmentLocation</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
         name="Author"
         title="Author"
         class="edu.ku.brc.specify.datamodel.Author"
@@ -148,6 +148,7 @@
         name="CollectingEvent"
         title="CollectingEvent"
         class="edu.ku.brc.specify.datamodel.CollectingEvent"
+        default="true"
         >
         <switch single="true">
             <fields>
@@ -254,6 +255,18 @@
         <switch single="true">
             <fields>
                 <field formatter="Agent">agent</field>
+            </fields>
+        </switch>
+    </format>
+    
+    <format
+        name="Collectors Last Name"
+        title="Collectors Last Name"
+        class="edu.ku.brc.specify.datamodel.Collector"
+        >
+        <switch single="true">
+            <fields>
+                <field>agent.lastName</field>
             </fields>
         </switch>
     </format>
@@ -621,6 +634,20 @@
             </fields>
         </switch>
     </format>
+    
+    <format
+        name="Parasites"
+        title="Parasites"
+        class="edu.ku.brc.specify.datamodel.Determination"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field>varQualifier</field>
+                <field sep=": ">taxon.fullName</field>
+            </fields>
+        </switch>
+    </format>
 
     <format
         name="Permit"
@@ -705,7 +732,7 @@
             </fields>
         </switch>
     </format>
-
+    
     <format
         name="Station"
         title="Station"
@@ -928,8 +955,19 @@
     <aggregator name="Collector"
                 title="Collector"
                 class="edu.ku.brc.specify.datamodel.Collector"
+                default="false"
+                separator="; "
+                ending=""
+                count=""
+                format="Collector"
+                orderfieldname="orderNumber"
+               />
+
+    <aggregator name="Collector Last Names Only"
+                title="Collector Last Names Only"
+                class="edu.ku.brc.specify.datamodel.Collector"
                 default="true"
-                separator="| "
+                separator=", "
                 ending=""
                 count="0"
                 format="Collector"
@@ -1123,6 +1161,17 @@
                 orderfieldname="ordinal"
                />
 
+    <aggregator name="Parasites"
+                title="Parasites"
+                class="edu.ku.brc.specify.datamodel.Determination"
+                default="true"
+                separator="; "
+                ending=""
+                count="0"
+                format="Parasites"
+                orderfieldname="varQualifier"
+               />
+
     <aggregator name="PermitAttachment"
                 title="PermitAttachment"
                 class="edu.ku.brc.specify.datamodel.PermitAttachment"
@@ -1138,7 +1187,7 @@
                 title="Preparation"
                 class="edu.ku.brc.specify.datamodel.Preparation"
                 default="true"
-                separator="| "
+                separator=" | "
                 ending=""
                 count="0"
                 format="Preparation"
