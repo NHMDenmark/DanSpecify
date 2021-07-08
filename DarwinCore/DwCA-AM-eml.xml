@@ -1,62 +1,71 @@
 <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Invertebrate Zoology Collection</title>
-    <description />
+    <title xml:lang="eng">NHMD Amber Collection</title>
+      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+      </description>
+    <creator>
+      <individualName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Amber and Hemiptera</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 35321110</phone>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/10873</onlineUrl>
+    </creator>
     <associatedParty>
       <individualName>
-        <givenName>Martin Vinther</givenName>
-        <surName>Sørensen</surName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Curator of Mollusca, Plathyhelminthes, Cnidaria - Ctenophora and Porifera</positionName>
-      <electronicMailAddress>mvsorensen@snm.ku.dk</electronicMailAddress>
+      <positionName>Curator of Amber and Hemiptera</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
       <onlineUrl></onlineUrl>
-      <role>curator</role>
+      <role>Curator</role>
     </associatedParty>
-    <associatedParty>
+	<metadataProvider>
       <individualName>
-        <givenName>Jørgen</givenName>
-        <surName>Olesen</surName>
+        <givenName>Sree</givenName>
+        <surName>Selvantharan</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Curator of Echinodermata 'Tentaculata', Crustacea and 'Vermes'</positionName>
-      <electronicMailAddress>jolesen@snm.ku.dk </electronicMailAddress>
+      <positionName>Collection Manager</positionName>
+      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
       <onlineUrl></onlineUrl>
-      <role>curator</role>
-    </associatedParty>
-    <metadataProvider>
-      <individualName>
-        <givenName>Laura</givenName>
-        <surName>Pavesi</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Plathyhelminthes, Cnidaria, Ctenophora and Porifera</positionName>
-      <electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>collection manager</role>
+      <role>Collection Manager</role>
     </metadataProvider>
-    <metadataProvider>
+	<metadataProvider>
       <individualName>
-        <givenName>Tom</givenName>
-        <surName>Schiøtte</surName>
+        <givenName>Anders</givenName>
+        <surName>Illum</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Mollusca, Echinodermata, 'Tentaculata' and Tunicata </positionName>
-      <electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
-      <role>collection manager</role>
-    </metadataProvider>
-    <metadataProvider>
-      <individualName>
-        <givenName>Danny</givenName>
-        <surName>Eibye-Jacobsen</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Crustacea and 'Vermes'</positionName>
-      <electronicMailAddress>dejacobsen@snm.ku.dk </electronicMailAddress>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>andersaillum@snm.ku.dk</electronicMailAddress>
       <onlineUrl></onlineUrl>
-      <role>collection manager</role>
+      <role>Collection manager</role>
+    </metadataProvider>
+	<metadataProvider>
+      <individualName>
+        <givenName>Jan</givenName>
+        <surName>Pedersen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>japedersen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>Collection manager</role>
     </metadataProvider>
     <associatedParty>
       <individualName>
@@ -74,7 +83,7 @@
       </address>
       <phone>+45 22369539</phone>
       <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
       <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
       <role>distributor</role>
     </associatedParty>
@@ -98,18 +107,20 @@
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para xml:lang="EN">The invertebrate collection (excepting insects and some other arthropods) is for historical reasons very much focused on marine fauna. The geographical representation is especially good for areas where Denmark has been present as a nation: Danish marine territory, Greenland, the North Atlantic in general, and our former, tropical colonies. The collection contains large amounts of original and type material from the period 1760 to about a hundred years later, when the description of the animal kingdom was really gaining speed. From later, important initiatives it is relevant to mention material from the “Dana” plankton expeditions, the “Galathea” Deep Sea Expedition, and from recent years large amounts of previously poorly known or undescribed, so called meiofauna animals. </para>
-      <para xml:lang="DA">Samlingen af hvirvelløse dyr (undtagen insekter og visse andre leddyr) har af historiske grunde specielt fokus på den marine fauna. Geografisk er repræsentationen særligt god for områder, hvor Danmark har været nationalt til stede: dansk havområde, Grønland, Nordatlanten generelt og vore tidligere tropekolonier. Samlingen rummer store mængder original- og typemateriale fra perioden 1760 og hundrede år frem, hvor dyrerigets beskrivelse virkelig tog fart. Af senere, vigtige indsatser kan nævnes “Dana”-ekspeditionernes plankton, “Galathea” Dybhavsekspeditionens indsamlinger og fra de senere år de store materialer af tidligere ret ukendte eller helt ubeskrevne, såkaldte meiofauna-dyr. </para>
+      <para xml:lang="EN">The amber collection at SNM comprises almost 70.000 pieces with inclusions, mostly of insects. Almost all the pieces are of Baltic amber, either collected on the western coast of Jutland or along the Baltic coastline of Russia (Kaliningrad region) or Latvia. The collection includes approx. 100 holotypes and additional material identified to species, but most of the material is identified only to order or family. The entire collection is databased and packed in airtight zip lock bags. </para>
+      <para xml:lang="EN">The majority of the collection (57.000+ pieces) was bought in 2018 from a private collector in Skagen, Karin Nordmann Ernst. This purchase was made possible by donations from Augustinusfonden, Knud Højgaards Fond and Villum Fonden.</para>
+      <para xml:lang="DA">Ravsamlingen består af ca. 70.000 stykker med inklusioner af primært insekter. Det fleste stykker er baltisk rav og indsamlet på den Jyllands vestkyst, eller langs den baltiske kystlinje i Rusland (Kalinigrad) og Letland. Samlingen indeholder ca. 100 holotyper samt rester af dyr som er bestemt til enten orden, familie,eller artsniveau. Hele samlingen er registeret og pakket i lufttætte zip-lock poser. Størstedelen af samlingen (57.000) blev købt fra en privat samler, Karin Nordmann Ernst. Dette blev muligt igennem en gavmild donation fra Augustinusfonden, Knud Højgaards Fond og Villum Fonden.</para>
     </abstract>
     <keywordSet>
-      <keyword>invertebrate</keyword>
+      <keyword>amber</keyword>
+      <keyword>baltic</keyword>
       <keyword>zoology</keyword>
       <keyword>Denmark</keyword>
       <keyword>Copenhagen</keyword>
-      <keyword>Mollusca</keyword>
-      <keyword>Echinodermata</keyword>
-      <keyword>molluscs</keyword>
-      <keyword>echinoderms</keyword>
+      <keyword>Insecta</keyword>
+      <keyword>entomology</keyword>
+      <keyword>arachnida</keyword>
+      <keyword>insects</keyword>
       <keywordThesaurus>n/a</keywordThesaurus>
     </keywordSet>
     <keywordSet>
@@ -128,6 +139,6 @@
       <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
       <identifier>CC-BY</identifier>
     </licensed>
-  <pubDate>2021-03-30</pubDate>
+  <pubDate>2021-04-13</pubDate>
 </dataset>
 </eml:eml>
