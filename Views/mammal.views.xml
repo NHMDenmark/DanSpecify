@@ -269,12 +269,6 @@
 					<cell type="field" id="ca" name="countAmt" uitype="text" colspan="3"/>
 				</row>
 				<row>
-				  <cell type="label" labelfor="14"/>
-                  <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
-				  <cell type="label" labelfor="hide" colspan="1"/>
-				  <cell type="field" id="hide" name="yesNo1" uitype="checkbox" initialize="editable=true" colspan="1"/><!-- Mark the collection object as not ready or eligible for publication to online resources like GBIF.  -->
-				</row>
-				<row>
 					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="13" rows="3"/>
 				</row>
 				<row>
