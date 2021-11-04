@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
+    
+    <format
+        name="AttachmentURI"
+        title="AttachmentURI"
+        class="edu.ku.brc.specify.datamodel.Attachment">
+        <switch single="false" field="isPublic">
+            <fields value="true">
+                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Herpetology/originals/">attachmentLocation</field>
+            </fields>
+        </switch>
+    </format>
+
     <format
         name="Accession"
         title="Accession"
@@ -26,6 +38,19 @@
             </fields>
         </switch>
     </format>
+
+<!-- <format
+        name="CatalogNumber"
+        title="CatalogNumber"
+        class="edu.ku.brc.specify.datamodel.CatalogNumber"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field>collectionobject.catalogNumber</field>
+            </fields>
+        </switch>
+    </format> -->
 
     <format
         name="AccessionAuthorization"
@@ -94,18 +119,6 @@
     </format>
 
     <format
-        name="AttachmentURI"
-        title="AttachmentURI"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        >
-        <switch single="false" field="isPublic">
-            <fields value="true">
-                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Invertebrate_Zoology/originals/">attachmentLocation</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
         name="Author"
         title="Author"
         class="edu.ku.brc.specify.datamodel.Author"
@@ -148,6 +161,7 @@
         name="CollectingEvent"
         title="CollectingEvent"
         class="edu.ku.brc.specify.datamodel.CollectingEvent"
+        default="true"
         >
         <switch single="true">
             <fields>
@@ -267,19 +281,6 @@
         <switch single="true">
             <fields>
                 <field>name</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
-        name="DNAPrimer"
-        title="DNAPrimer"
-        class="edu.ku.brc.specify.datamodel.DNAPrimer"
-        default="true"
-        >
-        <switch single="true">
-            <fields>
-                <field>primerDesignator</field>
             </fields>
         </switch>
     </format>
@@ -663,18 +664,6 @@
     </format>
 
     <format
-        name="Public Media"
-        title="Public Media"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        >
-        <switch single="false" field="isPublic">
-            <fields value="true">
-                <field>attachmentLocation</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
         name="ReferenceWork"
         title="ReferenceWork"
         class="edu.ku.brc.specify.datamodel.ReferenceWork"
@@ -682,11 +671,7 @@
         >
         <switch single="true">
             <fields>
-                <field sep="'">title</field>
-                <field sep=" (">workDate</field>
-                <field sep=") ">journal</field>
-                <field sep=" ">volume</field>
-                <field sep=" pp. ">pages</field>
+                <field>title</field>
             </fields>
         </switch>
     </format>
@@ -702,22 +687,6 @@
                 <field>shipmentDate</field>
                 <field sep=" - ">shipmentNumber</field>
                 <field sep=" - ">shipmentMethod</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
-        name="Station"
-        title="Station"
-        class="edu.ku.brc.specify.datamodel.CollectingEvent"
-        default="true"
-        >
-        <switch single="true">
-            <fields>
-                <field>stationFieldNumber</field>
-                <field sep=", ">locality.geography.fullName</field>
-                <field sep=", ">locality.localityName</field>
-                <field sep=", ">startDate</field>
             </fields>
         </switch>
     </format>
@@ -770,7 +739,6 @@
         <switch single="true">
             <fields>
                 <field>fullName</field>
-                <field sep=" ">author</field>
             </fields>
         </switch>
     </format>
@@ -814,7 +782,33 @@
         </switch>
     </format>
 
-  <aggregators>
+    <format
+        name="other_identifier"
+        title="other_identifier"
+        class="edu.ku.brc.specify.datamodel.OtherIdentifier"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field>institution</field>
+                <field sep="-">identifier</field>
+            </fields>
+        </switch>
+    </format>
+
+  <format 
+name="DNAPrimer"
+title="DNAPrimer"
+class="edu.ku.brc.specify.datamodel.DNAPrimer"
+default="true"
+>
+<switch single="true">
+<fields>
+     <field>primerDesignator</field>
+   </fields>
+</switch>
+</format>
+<aggregators>
     <aggregator name="AccessionAgent"
                 title="AccessionAgent"
                 class="edu.ku.brc.specify.datamodel.AccessionAgent"
@@ -929,9 +923,9 @@
                 title="Collector"
                 class="edu.ku.brc.specify.datamodel.Collector"
                 default="true"
-                separator="| "
+                separator="; "
                 ending=""
-                count="0"
+                count=""
                 format="Collector"
                 orderfieldname="orderNumber"
                />
@@ -1138,9 +1132,9 @@
                 title="Preparation"
                 class="edu.ku.brc.specify.datamodel.Preparation"
                 default="true"
-                separator="| "
+                separator="; "
                 ending=""
-                count="0"
+                count=""
                 format="Preparation"
                 orderfieldname=""
                />
@@ -1187,6 +1181,17 @@
                 count=""
                 format="identity"
                 orderfieldname="ordinal"
+               />
+
+    <aggregator name="other_identifiers"
+                title="other_identifiers"
+                class="edu.ku.brc.specify.datamodel.OtherIdentifier"
+                default="true"
+                separator=", "
+                ending=""
+                count="0"
+                format="other_identifier"
+                orderfieldname=""
                />
 
   </aggregators>

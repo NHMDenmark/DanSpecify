@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
+    
     <format
+        name="AttachmentURI"
+        title="AttachmentURI"
+        class="edu.ku.brc.specify.datamodel.Attachment">
+        <switch single="false" field="isPublic">
+            <fields value="true">
+                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Quaternary_Zoology/originals/">attachmentLocation</field>
+            </fields>
+        </switch>
+    </format>
+
+<format
         name="Accession"
         title="Accession"
         class="edu.ku.brc.specify.datamodel.Accession"
@@ -94,18 +106,6 @@
     </format>
 
     <format
-        name="AttachmentURI"
-        title="AttachmentURI"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        >
-        <switch single="false" field="isPublic">
-            <fields value="true">
-                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Invertebrate_Zoology/originals/">attachmentLocation</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
         name="Author"
         title="Author"
         class="edu.ku.brc.specify.datamodel.Author"
@@ -148,10 +148,15 @@
         name="CollectingEvent"
         title="CollectingEvent"
         class="edu.ku.brc.specify.datamodel.CollectingEvent"
+        default="true"
         >
         <switch single="true">
             <fields>
-                <field>startDate</field>
+                <field>stationFieldNumber</field>
+                <field sep="; ">locality.localityName</field>
+                <field sep="; ">locality.geography.fullName</field>
+                <field type="bigdecimal" sep="; ">locality.latitude1</field>
+                <field type="bigdecimal" sep=", ">locality.longitude1</field>
             </fields>
         </switch>
     </format>
@@ -323,19 +328,6 @@
             </fields>
             <fields value="false">
                 <field>taxon.fullName</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
-        name="DeterminationCitation"
-        title="DeterminationCitation"
-        class="edu.ku.brc.specify.datamodel.DeterminationCitation"
-        default="true"
-        >
-        <switch single="true">
-            <fields>
-                <field formatter="ReferenceWork">referenceWork</field>
             </fields>
         </switch>
     </format>
@@ -573,6 +565,8 @@
                 <field sep="; ">geography.fullName</field>
                 <field type="bigdecimal" sep="; ">latitude1</field>
                 <field type="bigdecimal" sep=", ">longitude1</field>
+                <field type="double" sep="; ">minElevation</field>
+                <field type="double" sep=", ">maxElevation</field>
             </fields>
         </switch>
     </format>
@@ -663,18 +657,6 @@
     </format>
 
     <format
-        name="Public Media"
-        title="Public Media"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        >
-        <switch single="false" field="isPublic">
-            <fields value="true">
-                <field>attachmentLocation</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
         name="ReferenceWork"
         title="ReferenceWork"
         class="edu.ku.brc.specify.datamodel.ReferenceWork"
@@ -682,11 +664,7 @@
         >
         <switch single="true">
             <fields>
-                <field sep="'">title</field>
-                <field sep=" (">workDate</field>
-                <field sep=") ">journal</field>
-                <field sep=" ">volume</field>
-                <field sep=" pp. ">pages</field>
+                <field>title</field>
             </fields>
         </switch>
     </format>
@@ -702,22 +680,6 @@
                 <field>shipmentDate</field>
                 <field sep=" - ">shipmentNumber</field>
                 <field sep=" - ">shipmentMethod</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
-        name="Station"
-        title="Station"
-        class="edu.ku.brc.specify.datamodel.CollectingEvent"
-        default="true"
-        >
-        <switch single="true">
-            <fields>
-                <field>stationFieldNumber</field>
-                <field sep=", ">locality.geography.fullName</field>
-                <field sep=", ">locality.localityName</field>
-                <field sep=", ">startDate</field>
             </fields>
         </switch>
     </format>
@@ -770,7 +732,6 @@
         <switch single="true">
             <fields>
                 <field>fullName</field>
-                <field sep=" ">author</field>
             </fields>
         </switch>
     </format>
@@ -929,9 +890,9 @@
                 title="Collector"
                 class="edu.ku.brc.specify.datamodel.Collector"
                 default="true"
-                separator="| "
+                separator="; "
                 ending=""
-                count="0"
+                count=""
                 format="Collector"
                 orderfieldname="orderNumber"
                />
@@ -988,28 +949,6 @@
                 ending=""
                 count="1"
                 format="Determination"
-                orderfieldname=""
-               />
-
-    <aggregator name="DeterminationCitation"
-                title="DeterminationCitation"
-                class="edu.ku.brc.specify.datamodel.DeterminationCitation"
-                default="true"
-                separator=" | "
-                ending=""
-                count="1"
-                format="DeterminationCitation"
-                orderfieldname=""
-               />
-
-    <aggregator name="DwC Media"
-                title="DwC Media"
-                class="edu.ku.brc.specify.datamodel.Attachment"
-                default="true"
-                separator="|"
-                ending=""
-                count="0"
-                format="Public Media"
                 orderfieldname=""
                />
 
@@ -1138,9 +1077,9 @@
                 title="Preparation"
                 class="edu.ku.brc.specify.datamodel.Preparation"
                 default="true"
-                separator="| "
+                separator="; "
                 ending=""
-                count="0"
+                count=""
                 format="Preparation"
                 orderfieldname=""
                />
