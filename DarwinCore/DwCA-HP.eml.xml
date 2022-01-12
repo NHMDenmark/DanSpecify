@@ -2,17 +2,23 @@
   <dataset>
     <alternateIdentifier>c37f3fc6-919b-4e82-aa9f-fc815512422e</alternateIdentifier>
     <title xml:lang="eng">NHMD Herpetology Collection</title>
-      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
-       </description>
+    <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0"></description>
     <creator>
       <individualName>
-        <givenName>Daniel Klingberg</givenName>
-        <surName>Johansson</surName>
+        <givenName>Mark</givenName>
+        <surName>Scherz</surName>
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection Manager of Mammalogy</positionName>
-      <electronicMailAddress>dkjohansson@snm.ku.dk</electronicMailAddress>
-      <role>collection manager</role>
+      <positionName>Curator of Herpetology</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea></administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>mark.scherz@gmail.com</electronicMailAddress>
     </creator>
     <metadataProvider>
       <individualName>
@@ -34,7 +40,7 @@
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
         <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <administrativeArea></administrativeArea>
         <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
@@ -54,7 +60,7 @@
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
         <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <administrativeArea></administrativeArea>
         <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
@@ -64,12 +70,12 @@
     </associatedParty>
     <language>eng</language>
     <abstract>
-      <para xml:lang="EN">The mammal collection comprises approx 56,000 specimens, the oldest of which date back to 1649. Around 1,600 of the World’s 5,488 (estimated in April 2015) mammal species are represented.</para>
-      <para xml:lang="EN">We have impressive series of most Danish and Greenlandic mammals, including terrestrial and marine carnivores (polar bear, Arctic fox, red fox, walrus, seals), rodents (red squirrels), mustelids (Eurasian otter, European badger, martin, polecat, marmot) bovids (musk ox), cervids (reindeer, red deer, roe deer) and bats. The geographic span of our material furthermore includes particularly rich collections from East Africa, Sudan, Southeast Asia, and Brazil (incl. the recent Lagoa Santa material collected by PW Lund in the mid-1880s).</para>
-      <para xml:lang="EN">We have a large collection of whales from Greenland and Denmark, and large series of sperm whale, narwhal, beluga, harbor porpoise and white-beaked dolphin.</para>
-      <para xml:lang="DA">Pattedyrsamlingen omfatter ca. 56.000 genstande, hvoraf den ældste dateres tilbage til 1649. Cirka 1.600 af verdens 5.488 (estimeret i april 2015) pattedyrarter er repræsenteret.</para>
-      <para xml:lang="DA">Vi har imponerende serier af de fleste danske og grønlandske pattedyr, inklusive land- og havkødædere (isbjørn, polarræv, rødrev, hvalros, sæler), gnavere (røde egern), mårdyr (eurasatisk odder, europæisk grævling, mår, væsler, murmeldyr, skedehornede (moskusokse), hjortedyr (rensdyr, hjorte, rådyr) og flagermus. Det geografiske område for vores materiale inkluderer desuden særligt rige samlinger fra Østafrika, Sudan, Sydøstasien og Brasilien (inkl. Det nylige materiale fra Lagoa Santa, der blev indsamlet af PW Lund i midten af 1880'erne).</para>
-      <para xml:lang="DA">Vi har en stor samling af hvaler fra Grønland og Danmark, og store serier af sædhval, narhval, hvidhval, marsvin og hvidnæbbet delfin. </para>      
+      <para xml:lang="EN">The herpetological collection contains reptiles and amphibians (estimated 50,000 specimens including 140 type specimens), with all Danish species represented as well as good coverage of European species. Additionally, there are substantial collections from the former Danish West Indies colonies, Brazil, sub-Saharan Africa, The Philippines and the islands of Southeast Asia.
+          Approximately 2,700 species are represented. Most specimens are preserved in alcohol and for the last 10 years, DNA samples have been recovered from all collected specimens.
+      </para>
+      <para xml:lang="DA">Den herpetologiske samling består af krybdyr og padder og indeholder ca 50.000 eksemplarer samt 140 type-eksemplarer. Samlingen indeholder alle danske arter samt en bred dækning af europæiske arter. Derudover er der også en god dækning fra det tidligere Dansk Vestindien, Brasilien, sub-Sahara Afrika, Filippinerne samt Sydøstasien.
+         Omtrent 2,700 arter er registreret. De fleste eksemplarer er bevaret i sprit, og igennem de sidste 10 år er der sikret DNA prøver fra alle indsamlede dyr.
+      </para>      
     </abstract>
     <keywordSet>
       <keyword>Africa</keyword>
