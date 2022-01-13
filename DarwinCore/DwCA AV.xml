@@ -11,7 +11,7 @@
         <query contextTableId="1" name="DarwinCoreAV.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Collection object -->
-            <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.catalogNumber" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"   isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.altCatalogNumber" value=""/>
             <field term="http://purl.org/dc/terms/modified"                  isNot="false" isRelFld="false" oper="1"  stringId="1.collectionobject.timestampModified" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/occurrenceRemarks"     isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.remarks" value=""/>
@@ -31,7 +31,7 @@
             <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
-			<field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.maxUncertaintyEst" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.maxUncertaintyEst" value=""/>
             <!-- Determination & Taxonomy -->
 <!--        <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/> -->
@@ -74,7 +74,9 @@
                 <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="0"  stringId="111,41.attachment.mimeType"              value="image%"/>
                 <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.title"                 value=""/>
                 <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.credit"                value=""/>
-                <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"                value=""/>
+                <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"             value=""/>
+                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.copyrightholder"     value=""/>
+                <field term="http://purl.org/dc/terms/source"             isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.LicenseLogoUrl"      value=""/>
             </query>
         </queries>
     </extension>

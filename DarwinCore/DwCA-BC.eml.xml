@@ -1,4 +1,4 @@
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+ <eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
     <title xml:lang="eng">NHMD Biocultural Botany Collection</title>
@@ -49,7 +49,7 @@
       <phone>+45 22369539</phone>
       <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
       <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <onlineUrl>https://samlinger.snm.ku.dk/en/digital_collections/</onlineUrl>
       <role>distributor</role>
     </associatedParty>
     <associatedParty>
@@ -68,6 +68,25 @@
       </address>
       <phone></phone>
       <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Isabel</givenName>
+        <surName>Calabuig</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Node Manager &amp; Data Curator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>icalabuig@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0001-5515-7900</userId>
       <role>distributor</role>
     </associatedParty>
     <language>eng</language>
