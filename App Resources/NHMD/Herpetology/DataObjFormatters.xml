@@ -39,7 +39,7 @@
         </switch>
     </format>
 
-<!-- <format
+<format
         name="CatalogNumber"
         title="CatalogNumber"
         class="edu.ku.brc.specify.datamodel.CatalogNumber"
@@ -50,7 +50,7 @@
                 <field>collectionobject.catalogNumber</field>
             </fields>
         </switch>
-    </format> -->
+    </format>
 
     <format
         name="AccessionAuthorization"
@@ -241,7 +241,7 @@
         >
         <switch single="true">
             <fields>
-                <field uifieldformatter="CatalogNumber">catalogNumber</field>
+                <field sep="NHMD-" uifieldformatter="CatalogNumber">catalogNumber</field>
             </fields>
         </switch>
     </format>

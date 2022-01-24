@@ -8,7 +8,7 @@
     <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Invertebrate Zoology"/> 
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
     <queries>
-        <query contextTableId="1" name="DarwinCoreIV.csv">
+        <query contextTableId="1" name="_SpecimensIV.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Collection object -->
             <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
