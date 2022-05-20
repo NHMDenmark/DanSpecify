@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
-    
+
     <format
         name="AttachmentURI"
         title="AttachmentURI"
@@ -12,7 +12,33 @@
         </switch>
     </format>
 
-<format
+    <format
+        name="Attachment"
+        title="Attachment"
+        class="edu.ku.brc.specify.datamodel.Attachment"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field>title</field>
+            </fields>
+        </switch>
+    </format>
+
+    <format
+        name="CollectionObjectAttachment"
+        title="CollectionObjectAttachment"
+        class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
+        default="true"
+        >
+        <switch single="true">
+            <fields>
+                <field>attachment</field>
+            </fields>
+        </switch>
+    </format>
+
+    <format
         name="Accession"
         title="Accession"
         class="edu.ku.brc.specify.datamodel.Accession"
@@ -101,19 +127,6 @@
             </fields>
             <fields value="3">
                 <field>lastName</field>
-            </fields>
-        </switch>
-    </format>
-
-    <format
-        name="Attachment"
-        title="Attachment"
-        class="edu.ku.brc.specify.datamodel.Attachment"
-        default="true"
-        >
-        <switch single="true">
-            <fields>
-                <field>title</field>
             </fields>
         </switch>
     </format>
@@ -245,7 +258,7 @@
         >
         <switch single="true">
             <fields>
-                <field sep="NHMD-" uifieldformatter="CatalogNumber">catalogNumber</field>
+                <field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
             </fields>
         </switch>
     </format>

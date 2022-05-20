@@ -228,7 +228,7 @@
         >
         <switch single="true">
             <fields>
-                <field sep="NHMD-" uifieldformatter="CatalogNumber">catalogNumber</field>
+                <field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
             </fields>
         </switch>
     </format>

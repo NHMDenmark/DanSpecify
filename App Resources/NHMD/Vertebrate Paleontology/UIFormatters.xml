@@ -58,7 +58,7 @@
 
   <format system="false" name="CatalogNumberNHMD" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumberAlphaNum</autonumber>
-    <field type="constant" size="5" value="NHMD"/>
+    <field type="constant" size="4" value="NHMD"/>
     <field type="numeric" size="9" inc="true"/>
   </format>
 
