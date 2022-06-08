@@ -1,0 +1,51 @@
+su specify
+
+sudo unlink /opt/specify6
+sudo ln -s /opt/Specify/Specify6.8.01 /opt/specify6
+
+cd ~/versions/
+
+mkdir v7.6.1
+
+git clone https://github.com/specify/specify7.git
+
+cp ~/versions/v7.5.0/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py
+
+unlink ~/currentversion
+ln -sf /home/specify/versions/v7.6.1 /home/specify/currentversion
+
+python3 -m venv specify7/ve 
+source specify7/ve/bin/activate
+
+cd specify7
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+source ~/.nvm/nvm.sh
+
+nvm install --lts
+
+npm install -g npm@8.12.1
+
+pip install --upgrade pip
+pip install --upgrade pip
+pip3 install -r requirements.txt
+
+make
+
+cp package-lock.json package.json
+npm i --package-lock-only | npm audit fix
+
+#certbot certificates automatic update
+SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
+sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
+sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
+sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
+sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
+
+
+
+sudo apachectl restart 
+
+sudo tail -f /var/log/httpd/error.log
+
