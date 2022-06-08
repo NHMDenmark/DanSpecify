@@ -2,6 +2,7 @@ su specify
 
 sudo unlink /opt/specify6
 sudo ln -s /opt/Specify/Specify6.8.01 /opt/specify6
+# Also remember to update the database using the latest Specify6 client! 
 
 cd ~/versions/
 
@@ -36,16 +37,6 @@ make
 cp package-lock.json package.json
 npm i --package-lock-only | npm audit fix
 
-#certbot certificates automatic update
-SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
-sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
-sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
-sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
-sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
-
-
-
 sudo apachectl restart 
 
 sudo tail -f /var/log/httpd/error.log
-

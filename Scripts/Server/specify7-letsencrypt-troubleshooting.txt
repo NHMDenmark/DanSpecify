@@ -1,0 +1,54 @@
+# install snapd (RHEL7)
+
+#check OS version
+cat /etc/redhat-release 
+
+#register EPEL repo 
+sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+sudo yum update
+
+#install snapd 
+sudo yum install snapd
+
+# If 'sudo yum install snapd' reports 'No package snapd found'
+# even when the epel repos have been added and enabled 
+# add the following lines to: '/etc/yum.repos.d/epel.repo'
+#---------------------------------------------------------
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+#---------------------------------------------------------
+
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
+#check snapd installation 
+sudo snap install core
+sudo snap refresh core
+
+#remove any old certbot packages 
+sudo yum remove certbot
+
+#install certbot
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+#install certificates (**** = specific domain name ! )
+sudo certbot certonly --apache --domains specify-*****.science.ku.dk
+
+#test automatic renewal
+sudo certbot renew --dry-run
+
+#certbot certificates automatic update 
+SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
+sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
+sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
+sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
+sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
+
