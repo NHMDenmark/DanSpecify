@@ -1,19 +1,22 @@
-# install snapd (RHEL7)
+# First: Check ssl.conf and replace with standard version on GitHub if necessary
+sudo nano /etc/httpd/conf.d/ssl.conf
 
-#check OS version
+# Next: install snapd (RHEL7)
+#  check OS version (should be RHEL7 e.g. 7.9)
 cat /etc/redhat-release 
 
-#register EPEL repo 
+#  register EPEL repo 
 sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
 sudo yum update
 
-#install snapd 
+#  install snapd 
 sudo yum install snapd
 
-# If 'sudo yum install snapd' reports 'No package snapd found'
-# even when the epel repos have been added and enabled 
-# add the following lines to: '/etc/yum.repos.d/epel.repo'
+#  If 'sudo yum install snapd' reports 'No package snapd available.'
+#  even when the epel repos have been added and enabled 
+#  add the following lines to: '/etc/yum.repos.d/epel.repo' or '/etc/yum.repos.d/redhat.repo'
+#  (NOTE: in some cases epel.repo was deactivated as epel.repo.old or epel.repo_bad)
 #---------------------------------------------------------
 [epel]
 name=Extra Packages for Enterprise Linux 7 - $basearch
@@ -28,27 +31,34 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 
-#check snapd installation 
+#  check snapd installation (you may need to wait a few minutes first)
+sleep 5m
 sudo snap install core
 sudo snap refresh core
 
-#remove any old certbot packages 
+# Finally: Setup certificates 
+#  remove any old certbot packages 
 sudo yum remove certbot
 
-#install certbot
+#  install certbot
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
-#install certificates (**** = specific domain name ! )
-sudo certbot certonly --apache --domains specify-*****.science.ku.dk
+#  install certificates (**** = specific domain name ! )
+sudo apachectl start
+sudo mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf.tmp
+sudo certbot certonly --apache --domains specify-****.science.ku.dk
+sudo mv /etc/httpd/conf.d/ssl.conf.tmp /etc/httpd/conf.d/ssl.conf
+sudo apachectl restart
 
-#test automatic renewal
+#  test automatic renewal
 sudo certbot renew --dry-run
 
-#certbot certificates automatic update 
+#  certbot certificates automatic update 
 SLEEPTIME=$(awk 'BEGIN{srand(); print int(rand()*(3600+1))}'); echo "0 0,12 * * * root sleep $SLEEPTIME && certbot renew -q" | sudo tee -a /etc/crontab > /dev/null
 sudo sh -c 'printf "#!/bin/sh\nservice haproxy stop\n" > /etc/letsencrypt/renewal-hooks/pre/haproxy.sh'
 sudo sh -c 'printf "#!/bin/sh\nservice haproxy start\n" > /etc/letsencrypt/renewal-hooks/post/haproxy.sh'
 sudo chmod 755 /etc/letsencrypt/renewal-hooks/pre/haproxy.sh
 sudo chmod 755 /etc/letsencrypt/renewal-hooks/post/haproxy.sh
 
+# DONE! 

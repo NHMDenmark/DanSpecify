@@ -1,41 +1,58 @@
+## Upgrading Specify7 to 7.6.1 server process ##
+
+# 1. First preparations
+
 su specify
 
+#  Download the latest version of Specify6 into a /opt/tmp folder 
+sudo wget https://update.specifysoftware.org/Specify_unix_64.sh
+#  then install it into the /opt/Specify6/Specify6.8.01 folder 
+sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.01
+#  Switch symlink to this version of Specify6 
 sudo unlink /opt/specify6
-sudo ln -s /opt/Specify/Specify6.8.01 /opt/specify6
-# Also remember to update the database using the latest Specify6 client! 
+sudo ln -sf /opt/Specify6/Specify6.8.01 /opt/specify6
 
+#  Setup specify7.6.1
 cd ~/versions/
-
 mkdir v7.6.1
-
+cd v7.6.1
 git clone https://github.com/specify/specify7.git
-
 cp ~/versions/v7.5.0/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py
 
-unlink ~/currentversion
-ln -sf /home/specify/versions/v7.6.1 /home/specify/currentversion
-
+# 2. Fix nodejs version (only latest stable version v16.15.1) 
 python3 -m venv specify7/ve 
 source specify7/ve/bin/activate
 
 cd specify7
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
 source ~/.nvm/nvm.sh
-
 nvm install --lts
 
 npm install -g npm@8.12.1
 
 pip install --upgrade pip
-pip install --upgrade pip
+pip install --upgrade pip # yes, do it multiple times if necessary
 pip3 install -r requirements.txt
 
+# 3. Compile source, upgrade database and check for vulnerabilities 
 make
 
+#  RIGHT before the migration upgrade the database by connecting to it 
+#    with the Specify6.8.01 client and then run the upgrade wizard!
+#  HOWEVER make a backup of the old database first using the Specify6 Backup and Restore tool ! 
+python manage.py migrate
+
+npm i --package-lock-only
 cp package-lock.json package.json
-npm i --package-lock-only | npm audit fix
+npm audit fix
+
+deactivate
+
+# 4. Finishing up
+
+unlink ~/currentversion
+ln -sf /home/specify/versions/v7.6.1 /home/specify/currentversion
 
 sudo apachectl restart 
 
