@@ -11,6 +11,7 @@ sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.01
 #  Switch symlink to this version of Specify6 
 sudo unlink /opt/specify6
 sudo ln -sf /opt/Specify6/Specify6.8.01 /opt/specify6
+sudo ln -sf /opt/specify6 /opt/specify
 
 #  Setup specify7.6.1
 cd ~/versions/
@@ -19,7 +20,7 @@ cd v7.6.1
 git clone https://github.com/specify/specify7.git
 cp ~/versions/v7.5.0/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py
 
-# 2. Fix nodejs version (only latest stable version v16.15.1) 
+# 2. Fix nodejs version (only latest stable version v16.15.1) and compile
 python3 -m venv specify7/ve 
 source specify7/ve/bin/activate
 
@@ -34,18 +35,18 @@ npm install -g npm@8.12.1
 pip install --upgrade pip
 pip install --upgrade pip # yes, do it multiple times if necessary
 pip3 install -r requirements.txt
-
-# 3. Compile source, upgrade database and check for vulnerabilities 
+m
 make
 
+# **** The last steps have to be coordinated with the end users!**** 
+
+# 3. Upgrade the database 
 #  RIGHT before the migration upgrade the database by connecting to it 
 #    with the Specify6.8.01 client and then run the upgrade wizard!
 #  HOWEVER make a backup of the old database first using the Specify6 Backup and Restore tool ! 
-python manage.py migrate
 
-npm i --package-lock-only
-cp package-lock.json package.json
-npm audit fix
+#  When done, upgrade the database from Specify7 by migrating the django models like so:
+python manage.py migrate
 
 deactivate
 
