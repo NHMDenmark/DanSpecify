@@ -1,0 +1,14 @@
+[Unit]
+Description=Specify7 Worker Process service
+
+[Service]
+After=network.target
+StartLimitIntervalSec=0[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=specify
+ExecStart=/home/specify/sp7worker.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,4 +1,4 @@
-## Upgrading Specify7 to 7.6.1 server process ##
+## Upgrading Specify7 to 7.7.0 server process ##
 
 # 1. First preparations
 
@@ -13,14 +13,39 @@ sudo unlink /opt/specify6
 sudo ln -sf /opt/Specify6/Specify6.8.01 /opt/specify6
 sudo ln -sf /opt/specify6 /opt/specify
 
-#  Setup specify7.6.1
+#  Setup specify7.7.0
 cd ~/versions/
-mkdir v7.6.1
-cd v7.6.1
+mkdir v7.7.0
+cd v7.7.0
 git clone https://github.com/specify/specify7.git
-cp ~/versions/v7.5.0/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py
+cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.0/specify7/specifyweb/settings/local_specify_settings.py
 
-# 2. Fix nodejs version (only latest stable version v16.15.1) and compile
+# In case yum refuses to install certain required libraries like e.g. redis lines need to be added to the redhat repo file;
+sudo nano /etc/yum.repos.d/redhat.repo		#add the following lines: 
+
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
+# *** Create automated service for Celery & Redis worker process needed for WorkBench amongst others ***
+#   1. add bash script 
+
+cd ~
+nano sp7worker.sh		# add file contents from version in repo
+chmod a+x sp7worker.sh
+
+#   2. Create & start service for auto-running script
+cd /etc/systemd/system/
+sudo nano sp7worker.service		# add file contents from version in repo
+sudo systemctl start sp7worker
+sudo systemctl enable sp7worker
+
+# Fix nodejs version (only latest stable version v16.15.1) and compile
 python3 -m venv specify7/ve 
 source specify7/ve/bin/activate
 
@@ -34,8 +59,13 @@ npm install -g npm@8.12.1
 
 pip install --upgrade pip
 pip install --upgrade pip # yes, do it multiple times if necessary
+
+# make sure that all other requirements are installed 
 pip3 install -r requirements.txt
-m
+
+# It may also be necessary to make sure nodejs has enough available memory 
+export NODE_OPTIONS=--max_old_space_size=4096
+
 make
 
 # **** The last steps have to be coordinated with the end users!**** 
