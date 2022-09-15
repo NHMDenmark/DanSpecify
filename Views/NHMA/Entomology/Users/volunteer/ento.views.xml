@@ -1143,14 +1143,13 @@
            <cell type="field" id="3" name="countAmt" uitype="text" default="1"/>
           <cell type="label" labelfor="prepdate"/>
           <cell type="field" id="prepdate" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date"/>
-          
         </row>
-        <!--<row>
-          <cell type="label" labelfor="esd"/>
-          <cell type="field" id="esd" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date" colspan="3"/>
-          <cell type="label" labelfor="eed"/>
-          <cell type="field" id="eed" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date2;tp=date2Precision" uifieldformatter="Date" colspan="3"/>
-        </row>-->
+		<row>
+            <cell type="label" labelfor="esd"/>
+            <cell type="field" id="esd" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date" colspan="3"/>
+            <cell type="label" labelfor="eed"/>
+            <cell type="field" id="eed" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date2;tp=date2Precision" uifieldformatter="Date" colspan="3"/>
+        </row>
         <!--<row>
           <cell type="label" labelfor="1"/>
           <cell type="field" id="1" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date"/>
