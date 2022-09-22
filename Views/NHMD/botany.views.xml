@@ -743,14 +743,12 @@
 					<cell type="field" id="geography" name="geography" uitype="querycbx" initialize="name=Geography" colspan="14"/>
 				</row>
 				<row>
+				    <!-- Broad Geographic Region -->
 					<cell type="label" labelfor="t1"/>
 					<cell type="field" id="t1" name="text1" uitype="combobox" colspan="5"/>
-					<!--<cell type="label" labelfor="t2"/>
-					<cell type="field" id="t2" name="text2" uitype="combobox" colspan="3"/>-->
-				</row>
-				<row>
-					<cell type="label" labelfor="5"/>
-					<cell type="field" id="5" name="this" uitype="plugin" initialize="name=LatLonUI" colspan="11"/>
+					<!-- BGR Source -->
+					<cell type="label" labelfor="t2"/>
+					<cell type="field" id="t2" name="text2" uitype="combobox" colspan="5"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="2"/>
@@ -758,6 +756,10 @@
 					<cell type="label" label=""/>
 					<cell type="label" labelfor="6"/>
 					<cell type="field" id="6" name="latLongMethod" uitype="text" colspan="3"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="this" uitype="plugin" initialize="name=LatLonUI" colspan="11"/>
 				</row>
 				<row>
 					<cell type="subview" id="7" name="geoCoordDetails" viewname="GeoCoordDetail" colspan="17"/>
