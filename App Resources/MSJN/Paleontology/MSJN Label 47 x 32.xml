@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="MSJN Label 47 x 32"
+		 columnCount="4"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="133"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="1,10,32,46-chronosStratEnd.geologictimeperiod.chronosStratEnd" class="java.lang.String"/>
+	<field name="1,10,32,46-chronosStrat.geologictimeperiod.chronosStrat" class="java.lang.String"/>
+	<field name="1.collectionobject.altCatalogNumber" class="java.lang.String"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="1,9-determinations,4-preferredTaxon.taxon.Genus" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogedDate" class="java.lang.String"/>
+	<field name="1,9-determinations,4-preferredTaxon.taxon.fullName" class="java.lang.String"/>
+	<field name="1,9-determinations,4-preferredTaxon,77-definitionItem.taxontreedefitem.name" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<field name="1,9-determinations,4-preferredTaxon.taxon.author" class="java.lang.String"/>
+	<field name="1,10,32.paleocontext.paleoContextName" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogedDateNumericYear" class="java.lang.Integer"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="1"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="133"
+						height="0"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.01" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="93"  isSplitAllowed="true" >
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="15"
+						y="3"
+						width="34"
+						height="13"
+						key="image-logo"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/ireportslogo/msjn.png")]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="50"
+						width="115"
+						height="10"
+						key="localityName"/>
+					<box></box>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2.locality.localityName} != null ? $F{1,10,2.locality.localityName} : "ukendt lokalitet"]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="6"
+						y="19"
+						width="121"
+						height="0"
+						key="thick-line-upper"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<staticText>
+					<reportElement
+						x="50"
+						y="7"
+						width="83"
+						height="12"
+						key="Naturhistorie"/>
+					<box></box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[NATURHISTORIE]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="23"
+						width="115"
+						height="20"
+						key="taxonName"
+						isPrintWhenDetailOverflows="true"/>
+					<box></box>
+					<textElement verticalAlignment="Middle" markup="html">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<html><b>" +
+($F{1,9-determinations,4-preferredTaxon.taxon.fullName} != null ? 
+	($F{1,9-determinations,4-preferredTaxon.taxon.Genus} != null ? "<i>" + $F{1,9-determinations,4-preferredTaxon.taxon.fullName}.toUpperCase() + "</i>" : $F{1,9-determinations,4-preferredTaxon.taxon.fullName}.toUpperCase())
+	: "indet") +
+"</b></html>"]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="6"
+						y="47"
+						width="121"
+						height="0"
+						key="thick-line-lower"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="70"
+						width="115"
+						height="10"
+						key="altCatalogNr">
+							<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="60"
+						width="115"
+						height="10"
+						key="Stratigraphy">
+							<printWhenExpression><![CDATA[$F{1,10,32.paleocontext.paleoContextName} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,32.paleocontext.paleoContextName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="80"
+						width="55"
+						height="10"
+						key="CatalogNumber"/>
+					<box></box>
+					<textElement>
+						<font size="6" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["MSJN "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="68"
+						y="80"
+						width="56"
+						height="10"
+						key="regDate"/>
+					<box></box>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Reg.dato: " + ($F{1.collectionobject.catalogedDateNumericYear} != null ? $F{1.collectionobject.catalogedDateNumericYear} : "")]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="0"
+						height="93"
+						key="left-line"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.01" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="535"
+						y="0"
+						width="0"
+						height="93"
+						key="line-far-right"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="92"
+						width="133"
+						height="0"
+						key="line-bottom"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.01" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="133"
+						y="0"
+						width="0"
+						height="93"
+						key="line-right"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.01" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

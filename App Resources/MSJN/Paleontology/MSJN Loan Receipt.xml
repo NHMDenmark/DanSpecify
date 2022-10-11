@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="MSJN Loan Receipt v5"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="483"
+		 columnSpacing="0"
+		 leftMargin="56"
+		 rightMargin="56"
+		 topMargin="42"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="52.loan.remarks" class="java.lang.String"/>
+	<field name="52.loan.isClosed" class="java.lang.Boolean"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.Genus" class="java.lang.String"/>
+	<field name="52.loan.dateClosed" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.isResolved" class="java.lang.Boolean"/>
+	<field name="52.loan.text1" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.descriptionOfMaterial" class="java.lang.String"/>
+	<field name="52,71-shipments.shipment.shipmentMethod" class="java.lang.String"/>
+	<field name="52.loan.loanNumber" class="java.lang.Object"/>
+	<field name="52,54-loanPreparations.loanpreparation.outComments" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.fullName" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.receivedComments" class="java.lang.String"/>
+	<field name="52.loan.loanDate" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.quantity" class="java.lang.Integer"/>
+	<field name="52,53-loanagents.loanagent.loanAgents" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.inComments" class="java.lang.String"/>
+	<field name="52,54-loanpreparations,63,1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="52.loan.currentDueDate" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="115"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="85"
+						width="480"
+						height="30"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[KVITTERING FOR RETURNERING AF UDLÅN]]></text>
+				</staticText>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="140"
+						height="57"
+						key="image-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/ireportslogo/msjn_large.png")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="140"
+						y="2"
+						width="340"
+						height="54"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="html" lineSpacing="Single">
+						<font/>
+					</textElement>
+				<text><![CDATA[<html><b>NATURHISTORIE</b><p/>LERGRAVSVEJ 2<br/>DK-6510 GRAM<p/>+45 65 370 806</html>]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="140"
+						y="57"
+						width="340"
+						height="26"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom" rotation="None" markup="html">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<html><b>LÅN NUMMER: " + $F{52.loan.loanNumber} + "</b><p>" + $F{52.loan.loanDate}.toString() + "</html>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="35"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="1"
+						width="480"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="6"
+						y="6"
+						width="470"
+						height="15"
+						key="staticText-3"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[GENSTANDE DER UDLÅNES:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="21"
+						width="70"
+						height="14"
+						key="staticText-4"/>
+					<box></box>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[MUSEUMSNR.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="80"
+						y="21"
+						width="91"
+						height="14"
+						key="staticText-5"/>
+					<box></box>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[GENSTAND]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="176"
+						y="21"
+						width="37"
+						height="14"
+						key="staticText-6"/>
+					<box></box>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ANTAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="213"
+						y="21"
+						width="264"
+						height="14"
+						key="staticText-7"/>
+					<box></box>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[BESKRIVELSE]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="2"
+						width="0"
+						height="33"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="480"
+						y="2"
+						width="0"
+						height="33"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="19"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="0"
+						height="19"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="480"
+						y="0"
+						width="0"
+						height="19"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="2"
+						width="70"
+						height="14"
+						key="textField-2"/>
+					<box></box>
+					<textElement markup="html">
+						<font size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{52,54-loanpreparations,63,1.collectionobject.catalogNumber} != null ? "MSJN "+ $F{52,54-loanpreparations,63,1.collectionobject.catalogNumber} : "intet")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="80"
+						y="2"
+						width="91"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement markup="html">
+						<font size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<html>" + ($F{52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.Genus} != null ? "<i>" + $F{52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.fullName} + "</i>" : ($F{52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.fullName} != null ? $F{52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.fullName} : "-")) + "</html>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="176"
+						y="2"
+						width="32"
+						height="14"
+						key="textField-4"/>
+					<box></box>
+					<textElement markup="html">
+						<font size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{52,54-loanPreparations.loanpreparation.quantity} != null ? $F{52,54-loanPreparations.loanpreparation.quantity} : "-" )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="213"
+						y="2"
+						width="264"
+						height="14"
+						key="textField-5"/>
+					<box></box>
+					<textElement markup="html">
+						<font size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} != null ? $F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} : "" )]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="420"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="1"
+						y="1"
+						width="480"
+						height="0"
+						key="line-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="0"
+						height="419"
+						key="line-7"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="480"
+						y="1"
+						width="0"
+						height="418"
+						key="line-8"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="6"
+						y="6"
+						width="470"
+						height="15"
+						key="staticText-8"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[MODTAGET AF:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="23"
+						width="469"
+						height="51"
+						key="textField-6"/>
+					<box></box>
+					<textElement markup="html">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>"))
+.replace("- authorizer", "")
+: "- No authorizer defined! - ")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="6"
+						y="82"
+						width="470"
+						height="15"
+						key="staticText-11"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[RETURNERES AF: ]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="78"
+						width="480"
+						height="0"
+						key="line-9"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="1.0"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="98"
+						width="470"
+						height="64"
+						key="textField-7"/>
+					<box></box>
+					<textElement markup="html">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>"))
+.replace("- borrower", "")
+: "- No borrower defined! - ")]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="164"
+						width="480"
+						height="0"
+						key="line-10"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="2.0"/>
+</graphicElement>
+				</line>
+				<staticText>
+					<reportElement
+						x="6"
+						y="168"
+						width="470"
+						height="15"
+						key="staticText-12"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[MODTAGELSESDATO:	]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="183"
+						width="471"
+						height="14"
+						key="textField-8"/>
+					<box></box>
+					<textElement markup="html">
+						<font size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{52.loan.dateClosed}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="207"
+						width="480"
+						height="0"
+						key="line-11"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="6"
+						y="212"
+						width="470"
+						height="15"
+						key="staticText-15"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[BEMÆRKNINGER:]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="291"
+						width="480"
+						height="0"
+						key="line-13"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="228"
+						width="470"
+						height="60"
+						key="textField-9"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{52.loan.remarks} != null ? $F{52.loan.remarks} : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="6"
+						y="295"
+						width="470"
+						height="15"
+						key="staticText-16"/>
+					<box></box>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+				<text><![CDATA[SIGNATURER:]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="6"
+						y="358"
+						width="230"
+						height="0"
+						key="line-14"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="246"
+						y="358"
+						width="230"
+						height="0"
+						key="line-15"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="6"
+						y="360"
+						width="230"
+						height="54"
+						key="textField-10"/>
+					<box></box>
+					<textElement markup="html">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<html><b>DATO, MODTAGET AF</b><p/>" + 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
++ "</html>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="246"
+						y="360"
+						width="229"
+						height="54"
+						key="textField-11"/>
+					<box></box>
+					<textElement markup="html">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<html><b>DATO, RETURNERET AF</b><p/>" + 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
++ "</html>"]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="419"
+						width="480"
+						height="0"
+						key="line-16"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="0"
+						y="-177"
+						width="476"
+						height="575"
+						forecolor="#FF3333"
+						key="staticText-17">
+							<printWhenExpression><![CDATA[$F{52.loan.isClosed} != true]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="104" isBold="true"/>
+					</textElement>
+				<text><![CDATA[THIS LOAN IS NOT CLOSED!]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>
