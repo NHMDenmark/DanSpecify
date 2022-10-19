@@ -1,10 +1,10 @@
-## Upgrading Specify7 to 7.7.0 server process ##
+## Upgrading Specify7 to 7.7.4 server process ##
 
 # 1. First preparations
 
 su specify
 
-#  Download the latest version of Specify6 into a /opt/tmp folder 
+# IF NECESSARY, download the latest version of Specify6 into a /opt/tmp folder 
 sudo wget https://update.specifysoftware.org/Specify_unix_64.sh
 #  then install it into the /opt/Specify6/Specify6.8.01 folder 
 sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.01
@@ -13,12 +13,12 @@ sudo unlink /opt/specify6
 sudo ln -sf /opt/Specify6/Specify6.8.01 /opt/specify6
 sudo ln -sf /opt/specify6 /opt/specify
 
-#  Setup specify7.7.0
+#  Setup specify7.7.4
 cd ~/versions/
-mkdir v7.7.0
-cd v7.7.0
+mkdir v7.7.4
+cd v7.7.4
 git clone https://github.com/specify/specify7.git
-cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.0/specify7/specifyweb/settings/local_specify_settings.py
+cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.4/specify7/specifyweb/settings/local_specify_settings.py
 
 # In case yum refuses to install certain required libraries like e.g. redis lines need to be added to the redhat repo file;
 sudo nano /etc/yum.repos.d/redhat.repo		#add the following lines: 
@@ -32,7 +32,7 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
-# *** Create automated service for Celery & Redis worker process needed for WorkBench amongst others ***
+# *** If not already created beforehand, an automated service for Celery & Redis worker process will be needed for WorkBench amongst others ***
 #   1. add bash script 
 
 cd ~
