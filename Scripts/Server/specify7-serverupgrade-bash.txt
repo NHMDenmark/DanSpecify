@@ -83,7 +83,7 @@ deactivate
 # 4. Finishing up
 
 unlink ~/currentversion
-ln -sf /home/specify/versions/v7.6.1 /home/specify/currentversion
+ln -sf /home/specify/versions/v7.7.4 /home/specify/currentversion
 
 sudo apachectl restart 
 
