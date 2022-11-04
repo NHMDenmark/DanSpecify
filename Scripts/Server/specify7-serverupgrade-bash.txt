@@ -53,20 +53,19 @@ source specify7/ve/bin/activate
 
 cd specify7
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source ~/.nvm/nvm.sh
-nvm install --lts
-
-npm install -g npm@8.12.1
-
 pip install --upgrade pip
-pip install --upgrade pip # yes, do it multiple times if necessary
 
 # make sure that all other requirements are installed 
 pip3 install -r requirements.txt
 
 # It may also be necessary to make sure nodejs has enough available memory 
 export NODE_OPTIONS=--max_old_space_size=4096
+
+# Make sure that the latest version of nodejs is running (v16.15.1)
+node -v
+
+# You may need to update the npm browser list too! 
+npx browserslist@latest --update-db
 
 make
 
