@@ -1,4 +1,4 @@
-## Upgrading Specify7 to 7.7.4 server process ##
+## Upgrading Specify7 to 7.7.5 server process ##
 
 # NOTE: Follow instructions on https://github.com/specify/specify7/#installation but take heed of the following: 
 
@@ -8,17 +8,17 @@ su specify
 
 # IF NECESSARY, download the latest version of Specify6 into a /opt/tmp folder 
 sudo wget https://update.specifysoftware.org/Specify_unix_64.sh
-#  then install it into the /opt/Specify6/Specify6.8.01 folder 
-sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.01
+#  then install it into the /opt/Specify6/Specify6.8.02 folder 
+sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.02
 #  Switch symlink to this version of Specify6 
 sudo unlink /opt/specify6
-sudo ln -sf /opt/Specify6/Specify6.8.01 /opt/specify6
+sudo ln -sf /opt/Specify6/Specify6.8.02 /opt/specify6
 sudo ln -sf /opt/specify6 /opt/specify
 
-#  Setup specify7.7.4
+#  Setup specify7.7.5
 cd ~/versions/
-mkdir v7.7.4
-cd v7.7.4
+mkdir v7.7.5
+cd v7.7.5
 git clone https://github.com/specify/specify7.git
 cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.4/specify7/specifyweb/settings/local_specify_settings.py
 
@@ -67,24 +67,37 @@ node -v
 # You may need to update the npm browser list too! 
 npx browserslist@latest --update-db
 
+#   3. Backup the database 
+#  Compiling would automatically involve database migrations using the command: python manage.py migrate
+# It's recommended to backup the database first before compilation 
+
+#   4. Apply attachment viewer custom fix 
+# There is a special hack to make the attachment viewer work for all collections at NHMD 
+# This will have to be done before compilation 
+
+# First cd in the right directory: 
+cd ~/currentversion/specify7/specifyweb/attachment_gw
+
+# Rename the views.py for safekeeping:
+mv views.py views.py.old
+
+# Create a new views.py file
+nano views.py
+
+# Open the following in a browser & copy and paste its contents into views.py
+
+https://raw.githubusercontent.com/specify/specify7/5cb767121b135fc8ce1bcf0b3cd1724b1d452725/specifyweb/attachment_gw/views.py
+
+# navigate back to the specify7 folder and compile
+cd ../.. 
 make
 
-# **** The last steps have to be coordinated with the end users!**** 
-
-# 3. Upgrade the database 
-#  RIGHT before the migration upgrade the database by connecting to it 
-#    with the Specify6.8.01 client and then run the upgrade wizard!
-#  HOWEVER make a backup of the old database first using the Specify6 Backup and Restore tool ! 
-
-#  When done, upgrade the database from Specify7 by migrating the django models like so:
-python manage.py migrate
+# 5. Finishing up
 
 deactivate
 
-# 4. Finishing up
-
 unlink ~/currentversion
-ln -sf /home/specify/versions/v7.7.4 /home/specify/currentversion
+ln -sf /home/specify/versions/v7.7.5 /home/specify/currentversion
 
 sudo apachectl restart 
 
