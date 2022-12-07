@@ -1,3 +1,17 @@
+DELIMITER //
+
+CREATE PROCEDURE `InsertDummyRecords`(
+	IN `amount` INT,
+	IN `collectionID` INT,
+	IN `catalogerID` INT,
+	IN `agentID` INT,
+	IN `ProjectName` TINYTEXT
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
 BEGIN
     
 	DECLARE highest INT DEFAULT 0;
@@ -19,4 +33,4 @@ BEGIN
         
    END WHILE;
 
-END
+END//
