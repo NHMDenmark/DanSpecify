@@ -2,7 +2,7 @@
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
     <title xml:lang="eng">NHMD Entomology Collection</title>
-      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.2.0">
+      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.1.1">
        </description>
     <creator>
       <individualName>
@@ -21,6 +21,50 @@
       <phone></phone>
       <electronicMailAddress>nscharff@snm.ku.dk</electronicMailAddress>
     </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Thomas</givenName>
+        <surName>Pape</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Diptera and Lepidoptera</positionName>
+      <electronicMailAddress>tpape@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Alexey</givenName>
+        <surName>Solodovnikov</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Coleoptera</positionName>
+      <electronicMailAddress>asolodovnikov@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Hymenoptera, Hemiptera and lesser orders</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk </electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Henrik</givenName>
+        <surName>Enghoff</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Myriapoda</positionName>
+      <electronicMailAddress>henghoff@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>curator</role>
+    </metadataProvider>
     <metadataProvider>
       <individualName>
         <givenName>Anders Alexander</givenName>

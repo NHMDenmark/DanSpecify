@@ -1,102 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
-<archive>
-  <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">  
-    <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>    
-    <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
-    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AM"/>
-    <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
-    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark Amber Collection"/> 
-    <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
-    <queries>
-        <query contextTableId="1" name="_SpecimensAM.csv">
-            <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
-            <!-- Collection object -->
-            <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"   isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.altCatalogNumber" value=""/>
-            <field term="http://purl.org/dc/terms/modified"                  isNot="false" isRelFld="false" oper="1"  stringId="1.collectionobject.timestampModified" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/occurrenceRemarks"     isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.remarks" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/fieldNumber"           isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.fieldNumber" value=""/>
-            <!-- Collecting event -->
-            <field term="http://rs.tdwg.org/dwc/terms/EarliestDateCollected" isNot="false" isRelFld="false" oper="1"  stringId="1,10.collectingevent.startDate" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/eventRemarks"          isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.remarks" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/recordedBy"            isNot="false" isRelFld="true"  oper="11" stringId="1,10,30-collectors.collector.collectors" value=""/> 
-            <!-- Locality & Geography  -->
-            <field term="http://rs.tdwg.org/dwc/terms/locality"              isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.localityName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/geodeticDatum"         isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.datum" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.latitude1" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/decimalLongitude"      isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.longitude1" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/continent"             isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Continent" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/country"               isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Country" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/stateProvince"         isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.State" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
-            <!-- Determination & Taxonomy -->
-            <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Order"      value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName"      value=""/>
-            <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"           value=""/> 
-            <!-- Preparations --> 
-            <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>
-            <!-- Publishable -->
-            <field isNot="false" isRelFld="false" oper="6" stringId="1.collectionobject.yesNo1" value=""/> 
-        </query>
-    </queries>
-  </core>
-
-    <!-- Reference Extension -->
-    <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
-        <queries>
-            <query contextTableId="69" name="References.csv">
-                <id                                                     isNot="false" isRelFld="false" oper="1" stringId="69,29-collectionobjectcitations,1.collectionobject.guid" value=""/>
-                <field term="http://purl.org/dc/terms/creator"          isNot="false" isRelFld="true"  oper="1" stringId="69,17-authors.author.authors" value=""/>
-                <field term="http://purl.org/dc/terms/date"             isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
-                <field term="http://purl.org/dc/terms/title"            isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
-                <field term="http://purl.org/dc/terms/source"           isNot="false" isRelFld="true"  oper="1" stringId="69,51.journal.journal" value=""/>
-                <field term="http://purl.org/dc/terms/identifier"       isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
-            </query>
-        </queries>
-    </extension>
-    
-    <!-- Simple Multimedia Extension -->
-    <extension rowType="http://rs.gbif.org/terms/1.0/Multimedia">
-        <queries>
-            <query contextTableId="111" name="Media.csv">
-                <id                                                       isNot="false" isRelFld="false" oper="1"  stringId="111,1.collectionobject.guid"           value=""/>
-                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="true"  oper="1"  stringId="111,41.attachment.attachment" value="" formatName="AttachmentURI"/>
-                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="0"  stringId="111,41.attachment.mimeType"            value="image%"/>
-                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.title"               value=""/>
-                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.credit"              value=""/>
-                <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"             value=""/>
-                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.copyrightholder"     value=""/>
-                <field term="http://purl.org/dc/terms/source"             isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.LicenseLogoUrl"      value=""/>
-            </query>
-        </queries>
-    </extension>
- 
-    <!-- Identification History Extension -->
-    <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
-        <queries>
-            <query contextTableId="9" name="Determinations.csv">
-                <id isNot="false" isRelFld="false" oper="1"  stringId="9,1.collectionobject.guid" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationID" isNot="false" isRelFld="false" oper="1" stringId="9.determination.guid" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy" isNot="false" isRelFld="true" oper="1" stringId="9,5-determiner.agent.determiner" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/dateIdentified" isNot="false" isRelFld="false" oper="1" stringId="9.determination.determinedDate" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationReferences" isNot="false" isRelFld="true" oper="1" stringId="9,38-determinationcitations.determinationcitation.determinationCitations" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationRemarks" isNot="false" isRelFld="false" oper="1" stringId="9.determination.remarks" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationQualifier" isNot="false" isRelFld="false" oper="1" stringId="9.determination.qualifier" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationVerificationStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.isCurrent" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/typeStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.typeStatusName" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/scientificName" isNot="false" isRelFld="true" oper="1" stringId="9,4.taxon.taxon" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/taxonRemarks" isNot="false" isRelFld="false" oper="1" stringId="9,4.taxon.remarks" value=""/>
-	    </query>
-        </queries>
-    </extension>
-
-</archive>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>4d0b5c21-32a6-4a02-a1b5-0ea9eeadad86</alternateIdentifier>
+    <title xml:lang="eng">NHMD Amber Collection</title>
+      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.1.1">
+      </description>
+    <creator>
+      <individualName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Amber and Hemiptera</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 35321110</phone>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/10873</onlineUrl>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Lars</givenName>
+        <surName>Vilhelmsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Curator of Amber and Hemiptera</positionName>
+      <electronicMailAddress>lbvilhelmsen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>Curator</role>
+    </associatedParty>
+	<metadataProvider>
+      <individualName>
+        <givenName>Sree</givenName>
+        <surName>Selvantharan</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <electronicMailAddress>selvantharan@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>Collection Manager</role>
+    </metadataProvider>
+	<metadataProvider>
+      <individualName>
+        <givenName>Anders</givenName>
+        <surName>Illum</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>andersaillum@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>Collection manager</role>
+    </metadataProvider>
+	<metadataProvider>
+      <individualName>
+        <givenName>Jan</givenName>
+        <surName>Pedersen</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection manager</positionName>
+      <electronicMailAddress>japedersen@snm.ku.dk</electronicMailAddress>
+      <onlineUrl></onlineUrl>
+      <role>Collection manager</role>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+      <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para xml:lang="EN">The amber collection at SNM comprises almost 70.000 pieces with inclusions, mostly of insects. Almost all the pieces are of Baltic amber, either collected on the western coast of Jutland or along the Baltic coastline of Russia (Kaliningrad region) or Latvia. The collection includes approx. 100 holotypes and additional material identified to species, but most of the material is identified only to order or family. The entire collection is databased and packed in airtight zip lock bags. </para>
+      <para xml:lang="EN">The majority of the collection (57.000+ pieces) was bought in 2018 from a private collector in Skagen, Karin Nordmann Ernst. This purchase was made possible by donations from Augustinusfonden, Knud Højgaards Fond and Villum Fonden.</para>
+      <para xml:lang="DA">Ravsamlingen består af ca. 70.000 stykker med inklusioner af primært insekter. Det fleste stykker er baltisk rav og indsamlet på den Jyllands vestkyst, eller langs den baltiske kystlinje i Rusland (Kalinigrad) og Letland. Samlingen indeholder ca. 100 holotyper samt rester af dyr som er bestemt til enten orden, familie,eller artsniveau. Hele samlingen er registeret og pakket i lufttætte zip-lock poser. Størstedelen af samlingen (57.000) blev købt fra en privat samler, Karin Nordmann Ernst. Dette blev muligt igennem en gavmild donation fra Augustinusfonden, Knud Højgaards Fond og Villum Fonden.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>amber</keyword>
+      <keyword>baltic</keyword>
+      <keyword>zoology</keyword>
+      <keyword>Denmark</keyword>
+      <keyword>Copenhagen</keyword>
+      <keyword>Insecta</keyword>
+      <keyword>entomology</keyword>
+      <keyword>arachnida</keyword>
+      <keyword>insects</keyword>
+      <keywordThesaurus>n/a</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Occurrence</keyword>
+      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>   
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+      <identifier>CC-BY</identifier>
+    </licensed>
+  <pubDate>2021-04-13</pubDate>
+</dataset>
+</eml:eml>

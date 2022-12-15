@@ -8,7 +8,7 @@
     <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Danekrae Fossil Trove"/> 
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
     <queries>
-        <query contextTableId="1" name="DarwinCoreDK.csv">
+        <query contextTableId="1" name="CollObjectsDK.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Collection object -->
             <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
@@ -82,6 +82,8 @@
                 <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.title"                 value=""/>
                 <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.credit"                value=""/>
                 <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"                value=""/>
+                <!-- Publishable -->
+                <field isNot="true" isRelFld="false" oper="7" stringId="111,41.attachment.isPublic" value=""/>
             </query>
         </queries>
     </extension>
@@ -91,17 +93,17 @@
         <queries>
             <query contextTableId="9" name="Determinations.csv">
                 <id isNot="false" isRelFld="false" oper="1"  stringId="9,1.collectionobject.guid" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationID" isNot="false" isRelFld="false" oper="1" stringId="9.determination.guid" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy" isNot="false" isRelFld="true" oper="1" stringId="9,5-determiner.agent.determiner" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/dateIdentified" isNot="false" isRelFld="false" oper="1" stringId="9.determination.determinedDate" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationReferences" isNot="false" isRelFld="true" oper="1" stringId="9,38-determinationcitations.determinationcitation.determinationCitations" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationRemarks" isNot="false" isRelFld="false" oper="1" stringId="9.determination.remarks" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationQualifier" isNot="false" isRelFld="false" oper="1" stringId="9.determination.qualifier" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identificationVerificationStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.isCurrent" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/typeStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.typeStatusName" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/scientificName" isNot="false" isRelFld="true" oper="1" stringId="9,4.taxon.taxon" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/taxonRemarks" isNot="false" isRelFld="false" oper="1" stringId="9,4.taxon.remarks" value=""/>
-	    </query>
+                <field term="http://rs.tdwg.org/dwc/terms/identificationID" isNot="false" isRelFld="false" oper="1" stringId="9.determination.guid" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/identifiedBy" isNot="false" isRelFld="true" oper="1" stringId="9,5-determiner.agent.determiner" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/dateIdentified" isNot="false" isRelFld="false" oper="1" stringId="9.determination.determinedDate" value=""/>
+                <!-- <field term="http://rs.tdwg.org/dwc/terms/identificationReferences" isNot="false" isRelFld="true" oper="1" stringId="9,38-determinationcitations.determinationcitation.determinationCitations" value=""/> -->
+                <field term="http://rs.tdwg.org/dwc/terms/identificationRemarks" isNot="false" isRelFld="false" oper="1" stringId="9.determination.remarks" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/identificationQualifier" isNot="false" isRelFld="false" oper="1" stringId="9.determination.qualifier" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/identificationVerificationStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.isCurrent" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/typeStatus" isNot="false" isRelFld="false" oper="1" stringId="9.determination.typeStatusName" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/scientificName" isNot="false" isRelFld="true" oper="1" stringId="9,4.taxon.taxon" value=""/>
+                <field term="http://rs.tdwg.org/dwc/terms/taxonRemarks" isNot="false" isRelFld="false" oper="1" stringId="9,4.taxon.remarks" value=""/>
+        </query>
         </queries>
     </extension>
 

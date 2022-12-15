@@ -3,12 +3,12 @@
   <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">  
     <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>    
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
-    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AV"/>
+    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="MM"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
-    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Ornithology Collection"/> 
+    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Mammalogy Collection"/> 
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
     <queries>
-        <query contextTableId="1" name="_SpecimensAV.csv">
+        <query contextTableId="1" name="CollObjectsMM.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Collection object -->
             <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
@@ -31,15 +31,14 @@
             <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.maxUncertaintyEst" value=""/>
             <!-- Determination & Taxonomy -->
-<!--        <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/> 
+     <!--   <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/> -->
             <field term="http://rs.tdwg.org/dwc/terms/order"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Order"      value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/family"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family"     value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/>  
             <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName"      value=""/>
             <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"           value=""/> 
