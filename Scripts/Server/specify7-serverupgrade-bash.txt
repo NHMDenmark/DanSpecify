@@ -44,6 +44,7 @@ chmod a+x sp7worker.sh
 #   2. Create & start service for auto-running script
 cd /etc/systemd/system/
 sudo nano sp7worker.service		# add file contents from version in repo
+sudo service redis start      # remember to start redis server
 sudo systemctl start sp7worker
 sudo systemctl enable sp7worker
 
