@@ -7,5 +7,6 @@
 1. Loans (coming soon)
 1. Accessions  (coming soon)
 1. Labels & Reports  (coming soon)
-1. Importing Data / Workbench - (coming soon)
+1. Importing Data (Workbench) - (coming soon)
+1. Data Cleaning 
 1. [Frequently Asked Questions](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/8.%20FAQ.md)
