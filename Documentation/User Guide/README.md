@@ -45,7 +45,7 @@ The Specify7 installations for each of the Danish Natural History Museums are ac
 
 There are 2 ways of creating a support ticket: 
 1. Directly on GitHub
-2. By sending a mail 
+2. By sending a mail to this address: danspecify@fire.fundersclub.com 
 
 To be able to create tickets directly on GitHub, you need to first create a GitHub account, which you can do here: https://github.com/join 
 
