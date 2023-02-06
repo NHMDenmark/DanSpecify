@@ -17,8 +17,7 @@ This is the user guide with a brief and focused introduction to how to use vario
 This is an overview of frequently asked questions regarding the Specify installation at the Danish network of Natural History Museums (DNHM). 
 If you cannot find an answer to your question here, please write to the Specify team: 
 
- - zsuzsanna.papp@snm.ku.dk 
- - fedor.steeman@snm.ku.dk
+ - specify@snm.ku.dk 
 
 You can also communicate with the team and other end users by using the appropriate mailing list: 
 
@@ -27,7 +26,7 @@ You can also communicate with the team and other end users by using the appropri
 
 To be able to use any of our Specify instances, you need to have a user account created for that specific database. Please contact the Specify team for that.
 
-**NOTE:** For specific issues that you experience with using Specify, we prefer that [a ticket is created on our GitHub page](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/8.%20FAQ.md#).
+**NOTE:** For specific issues that you experience with using Specify, we prefer that [a ticket is created on our GitHub page](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/README.md#how-do-i-create-a-support-ticket).
 
 ## Where can I access Specify 7? 
 
