@@ -354,9 +354,9 @@
 				<row>
                     <cell type="label" labelfor="t4"/>
                     <cell type="field" id="t4" name="text4" uitype="text"/>
-					<cell type="label" label="" colspan="7"/>
-					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
-				</row>
+					<cell type="label" label="" />
+                    <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>				
+                </row>
                 <row>
                     <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
                 </row>

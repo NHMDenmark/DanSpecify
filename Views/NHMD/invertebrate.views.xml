@@ -483,6 +483,8 @@
               <row>
                 <cell type="label" label="Catalog Number: NHMD-"/>
                 <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
+                <!--<cell type="field" id="visibility" name="visibility" uitype="checkbox" initialize="editable=true" default="true"/>-->
+                <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
               </row>
               <row>
                 <cell type="label" labelfor="14"/>
@@ -508,7 +510,6 @@
               </row>
             </rows>
           </cell>
-          <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
         </row>
         <row>
           <!--<cell type="subview" viewname="CollectingEventSub" id="21" name="collectingEvent" colspan="12" rows="5"/>-->
