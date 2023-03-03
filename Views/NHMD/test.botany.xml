@@ -1201,8 +1201,6 @@
              </rows>
         </viewdef>
 
-
-
         <viewdef
                 type="formtable"
                 name="CollectionObjectProperty Table"
