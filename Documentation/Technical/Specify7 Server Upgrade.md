@@ -107,7 +107,7 @@ git clone git://github.com/specify/specify7.git
 ```
 The local settings file need to copied from the previous (and still current) version:
 ```
-cp ~/currentversion/specify7/specifyweb/settings/local_specify_settings.py specifyweb/settings/local_specify_settings.py
+cp ~/currentversion/specify7/specifyweb/settings/local_specify_settings.py specify7/specifyweb/settings/local_specify_settings.py
 ```
 NOTE: Since there may have been changes to the settings file, it's recommended to compare the new with the old version and transfer any differences. 
 
