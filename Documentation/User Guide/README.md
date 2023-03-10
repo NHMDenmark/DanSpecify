@@ -106,7 +106,7 @@ At the login screen, open the "More information" tab and enter the following inf
    * Faxe: OESM
    * Esbjerg: FIMUS
    * Svendborg: Naturama
-   * Test: spsandbox
+   * Test: NHMDtest
 * Server: specify-db.science.domain
 * Port: 3306
 
