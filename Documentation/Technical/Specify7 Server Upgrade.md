@@ -36,7 +36,7 @@ I case of a RHEL7 server version (e.g. `cpe:/o:redhat:enterprise_linux:7.9:GA:se
 
 Install the following packages first:
 ```
-yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
+sudo yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
 ```
 
 Then download a version of python3.8 (e.g. 3.8.12) in the 'opt' folder and unpack and enter unpacked folder: 
@@ -178,7 +178,7 @@ It may also be necessary to make sure nodejs has enough available memory:
 ```
 export NODE_OPTIONS=--max_old_space_size=4096
 ```
-Check that the latest version of nodejs should be installed (v16.15.1):
+Check that the latest version of nodejs should be installed (v18.*):
 ```
 node -v
 ```
