@@ -26,13 +26,38 @@ Fill in the following in the respective input fields:
 * __Port:__ 3306
   
 The username and password can be acquired from the Specify team and depend on the level of access needed. 
-For complete access, the username is 'root'. 
+Please note that this is not the same username/password as you use for logging in to Specify. 
+For complete access, the username is 'root'.
 
-NOTE: It is generally strongly discouraged to make any direct changes to the data in Specify databases, unless one is exceedingly certain about the implications of each change. Otherwise, no UPDATE/INSERT/DELETE actions should be performed, only SELECT statements run. 
+__NOTE:__ It is generally strongly discouraged to make any direct changes to the data in Specify databases, unless one is exceedingly certain about the implications of each change. Otherwise, no UPDATE/INSERT/DELETE actions should be performed, only SELECT statements run. 
   
 ### SQL Statement for statistics 
 
-  Under construction...
+You can use the following SQL statement for extracting statistics per collection: 
+
+```
+-- Number of specimens records across all collections in Specify 
+SELECT 'All specimens', COUNT(*) FROM collectionobject co
+
+UNION
+	
+-- Number of specimens records with an image attachment (i.e. not only a document)
+SELECT 'All specimens with image', COUNT(*) 
+	FROM collectionobject co
+	LEFT JOIN collectionobjectattachment coa ON coa.CollectionObjectID = co.CollectionObjectID 
+	LEFT JOIN attachment a ON a.AttachmentID = coa.AttachmentID
+	WHERE a.MimeType LIKE 'image/%'	
+
+UNION	
+	
+-- Number of specimens records per collection in Specify 
+SELECT c.CollectionName, COUNT(*) 
+	FROM collectionobject co
+	LEFT JOIN collection c ON c.collectionId = co.CollectionID 
+	GROUP BY c.collectionId
+ ``` 
+
+
 
 ## Backing up databases
 
