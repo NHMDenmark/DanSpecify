@@ -20,6 +20,58 @@ su specify
 ```
 Update local dependencies according to the general installation instructions (https://github.com/specify/specify7/#installation).
 
+### Upgrade Python to 3.8 ### 
+
+The latest version of Specify7 needs Python version 3.8 to work. Upgrading python to version 3.8 on a RHEL7 server is not as straightforwards as just typing the following on a RHEL8 server: 
+```
+sudo yum install python38
+```
+
+First check the server version using the following command: 
+```
+hostnamectl 
+```
+
+I case of a RHEL7 server version (e.g. `cpe:/o:redhat:enterprise_linux:7.9:GA:server`) you'd need to follow the next instructions.  
+
+Install the following packages first:
+```
+yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
+```
+
+Then download a version of python3.8 (e.g. 3.8.12) in the 'opt' folder and unpack and enter unpacked folder: 
+```
+cd /opt
+sudo curl -O https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz
+sudo tar -zxvf Python-3.8.12.tgz
+cd /opt/Python-3.8.12
+```
+
+Python 3.8 will be installed alongside the other versions using the following configuration: 
+```
+sudo ./configure --enable-shared --prefix=/usr
+```
+
+Then build the downloaded Python source code like so: 
+```
+sudo make install
+```
+
+Then copy the shared compiled library files (libpython3.8.so) to the /lib64/ directory:
+```
+sudo cp --no-clobber ./libpython3.8.so* /lib64/
+```
+
+Change the permissions of the libpython3.8.so files as follows:
+```
+sudo chmod 755 /lib64/libpython3.8.so*
+```
+
+For pip to use the latest version of setuptools you may need to make sure it's upgraded: 
+```
+python3 -m pip install -U setuptools
+```
+
 ### Trouble installing dependencies 
 
 In case yum refuses to install certain required libraries, several lines need to be added to the redhat repo file. 
@@ -103,7 +155,7 @@ cd versions/v<VERSION_NUMBER>
 ```
 Clone the Specify7 source code into this folder:
 ```
-git clone git://github.com/specify/specify7.git 
+git clone https://github.com/specify/specify7.git
 ```
 The local settings file need to copied from the previous (and still current) version:
 ```
