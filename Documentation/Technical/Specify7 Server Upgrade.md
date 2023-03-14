@@ -50,6 +50,7 @@ cd /opt/Python-3.8.12
 Python 3.8 will be installed alongside the other versions using the following configuration: 
 ```
 sudo ./configure --enable-shared --prefix=/usr
+sudo ./configure --enable-optimizations
 ```
 
 Then build the downloaded Python source code like so: 
