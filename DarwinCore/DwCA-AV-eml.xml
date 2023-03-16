@@ -12,12 +12,12 @@
       <positionName>Curator and Assistant Professor</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <city>Copenhagen</city>    
         <postalCode>1500</postalCode>
         <country>DK</country>
       </address>
       <electronicMailAddress>peter.hosner@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0001-7499-6224</userId> 
       <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/637347</onlineUrl>
       <role>Curator</role>
     </creator>
@@ -30,15 +30,48 @@
       <positionName>Curator and Assistant Professor</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <city>Copenhagen</city>    
         <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
       <electronicMailAddress>peter.hosner@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0001-7499-6224</userId> 
       <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/637347</onlineUrl>
-	  <userId directory="https://orcid.org/">0000-0001-7499-6224</userId> 
-      <role>curator</role>
+      <role>Curator</role>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Gloria</givenName>
+        <surName>Ramello</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>    
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone/>
+      <electronicMailAddress>gloria.ramello@snm.ku.dk</electronicMailAddress>
+      <onlineUrl />
+    </associatedParty>
+    <metadataProvider>
+      <individualName>
+        <givenName>Gloria</givenName>
+        <surName>Ramello</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>    
+        <postalCode>1500</postalCode>
+        <country>DK</country>
+      </address>
+      <phone/>
+      <electronicMailAddress>gloria.ramello@snm.ku.dk</electronicMailAddress>
+      <onlineUrl />
     </metadataProvider>
     <metadataProvider>
       <individualName>
@@ -71,53 +104,7 @@
       </individualName>
       <organizationName>Natural History Museum of Denmark</organizationName>
       <positionName>Collection Manager Emeritus</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 35321032</phone>
-      <electronicMailAddress>Jtbkristensen@snm.ku.dk</electronicMailAddress>
-      <onlineUrl />
 	</metadataProvider>
-    <associatedParty>
-      <individualName>
-        <givenName>Gloria</givenName>
-        <surName>Ramello</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection Manager Emeritus</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone/>
-      <electronicMailAddress>gloria.ramello@snm.ku.dk</electronicMailAddress>
-      <onlineUrl />
-    </associatedParty>
-    <associatedParty>
-      <individualName>
-        <givenName>Jan Bolding</givenName>
-        <surName>Kristensen</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection Manager Emeritus</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>1500</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 35321032</phone>
-      <electronicMailAddress>Jtbkristensen@snm.ku.dk</electronicMailAddress>
-      <onlineUrl />
-    </associatedParty>
     <associatedParty>
       <individualName>
         <givenName>Fedor Alexander</givenName>
@@ -127,8 +114,7 @@
       <positionName>Data Coordinator</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <city>Copenhagen</city>    
         <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
@@ -147,8 +133,7 @@
       <positionName>Data Coordinator</positionName>
       <address>
         <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <city>Copenhagen</city>    
         <postalCode>2100</postalCode>
         <country>DK</country>
       </address>
@@ -161,8 +146,7 @@
       <para xml:lang="EN">The Natural History Museum of Denmark's ornithology collection is one of the world's most extensive and diverse collections of bird specimens. With ca. 200,000 specimens representing ~ 6000 species, it provides a comprehensive record of avian diversity from around the globe, spanning more than two centuries of scientific exploration and discovery.</para>
       <para xml:lang="EN">The collection contains a wide variety of specimens and preparation types representing a vast array of species from all over the world. The predominant largest is the 150,000-strong skin collection, about half of which come from Denmark and the North Atlantic. Other geographical strengths include the Neotropics, East Africa, Central Asia, and certain portions of the Indo-Pacific. The egg collection includes 16,000 clutches, mostly from Denmark and the North Atlantic. Anatomical collections include 15,000 skeletons and 10,000 birds preserved in alcohol. Since 1987 tissue samples for genetic and genomic research accompany each specimen, about 40,000 in total. Presently, only about 25% of specimen metadata has been registered digitally.</para>
       <para xml:lang="EN">Rarities include a skull and other type material of the Dodo (Raphus cucullatus); two mounted specimens (one in breeding plumage, one in non-breeding plumage), an egg, and the only preserved soft tissue (in ethanol) parts of Great Auk (Pinguinus impennis); a Crested Shelduck (Tadorna cristata) and 103 type specimens.</para>
-	  <para xml:lang="EN">The occurrence data provided to GBIF provides valuable information on the distribution and abundance of bird species, as well as their ecological and evolutionary relationships. It includes precise location information and detailed metadata on the specimens themselves, such as their sex, age, and breeding status.
-	  </para>
+	  <para xml:lang="EN">The occurrence data provided to GBIF provides valuable information on the distribution and abundance of bird species, as well as their ecological and evolutionary relationships. It includes precise location information and detailed metadata on the specimens themselves, such as their sex, age, and breeding status.</para>
 	  <para xml:lang="EN">Researchers and enthusiasts alike can use this data to investigate a wide range of topics, from the evolution and biogeography of birds to their responses to environmental change. The Natural History Museum of Denmark's ornithology collection and its associated occurrence data on GBIF are an invaluable resource for advancing our understanding of avian biology and ecology, both now and in the future.
 	  </para>
     </abstract>
