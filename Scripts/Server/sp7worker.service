@@ -1,9 +1,9 @@
 [Unit]
 Description=Specify7 Worker Process service
+After=network.target
 
 [Service]
-After=network.target
-StartLimitIntervalSec=0[Service]
+SyslogIdentifier=sp7worker
 Type=simple
 Restart=always
 RestartSec=1
