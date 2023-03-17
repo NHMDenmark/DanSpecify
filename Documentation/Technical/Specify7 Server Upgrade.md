@@ -139,6 +139,7 @@ Create the service definition, start the redis service and activate the sp7worke
 ```
 cd /etc/systemd/system/         
 sudo nano sp7worker.service		  
+sudo systemctl daemon-reload
 sudo service redis start        
 sudo systemctl start sp7worker  
 sudo systemctl enable sp7worker 
