@@ -1,133 +1,844 @@
-<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
-  <dataset>
-    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
-    <title xml:lang="eng">NHMD Invertebrate Zoology Collection</title>
-    <description />
-    <associatedParty>
-      <individualName>
-        <givenName>Martin Vinther</givenName>
-        <surName>Sørensen</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Curator of Mollusca, Plathyhelminthes, Cnidaria - Ctenophora and Porifera</positionName>
-      <electronicMailAddress>mvsorensen@snm.ku.dk</electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>curator</role>
-    </associatedParty>
-    <associatedParty>
-      <individualName>
-        <givenName>Jørgen</givenName>
-        <surName>Olesen</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Curator of Echinodermata 'Tentaculata', Crustacea and 'Vermes'</positionName>
-      <electronicMailAddress>jolesen@snm.ku.dk </electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>curator</role>
-    </associatedParty>
-    <metadataProvider>
-      <individualName>
-        <givenName>Laura</givenName>
-        <surName>Pavesi</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Plathyhelminthes, Cnidaria, Ctenophora and Porifera</positionName>
-      <electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>collection manager</role>
-    </metadataProvider>
-    <metadataProvider>
-      <individualName>
-        <givenName>Tom</givenName>
-        <surName>Schiøtte</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Mollusca, Echinodermata, 'Tentaculata' and Tunicata </positionName>
-      <electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
-      <onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
-      <role>collection manager</role>
-    </metadataProvider>
-    <metadataProvider>
-      <individualName>
-        <givenName>Danny</givenName>
-        <surName>Eibye-Jacobsen</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Collection manager of Crustacea and 'Vermes'</positionName>
-      <electronicMailAddress>dejacobsen@snm.ku.dk </electronicMailAddress>
-      <onlineUrl></onlineUrl>
-      <role>collection manager</role>
-    </metadataProvider>
-    <associatedParty>
-      <individualName>
-        <givenName>Fedor Alexander</givenName>
-        <surName>Steeman</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>2100</postalCode>
-        <country>DK</country>
-      </address>
-      <phone>+45 22369539</phone>
-      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
-	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
-      <onlineUrl>https://snm.ku.dk/ansatte/samlinger/?id=228929&vis=medarbejder</onlineUrl>
-      <role>distributor</role>
-    </associatedParty>
-    <associatedParty>
-      <individualName>
-        <givenName>Zsuzsanna</givenName>
-        <surName>Papp</surName>
-      </individualName>
-      <organizationName>Natural History Museum of Denmark</organizationName>
-      <positionName>Data Coordinator</positionName>
-      <address>
-        <deliveryPoint>Universitetsparken 15</deliveryPoint>
-        <city>Copenhagen</city>
-        <administrativeArea>Capital Region of Denmark</administrativeArea>
-        <postalCode>2100</postalCode>
-        <country>DK</country>
-      </address>
-      <phone></phone>
-      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
-      <role>distributor</role>
-    </associatedParty>
-    <language>eng</language>
-    <abstract>
-      <para xml:lang="EN">The invertebrate collection (excepting insects and some other arthropods) is for historical reasons very much focused on marine fauna. The geographical representation is especially good for areas where Denmark has been present as a nation: Danish marine territory, Greenland, the North Atlantic in general, and our former, tropical colonies. The collection contains large amounts of original and type material from the period 1760 to about a hundred years later, when the description of the animal kingdom was really gaining speed. From later, important initiatives it is relevant to mention material from the “Dana” plankton expeditions, the “Galathea” Deep Sea Expedition, and from recent years large amounts of previously poorly known or undescribed, so called meiofauna animals. </para>
-      <para xml:lang="DA">Samlingen af hvirvelløse dyr (undtagen insekter og visse andre leddyr) har af historiske grunde specielt fokus på den marine fauna. Geografisk er repræsentationen særligt god for områder, hvor Danmark har været nationalt til stede: dansk havområde, Grønland, Nordatlanten generelt og vore tidligere tropekolonier. Samlingen rummer store mængder original- og typemateriale fra perioden 1760 og hundrede år frem, hvor dyrerigets beskrivelse virkelig tog fart. Af senere, vigtige indsatser kan nævnes “Dana”-ekspeditionernes plankton, “Galathea” Dybhavsekspeditionens indsamlinger og fra de senere år de store materialer af tidligere ret ukendte eller helt ubeskrevne, såkaldte meiofauna-dyr. </para>
-    </abstract>
-    <keywordSet>
-      <keyword>invertebrate</keyword>
-      <keyword>zoology</keyword>
-      <keyword>Denmark</keyword>
-      <keyword>Copenhagen</keyword>
-      <keyword>Mollusca</keyword>
-      <keyword>Echinodermata</keyword>
-      <keyword>molluscs</keyword>
-      <keyword>echinoderms</keyword>
-      <keywordThesaurus>n/a</keywordThesaurus>
-    </keywordSet>
-    <keywordSet>
-      <keyword>Specimen</keyword>
-      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
-    </keywordSet>
-    <keywordSet>
-      <keyword>Occurrence</keyword>
-      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
-    </keywordSet>
-    <intellectualRights>
-        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
-      </intellectualRights>   
-    <licensed>
-      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
-      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
-      <identifier>CC-BY</identifier>
-    </licensed>
-  <pubDate>2021-03-30</pubDate>
-</dataset>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" 
+	xmlns:dc="http://purl.org/dc/terms/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	packageId="48824c48-20b0-417c-b591-d775c6d41b2c" 
+	system="Specify" 
+	scope="system" 
+	xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd" 
+	xml:lang="eng">
+	<dataset>
+		<alternateIdentifier>58fc397b-eee4-4138-8a5f-50f9dfb00216</alternateIdentifier>
+		<title xml:lang="eng">NHMD Invertebrate Zoology Collection</title>
+		<creator>
+			<individualName>
+				<givenName>Danny</givenName>
+				<surName>Eibye-Jacobsen</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Crustacea and 'Vermes'</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321115</phone>
+			<electronicMailAddress>dejacobsen@snm.ku.dk</electronicMailAddress>
+			<userId directory="http://orcid.org/">0000-0002-7079-2627</userId>
+		</creator>
+		<creator>
+			<individualName>
+				<givenName>Laura</givenName>
+				<surName>Pavesi</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Plathyhelminthes, Cnidaria, Ctenophora and Porifera</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321179</phone>
+			<electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
+		</creator>
+		<creator>
+			<individualName>
+				<givenName>Tom</givenName>
+				<surName>Schiøtte</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Mollusca, Echinodermata, 'Tentaculata' and Tunicata</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321048</phone>
+			<electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
+		</creator>
+		<creator>
+			<individualName>
+				<givenName>Martin Vinther</givenName>
+				<surName>Sørensen</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Curator of Mollusca, Plathyhelminthes, Cnidaria - Ctenophora and Porifera</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321081</phone>
+			<electronicMailAddress>mvsorensen@snm.ku.dk</electronicMailAddress>
+		</creator>
+		<creator>
+			<individualName>
+				<givenName>Jørgen</givenName>
+				<surName>Olesen</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Curator of Echinodermata 'Tentaculata', Crustacea and 'Vermes'</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<administrativeArea>2100</administrativeArea>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321045</phone>
+			<electronicMailAddress>jolesen@snm.ku.dk</electronicMailAddress>
+		</creator>
+		<metadataProvider>
+			<individualName>
+				<givenName>Laura</givenName>
+				<surName>Pavesi</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Plathyhelminthes, Cnidaria, Ctenophora and Porifera</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 35321179</phone>
+			<electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
+			<onlineUrl></onlineUrl>
+			<role>collection manager</role>
+		</metadataProvider>
+		<metadataProvider>
+			<individualName>
+				<givenName>Tom</givenName>
+				<surName>Schiøtte</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Mollusca, Echinodermata, 'Tentaculata' and Tunicata</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 35321048</phone>
+			<electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
+			<onlineUrl>https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/</onlineUrl>
+			<role>collection manager</role>
+		</metadataProvider>
+		<metadataProvider>
+			<individualName>
+				<givenName>Danny</givenName>
+				<surName>Eibye-Jacobsen</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection manager of Crustacea and 'Vermes'</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 35321115</phone>
+			<electronicMailAddress>dejacobsen@snm.ku.dk</electronicMailAddress>
+			<userId directory="http://orcid.org/">0000-0002-7079-2627</userId>
+			<onlineUrl></onlineUrl>
+			<role>collection manager</role>
+		</metadataProvider>
+		<associatedParty>
+			<individualName>
+				<givenName>Fedor Alexander</givenName>
+				<surName>Steeman</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Data Coordinator</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen</city>
+				<administrativeArea>Capital Region of Denmark</administrativeArea>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 22369539</phone>
+			<electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+			<userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+			<onlineUrl>https://snm.ku.dk/ansatte/samlinger/?id=228929&amp;vis=medarbejder</onlineUrl>
+			<role>distributor</role>
+		</associatedParty>
+		<associatedParty>
+			<individualName>
+				<givenName>Isabel</givenName>
+				<surName>Calabuig</surName>
+			</individualName>
+			<organizationName>DanBIF, Natural History Museum of Denmark</organizationName>
+			<positionName>Node manager, Data curator</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen</city>
+				<administrativeArea>Capital Region of Denmark</administrativeArea>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<electronicMailAddress>icalabuig@snm.ku.dk</electronicMailAddress>
+			<onlineUrl>https://samlinger.snm.ku.dk/en/digital_collections/danbif-and-gbif/</onlineUrl>
+			<userId directory="http://orcid.org/">0000-0001-5515-7900</userId>
+			<role>distributor</role>
+		</associatedParty>
+		<language>eng</language>
+		<abstract>
+			<para>Registered invertebrates (excluding entomology) in the collections of the Natural History Museum of Denmark. These collections encompass 33 phyla, most of them primarily or exclusively marine. The most important phyla (in terms of degree of registration) are: Annelida (especially Polychaeta, marine bristleworms), Arthropoda (Crustacea), Cnidaria, Cycliophora (ring bearers), Echinodermata, Kinorhyncha (mud dragons), Loricifera (corset animals), Mollusca, Nematoda, Platyhelminthes (especially Cestoda, tapeworms), Porifera, Priapulida (penis worms), Rotifera and Tardigrada.</para>
+			<para>The collections are global in scope, with particular strenghs in Scandinavia, the North Atlantic, the Faroe Islands, Greenland, West Africa, southeast Asia, Australia and New Zealand. The oldest lots date back to the late 18th century, but the bulk was collected in the late 19th century and during the 20th century.</para>
+			<para>The invertebrate collection (excluding entomology) consists of eight curatorial units which as of 2019 is staffed by two curators (Jørgen Olesen and Martin Vinther Sørensen) and three collection managers (Laura Pavesi, Tom Schiøtte and Danny Eibye-Jacobsen). The curatorial units (with number of registered lots as of January 2019 and link to description of unit in parentheses) are:</para>
+			<para>MOLLUSCA (9,740) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/mollusca-collection/)</para>
+			<para>ECHINODERMATA (1,913) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/echinodermata---tentaculata/)</para>
+			<para>CRUSTACEA (11,993) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/crustacea/)</para>
+			<para>VERMES = Annelida, Echiura, Sipuncula and Chaetognatha (2,711) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/vermes-collection/)</para>
+			<para>PORIFERA (465) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/porifera-collection/)</para>
+			<para>CNIDARIA-CTENOPHORA (5,964) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/cnidaria-ctenophora/)</para>
+			<para>PROTOZOA (12) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/protozoa-collection/)</para>
+			<para>PLATYHELMINTHES-&quot;ASCHELMINTHES&quot;-PROTOARTHROPODA (13,660) (https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/platyhelminthes-aschelminthes-proarthropoda-collections/).</para>
+			<para>The following groups (mostly phyla) are of minor importance (only in terms of number of registered lots), have a total of 384 registered lots, and are not encompassed by the preceding eight curatorial units: Brachiopoda, Bryozoa, Enteropneusta, Entoprocta, Myxozoa, Myzozoa, Nemertea, Onychophora, Phoronida and Tunicata.</para>
+			<para>The majority of the registered lots in the invertebrate (excluding entomology) collection are available for study here, but some have been removed for various reasons (sensitive data, incomplete records, pending publication, etc.).</para>
+		</abstract>
+		<keywordSet>
+			<keyword>preserved specimens</keyword>
+			<keyword>museum collection</keyword>
+			<keyword>Acanthocephala</keyword>
+			<keyword>Annelida</keyword>
+			<keyword>Clitellata</keyword>
+			<keyword>Oligochaeta</keyword>
+			<keyword>earthworms</keyword>
+			<keyword>Hirudinea</keyword>
+			<keyword>leeches</keyword>
+			<keyword>Polychaeta</keyword>
+			<keyword>marine bristleworms</keyword>
+			<keyword>Merostomata</keyword>
+			<keyword>horseshoe crabs</keyword>
+			<keyword>Pycnogonida</keyword>
+			<keyword>sea spiders</keyword>
+			<keyword>Branchiopoda</keyword>
+			<keyword>fairy shrimp</keyword>
+			<keyword>clam shrimp</keyword>
+			<keyword>Branchiura</keyword>
+			<keyword>fish lice</keyword>
+			<keyword>Cephalocarida</keyword>
+			<keyword>Copepoda</keyword>
+			<keyword>Dendrobranchiata</keyword>
+			<keyword>Anomura</keyword>
+			<keyword>hermit crabs</keyword>
+			<keyword>Astacidea</keyword>
+			<keyword>crayfish</keyword>
+			<keyword>Brachyura</keyword>
+			<keyword>crabs</keyword>
+			<keyword>Caridea</keyword>
+			<keyword>shrimp</keyword>
+			<keyword>Euphausiacea</keyword>
+			<keyword>krill</keyword>
+			<keyword>Amphipoda</keyword>
+			<keyword>Cumacea</keyword>
+			<keyword>Isopoda</keyword>
+			<keyword>woodlice</keyword>
+			<keyword>Mysida</keyword>
+			<keyword>opossum shrimp</keyword>
+			<keyword>Tanaidacea</keyword>
+			<keyword>tanaids</keyword>
+			<keyword>Stomatopoda</keyword>
+			<keyword>mantis shrimp</keyword>
+			<keyword>Ostracoda</keyword>
+			<keyword>Remipedia</keyword>
+			<keyword>Tantulocarida</keyword>
+			<keyword>Cirripedia</keyword>
+			<keyword>barnacles</keyword>
+			<keyword>Brachiopoda</keyword>
+			<keyword>lamp shells</keyword>
+			<keyword>Bryozoa</keyword>
+			<keyword>moss animals</keyword>
+			<keyword>Chaetognatha</keyword>
+			<keyword>arrow worms</keyword>
+			<keyword>Appendicularia</keyword>
+			<keyword>Ascidiacea</keyword>
+			<keyword>Tunicata</keyword>
+			<keyword>tunicates</keyword>
+			<keyword>Cephalochordata</keyword>
+			<keyword>Cnidaria</keyword>
+			<keyword>Anthozoa</keyword>
+			<keyword>corals</keyword>
+			<keyword>sea anenomes</keyword>
+			<keyword>gorgonians</keyword>
+			<keyword>Hydrozoa</keyword>
+			<keyword>Scyphozoa</keyword>
+			<keyword>jellyfish</keyword>
+			<keyword>Ctenophora</keyword>
+			<keyword>comb jellies</keyword>
+			<keyword>Cycliophora</keyword>
+			<keyword>ring bearers</keyword>
+			<keyword>Echinodermata</keyword>
+			<keyword>Asteroidea</keyword>
+			<keyword>sea stars</keyword>
+			<keyword>Crinoidea</keyword>
+			<keyword>sea lilies</keyword>
+			<keyword>Echinoidea</keyword>
+			<keyword>sea urchins</keyword>
+			<keyword>Holothuroidea</keyword>
+			<keyword>sea cucumbers</keyword>
+			<keyword>Ophiuroidea</keyword>
+			<keyword>brittle stars</keyword>
+			<keyword>Echiura</keyword>
+			<keyword>spoon worms</keyword>
+			<keyword>Entoprocta</keyword>
+			<keyword>Foraminifera</keyword>
+			<keyword>Gastrotricha</keyword>
+			<keyword>Gnathostomulida</keyword>
+			<keyword>Enteropneusta</keyword>
+			<keyword>acorn worms</keyword>
+			<keyword>Kinorhyncha</keyword>
+			<keyword>mud dragons</keyword>
+			<keyword>Loricifera</keyword>
+			<keyword>corset animals</keyword>
+			<keyword>Micrognathozoa</keyword>
+			<keyword>Mollusca</keyword>
+			<keyword>Aplacophora</keyword>
+			<keyword>Bivalvia</keyword>
+			<keyword>mussels</keyword>
+			<keyword>clams</keyword>
+			<keyword>Cephalopoda</keyword>
+			<keyword>octopus</keyword>
+			<keyword>squid</keyword>
+			<keyword>Gastropoda</keyword>
+			<keyword>snails</keyword>
+			<keyword>Opisthobranchia</keyword>
+			<keyword>Monoplacophora</keyword>
+			<keyword>Polyplacophora</keyword>
+			<keyword>chitons</keyword>
+			<keyword>Scaphopoda</keyword>
+			<keyword>Nematoda</keyword>
+			<keyword>roundworms</keyword>
+			<keyword>Nematomorpha</keyword>
+			<keyword>Nemertea</keyword>
+			<keyword>ribbon worms</keyword>
+			<keyword>Onychophora</keyword>
+			<keyword>velvet worms</keyword>
+			<keyword>Platyhelminthes</keyword>
+			<keyword>flatworms</keyword>
+			<keyword>Cestoda</keyword>
+			<keyword>tapeworms</keyword>
+			<keyword>Trematoda</keyword>
+			<keyword>flukes</keyword>
+			<keyword>Porifera</keyword>
+			<keyword>sponges</keyword>
+			<keyword>Priapulida</keyword>
+			<keyword>penis worms</keyword>
+			<keyword>Rotifera</keyword>
+			<keyword>Sipuncula</keyword>
+			<keyword>peanut worms</keyword>
+			<keyword>Tardigrada</keyword>
+			<keyword>water bears</keyword>
+			<keyword>Arabia Feix</keyword>
+			<keyword>Dijmphna</keyword>
+			<keyword>Tjalfe</keyword>
+			<keyword>Ingolf</keyword>
+			<keyword>Dana</keyword>
+			<keyword>Godthaab</keyword>
+			<keyword>Atlantide</keyword>
+			<keyword>Galathea</keyword>
+			<keyword>BIOFAR</keyword>
+			<keyword>O.F. Müller</keyword>
+			<keyword>Fabricius</keyword>
+			<keyword>Forskål</keyword>
+			<keyword>Moltke</keyword>
+			<keyword>Schumacher</keyword>
+			<keyword>Spengler</keyword>
+			<keyword>Chemnitz</keyword>
+			<keyword>Steenstrup</keyword>
+			<keyword>Th. Mortensen</keyword>
+			<keyword>Krøyer</keyword>
+			<keyword>Ørsted</keyword>
+			<keyword>Mörch</keyword>
+			<keyword>Levinsen</keyword>
+			<keyword>Ditlevsen</keyword>
+			<keyword>Wesenberg-Lund</keyword>
+			<keyword>Kirkegaard</keyword>
+			<keyword>Eibye-Jacobsen</keyword>
+			<keyword>Lundbeck</keyword>
+			<keyword>Brøndsted</keyword>
+			<keyword>Tendal</keyword>
+			<keyword>Lütken</keyword>
+			<keyword>Jungersen</keyword>
+			<keyword>Kramp</keyword>
+			<keyword>Petersen</keyword>
+			<keyword>Nørvang</keyword>
+			<keyword>Krabbe</keyword>
+			<keyword>Thulin</keyword>
+			<keyword>Pedersen</keyword>
+			<keyword>Jensenius Madsen</keyword>
+			<keyword>Hansen</keyword>
+			<keyword>Stephensen</keyword>
+			<keyword>Wolff</keyword>
+			<keyword>Just</keyword>
+			<keyword>Olesen</keyword>
+			<keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+		</keywordSet>
+		<keywordSet>
+			<keyword>Specimen</keyword>
+			<keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+		</keywordSet>
+		<intellectualRights>
+			<para>This work is licensed under a 
+				<ulink url="http://creativecommons.org/licenses/by/4.0/legalcode">
+					<citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle>
+				</ulink>.
+			</para>
+		</intellectualRights>
+		<licensed>
+			<licenseName>Creative Commons Attribution 4.0 International</licenseName>
+			<url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+			<identifier>CC-BY</identifier>
+		</licensed>
+		<pubDate>2021-03-30</pubDate>
+		<distribution scope="document">
+			<online>    
+			<url function="information">https://samlinger.snm.ku.dk/en/dry-and-wet-collections/zoology/</url>
+			</online>
+		</distribution>
+		<coverage>
+			<geographicCoverage>
+				<geographicDescription>Global; primarily marine, but also limnic and terrestrial</geographicDescription>
+				<boundingCoordinates>
+					<westBoundingCoordinate>-180</westBoundingCoordinate>
+					<eastBoundingCoordinate>180</eastBoundingCoordinate>
+					<northBoundingCoordinate>90</northBoundingCoordinate>
+					<southBoundingCoordinate>-90</southBoundingCoordinate>
+				</boundingCoordinates>
+			</geographicCoverage>
+			<temporalCoverage>
+				<rangeOfDates>
+					<beginDate>
+						<calendarDate>1750-01-01</calendarDate>
+					</beginDate>
+					<endDate>
+						<calendarDate>2020-12-31</calendarDate>
+					</endDate>
+				</rangeOfDates>
+			</temporalCoverage>
+			<taxonomicCoverage>
+				<generalTaxonomicCoverage>Collection of invertebrates excl. entomology at the Natural History Museum of Denmark</generalTaxonomicCoverage>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Acanthocephala</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Annelida</taxonRankValue>
+					<commonName>segmented worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Clitellata</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>subclass</taxonRankName>
+					<taxonRankValue>Oligochaeta</taxonRankValue>
+					<commonName>earthworms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>subclass</taxonRankName>
+					<taxonRankValue>Hirudinea</taxonRankValue>
+					<commonName>leeches</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Polychaeta</taxonRankValue>
+					<commonName>marine bristleworms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Merostomata</taxonRankValue>
+					<commonName>horseshoe crabs</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Pycnogonida</taxonRankValue>
+					<commonName>sea spiders</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Branchiopoda</taxonRankValue>
+					<commonName>fairy shrimp</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Branchiura</taxonRankValue>
+					<commonName>fish lice</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Cephalocarida</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Copepoda</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>suborder</taxonRankName>
+					<taxonRankValue>Dendrobranchiata</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>infraorder</taxonRankName>
+					<taxonRankValue>Anomura</taxonRankValue>
+					<commonName>hermit crabs</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>infraorder</taxonRankName>
+					<taxonRankValue>Astacidea</taxonRankValue>
+					<commonName>crayfish</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>infraorder</taxonRankName>
+					<taxonRankValue>Brachyura</taxonRankValue>
+					<commonName>crabs</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>infraorder</taxonRankName>
+					<taxonRankValue>Caridea</taxonRankValue>
+					<commonName>shrimp</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Euphausiacea</taxonRankValue>
+					<commonName>krill</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Amphipoda</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Cumacea</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Isopoda</taxonRankValue>
+					<commonName>woodlice</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Mysida</taxonRankValue>
+					<commonName>opossum shrimp</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Tanaidacea</taxonRankValue>
+					<commonName>tanaids</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Stomatopoda</taxonRankValue>
+					<commonName>mantis shrimp</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Ostracoda</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Remipedia</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Tantulocarida</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>subclass</taxonRankName>
+					<taxonRankValue>Cirripedia</taxonRankValue>
+					<commonName>barnacles</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Brachiopoda</taxonRankValue>
+					<commonName>lamp shells</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Bryozoa</taxonRankValue>
+					<commonName>moss animals</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Chaetognatha</taxonRankValue>
+					<commonName>arrow worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Appendicularia</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Ascidiacea</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>subphylum</taxonRankName>
+					<taxonRankValue>Tunicata</taxonRankValue>
+					<commonName>tunicates</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>subphylum</taxonRankName>
+					<taxonRankValue>Cephalochordata</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Cnidaria</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Anthozoa</taxonRankValue>
+					<commonName>corals</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Hydrozoa</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Scyphozoa</taxonRankValue>
+					<commonName>jellyfish</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Ctenophora</taxonRankValue>
+					<commonName>comb jellies</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Cycliophora</taxonRankValue>
+					<commonName>ring bearers</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Echinodermata</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Asteroidea</taxonRankValue>
+					<commonName>sea stars</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Crinoidea</taxonRankValue>
+					<commonName>sea lilies</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Echinoidea</taxonRankValue>
+					<commonName>sea urchins</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Holothuroidea</taxonRankValue>
+					<commonName>sea cucmubers</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Ophiuroidea</taxonRankValue>
+					<commonName>brittle stars</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Entoprocta</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Foraminifera</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Gastrotricha</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Gnathostomulida</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Enteropneusta</taxonRankValue>
+					<commonName>acorn worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Kinorhyncha</taxonRankValue>
+					<commonName>mud dragons</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Loricifera</taxonRankValue>
+					<commonName>corset animals</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Micrognathozoa</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Mollusca</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Aplacophora</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Bivalvia</taxonRankValue>
+					<commonName>clams</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Cephalopoda</taxonRankValue>
+					<commonName>squid</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Gastropoda</taxonRankValue>
+					<commonName>snails</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Monoplacophora</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Polyplacophora</taxonRankValue>
+					<commonName>chitons</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Scaphopoda</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Nematoda</taxonRankValue>
+					<commonName>roundworms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Nematomorpha</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Nemertea</taxonRankValue>
+					<commonName>ribbon worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Onychophora</taxonRankValue>
+					<commonName>velvet worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Platyhelminthes</taxonRankValue>
+					<commonName>flatworms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Cestoda</taxonRankValue>
+					<commonName>tapeworms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>class</taxonRankName>
+					<taxonRankValue>Trematoda</taxonRankValue>
+					<commonName>flukes</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Porifera</taxonRankValue>
+					<commonName>sponges</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Priapulida</taxonRankValue>
+					<commonName>penis worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Rotifera</taxonRankValue>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Sipuncula</taxonRankValue>
+					<commonName>peanut worms</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>phylum</taxonRankName>
+					<taxonRankValue>Tardigrada</taxonRankValue>
+					<commonName>water bears</commonName>
+				</taxonomicClassification>
+				<taxonomicClassification>
+					<taxonRankName>order</taxonRankName>
+					<taxonRankValue>Echiura</taxonRankValue>
+					<commonName>spoon worms</commonName>
+				</taxonomicClassification>
+			</taxonomicCoverage>
+		</coverage>
+		<maintenance>
+			<description>
+				<para></para>
+			</description>
+			<maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+		</maintenance>
+		<contact>
+			<individualName>
+				<givenName>Danny</givenName>
+				<surName>Eibye-Jacobsen</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection Manager</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 35321115</phone>
+			<electronicMailAddress>dejacobsen@snm.ku.dk</electronicMailAddress>
+			<userId directory="http://orcid.org/">0000-0002-7079-2627</userId>
+		</contact>
+		<contact>
+			<individualName>
+				<givenName>Tom</givenName>
+				<surName>Schiøtte</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection Manager</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+4535321048</phone>
+			<electronicMailAddress>tschioette@snm.ku.dk</electronicMailAddress>
+		</contact>
+		<contact>
+			<individualName>
+				<givenName>Laura</givenName>
+				<surName>Pavesi</surName>
+			</individualName>
+			<organizationName>Natural History Museum of Denmark</organizationName>
+			<positionName>Collection Manager</positionName>
+			<address>
+				<deliveryPoint>Universitetsparken 15</deliveryPoint>
+				<city>Copenhagen Ø</city>
+				<postalCode>2100</postalCode>
+				<country>DK</country>
+			</address>
+			<phone>+45 35321179</phone>
+			<electronicMailAddress>lpavesi@snm.ku.dk</electronicMailAddress>
+		</contact>
+		<methods>
+			<methodStep>
+				<description>
+					<para></para>
+				</description>
+			</methodStep>
+		</methods>
+	</dataset>
 </eml:eml>
