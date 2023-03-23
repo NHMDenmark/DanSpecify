@@ -28,6 +28,11 @@ To be able to use any of our Specify instances, you need to have a user account 
 
 **NOTE:** For specific issues that you experience with using Specify, we prefer that [a ticket is created on our GitHub page](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/README.md#how-do-i-create-a-support-ticket).
 
+* [Where can I access Specify 7?](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#where-can-i-access-specify-7)
+* [I need to (re)install Specify 6 ](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#i-need-to-reinstall-specify-6)
+* [How do I create a support ticket?](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#how-do-i-create-a-support-ticket)
+* [Why use Specify?]()
+
 ## Where can I access Specify 7? 
 
 The Specify7 installations for each of the Danish Natural History Museums are accessible via these URLs: 
@@ -125,3 +130,7 @@ Copy the Master Key that is generated using the key combination 'Ctrl' and 'C'. 
 Now you can log on to Specify6!
 
 **NOTE:** If you aren't able to acquire your Master Key through Specify7, please contact the team. 
+
+## Why use Specify? 
+
+(stub)
