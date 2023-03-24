@@ -134,4 +134,47 @@ Now you can log on to Specify6!
 
 ## Why use Specify? 
 
+There are many different ways to keep track of collections data digitally. 
+Many years ago, the decision was made by the organization of Danish Natural History Museums to opt for Specify. 
+Why is using such a specialised software solution the best way forward rather than using spreadsheets, custom FileMaker files or bespoke databases? 
+And what are the advantages of using Specify specifically rather than an alternative system on the market? 
+
+The advantage of a specialised collections management system are the following: 
+
+1. Single system to be supported 
+2. Central repository of all data 
+3. Relational structuring of data 
+4. Ready features for working with data 
+5. Easy sharing of data 
+
+The advantage of using Specify over alternatives are the following: 
+
+1. Low cost 
+2. Widely used
+3. Open source  
+
+### Single system 
+
+Managing data digitally actually requires a lot of specialized expertise.  
+
+(stub)
+
+### Central repository 
+
+(stub)
+
+### Relational Data Structure 
+
+(stub)
+
+### Low Cost
+
+(stub)
+
+### Widely Used 
+
+(stub)
+
+### Open Source 
+
 (stub)
