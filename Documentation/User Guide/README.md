@@ -16,10 +16,10 @@ This is the user guide with a brief and focused introduction to how to use vario
 
 This is an overview of frequently asked questions regarding the Specify installation at the Danish network of Natural History Museums (DNHM). 
 
-1. [Where can I access Specify 7?](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#where-can-i-access-specify-7)
-1. [I need to (re)install Specify 6 ](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#i-need-to-reinstall-specify-6)
-1. [How do I create a support ticket?](https://github.com/NHMDenmark/DanSpecify/tree/master/Documentation/User%20Guide#how-do-i-create-a-support-ticket)
-1. [Why use Specify?]()
+1. [Where can I access Specify 7?](#where-can-i-access-specify-7)
+1. [I need to (re)install Specify 6 ](#i-need-to-reinstall-specify-6)
+1. [How do I create a support ticket?](#how-do-i-create-a-support-ticket)
+1. [Why use Specify?](#why-use-specify)
 
 If you cannot find an answer to your question here, please write to the Specify team: 
 
