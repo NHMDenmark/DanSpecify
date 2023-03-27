@@ -892,6 +892,10 @@
           <cell type="field" id="mod" name="modifier" uitype="combobox" picklist="other_id_institution"/>
           <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
         </row>
+		
+
+		
+		
         <row>
             <cell type="label" labelfor="4"/>
             <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
@@ -900,15 +904,33 @@
             <cell type="label" labelfor="2"/>
             <cell type="field" id="2" name="projectNumber" uitype="text" colspan="3"/>
         </row>
+		
+		<row>
+			<cell type="label" labelfor="name"/>
+			<cell type="field" id="name" name="name" uitype="text"/>
+			<cell type="label" labelfor="cn"/>
+			<cell type="field" id="cn" name="text4" uitype="text"/>
+			<cell type="label" labelfor="aves"/>
+			<cell type="field" id="aves" name="text5" uitype="text" colspan="3"/>
+		</row>  
+		
+		<row>  
+			<cell type="label" labelfor="egg"/>
+			<cell type="field" id="egg" name="text6" uitype="text"/>
+			<cell type="label" labelfor="lopp"/>
+			<cell type="field" id="lopp" name="text7" uitype="text"/>
+			<cell type="label" label=""/>
+			<cell type="field" id="yesno1" name="yesno1" uitype="checkbox" initialize="editable=true" default="true"/>
+		</row>
+		
+		
+		
         <!--<row>
           <cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="11" rows="3"/>
         </row>-->
-        <row>
-          <cell type="label" labelfor="name"/>
-          <cell type="field" id="name" name="name" uitype="text"/>
-		  <cell type="label" label=""/>
-		  <cell type="field" id="yesno1" name="yesno1" uitype="checkbox" initialize="editable=true" default="true"/>
-        </row>
+
+			
+		
         <row>
           <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
         </row>
