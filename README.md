@@ -177,10 +177,6 @@ Being part of the consortium has the major advantages of making sure that develo
 Not only that, we are also eligible for support from the Specify team in Kansas. 
 This is still at a much lower price than most of the commercials solutions out there and that also often are **closed source** meaning a complete dependence on the producer of this solution. 
 
-### Widely Used 
-
-The Specify
-
 ### Open Source 
 
 Open source software has many advantages not in the least the following: 
