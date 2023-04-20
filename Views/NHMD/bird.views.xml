@@ -431,7 +431,7 @@
 		  <cell type="label" labelfor="sexdeterm"/>
           <cell type="field" id="sexdeterm" name="text18" uitype="text"/>
           <cell type="label" labelfor="gonads"/>
-          <cell type="field" id="gonads" name="text6" uitype="text"/>
+          <cell type="field" id="gonads" name="text6" uitype="textareabrief" rows="1" colspan="7"/>
         </row>		  
 		 
         <row>		 
@@ -469,7 +469,7 @@
           <cell type="label" labelfor="toelen"/>
           <cell type="field" id="toelen" name="number8" uitype="text" />
 		  <cell type="label" labelfor="hallux"/>
-          <cell type="field" id="hallux" name="number11" uitype="text" colspan="3"/>
+          <cell type="field" id="hallux" name="number11" uitype="text" />
         </row>
 		
 
