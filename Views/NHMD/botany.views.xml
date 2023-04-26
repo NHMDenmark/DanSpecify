@@ -352,8 +352,10 @@
                     <cell type="field" id="2" name="projectNumber" uitype="text"/>
                 </row>
 				<row>
-					<cell type="label" label="" colspan="9"/>
-					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+					<cell type="label" label=""/>
+					<cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
+					<cell type="label" label="" />
+					<cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
 				</row>
                 <row>
                     <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
