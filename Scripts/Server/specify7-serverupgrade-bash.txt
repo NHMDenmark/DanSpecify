@@ -48,7 +48,7 @@ sudo service redis start      # remember to start redis server
 sudo systemctl start sp7worker
 # Remember to enable restart of services
 sudo systemctl enable sp7worker
-sudo systemctl enable sp7worker
+sudo systemctl enable redis
 
 # Fix nodejs version (only latest stable version v16.15.1) and compile
 python3 -m venv specify7/ve 
