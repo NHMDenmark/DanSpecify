@@ -20,7 +20,7 @@ cd ~/versions/
 mkdir v7.7.5
 cd v7.7.5
 git clone https://github.com/specify/specify7.git
-cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.4/specify7/specifyweb/settings/local_specify_settings.py
+cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.5/specify7/specifyweb/settings/local_specify_settings.py
 
 # In case yum refuses to install certain required libraries like e.g. redis lines need to be added to the redhat repo file;
 sudo nano /etc/yum.repos.d/redhat.repo		#add the following lines: 
