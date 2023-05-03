@@ -1,3 +1,5 @@
+### NOTE this recipe is out of date vis-à-vis the one over here:  https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/Technical/Specify7%20Server%20Upgrade.md
+
 ## Upgrading Specify7 to 7.7.5 server process ##
 
 # NOTE: Follow instructions on https://github.com/specify/specify7/#installation but take heed of the following: 
