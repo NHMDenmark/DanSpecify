@@ -7,12 +7,14 @@
 su specify
 
 # IF NECESSARY, download the latest version of Specify6 into a /opt/tmp folder 
+cd /opt/tmp
 sudo wget https://update.specifysoftware.org/Specify_unix_64.sh
-#  then install it into the /opt/Specify6/Specify6.8.02 folder 
-sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.02
+#  then install it into the /opt/Specify6/Specify6.8.03 folder 
+sudo mkdir /opt/Specify6/Specify6.8.03
+sudo sh Specify_unix_64.sh -q -dir /opt/Specify6/Specify6.8.03
 #  Switch symlink to this version of Specify6 
 sudo unlink /opt/specify6
-sudo ln -sf /opt/Specify6/Specify6.8.02 /opt/specify6
+sudo ln -sf /opt/Specify6/Specify6.8.03 /opt/specify6
 sudo ln -sf /opt/specify6 /opt/specify
 
 #  Setup specify7.7.5
@@ -20,7 +22,8 @@ cd ~/versions/
 mkdir v7.7.5
 cd v7.7.5
 git clone https://github.com/specify/specify7.git
-cp ~/versions/v7.6.1/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.5/specify7/specifyweb/settings/local_specify_settings.py
+git checkout -b 62052498cc3592ddf61dce52e09a1fd666f2796e # Gets version v7.7.5 specifically 
+cp ~/versions/v7.7.4/specify7/specifyweb/settings/local_specify_settings.py ~/versions/v7.7.5/specify7/specifyweb/settings/local_specify_settings.py
 
 # In case yum refuses to install certain required libraries like e.g. redis lines need to be added to the redhat repo file;
 sudo nano /etc/yum.repos.d/redhat.repo		#add the following lines: 
@@ -74,22 +77,7 @@ npx browserslist@latest --update-db
 #  Compiling would automatically involve database migrations using the command: python manage.py migrate
 # It's recommended to backup the database first before compilation 
 
-#   4. Apply attachment viewer custom fix 
-# There is a special hack to make the attachment viewer work for all collections at NHMD 
-# This will have to be done before compilation 
-
-# First cd in the right directory: 
-cd ~/currentversion/specify7/specifyweb/attachment_gw
-
-# Rename the views.py for safekeeping:
-mv views.py views.py.old
-
-# Create a new views.py file
-nano views.py
-
-# Open the following in a browser & copy and paste its contents into views.py
-
-https://raw.githubusercontent.com/specify/specify7/5cb767121b135fc8ce1bcf0b3cd1724b1d452725/specifyweb/attachment_gw/views.py
+#   4. Compile 
 
 # navigate back to the specify7 folder and compile
 cd ../.. 
