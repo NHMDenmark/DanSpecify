@@ -94,7 +94,8 @@ Remember that you need the 64-bits version of Java for using the 64-bits version
 
 You can download the right version here:  
 
-http://update.specifysoftware.org/6802/ 
+NHMD: http://update.specifysoftware.org/6803/ 
+OTHERS: http://update.specifysoftware.org/6801/
 
 When you've finished installing start Specify6 to log in to the database. 
 
