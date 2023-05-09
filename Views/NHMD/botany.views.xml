@@ -357,6 +357,28 @@
 					<cell type="label" label="" />
 					<cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
 				</row>
+				
+        <row>
+          <cell type="panel" id="Frankenpanel" name="Frankenpanel"  coldef="p,2px,f:p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+            <rows>
+              <row>
+                <cell type="panel" id="ContainerPanel" name="ContainerPanel" coldef="p" rowdef="p" colspan="3">
+                  <rows>
+                    <row>
+                      <cell type="panel" id="CPInner" name="CPInner" coldef="p" rowdef="p" initialize="border=line;bordercolor=200,200,200;bgcolor=240,240,240">
+                        <rows>
+                          <row>
+                            <cell type="field" id="ContainerPlugin" uitype="plugin" name="this" initialize="name=ContainerPlugin"/>
+                          </row>
+                        </rows>
+                      </cell>
+                    </row>
+                  </rows>
+                </cell>
+              </row>
+            </rows>
+        </row>
+							
                 <row>
                     <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
                 </row>
