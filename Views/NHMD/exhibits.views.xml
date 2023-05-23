@@ -2,6 +2,24 @@
 <viewset name="Exhibits Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     
     <views>
+	
+	   <view name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" isinternal="false" resourcelabels="false">
+			<desc><![CDATA[CollectingEvent Form]]></desc>
+			<altviews>
+				<altview name="CollectingEvent View" viewdef="CollectingEvent" mode="view" default="true"/>
+				<altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
+			</altviews>
+		</view>
+
+		<view name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" resourcelabels="false">
+			<desc><![CDATA[CollectingEvent SubForm]]></desc>
+			<altviews>
+				<altview name="CollectingEventSub View" viewdef="CollectingEventSub" mode="view"/>
+				<altview name="CollectingEventSub Edit" viewdef="CollectingEventSub" mode="edit" default="true"/>
+			</altviews>
+		</view>	
+		
+ 
         
         <view name="CollectionObject"
             class="edu.ku.brc.specify.datamodel.CollectionObject"
@@ -252,12 +270,9 @@
                 </row>
                 
 
-				
-
-        <!--        <row>
-                    <cell type="subview" viewname="TreatmentEvent" id="20" name="treatmentEvents" colspan="15" rows="3"/>
-                </row>
-			-->				
+				<row>
+					<cell type="subview" viewname="CollectingEventSub" id="ce" name="collectingEvent" colspan="13" rows="5"/>
+				</row>			
 				
 				<row>
 					<cell type="subview" id="19" viewname="CollectionObjectProperty" name="collectionObjectProperties" colspan="13"/>
@@ -749,13 +764,7 @@
                 </row>
 				
 
-				<row>
-                    <cell type="separator" label="Attachments(Condition assessment and Treatment approval)" colspan="13"/>
-                </row>	
-                <row>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="treatmentEventAttachments" colspan="13" 
-					initialize="icon=TreatmentEventAttachment" defaulttype="icon"/>
-                </row>
+
 
             </rows>
         </viewdef>
@@ -804,20 +813,49 @@
                 </row>
 				
 
-
-				<row>
-                    <cell type="separator" label="Attachments(Condition assessment and Treatment approval)" colspan="13"/>
-                </row>		
-                <row>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="treatmentEventAttachments" colspan="13" 
-					initialize="icon=TreatmentEventAttachment" defaulttype="icon"/>					
-					
-                </row>
 				
 			</rows>
         </viewdef>
 
+		
+		<viewdef type="form" name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+		  <desc><![CDATA[Collecting Event]]></desc>
+		  <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
+		  <columnDef os="lnx">115px,2px,210px,5px,105px,2px,210px,5px,125px,2px,136px,0px,p:g</columnDef>
+		  <columnDef os="mac">130px,2px,260px,5px,85px,2px,260px,5px,115px,2px,166px,0px,p:g</columnDef>
+		  <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
+		  <rowDef auto="true" cell="p" sep="2px"/>
+		  <rows>
+			<!--        
+			<row>
+			  <cell type="separator" label="Attachments(Condition assessment and Treatment approval)" colspan="13"/>
+			</row>	
+			-->			
+			<row>
+			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=left;btn=true;icon=CollectingEventAttachment" colspan="13"/>
+			</row>
+		  
+		  </rows>
+		</viewdef>
 
+		<viewdef type="form" name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+		  <desc><![CDATA[Collecting Event]]></desc>
+		  <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
+		  <columnDef os="lnx">115px,2px,210px,5px,105px,2px,210px,5px,125px,2px,136px,0px,p:g</columnDef>
+		  <columnDef os="mac">130px,2px,260px,5px,85px,2px,260px,5px,115px,2px,166px,0px,p:g</columnDef>
+		  <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
+		  <rowDef auto="true" cell="p" sep="2px"/>
+		  <rows>
+			<!--        
+			<row>
+			  <cell type="separator" label="Attachments(Condition assessment and Treatment approval)" colspan="13"/>
+			</row>	
+			-->		
+			<row>
+			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=left;btn=true;icon=CollectingEventAttachment" colspan="13"/>
+			</row>
+		  </rows>
+		</viewdef>
 
 		
     </viewdefs>
