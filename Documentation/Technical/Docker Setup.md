@@ -2,7 +2,7 @@
 
 Initial attempts of installing docker on specifyweb01fl has been succesful. 
 
-Specify's docker-compose git repository was cloned to `/root/specify/`
+Specify's [docker-compositions](https://github.com/specify/docker-compositions) git repository was cloned to `/root/specify/`
 
 Docker is started as root using the following command: 
 
