@@ -832,7 +832,7 @@
 			</row>	
 			-->			
 			<row>
-			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=left;btn=true;icon=CollectingEventAttachment" colspan="13"/>
+			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" colspan="15" initialize="icon=CollectingEventAttachment" defaulttype="icon" />
 			</row>
 		  
 		  </rows>
@@ -852,7 +852,7 @@
 			</row>	
 			-->		
 			<row>
-			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=left;btn=true;icon=CollectingEventAttachment" colspan="13"/>
+			  <cell type="subview" id="ceattach" viewname="ObjectAttachment" name="collectingEventAttachments" colspan="15" initialize="icon=CollectingEventAttachment" defaulttype="icon" />
 			</row>
 		  </rows>
 		</viewdef>
