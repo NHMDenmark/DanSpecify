@@ -94,7 +94,8 @@ Remember that you need the 64-bits version of Java for using the 64-bits version
 
 You can download the right version here:  
 
-http://update.specifysoftware.org/6802/ 
+NHMD: http://update.specifysoftware.org/6803/ 
+OTHERS: http://update.specifysoftware.org/6801/
 
 When you've finished installing start Specify6 to log in to the database. 
 
@@ -155,26 +156,32 @@ The advantage of using Specify over alternatives are the following:
 
 ### Single system 
 
-Managing data digitally actually requires a lot of specialized expertise.  
-
-(stub)
+Managing data digitally actually requires a lot of specialized expertise. 
+If different department or sections each uses their own bespoke system they need a specialist to manage their specific solution. 
 
 ### Central repository 
 
-(stub)
+Saving data a central place like in the University infrastructure as is our case is by far the safest way. 
+Not only is it regularly backed up, it is also kept safe from cyberattacks and ransomware. 
 
 ### Relational Data Structure 
 
-(stub)
+As has been known since the seventies, a relational data structure is the most optimal way for storing data. 
+1. It minimize repetition 
+2. It makes searching easier 
+3. It saves space 
 
 ### Low Cost
 
-(stub)
-
-### Widely Used 
-
-(stub)
+The Specify Software suite is **open source** and in principle free of cost for anyone to install and deploy on their own systems. 
+Being part of the consortium has the major advantages of making sure that development continues on Specify and also that we can influence this. 
+Not only that, we are also eligible for support from the Specify team in Kansas. 
+This is still at a much lower price than most of the commercials solutions out there and that also often are **closed source** meaning a complete dependence on the producer of this solution. 
 
 ### Open Source 
 
-(stub)
+Open source software has many advantages not in the least the following: 
+1. It's in principle free to install & deploy yourself if you have the expertise & infrastructure 
+2. It's in principle possible to troubleshoot any issues yourself 
+3. It's in principle possible to develop your own solutions to be integrate into the main branch 
+4. In contrast to closed source, it's in principle safeguarded continued development into the future by whoever holds the torch 
