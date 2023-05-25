@@ -14,7 +14,7 @@ SQL SECURITY DEFINER
 
 BEGIN
     
-DECLARE highest INT DEFAULT 0;
+	DECLARE highest INT DEFAULT 0;
 	
    WHILE amount > 0 DO
 
@@ -23,10 +23,10 @@ DECLARE highest INT DEFAULT 0;
     	SET highest = highest + 1;
     	
  		INSERT INTO `collectionobject` (`TimestampCreated`, `TimestampModified`, `Version`, `CollectionMemberID`, `CatalogedDate`, 
- 				`CatalogNumber`, `ProjectNumber`, `CollectionID`, `CreatedByAgentID`, `CatalogerID`, `YesNo3`) 
+ 				`CatalogNumber`, `ProjectNumber`, `CollectionID`, `CreatedByAgentID`, `CatalogerID`, `YesNo1`, `YesNo3`) 
  			VALUES (CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), 0, collectionID, '2022-07-08',
  				LPAD(highest, 9, 0),
-				ProjectName, collectionID, agentID, catalogerID, 1);
+				ProjectName, collectionID, agentID, catalogerID, 0, 1);
        
    	SET amount = amount - 1;
         
