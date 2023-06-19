@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewset name="Mammal Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<views>
+	    <!-- Common Views -->
+
+	    <view name="Accession" class="edu.ku.brc.specify.datamodel.Accession" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionBusRules">
+	      <desc><![CDATA[The Accession form.]]></desc>
+	      <altviews>
+	        <altview name="Accession View" viewdef="Accession" mode="view" default="true"/>
+	        <altview name="Accession Edit" viewdef="Accession" mode="edit"/>
+	      </altviews>
+	    </view>
+
+	    <!-- Collection Specific Views -->
+		
 		<view name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false">
 			<desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
 			<altviews>
@@ -88,6 +100,140 @@
 	</views>
 
 	<viewdefs>
+	    <!-- Common Views -->
+
+	    <viewdef type="form" name="Accession" class="edu.ku.brc.specify.datamodel.Accession" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+	      <desc><![CDATA[The Accession form.]]></desc>
+	      <enableRules/>
+	      <columnDef>p,0px,190px,5px,130px,2px,141px,5px,110px,2px,140px,0px,15px,p:g</columnDef>
+	      <columnDef os="lnx">135px,2px,200px,5px,135px,2px,153px,5px,125px,2px,153px,0px,15px,p:g</columnDef>
+	      <columnDef os="mac">130px,2px,220px,5px,153px,2px,189px,5px,133px,2px,189px,0px,15px,p:g</columnDef>
+	      <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
+	      <rowDef auto="true" cell="p" sep="1px"/>
+	      <rows>
+	          <row>
+	              <cell type="label" labelfor="1"/>
+	              <cell type="field" id="1" name="accessionNumber" uitype="formattedtext"/>
+		          <cell type="label" labelfor="32"/>
+		          <cell type="field" id="32" name="text2" uitype="text" colspan="3"/>
+		          <!--<cell type="label" labelfor="attachments"/>-->
+		          <cell type="subview" id="attachments" viewname="ObjectAttachment" name="accessionAttachments" initialize="btn=true;icon=AccessionAttachment;hc=xxx"/>
+	          </row>
+	          <row>
+		          <cell type="panel" id="acin" name="accessionInfo" coldef="p,2px,p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+		            <rows>
+		              <row>
+	                <cell type="label" labelfor="31"/>
+	                <cell type="field" id="31" name="text1" uitype="text"/>
+	              </row>
+	              <row>
+	                <cell type="label" id="divLabel" label=" " initialize="align=right"/>
+	                <cell type="field" id="4" name="divisionCBX" uitype="combobox" ignore="true"/>
+	              </row>
+	              <row>
+	                <cell type="label" labelfor="3"/>
+	                <cell type="field" id="3" name="type" uitype="combobox"/>
+	              </row>
+	          </rows>
+	        </cell>
+	        <cell type="label" labelfor="7"/>
+	        <cell type="field" id="7" name="remarks" uitype="textareabrief" rows="7" colspan="7"/>
+	      </row>
+	        <row>
+	          <cell type="separator" label="" colspan="13"/>
+	        </row>
+	        <row>
+	          <cell type="panel" id="acdt" name="accessionDetail" coldef="p,2px,p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+	            <rows>
+	              <row>
+	                <cell type="label" labelfor="2"/>
+	                <cell type="field" id="2" name="status" uitype="combobox"/>
+	              </row>
+	              <row>
+	                <cell type="label" labelfor="5"/>
+	                <cell type="field" id="5" name="dateAccessioned" uitype="formattedtext" uifieldformatter="Date"/>
+	              </row>
+	              <row>
+	                <cell type="label" labelfor="6"/>
+	                <cell type="field" id="6" name="dateReceived" uitype="formattedtext" uifieldformatter="Date"/>
+	              </row>
+	              <row>
+			          <cell type="label" labelfor="33"/>
+			          <cell type="field" id="33" name="text3" uitype="textareabrief" rows="5"/>
+	              </row>
+	            </rows>
+	          </cell>
+	          <cell type="subview" viewname="AccessionAgent" id="8" name="accessionAgents" desc="Agents" colspan="7" rows="3"  defaulttype="table"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="28"/>
+	          <cell type="field" id="28" name="accessionCondition" uitype="textareabrief" rows="2" colspan="10"/>
+	        </row>
+			<row>
+	          <cell type="subview" viewname="AccessionAuthorization" id="9" desc="Authorization" name="accessionAuthorizations" colspan="13"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="rag"/>
+	          <cell type="field" id="rag" name="repositoryAgreement" uitype="querycbx" initialize="name=RepositoryAgreement" colspan="10"/>
+	        </row>
+			<row>
+				<cell type="subview" viewname="AccessionItems" id="25" desc="Collection Object" name="collectionObjects" colspan="13" rows="10" initialize="addsearch=true" defaulttype="table"/>
+			</row>
+	        <row>
+	          <cell type="separator" label="" colspan="13"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="10"/>
+	          <cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true"  uifieldformatter="Agent"/>
+	          <cell type="label" labelfor="11"/>
+	          <cell type="field" id="11" name="timestampModified" uitype="label" readonly="true"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="createdAgent"/>
+	          <cell type="field" id="createdAgent" name="createdByAgent" uitype="label" readonly="true"  uifieldformatter="Agent"/>
+	          <cell type="label" labelfor="timestampCreated"/>
+	          <cell type="field" id="timestampCreated" name="timestampCreated" uitype="label" readonly="true"/>
+	        </row>
+	        <!-- <row>
+	          <cell type="label" labelfor="99"/>
+	          <cell type="field" id="99" name="this" uitype="plugin" initialize="name=WebLinkButton;weblink=AccessionNumber"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="26"/>
+	          <cell type="field" id="26" name="dateAcknowledged" uitype="formattedtext" uifieldformatter="Date" default="today"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="29"/>
+	          <cell type="field" id="29" name="number1" uitype="text"/>
+	          <cell type="label" labelfor="30"/>
+	          <cell type="field" id="30" name="number2" uitype="text"/>
+	        </row>
+	        <row>
+	          <cell type="field" id="34" uitype="checkbox" name="yesNo1" label="yesNo1"/>
+	          <cell type="field" id="35" uitype="checkbox" name="yesNo2" label="yesNo2"/>
+	        </row>
+	        <row>
+	          <cell type="label" labelfor="27"/>
+	          <cell type="field" id="27" name="verbatimDate" uitype="text"/>
+	        <row>
+	          <cell type="subview" viewname="Appraisal" id="appr" name="appraisals" colspan="14"/>
+	        </row>
+	        <row>
+	          <cell type="subview" id="addr" name="addressOfRecord" viewname="AddressOfRecord" colspan="14"/>
+	        </row>
+	        <row>
+	          <cell type="subview" viewname="TreatmentEventForAccession" id="13" name="treatmentEvents" colspan="12" initialize="btn=true"/>
+	        </row>
+	              <row>
+	                <cell type="label" labelfor="tv"/>
+	                <cell type="field" id="tv" name="totalValue" uitype="text"/>
+	              </row>
+	        </row>-->
+	      </rows>
+	    </viewdef>
+
+	    <!-- Collection Specific Views -->
+		
 		<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc><![CDATA[Accession Items]]></desc>
 			<definition>AccessionItems</definition>
@@ -126,6 +272,12 @@
 				<row>
 					<cell type="label" labelfor="loc"/>
 					<cell type="field" id="loc" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="11"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="splat"/>
+					<cell type="field" id="splat" name="text4" uitype="text"/>
+					<cell type="label" labelfor="splong"/>
+					<cell type="field" id="splong" name="text5" uitype="text"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="cdt"/>
@@ -246,7 +398,7 @@
 		<viewdef type="form" name="Collection Object" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc><![CDATA[The Collection Object form.]]></desc>
 			<enableRules/>
-			<columnDef>100px,2px,195px,5px,96px,2px,210px,5px,94px,2px,116px,15px,p:g</columnDef>
+			<columnDef>         100px,2px,195px,5px,96px,2px,210px,5px,94px,2px,116px,15px,p:g</columnDef>
 			<columnDef os="lnx">115px,2px,195px,5px,125px,2px,210px,5px,125px,2px,131px,15px,p:g</columnDef>
 			<columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
 			<columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
@@ -255,10 +407,10 @@
 				<row>
 					<cell type="label" labelfor="1"/>
 					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-					<cell type="label" labelfor="4"/>
-					<cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
-					<cell type="label" labelfor="5"/>
-					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today" colspan="3"/>
+					<cell type="label" labelfor="14"/>
+					<cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
+					<cell type="label" labelfor="cnnumber"/>
+					<cell type="field" id="cnnumber" name="text3" uitype="text"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="3"/>
@@ -266,7 +418,13 @@
 					<cell type="label" labelfor="fn"/>
 					<cell type="field" id="fn" name="fieldNumber" uitype="text"/>
 					<cell type="label" labelfor="ca"/>
-					<cell type="field" id="ca" name="countAmt" uitype="text" colspan="3"/>
+					<cell type="field" id="ca" name="countAmt" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today"/>
+					<cell type="label" label=""/>
+					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
 				</row>
 				<row>
 					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="13" rows="3"/>
@@ -305,6 +463,12 @@
 					<cell type="separator" label="" colspan="12"/>
 				</row>
 				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
+					<cell type="label" labelfor="12"/>
+					<cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
+				</row>
+				<row>
 					<cell type="label" labelfor="10"/>
 					<cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true"  uifieldformatter="Agent"/>
 					<cell type="label" labelfor="11"/>
@@ -323,8 +487,6 @@
 					<cell type="field" id="guid" name="guid" uitype="text" colspan="5" readonly="true"/>
 				</row>
 				<!--<row>
-					<cell type="label" labelfor="14"/>
-					<cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
 					<cell type="label" labelfor="2"/>
 					<cell type="field" id="2" name="projectNumber" uitype="text"/>
 				</row>
@@ -420,7 +582,6 @@
 					<cell type="subview" viewname="TreatmentEvent" id="te" name="treatmentEvents" initialize="btn=true"/>
 				</row>
 				<row>
-					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
 					<cell type="field" id="yn2" name="yesNo2" uitype="checkbox" initialize="editable=true"/>
 					<cell type="field" id="yn3" name="yesNo3" uitype="checkbox" initialize="editable=true"/>
 					<cell type="field" id="yn4" name="yesNo4" uitype="checkbox" initialize="editable=true"/>
@@ -430,8 +591,6 @@
 				<row>
 					<cell type="label" labelfor="9"/>
 					<cell type="field" id="9" name="createdByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
-					<cell type="label" labelfor="12"/>
-					<cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
 				</row>-->
 			</rows>
 		</viewdef>
@@ -840,6 +999,14 @@
 					<cell type="field" id="mmm" name="text18" uitype="text" colspan="7"/>
 				</row>
 				<row>
+					<cell type="label" labelfor="measurer"/>
+					<cell type="field" id="measurer" name="agent1" uitype="querycbx" initialize="name=Agent" colspan="5"/>
+					<cell type="label" labelfor="datemeasured"/>
+					<cell type="field" id="datemeasured" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date" colspan="3"/>
+					<cell type="label" labelfor="meastate"/>
+					<cell type="field" id="meastate" name="text16" uitype="combobox"/>
+				</row>
+				<row>
 					<cell type="label" labelfor="rem"/>
 					<cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="15"/>
 				</row>
@@ -875,9 +1042,9 @@
 		<viewdef type="form" name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
 			<desc><![CDATA[Preparation for Collection Object form.]]></desc>
 			<enableRules/>
-			<columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
-			<columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
-			<columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
+			<columnDef>         100px,2px,183px,5px,86px,2px,175px,5px,82px,2px,118px,2px,70px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,200px,5px,105px,2px,188px,5px,95px,2px,121px,2px,75px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,215px,5px,105px,2px,225px,5px,100px,2px,169px,2px,70px,p:g</columnDef>
 			<columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
 			<rowDef auto="true" cell="p" sep="2dlu"/>
 			<rows>
@@ -887,7 +1054,8 @@
 					<cell type="label" labelfor="san"/>
 					<cell type="field" id="san" name="sampleNumber" uitype="text"/>
 					<cell type="label" labelfor="3"/>
-					<cell type="field" id="3" name="countAmt" uitype="text"/>
+					<cell type="field" id="3" name="countAmt" uitype="text" default="1"/>
+					<!--><cell type="label" label=""/>-->
 					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="preparationAttachments" initialize="align=right;btn=true;icon=PreparationAttachment"/>
 				</row>
 				<row>
@@ -905,7 +1073,8 @@
 					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
 				</row>
 				<row>
-					<cell type="label" label="" colspan="3"/>
+					<cell type="label" label=""/>	
+					<cell type="field" id="lost" name="yesNo3" uitype="checkbox" initialize="editable=true"/>				
 					<cell type="field" id="isOnLoan" name="isOnLoan" uitype="checkbox" label="IS_ON_LOAN" readonly="true"/>
 					<cell type="command" id="ShowLoansBtn" name="ShowLoansBtn" label="SHOW_LOANS" ignore="true"/>
 				</row>
