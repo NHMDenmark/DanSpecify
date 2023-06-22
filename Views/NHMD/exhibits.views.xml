@@ -6,8 +6,8 @@
 	   <view name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" isinternal="false" resourcelabels="false">
 			<desc><![CDATA[CollectingEvent Form]]></desc>
 			<altviews>
-				<altview name="CollectingEvent View" viewdef="CollectingEvent" mode="view" default="true"/>
-				<altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
+				<altview name="CollectingEvent View" viewdef="CollectingEvent" mode="view" />
+				<altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit" default="true"/>
 			</altviews>
 		</view>
 
@@ -271,21 +271,13 @@
                 
 
 				<row>
-					<cell type="subview" viewname="CollectingEventSub" id="ce" name="collectingEvent" colspan="13" rows="5"/>
+					<cell type="subview" viewname="CollectingEvent" id="ce" name="collectingEvent" colspan="13" rows="5"/>
 				</row>			
 				
 				<row>
 					<cell type="subview" id="19" viewname="CollectionObjectProperty" name="collectionObjectProperties" colspan="13"/>
 				</row>
 				
-				
-				
-				<row>
-                    <cell type="separator" label="" colspan="12"/>
-                </row>
-              
-				
-
 				
 				<row>
                     <cell type="subview" viewname="ConservDescription" id="cd" name="conservDescriptions" defaulttype="table" colspan="15" rows="3"/>
