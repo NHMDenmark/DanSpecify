@@ -21,6 +21,7 @@ The workshops are recorded and can be accessed online via below links:
 
 1. Getting Started: https://vimeo.com/813495735
 1. Data Import Basics: https://vimeo.com/823612618
+1. Data Cleaning with OpenRefine: https://vimeo.com/846255679  
 
 # Frequently Asked Questions
 
