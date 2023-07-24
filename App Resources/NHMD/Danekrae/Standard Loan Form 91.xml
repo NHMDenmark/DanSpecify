@@ -70,7 +70,7 @@
 					<textElement lineSpacing="Single">
 						<font fontName="Arial" size="7" isBold="false"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[new SimpleDateFormat("dd MMMMM yyyy").format(new SimpleDateFormat("dd/MM/yyyy").parse($F{52.loan.loanDate})).toUpperCase()]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new SimpleDateFormat("dd MMMMM yyyy").format(new SimpleDateFormat("yyyy-MM-dd").parse($F{52.loan.loanDate})).toUpperCase()]]></textFieldExpression>
 				</textField>
 				<line direction="TopDown">
 					<reportElement
