@@ -1077,9 +1077,11 @@
 					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
 				</row>
 				<row>
-					<cell type="label" label="" colspan="3"/>
+					<cell type="label" label=""/>	
+					<cell type="field" id="lost" name="yesNo3" uitype="checkbox" initialize="editable=true"/>				
 					<cell type="field" id="isOnLoan" name="isOnLoan" uitype="checkbox" label="IS_ON_LOAN" readonly="true"/>
 					<cell type="command" id="ShowLoansBtn" name="ShowLoansBtn" label="SHOW_LOANS" ignore="true"/>
+
 				</row>
 				<!--<row>
 					<cell type="label" labelfor="rem"/>

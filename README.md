@@ -12,6 +12,17 @@ This is the user guide with a brief and focused introduction to how to use vario
 1. [Importing Data (Workbench)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/8.%20Importing%20Data%20(Workbench).md)
 1. [Data Cleaning (OpenRefine)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/9.%20Data%20Cleaning.md) - (coming soon)
 
+# Workshops 
+
+We have started keeping regular workshops to get both incipient and experienced users up to speed with the latest version of Specify. 
+The workshops are recorded and can be accessed online via below links: 
+
+- Entire workshop series: https://vimeo.com/showcase/10375769 
+
+1. Getting Started: https://vimeo.com/813495735
+1. Data Import Basics: https://vimeo.com/823612618
+1. Data Cleaning with OpenRefine: https://vimeo.com/846255679  
+
 # Frequently Asked Questions
 
 This is an overview of frequently asked questions regarding the Specify installation at the Danish network of Natural History Museums (DNHM). 
