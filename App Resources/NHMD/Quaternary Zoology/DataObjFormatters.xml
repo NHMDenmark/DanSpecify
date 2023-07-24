@@ -609,9 +609,10 @@
         >
         <switch single="true">
             <fields>
-                <field>paleoContextName</field>
-                <field sep=", ">chronosStrat.fullName</field>
-                <field sep=", ">lithoStrat.fullName</field>
+                <!--<field>paleoContextName</field>-->
+                <field sep="">chronosStrat.name</field>
+                <field sep="-">chronosStratEnd.name</field>
+                <!--<field sep=", ">lithoStrat.fullName</field>-->
             </fields>
         </switch>
     </format>
