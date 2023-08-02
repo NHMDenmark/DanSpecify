@@ -3,7 +3,8 @@
   <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">  
     <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>    
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
-    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AV"/>
+    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AV"/>    
+    <field term="http://rs.tdwg.org/dwc/terms/collectionID" value="https://www.gbif.org/grscicoll/collection/aff8b844-b98f-424e-b9b9-9b078423d9f3"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
     <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Ornithology Collection"/> 
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
@@ -77,10 +78,11 @@
                 <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"             value=""/>
                 <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.copyrightholder"     value=""/>
                 <field term="http://purl.org/dc/terms/source"             isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.LicenseLogoUrl"      value=""/>
+            	<field isNot="true" isRelFld="false" oper="7" stringId="1,111-collectionObjectAttachments,41.attachment.isPublic" value=""/>
             </query>
         </queries>
     </extension>
-
+    
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>
