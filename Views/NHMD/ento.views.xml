@@ -919,10 +919,14 @@
         <row>
           <cell type="label" labelfor="localityName"/>
           <cell type="field" id="localityName" name="localityName" uitype="text" colspan="16"/>
-        </row>
+        </row>		
         <row>
+			<!-- Broad Geographic Region -->
             <cell type="label" labelfor="t4"/>
             <cell type="field" id="t4" name="text4" uitype="combobox" colspan="5"/>
+			<!-- BGR Source -->
+			<cell type="label" labelfor="t5"/>
+			<cell type="field" id="t5" name="text5" uitype="combobox" colspan="5"/>			
             <!--<cell type="label" labelfor="t2"/>
             <cell type="field" id="t2" name="text2" uitype="combobox" colspan="3"/>-->
         </row>
