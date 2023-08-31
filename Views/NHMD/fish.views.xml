@@ -136,7 +136,7 @@
             <desc><![CDATA[The Collection Object form.]]></desc>
             <enableRules/>
             
-            <columnDef>99px,2px,200px,2px,89px,2px,50px,2px,50px,2px,70px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,p:g</columnDef>
+            <columnDef>99px,2px,300px,2px,89px,2px,50px,2px,50px,2px,70px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,p:g</columnDef>
             <!--<columnDef os="lnx">115px,2px,195px,5px,125px,2px,210px,5px,125px,2px,131px,15px,p:g</columnDef>
             <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>-->
@@ -152,39 +152,80 @@
                 <row>
                     <cell type="label" labelfor="4"/>
                     <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
-                 	<cell type="label" labelfor="t1"/>
-                    <cell type="field" id="t1" name="text1" colspan="3" uitype="text"/>
                     <cell type="label" labelfor="t2"/>
-                    <cell type="field" id="t2" name="text2" colspan="3" uitype="text"/>
+                    <cell type="field" id="t2" name="text2" colspan="3" uitype="text"/> <!-- P-Group -->
+                 	<cell type="label" labelfor="t1"/>
+                    <cell type="field" id="t1" name="text1" colspan="3" uitype="text"/> <!-- Other Number -->
                 </row>
                 <row>
 					<cell type="label" labelfor="5"/>
                     <cell type="field" id="5" name="this" uitype="plugin" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date"/>
+                    <cell type="label" labelfor="t6"/>
+                    <cell type="field" id="t6" name="text6" colspan="3" uitype="text"/> <!-- Former Nr -->
+					<cell type="label" labelfor="t7"/>
+                    <cell type="field" id="t7" name="text7" colspan="3" uitype="text"/> <!-- Former P -->
+                </row>
+				<row>					
+					<cell type="label" labelfor="jrndate"/>
+                    <cell type="field" id="jrndate" name="this" uitype="plugin" colspan="1" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date"/>
                     
                     <cell type="label" labelfor="t3"/>
-                    <cell type="field" id="t3" name="text3" colspan="3" uitype="text"/>
-                    <cell type="label" labelfor="pnr"  colspan="1"/>
-                    <cell type="field" id="pnr" name="projectNumber" colspan="3" uitype="text"/>
-
-                </row>
+                    <cell type="field" id="t3" name="text3" colspan="3" uitype="text"/> <!-- Journal Number -->					
+					
+                    <cell type="label" labelfor="reservedtxt"/>
+                    <cell type="field" id="reservedtxt" name="reservedText" colspan="3" uitype="text"/> <!-- Tilvækst -->
+				</row>
 				<row>
-					<cell type="label" labelfor="fnr"/>
-                    <cell type="field" id="fnr" name="fieldNumber" colspan="1" uitype="text"/>
-                    <!--<cell type="label" labelfor="pnr"  colspan="1"/>
-                    <cell type="field" id="pnr" name="projectNumber" colspan="7" uitype="text"/>-->
 					<cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="accession" colspan="9" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
+                    <cell type="field" id="3" name="accession" colspan="1" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
+                    <cell type="label" labelfor="t5"/>
+                    <cell type="field" id="t5" name="text5" colspan="1" uitype="text"/> <!-- Label (Etiket) --> 
+				</row>
+				<row>
+					<cell type="label" labelfor="t8"/>
+                    <cell type="field" id="t8" name="text8" colspan="1" uitype="text"/> <!-- Original Determination -->
+					<cell type="label" labelfor="t4"/>
+                    <cell type="field" id="t4" name="text4" colspan="9" uitype="text"/> <!-- Valid As -->
 					
 				</row>
 				<row>
                     <cell type="label" labelfor="rem"/>
-                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="4" colspan="3"/>
-					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="9" rows="2"/>
+                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="3" colspan="1"/>
+                    <cell type="label" labelfor="ContainerPanel"/>
+                    <cell type="panel" id="ContainerPanel" name="ContainerPanel" coldef="p" rowdef="p" colspan="9">
+                        <rows>
+                            <row>
+                                <cell type="panel" id="CPInner" name="CPInner" coldef="p" rowdef="p" initialize="border=line;bordercolor=200,200,200;bgcolor=240,240,240">
+                                <rows>
+                                    <row>
+                                        <cell type="field" id="ContainerPlugin" uitype="plugin" name="this" initialize="name=ContainerPlugin"/>
+                                    </row>
+                                </rows>
+                            </cell>
+                            </row>
+                        </rows> 
+                    </cell>
                 </row>
+				<row>
+                    <cell type="label" labelfor="yn1"/>
+                    <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
+				</row>
+					
+                    <!--<cell type="label" labelfor="pnr"  colspan="1"/>
+                    <cell type="field" id="pnr" name="projectNumber" colspan="3" uitype="text"/>
+					<cell type="label" labelfor="fnr"/>
+                    <cell type="field" id="fnr" name="fieldNumber" colspan="1" uitype="text"/>-->
+                <!--<row>
+					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="9" rows="5"/>
+                </row>-->
                 <row>
                     <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="23" />
                 </row>
                 <row>
+                    <cell type="separator" label="Collecting Event" colspan="15"/>
+                </row>
+                <row>
+					<!--<cell type="subview" viewname="CollectingEvent" id="collevent" name="collectingEvents" colspan="23" />-->
                     <cell type="label" labelfor="7"/>
                     <cell type="field" id="7" name="collectingEvent" uitype="querycbx" initialize="name=CollectingEvent;clonebtn=true" colspan="15"/>
                 </row>
@@ -232,21 +273,6 @@
                 <row>
                     <cell type="label" label="RELNAMEHERE:" initialize="align=right;"/>
                     <cell type="field" id="colrel" uitype="plugin" name="this" initialize="name=ColRelTypePlugin;relname=xxxx;"/>
-                </row>
-                <row>
-                    <cell type="panel" id="ContainerPanel" name="ContainerPanel" coldef="p" rowdef="p" colspan="11">
-                        <rows>
-                            <row>
-                                <cell type="panel" id="CPInner" name="CPInner" coldef="p" rowdef="p" initialize="border=line;bordercolor=200,200,200;bgcolor=240,240,240">
-                                <rows>
-                                    <row>
-                                        <cell type="field" id="ContainerPlugin" uitype="plugin" name="this" initialize="name=ContainerPlugin"/>
-                                    </row>
-                                </rows>
-                            </cell>
-                            </row>
-                        </rows> 
-                    </cell>
                 </row>
                 <row>
                     <cell type="label" labelfor="appr"/>
@@ -463,40 +489,48 @@
 
             <rows>
                 <row>
-                    <cell type="label" labelfor="1"/>
+                    <cell type="label" labelfor="1"/><!-- Sex -->
                     <cell type="field" id="1" name="text1" uitype="combobox"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="text2" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="text3" uitype="text"/>
-                    <cell type="label" labelfor="2"/>
+                    <cell type="label" labelfor="9"/><!-- Sex Verbatim -->
+                    <cell type="field" id="9" name="text9" uitype="text"/>
+                    <cell type="label" labelfor="2"/><!-- Stage -->
                     <cell type="field" id="2" name="text4" uitype="combobox"/>
+                    <cell type="label" labelfor="6"/><!-- Color in Life -->
+                    <cell type="field" id="6" name="text8" uitype="text"/>
                 </row>
                 <row>
-                    <cell type="label" labelfor="20"/>
+                    <cell type="label" labelfor="20"/><!-- TL -->
                     <cell type="field" id="20" name="text5" uitype="text"/>
-                    <cell type="label" labelfor="21"/>
+                    <cell type="label" labelfor="21"/><!-- SL -->
                     <cell type="field" id="21" name="text6" uitype="text"/>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" name="text7" uitype="text"/>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="text8" uitype="text"/>
+                    <cell type="label" labelfor="n1"/><!-- Length 1 -->
+                    <cell type="field" id="n1" name="number1" uitype="text"/>
+                    <cell type="label" labelfor="n2"/><!-- Length 2 -->
+                    <cell type="field" id="n2" name="number2" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="n3"/><!-- Weight (g)  -->
+                    <cell type="field" id="n3" name="number3" uitype="text"/>
+                    <cell type="label" labelfor="4"/><!-- Weight Verbatim -->
+                    <cell type="field" id="4" name="text2" uitype="text"/>
+                    <cell type="label" labelfor="t10"/><!-- Length Verbatim -->
+                    <cell type="field" id="t10" name="text10" uitype="text"/>
+                    <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="22"/>
                     <cell type="field" id="22" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
                 </row> 
-              <!--<row>
-                    <cell type="label" labelfor="t7"/>
-                    <cell type="field" id="t7" name="text7" uitype="text"/>
-                    <cell type="label" labelfor="t10"/>
-                    <cell type="field" id="t10" name="text10" uitype="text"/>
+              <!--
+                <row>
                     <cell type="label" labelfor="t11"/>
                     <cell type="field" id="t11" name="text11" uitype="text"/>
                     <cell type="label" labelfor="t12"/>
                     <cell type="field" id="t12" name="text12" uitype="text"/>
-                </row>
-                <row>
+                    <cell type="label" labelfor="n4"/>
+                    <cell type="field" id="n4" name="number4" uitype="text"/>
+				</row>
+				<row>
                     <cell type="label" labelfor="t13"/>
                     <cell type="field" id="t13" name="text13" uitype="text"/>
                     <cell type="label" labelfor="t14"/>
@@ -505,16 +539,6 @@
                     <cell type="field" id="t15" name="text15" uitype="text"/>
                     <cell type="label" labelfor="n1"/>
                     <cell type="field" id="n1" name="number1" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="n2"/>
-                    <cell type="field" id="n2" name="number2" uitype="text"/>
-                    <cell type="label" labelfor="n3"/>
-                    <cell type="field" id="n3" name="number3" uitype="text"/>
-                    <cell type="label" labelfor="n4"/>
-                    <cell type="field" id="n4" name="number4" uitype="text"/>
-                    <cell type="label" labelfor="n5"/>
-                    <cell type="field" id="n5" name="number5" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="n6"/>
@@ -739,7 +763,7 @@
             settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Collecting Event]]></desc>
             
-            <columnDef>100px,2px,200px,5px,90px,2px,210px,5px,96px,2px,115px,0px,15px,p:g</columnDef>
+            <columnDef>100px,2px,100px,5px,100px,2px,100px,5px,100px,5px,100px,5px,100px,5px,100px,5px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,240px,5px,100px,2px,215px,5px,106px,2px,125px,0px,15px,p:g</columnDef>
             <columnDef os="mac">130px,2px,246px,5px,115px,2px,270px,5px,110px,2px,145px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
@@ -763,6 +787,12 @@
                     <cell type="field" id="7" name="endTime" uitype="text"/>
                 </row>
                 <row>
+                    <cell type="label" labelfor="verbcoll"/>
+                    <cell type="field" id="verbcoll" name="text1" uitype="text" colspan="1"/>  <!-- Verbatim Collectors -->
+                    <cell type="label" labelfor="13"/>
+                    <cell type="field" id="13" name="verbatimDate" uitype="text" colspan="1"/> <!-- Verbatim Date -->
+                </row>
+                <row>
                     <cell type="label" labelfor="4"/>
                     <cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/> 
                 </row>
@@ -770,8 +800,19 @@
                     <cell type="label" labelfor="6"/>
                     <cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
+				<!--<row>  
+					<cell type="label" labelfor="haul"/>
+                    <cell type="field" id="haul" name="text2" uitype="text" colspan="1"/>     
+					<cell type="label" labelfor="gear"/>
+                    <cell type="field" id="gear" name="text3" uitype="text" colspan="1"/>      
+					<cell type="label" labelfor="wire"/>
+                    <cell type="field" id="wire" name="text4" uitype="text" colspan="1"/>      
+				</row>-->
                 <row>
                  <cell type="subview" id="8" name="collectingEventAttribute" viewname="CollectingEventAttribute" colspan="13"/>
+                </row>                
+				<row>
+                    <cell type="separator" label="" colspan="15"/>
                 </row>
                 <row>
                     <cell type="subview" viewname="Collectors" id="5" name="collectors" colspan="13" rows="3"/>
@@ -837,40 +878,40 @@
             
             <rows>
               <row>
-                    <cell type="label" labelfor="1"/>
+                    <cell type="label" labelfor="1"/><!-- Wire -->
                     <cell type="field" id="1" name="text1" uitype="text"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="text2" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="text3" uitype="text"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="text4" uitype="text"/>
+                    <cell type="label" labelfor="t10"/><!-- Haul -->
+                    <cell type="field" id="t10" name="text10" uitype="text"/>
+                    <cell type="label" labelfor="t11"/><!-- Gear -->
+                    <cell type="field" id="t11" name="text11" uitype="text"/>
+                    <cell type="label" labelfor="t12"/>
+                    <cell type="field" id="t12" name="text12" uitype="text"/>
                 </row>
+              <row>
+                    <cell type="label" labelfor="n1"/><!-- Min Depth -->
+                    <cell type="field" id="n1" name="number1" uitype="text"/>
+                    <cell type="label" labelfor="n2"/><!-- Max Depth -->
+                    <cell type="field" id="n2" name="number2" uitype="text"/>
+                    <cell type="label" labelfor="2"/><!-- Depth Verbatim -->
+                    <cell type="field" id="2" name="text2" uitype="text"/>
+                    <cell type="label" labelfor="3"/><!-- Temp -->
+                    <cell type="field" id="3" name="text3" uitype="text"/>
+			  </row>
                 <row>
-                    <cell type="label" labelfor="10"/>
+                    <cell type="label" labelfor="10"/><!-- Clarity -->
                     <cell type="field" id="10" name="text5" uitype="text"/>
-                    <cell type="label" labelfor="5"/>
+                    <cell type="label" labelfor="5"/><!-- Salinity -->
                     <cell type="field" id="5" name="text6" uitype="text"/>
-                    <cell type="label" labelfor="7"/>
+                    <cell type="label" labelfor="7"/><!-- Vegetation -->
                     <cell type="field" id="7" name="text8" uitype="text"/>
-                    <cell type="label" labelfor="8"/>
+                    <cell type="label" labelfor="8"/><!-- Habitat Type -->
                     <cell type="field" id="8" name="text9" uitype="combobox"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="9"/>
                     <cell type="field" id="9" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
                 </row>
-              <!--<row>
-                    <cell type="label" labelfor="t7"/>
-                    <cell type="field" id="t7" name="text7" uitype="text"/>
-                    <cell type="label" labelfor="t10"/>
-                    <cell type="field" id="t10" name="text10" uitype="text"/>
-                    <cell type="label" labelfor="t11"/>
-                    <cell type="field" id="t11" name="text11" uitype="text"/>
-                    <cell type="label" labelfor="t12"/>
-                    <cell type="field" id="t12" name="text12" uitype="text"/>
-                </row>
-                <row>
+                <!--<row>
                     <cell type="label" labelfor="t13"/>
                     <cell type="field" id="t13" name="text13" uitype="text"/>
                     <cell type="label" labelfor="t14"/>
