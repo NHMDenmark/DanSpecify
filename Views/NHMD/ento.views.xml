@@ -487,6 +487,8 @@
         <row>
           <cell type="label" labelfor="14"/>
           <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
+          <cell type="label" labelfor="oj"/>
+          <cell type="field" id="oj" name="objectCondition" uitype="text"/>
         </row>
         <row>
           <cell type="label" labelfor="visibility"/>

@@ -414,6 +414,8 @@
 					<cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
 					<cell type="label" label="" />
 					<cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+                    <cell type="label" labelfor="oj"/>
+                    <cell type="field" id="oj" name="objectCondition" uitype="text"/>
 				</row>
 				
         <row>
