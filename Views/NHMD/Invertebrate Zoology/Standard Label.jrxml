@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Label" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="175" columnSpacing="5" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="9346ee2b-32b3-4702-875e-c0c8beb1020b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SpecifyNHMDlocalhost.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="543"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="447"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<queryString>
+		<![CDATA[SELECT co.catalogNumber 
+	FROM collectionobject co
+	
+
+	ORDER BY co.timestampcreated DESC 
+	LIMIT 1000]]>
+	</queryString>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CatalogNumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="catalogNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="collectionobject"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="catalogNumber"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="148" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="14" width="175" height="12" uuid="ae45997d-d2f9-43f9-948e-c531f4a16255"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="28" width="175" height="12" uuid="1744de39-d54e-40e3-be70-753afe5d3fa8"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,9-determinations,4.taxon.Genus} != null ?
+	"<style isItalic='true'>" + $F{1,9-determinations,4.taxon.fullName} + "</style>" :
+	$F{1,9-determinations,4.taxon.fullName}) +
+	($F{1,9-determinations,4.taxon.author} != null ? " " + $F{1,9-determinations,4.taxon.author} : "") +
+	($F{1,9-determinations.determination.typeStatusName} != null ?
+		" <style isBold='true'>" + $F{1,9-determinations.determination.typeStatusName}.toUpperCase() + "</style>" :
+		"")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="-1" width="175" height="12" uuid="f909e02a-71ea-457b-b0e2-c9ec40bc6774"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM OF DENMARK]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="10" width="175" height="1" uuid="9841ab2f-2e1e-422d-9102-1df11c93f44e"/>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField" positionType="Float" x="0" y="42" width="175" height="11" uuid="74d5c17d-a887-4d1e-ba40-543fa0f3ce12"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Loc. </style>" +
+	( $F{1,10,2.locality.localityName} != null ? $F{1,10,2.locality.localityName} : "unknown" ) +
+	( $F{1,10,2,3.geography.Continent} != null ? " (" +
+		( $F{1,10,2,3.geography.Continent} != null ? $F{1,10,2,3.geography.Continent} : "" ) +
+		( $F{1,10,2,3.geography.Country} != null ? ", " + $F{1,10,2,3.geography.Country} : "" ) + ")" : "" )]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField" positionType="Float" x="0" y="54" width="175" height="11" uuid="f0a8c78f-a116-4ec5-bd68-32a54c824151"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.latitude1} != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.latitude1}, $F{1,10,2.locality.originalLatLongUnit}, true)
+		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.latitude1}, true) + ", "
+	+ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.longitude1}, $F{1,10,2.locality.originalLatLongUnit}, false)
+		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.longitude1}, false)
+: ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField-1" positionType="Float" x="0" y="66" width="175" height="12" isRemoveLineWhenBlank="true" uuid="44011c8a-6cc0-4fc8-93f3-75e2cc22eaab"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2,124-localityDetails.localitydetail.startDepth} != null ?
+	"depth: " +
+		$F{1,10,2,124-localityDetails.localitydetail.startDepth} + "m" +
+		( $F{1,10,2,124-localityDetails.localitydetail.endDepth} != null ?
+			"-" + $F{1,10,2,124-localityDetails.localitydetail.endDepth} + "m" :
+			"" ) :
+	""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField-2" positionType="Float" x="0" y="79" width="175" height="11" isRemoveLineWhenBlank="true" uuid="b67c9e91-410e-4b6c-99e9-ce51f6894ae0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.minElevation} != null ?
+	"elevation: " +
+		$F{1,10,2.locality.minElevation} +
+		( $F{1,10,2.locality.maxElevation} != null ?
+			"-" + $F{1,10,2.locality.maxElevation} :
+			"" ) :
+	""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-3" positionType="Float" x="0" y="91" width="175" height="11" uuid="b452ebdb-1a69-4314-92ef-1cb3dfd42f7f"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Date: </style>" +
+	( $F{1,10.collectingevent.startDate} != null ?
+		$F{1,10.collectingevent.startDate} + ( !$F{1,10.collectingevent.endDate}.isEmpty() ? "-" + $F{1,10.collectingevent.endDate} : "" ) :
+		"unknown" )]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-4" positionType="Float" x="0" y="103" width="175" height="11" uuid="a9bce7c3-fc69-4f8a-b4b0-9630be1f8a3f"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Legit: </style>" +
+	( !$F{1,10,30-collectors.collector.collectors}.isEmpty() ? $F{1,10,30-collectors.collector.collectors} : "unknown" ) + 
+	( $F{1,10,87.collectingtrip.collectingTripName} != null ?
+		", <style isBold='true'>Exp. </style>" + $F{1,10,87.collectingtrip.collectingTripName} +
+			( $F{1,10.collectingevent.text3} != null ? ", <style isBold='true'>St.</style> " + $F{1,10.collectingevent.text3} : "" ) :
+		"" )]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-5" positionType="Float" x="0" y="115" width="175" height="11" isRemoveLineWhenBlank="true" uuid="c6ea36d3-6301-4173-8138-3f5004ed5b35"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.method} != null ? "<style isBold='true'>Gear: </style>" + $F{1,10.collectingevent.method} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-6" positionType="Float" x="0" y="131" width="175" height="11" uuid="c3adb181-33cd-463c-bd3c-4293cd7798e6"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Det. </style>" +
+	( $F{1,9-determinations,5-determiner.agent.determiner} != null ?
+		$F{1,9-determinations,5-determiner.agent.determiner} + ( !$F{1,9-determinations.determination.determinedDate}.isEmpty() ? " " + $F{1,9-determinations.determination.determinedDate} : "" ) :
+		"unknown" )]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-2" positionType="Float" x="0" y="128" width="175" height="1" uuid="7c60aba1-cd6a-4e2f-9f6b-3a13ab2a81f1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
