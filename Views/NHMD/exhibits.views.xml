@@ -657,6 +657,19 @@
                     <cell type="field" id="erligh" name="lightRecommendations" uitype="combobox" picklist="Light" colspan="1"/>
                 </row>
 				
+				
+                <row>
+				<!--Mount Code-->
+                    <cell type="label" labelfor="ermountcode"/>
+                    <cell type="field" id="ermountcode" name="description" uitype="text" />
+                </row>
+
+                <row>
+				<!--Mount Description-->
+                    <cell type="label" labelfor="ermountdesc"/>
+                    <cell type="field" id="ermountdesc" name="text2" uitype="textareabrief" rows="2" colspan="10"/>
+                </row>				
+				
 
                 <row>
 				<!--Handling Requirements-->
@@ -984,9 +997,6 @@
  <!--   		</rows>
 		</viewdef>
 -->
-		
-	
-		
 			
 
 		
