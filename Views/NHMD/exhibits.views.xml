@@ -476,7 +476,12 @@
 					<!--Common name -->
 					
 					<cell type="label" labelfor="t3"/>
-					<cell type="field" id="t3" name="text3" uitype="text" colspan="5"/>
+					<cell type="field" id="t3" name="text3" uitype="text" />
+					
+					<!--Danish common name -->
+					
+					<cell type="label" labelfor="t7"/>
+					<cell type="field" id="t7" name="text7" uitype="text" />
 				</row>
 				
 			
