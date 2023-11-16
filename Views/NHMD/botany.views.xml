@@ -154,7 +154,8 @@
             </altviews>
         </view>
         
-        <view name="AttachmentMetadata"
+<!--		
+		<view name="AttachmentMetadata"
             class="edu.ku.brc.specify.datamodel.AttachmentMetadata"
             resourecelabels="false">
             <desc><![CDATA[The AttachmentMetadata subform.]]></desc>
@@ -163,6 +164,7 @@
                 <altview name="AttachmentMetadata Edit"  viewdef="AttachmentMetadata"  label="Form"  mode="edit" default="true"/>
             </altviews>
         </view>
+--> 
         
         <view name="Determination"
             class="edu.ku.brc.specify.datamodel.Determination"
@@ -1632,57 +1634,57 @@
               <rows>
                 <row>
                     <cell type="label" labelfor="origFilename" label="FILENAME"/>
-                    <cell type="field" id="origFilename" name="attachment.origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
+                    <cell type="field" id="origFilename" name="origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
                 </row>
                 <row>
                       <cell type="label" labelfor="title"  label="TITLE"/>
-                    <cell type="field" id="title" name="attachment.title" isrequired="true"/>
+                    <cell type="field" id="title" name="title" isrequired="true"/>
                 </row>
                 <!--<row>
-                    <cell type="subview" id="metadata" name="attachment.metadata" viewname="AttachmentMetadata" colspan="3"/>
+                    <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
                 </row> -->
                 <row>
                     <cell type="label" labelfor="dateImaged" label="DATE_IMAGED"/>
-                    <cell type="field" id="dateImaged" name="attachment.dateImaged" uitype="text"/>
+                    <cell type="field" id="dateImaged" name="dateImaged" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="fileCreatedDate" label="FILE_CREATED_DATE"/>
-                    <cell type="field" id="fileCreatedDate" name="attachment.fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
+                    <cell type="field" id="fileCreatedDate" name="fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="copyrightHolder" label="COPYRIGHT_HOLDER"/>
-                    <cell type="field" id="copyrightHolder" name="attachment.copyrightHolder" uitype="text"/>
+                    <cell type="field" id="copyrightHolder" name="copyrightHolder" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="copyrightDate" label="COPYRIGHT_DATE"/>
-                    <cell type="field" id="copyrightDate" name="attachment.copyrightDate" uitype="text"/>
+                    <cell type="field" id="copyrightDate" name="copyrightDate" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="attachmentLocation" label="ATTACHMENT_LOCATION"/>
-                    <cell type="field" id="attachmentLocation" name="attachment.attachmentLocation" uitype="text"/>
+                    <cell type="field" id="attachmentLocation" name="attachmentLocation" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="isPublic" label="is public"/>
-                    <cell type="field" id="isPublic" name="attachment.isPublic" isrequired="true" uitype="checkbox"/>
+                    <cell type="field" id="isPublic" name="isPublic" isrequired="true" uitype="checkbox"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="license" label="LICENSE"/>
-                    <cell type="field" id="license" name="attachment.license" uitype="text"/>
+                    <cell type="field" id="license" name="license" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="credit" label="CREDIT"/>
-                    <cell type="field" id="credit" name="attachment.credit" uitype="text"/>
+                    <cell type="field" id="credit" name="credit" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="mimeType" label="MIME_TYPE"/>
-                    <cell type="field" id="mimeType" name="attachment.mimeType" uitype="text"/>
+                    <cell type="field" id="mimeType" name="mimeType" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="remarks" label="REMARKS"/>
-                    <cell type="field" id="remarks" name="attachment.remarks" uitype="textareabrief" rows="2"/>
+                    <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
                 </row>
                 <!--<row>
-                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachment.attachmentImageAttribute" colspan="3" />
+                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachmentImageAttribute" colspan="3" />
                 </row>-->
             </rows>
         </viewdef>
@@ -1700,79 +1702,82 @@
             <columnDef>p,2px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
 
-            <rows>
+    		<rows>
                 <row>
                     <cell type="label" labelfor="origFilename" label="FILENAME"/>
-                    <cell type="field" id="origFilename" name="attachment.origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
+                    <cell type="field" id="origFilename" name="origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
                 </row>
                 <row>
-                    <cell type="label" labelfor="title"  label="TITLE"/>
-                    <cell type="field" id="title" name="attachment.title" uitype="text" isrequired="true"/>
+                	<cell type="label" labelfor="title"  label="TITLE"/>
+                	<cell type="field" id="title" name="title" uitype="text" isrequired="true"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="copyrightHolder" label="COPYRIGHT_HOLDER"/>
-                    <cell type="field" id="copyrightHolder" name="attachment.copyrightHolder" uitype="text"/>
+                    <cell type="field" id="copyrightHolder" name="copyrightHolder" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="license" label="LICENSE"/>
-                    <cell type="field" id="license" name="attachment.license" uitype="text"/>
+                    <cell type="field" id="license" name="license" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="credit" label="CREDIT"/>
-                    <cell type="field" id="credit" name="attachment.credit" uitype="text"/>
+                    <cell type="field" id="credit" name="credit" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="attachmentLocation" />
-                    <cell type="field" id="attachmentLocation" name="attachment.attachmentLocation" uitype="text"/>
+                    <cell type="field" id="attachmentLocation" name="attachmentLocation" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="fileCreatedDate" />
-                    <cell type="field" id="fileCreatedDate" name="attachment.fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
-                </row>            
+                    <cell type="field" id="fileCreatedDate" name="fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
+                </row>			
                 <row>
                     <cell type="label" labelfor="mimeType" />
-                    <cell type="field" id="mimeType" name="attachment.mimeType" uitype="text"/>
-                </row>    
+                    <cell type="field" id="mimeType" name="mimeType" uitype="text"/>
+                </row>	
                 <row>
                     <cell type="label" labelfor="remarks" />
-                    <cell type="field" id="remarks" name="attachment.remarks" uitype="textareabrief" rows="2"/>
-                </row>                
+                    <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
+                </row>				
                 <!--<row>
-                    <cell type="subview" id="metadata" name="attachment.metadata" viewname="AttachmentMetadata" colspan="3"/>
+                    <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
                 </row> -->
                 <row>
                     <cell type="label" labelfor="type" />
-                    <cell type="field" id="type" name="attachment.type" uitype="text"/>
-                </row>    
+                    <cell type="field" id="type" name="type" uitype="text"/>
+                </row>	
                 <row>
                     <cell type="label" labelfor="subtype" />
-                    <cell type="field" id="subtype" name="attachment.subtype" uitype="text"/>
-                </row>    
+                    <cell type="field" id="subtype" name="subtype" uitype="text"/>
+                </row>	
                 <row>
                     <cell type="label" labelfor="metadataText" />
-                    <cell type="field" id="metadataText" name="attachment.metadataText" uitype="text"/>
-                </row>                    
+                    <cell type="field" id="metadataText" name="metadataText" uitype="text"/>
+                </row>					
                 <row>
                     <cell type="label" labelfor="dateImaged" />
-                    <cell type="field" id="dateImaged" name="attachment.dateImaged" uitype="text"/>
+                    <cell type="field" id="dateImaged" name="dateImaged" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="copyrightDate" />
-                    <cell type="field" id="copyrightDate" name="attachment.copyrightDate" uitype="text"/>
+                    <cell type="field" id="copyrightDate" name="copyrightDate" uitype="text"/>
                 </row>
                 <row>
-                    <cell type="label" labelfor="ispub" label=""/>
-                    <cell type="field" id="ispub" name="attachment.isPublic" uitype="checkbox" label="Make Public"/>
-                </row>                
+                	<cell type="label" labelfor="ispub" label=""/>
+                	<cell type="field" id="ispub" name="isPublic" uitype="checkbox" label="Make Public"/>
+                </row>				
                 <!--<row>
-                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachment.attachmentImageAttribute" colspan="3" />
-                </row>-->
+                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachmentImageAttribute" colspan="3" />
+                </row>
+				
+    		    <row>
+    		        <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
+    		    </row> 
+				-->
+    		</rows>
+		</viewdef>
                 
-                <row>
-                    <cell type="subview" id="metadata" name="attachment.metadata" viewname="AttachmentMetadata" colspan="3"/>
-                </row> 
-            </rows>
-        </viewdef>
+<!--
 
         <viewdef
             type="form"
@@ -1794,7 +1799,7 @@
                 </row>
             </rows>
         </viewdef>
-        
+		
         <viewdef
             type="formtable"
             name="AttachmentMetadata Table"
@@ -1804,6 +1809,7 @@
             <desc><![CDATA[AttachmentMetadata Grid View.]]></desc>
             <definition>AttachmentMetadata</definition>
         </viewdef>
+-->
 
 
                 <viewdef
