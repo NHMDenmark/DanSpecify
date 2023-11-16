@@ -2,6 +2,22 @@
 <viewset name="Ento Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <views>
+  
+    <!-- Global Views -->
+  
+          <view name="Taxon"
+            class="edu.ku.brc.specify.datamodel.Taxon"
+            busrules="edu.ku.brc.specify.datamodel.busrules.TaxonBusRules"
+            isinternal="false"
+            resourcelabels="false">
+            <desc><![CDATA[Taxon data entry form.]]></desc>
+            <altviews>
+                <altview name="Taxon View" viewdef="Taxon" mode="view"/>
+                <altview name="Taxon Edit" viewdef="Taxon" mode="edit" default="true"/>
+            </altviews>
+        </view>
+      
+  
     <view name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false">
       <desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
       <altviews>
@@ -100,6 +116,235 @@
   </views>
 
   <viewdefs>
+  
+     <!-- Global Views --> 
+  
+        <viewdef
+            name="Taxon"
+            type="form"
+            class="edu.ku.brc.specify.datamodel.Taxon"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
+            useresourcelabels="true">
+            <desc><![CDATA[New Taxon Node Form]]></desc>
+           <enableRules>
+                <!--<rule id="acceptedParent"><![CDATA[!isAccepted.isSelected()]]></rule>-->
+                <rule id="hybridParent1"><![CDATA[isHybrid.isSelected()]]></rule>
+                <rule id="hybridParent2"><![CDATA[isHybrid.isSelected()]]></rule>
+                <rule id="definitionItem"><![CDATA[parent.getValue() != null]]></rule>
+            </enableRules> 
+            
+            <columnDef>100px,2px,325px,5px,133px,2px,155px,10px,95px,15px,p:g</columnDef>
+            <columnDef os="lnx">115px,2px,375px,5px,143px,2px,160px,10px,105px,15px,p:g</columnDef>
+            <columnDef os="mac">130px,2px,398px,5px,141px,2px,235px,10px,110px,15px,p:g</columnDef>
+            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),10px,p,p,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2dlu"/>
+            
+            <rows>
+                <row>
+                    <cell type="label" labelfor="parent"/>
+                  	<cell type="field" id="parent"  uitype="querycbx" isrequired="true" colspan="3" initialize="name=Taxon;title=Taxon;editbtn=false;newbtn=false;editoncreate=true" name="parent"/>
+                    <!-- <cell type="field" id="WebLink" name="this" uitype="plugin" initialize="name=WebLinkButton;weblink=FishBase;icon=FishBase"/> -->
+                    <!-- <cell type="field" id="WebLink" name="this" uitype="plugin" initialize="name=WebLinkButton;url=http://www.ncbi.nlm.nih.gov/sites/gquery?term=$genusName$%20$speciesName$;label=NCBI"/> -->
+                    <!-- <cell type="field" id="WebLink" name="this" uitype="plugin" initialize="name=WebLinkButton;url=[GBIF_Canada]?king=$kingdomName$AMPp_action=containingAMP;taxa=$genusName$%20$speciesName$AMPp_format=html;label=ITIS"/> -->
+                    <!-- Put in remote prefs: URL_Prefix.GBIF_Canada = http://www.cbif.gc.ca/pls/itisca/taxastep -->
+                </row>
+                <row>
+                    <cell type="label" labelfor="name"/>
+                    <cell type="field" id="name" uitype="text" name="name"/>
+                    <cell type="label" labelfor="definitionItem"/>
+                  	<cell type="field" id="definitionItem"  uitype="combobox" name="definitionItem" colspan="3"/>
+                </row>
+                <row>
+                	<cell type="label" labelfor="fullName"/>
+                	<cell type="field" id="fullName"  uitype="text" name="fullName" colspan="3" readonly="true"/>
+                </row>
+                <row>
+                	<cell type="label" labelfor="acceptedParent"/>
+                	<cell type="field" id="acceptedParent"  uitype="querycbx" initialize="name=Taxon;title=Taxon;editbtn=false;newbtn=false" name="acceptedParent" colspan="5"/>
+                	<cell type="field" id="isAccepted" uitype="checkbox" name="isAccepted" default="true"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="commonName"/>
+                    <cell type="field" id="commonName" uitype="text" name="commonName" colspan="5"/>
+                	<cell type="field" id="isHybrid" uitype="checkbox" name="isHybrid" default="false"/>
+                </row>
+				
+				<row>						
+                    <cell type="label" labelfor="taxonKey"/>
+                    <cell type="field" id="taxonKey" name="text1" uitype="text" colspan="9"/>				
+                    <cell type="label" labelfor="taxonKeySource"/>
+                    <cell type="field" id="taxonKeySource" name="text2" uitype="text" colspan="7"/>	
+                </row>				
+				
+                <row>
+                    <cell type="label" labelfor="author"/>
+                    <cell type="field" id="author" uitype="text" name="author"/>
+                    <cell type="label" labelfor="source"/>
+                    <cell type="field" id="source" uitype="text" name="source" colspan="3"/>			
+                    <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn2" name="yesNo2" uitype="checkbox" initialize="editable=true"/>
+                </row>      
+                <row>
+                	<cell type="label" labelfor="hybridParent1"/>
+                	<cell type="field" id="hybridParent1"  uitype="querycbx" initialize="name=Taxon;title=Taxon;editbtn=false;newbtn=false" name="hybridParent1" colspan="7"/>
+                </row>
+                <row>
+                	<cell type="label" labelfor="hybridParent2"/>
+                	<cell type="field" id="hybridParent2"  uitype="querycbx" initialize="name=Taxon;title=Taxon;editbtn=false;newbtn=false" name="hybridParent2" colspan="7"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="1"/>
+                    <cell type="field" id="1" uitype="text" name="guid" colspan="7" readonly="true"/>
+                </row>
+                <row>
+                    <cell type="subview" viewname="TaxonSubform" id="acceptedChildren" name="acceptedChildren" colspan="10"/>
+                </row>
+                <row>
+                    <cell type="subview" viewname="TaxonSubform" id="children" name="children" colspan="10"/>
+                </row>
+                <row>
+                    <cell type="subview" viewname="TaxonCitation" id="taxonCitations" name="taxonCitations" colspan="10"/>
+                </row> 
+		            <row>
+			              <cell type="separator" label="ATTACHMENTS" colspan="10"/>
+                </row>
+                <row>
+                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="taxonAttachments" colspan="10" initialize="btn=true;icon=TaxonAttachment"/>
+                </row>
+                <!--<row>
+                    <cell type="label" labelfor="cs"/>
+                    <cell type="field" id="cs" name="citesStatus" uitype="text"/>
+                    <cell type="label" labelfor="cols"/>
+                    <cell type="field" id="cols" name="colStatus" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="subview" id="ta" viewname="TaxonAttributes" name="taxonAttribute" colspan="10"/>
+                </row>
+				<row>						
+                    <cell type="label" labelfor="t1"/>
+                    <cell type="field" id="t1" name="text1" uitype="text" colspan="9"/>				
+                    <cell type="label" labelfor="t2"/>
+                    <cell type="field" id="t2" name="text2" uitype="text" colspan="7"/>		
+                    <cell type="label" labelfor="t3"/>
+                    <cell type="field" id="t3" name="text3" uitype="text" colspan="7"/>		
+                    <cell type="label" labelfor="t4"/>
+                    <cell type="field" id="t4" name="text4" uitype="text"/>						
+                </row>
+                <row>	
+                    <cell type="label" labelfor="t5"/>
+                    <cell type="field" id="t5" name="text5" uitype="text" colspan="3"/>					
+                    <cell type="label" labelfor="t6"/>
+                    <cell type="field" id="t6" name="text6" uitype="text"/>					
+                    <cell type="label" labelfor="t7"/>
+                    <cell type="field" id="t7" name="text7" uitype="text" colspan="3"/>					
+                    <cell type="label" labelfor="t8"/>
+                    <cell type="field" id="t8" name="text8" uitype="text"/>
+                    <cell type="label" labelfor="t9"/>
+                    <cell type="field" id="t9" name="text9" uitype="text"/>				
+                </row>
+                <row>	
+                    <cell type="label" labelfor="t10"/>
+                    <cell type="field" id="t10" name="text10" uitype="text"/>
+                    <cell type="label" labelfor="t11"/>
+                    <cell type="field" id="t11" name="text11" uitype="text"/>
+                    <cell type="label" labelfor="t12"/>
+                    <cell type="field" id="t12" name="text12" uitype="text"/>
+					<cell type="label" labelfor="t9"/>
+                    <cell type="field" id="t9" name="text13" uitype="text"/>					
+                    <cell type="label" labelfor="7"/>
+                    <cell type="field" id="7" name="text14" uitype="text"/>	
+                </row>
+                <row>						
+                    <cell type="label" labelfor="t15"/>
+                    <cell type="field" id="t15" name="text15" uitype="text" colspan="5"/>					
+                    <cell type="label" labelfor="t16"/>
+                    <cell type="field" id="n16" name="number16" uitype="text"/>		
+					<cell type="label" labelfor="n17"/>
+                    <cell type="field" id="n17" name="number17" uitype="text"/>			  
+					<cell type="label" labelfor="n18"/>
+                    <cell type="field" id="n18" name="number18" uitype="text"/>			  
+				</row>
+                <row>
+                    <cell type="label" labelfor="t19"/>
+                    <cell type="field" id="t19" name="text19" uitype="text"/>
+                    <cell type="label" labelfor="t20"/>
+                    <cell type="field" id="t20" name="text20" uitype="text"/>
+                    <cell type="label" labelfor="i1"/>
+                    <cell type="field" id="i1" name="integer1" uitype="text"/>
+                    <cell type="label" labelfor="i2"/>
+                    <cell type="field" id="i2" name="integer2" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="n1"/>
+                    <cell type="field" id="n1" name="number1" uitype="text"/>
+                    <cell type="label" labelfor="n2"/>
+                    <cell type="field" id="n2" name="number2" uitype="text"/>
+                    <cell type="label" labelfor="n3"/>
+                    <cell type="field" id="n3" name="number3" uitype="text"/>
+                    <cell type="label" labelfor="n4"/>
+                    <cell type="field" id="n4" name="number4" uitype="text"/>
+                    <cell type="label" labelfor="n5"/>
+                    <cell type="field" id="n5" name="number5" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn2" name="yesNo2" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn3" name="yesNo3" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn4" name="yesNo4" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn5" name="yesNo5" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn6" name="yesNo6" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn7" name="yesNo7" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn5" name="yesNo8" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn6" name="yesNo9" uitype="checkbox" initialize="editable=true"/>
+                    <cell type="field" id="yn7" name="yesNo10" uitype="checkbox" initialize="editable=true"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="cn"/>
+                    <cell type="field" id="cn" name="cultivarName" uitype="text" colspan="3"/>
+                    <cell type="label" labelfor="environmentalProtectionStatus"/>
+                    <cell type="field" id="environmentalProtectionStatus" name="environmentalProtectionStatus" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="es"/>
+                    <cell type="field" id="es" name="esaStatus" uitype="text"/>
+                    <cell type="label" labelfor="in"/>
+                    <cell type="field" id="in" name="isisNumber" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="lf"/>
+                    <cell type="field" id="lf" name="labelFormat" uitype="text"/>
+                    <cell type="label" labelfor="ntn"/>
+                    <cell type="field" id="ntn" name="ncbiTaxonNumber" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="remarks"/>
+                    <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="taxonomicSerialNumber"/>
+                    <cell type="field" id="taxonomicSerialNumber" uitype="text" name="taxonomicSerialNumber"/>
+                    <cell type="label" labelfor="uc"/>
+                    <cell type="field" id="uc" name="usfwsCode" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="9"/>
+                    <cell type="field" id="9" name="createdByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
+                    <cell type="label" labelfor="10"/>
+                    <cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="11"/>
+                    <cell type="field" id="11" name="timestampModified" uitype="label" readonly="true"/>
+                    <cell type="label" labelfor="12"/>
+                    <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
+                </row>-->
+            </rows>
+        </viewdef>
+  
+ 
+  
+  
     <viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Accession Items]]></desc>
       <definition>AccessionItems</definition>
@@ -189,8 +434,6 @@
           <cell type="field" id="13" name="verbatimDate" uitype="text" colspan="2"/>
           <cell type="label" labelfor="vl"/>
           <cell type="field" id="vl" name="verbatimLocality" uitype="text" colspan="2"/>
-          <cell type="label" labelfor="sdv"/>
-          <cell type="field" id="sdv" name="startDateVerbatim" uitype="text" readonly="true"/>
         </row>
         <row>
           <cell type="label" labelfor="9"/>
@@ -218,8 +461,12 @@
         <row>
           <cell type="label" labelfor="7"/>
           <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
-          <cell type="label" labelfor="10"/>
-          <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
+          <cell type="label" labelfor="13"/>
+          <cell type="field" id="13" name="verbatimDate" uitype="text"/>
+          <cell type="label" labelfor="sdv"/>
+          <cell type="field" id="sdv" name="startDateVerbatim" uitype="text" readonly="true"/>
+        </row>
+        <row>
           <cell type="label" labelfor="3"/>
           <cell type="field" id="3" name="method" uitype="combobox"/>
         </row>
@@ -267,12 +514,8 @@
           <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
           <cell type="label" labelfor="5"/>
           <cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date"/>
-          <cell type="label" labelfor="excoll"/>
-          <cell type="field" id="excoll" name="text3" uitype="text"/>
-        </row>
-        <row>
-          <cell type="label" labelfor="oj"/>
-          <cell type="field" id="oj" name="objectCondition" uitype="text"/>
+          <cell type="label" labelfor="t3"/>
+          <cell type="field" id="t3" name="text3" uitype="text"/>
         </row>
         <row>
           <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5"/>
@@ -284,15 +527,15 @@
           <cell type="subview" viewname="CollectingEventSub" id="21" name="collectingEvent" colspan="12" rows="5"/>
         </row>
         <row>
-          <cell type="label" labelfor="fnp"/>
-          <cell type="field" id="fnp" name="fieldNotebookPage" uitype="querycbx" initialize="name=FieldNotebookPage;title=FieldNotebookPage" isrequired="false"/>
-        </row>
-        <row>
           <cell type="subview" viewname="Preparation" id="8" name="preparations" defaulttype="form" colspan="12"/>
         </row>
         <row>
           <cell type="label" labelfor="rem"/>
           <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="9"/>
+        </row>
+        <row>
+          <cell type="label" labelfor="t2"/>
+          <cell type="field" id="t2" name="text2" uitype="text"/>
         </row>
         <row>
           <cell type="separator" label="Attachments" colspan="12"/>
@@ -329,9 +572,6 @@
           <cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
           <cell type="label" labelfor="2"/>
           <cell type="field" id="2" name="projectNumber" uitype="text"/>
-          <row>
-          <cell type="label" labelfor="t2"/>
-          <cell type="field" id="t2" name="text2" uitype="text"/>
         </row>
         <row>
           <cell type="label" label="RELNAMEHERE:" initialize="align=right;"/>
@@ -376,6 +616,10 @@
         </row>
         <row>
           <cell type="subview" viewname="DNASequence" id="6" name="dnaSequences" initialize="btn=true"/>
+        </row>
+        <row>
+          <cell type="label" labelfor="fnp"/>
+          <cell type="field" id="fnp" name="fieldNotebookPage" uitype="querycbx" initialize="name=FieldNotebookPage;title=FieldNotebookPage" isrequired="false"/>
         </row>
         <row>
           <cell type="label" labelfor="desc"/>
@@ -485,7 +729,9 @@
       <rows>
         <row>
           <cell type="label" labelfor="1"/>
-          <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7"/>
+          <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="3"/>
+          <cell type="label" labelfor="vq"/>
+          <cell type="field" id="vq" name="varQualifier" uitype="text"/>
           <cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
         </row>
         <row>
@@ -498,17 +744,15 @@
           <cell type="label" labelfor="7"/>
           <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=determinedDate;tp=determinedDatePrecision" uifieldformatter="Date"/>
           <cell type="label" labelfor="5"/>
-          <cell type="field" id="5" name="determiner" uitype="querycbx" initialize="name=Agent" colspan="5"/>
+          <cell type="field" id="5" name="determiner" uitype="querycbx" initialize="name=Agent"/>
+          <cell type="label" labelfor="t2"/>
+          <cell type="field" id="t2" name="text2" uitype="text"/>
         </row>
         <row>
           <cell type="label" labelfor="12"/>
           <cell type="field" id="12" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
         </row>
         <!--<row>
-          <cell type="label" labelfor="t2"/>
-          <cell type="field" id="t2" name="text2" uitype="text"/>
-          <cell type="label" labelfor="vq"/>
-          <cell type="field" id="vq" name="varQualifier" uitype="text"/>
           <cell type="label" labelfor="8"/>
           <cell type="field" id="8" name="qualifier" uitype="text"/>
           <cell type="label" labelfor="9"/>
@@ -581,17 +825,16 @@
       <rowDef auto="true" sep="2px" cell="p"/>
       <rows>
         <row>
-          <cell type="label" labelfor="sex"/>
-          <cell type="field" id="sex" name="text1" uitype="combobox" picklist="Sex"/>
-          <cell type="label" labelfor="stage"/>
-          <cell type="field" id="stage" name="text4" uitype="combobox"/>
+          <cell type="label" labelfor="1"/>
+          <cell type="field" id="1" name="text1" uitype="combobox" picklist="Sex"/>
         </row>
         <!--<row>
           <cell type="label" labelfor="4"/>
           <cell type="field" id="4" name="text2" uitype="text"/>
           <cell type="label" labelfor="3"/>
           <cell type="field" id="3" name="text3" uitype="text"/>
-
+          <cell type="label" labelfor="2"/>
+          <cell type="field" id="2" name="text4" uitype="combobox"/>
         </row>
                 <row>
           <cell type="label" labelfor="22"/>
@@ -759,8 +1002,8 @@
         <row>
           <cell type="label" labelfor="localityName"/>
           <cell type="field" id="localityName" name="localityName" uitype="text" colspan="9"/>
-          <cell type="label" labelfor="entodstr"/>
-          <cell type="field" id="entodstr" name="text1" uitype="combobox" picklist="ento_district" colspan="2"/>
+          <cell type="label" labelfor="t1"/>
+          <cell type="field" id="t1" name="text1" uitype="text" colspan="2"/>
         </row>
         <row>
           <cell type="label" labelfor="geography"/>
@@ -1028,16 +1271,6 @@
           <cell type="field" id="3" name="countAmt" uitype="text"/>
           <cell type="label" labelfor="4"/>
           <cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
-        </row>
-        <row>
-          <cell type="label" labelfor="prepdate"/>
-          <cell type="field" id="prepdate" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date" colspan="3"/>
-        </row>
-        <row>
-          <cell type="label" labelfor="esd"/>
-          <cell type="field" id="esd" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date" colspan="3"/>
-          <cell type="label" labelfor="eed"/>
-          <cell type="field" id="eed" uitype="plugin" name="this" initialize="name=PartialDateUI;df=date2;tp=date2Precision" uifieldformatter="Date" colspan="3"/>
         </row>
         <!--<row>
           <cell type="label" labelfor="1"/>
