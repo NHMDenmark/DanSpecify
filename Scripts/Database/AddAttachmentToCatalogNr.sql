@@ -26,5 +26,4 @@ INSERT INTO collectionobjectattachment
 VALUES (CURRENT_TIMESTAMP(), 0, (SELECT collectionid FROM collectionobject WHERE catalognumber = CatalogNr LIMIT 1), 0, 10215, LAST_INSERT_ID(), (SELECT collectionobjectid FROM collectionobject WHERE catalognumber = CatalogNr LIMIT 1));
 
 END
-
-END//
+//
