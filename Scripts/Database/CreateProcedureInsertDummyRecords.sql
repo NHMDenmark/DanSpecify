@@ -1,17 +1,18 @@
 DELIMITER //
 
-CREATE PROCEDURE `InsertDummyRecords`(
+CREATE DEFINER=`root`@`%` PROCEDURE `InsertDummyRecords`(
 	IN `amount` INT,
 	IN `collectionID` INT,
 	IN `catalogerID` INT,
 	IN `agentID` INT,
-	IN `ProjectName` TINYTEXT
+	IN `ProjectName` TINYTEXT,
+	IN `Remarks` TEXT
 )
 LANGUAGE SQL
 NOT DETERMINISTIC
 CONTAINS SQL
 SQL SECURITY DEFINER
-
+COMMENT ''
 BEGIN
     
 	DECLARE highest INT DEFAULT 0;
@@ -23,10 +24,10 @@ BEGIN
     	SET highest = highest + 1;
     	
  		INSERT INTO `collectionobject` (`TimestampCreated`, `TimestampModified`, `Version`, `CollectionMemberID`, `CatalogedDate`, 
- 				`CatalogNumber`, `ProjectNumber`, `CollectionID`, `CreatedByAgentID`, `CatalogerID`, `YesNo1`, `YesNo3`) 
+ 				`CatalogNumber`, `ProjectNumber`, `Remarks`, `CollectionID`, `CreatedByAgentID`, `CatalogerID`, `YesNo1`, `YesNo3`) 
  			VALUES (CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), 0, collectionID, '2022-07-08',
  				LPAD(highest, 9, 0),
-				ProjectName, collectionID, agentID, catalogerID, 0, 1);
+				ProjectName, Remarks, collectionID, agentID, catalogerID, 0, 1);
        
    	SET amount = amount - 1;
         
