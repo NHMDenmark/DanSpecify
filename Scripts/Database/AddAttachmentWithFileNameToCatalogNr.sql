@@ -12,7 +12,7 @@ SQL SECURITY DEFINER
 COMMENT ''
 BEGIN
 
-SET @altcatnr := CAST(AltCatNr AS CHAR CHARACTER SET UTF8);
+SET @catnr := CAST(CatalogNr AS CHAR CHARACTER SET UTF8);
 
 INSERT INTO attachment 
        (TimestampCreated, Version, AttachmentLocation, FileCreatedDate, GUID, 
@@ -22,8 +22,8 @@ VALUES (CURRENT_TIMESTAMP(), 0, FileName, DATE(CURRENT_TIMESTAMP()), (select md5
 
 INSERT INTO collectionobjectattachment  
 		 (Timestampcreated, Version, CollectionMemberID, Ordinal, CreatedByAgentID, AttachmentID, CollectionobjectID) 
-VALUES (CURRENT_TIMESTAMP(), 0, (SELECT collectionid FROM collectionobject WHERE catalognumber = CatalogNr LIMIT 1), 
-        0, 10215, LAST_INSERT_ID(), (SELECT collectionobjectid FROM collectionobject WHERE catalognumber = CatalogNr LIMIT 1));
+VALUES (CURRENT_TIMESTAMP(), 0, CollectionId, 0, 10215, LAST_INSERT_ID(), 
+        (SELECT collectionobjectid FROM collectionobject WHERE catalognumber = @catnr LIMIT 1));
 
 END
 
