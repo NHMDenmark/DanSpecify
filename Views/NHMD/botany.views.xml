@@ -154,8 +154,8 @@
             </altviews>
         </view>
         
-<!--		
-		<view name="AttachmentMetadata"
+<!--        
+        <view name="AttachmentMetadata"
             class="edu.ku.brc.specify.datamodel.AttachmentMetadata"
             resourecelabels="false">
             <desc><![CDATA[The AttachmentMetadata subform.]]></desc>
@@ -1702,14 +1702,14 @@
             <columnDef>p,2px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
 
-    		<rows>
+            <rows>
                 <row>
                     <cell type="label" labelfor="origFilename" label="FILENAME"/>
                     <cell type="field" id="origFilename" name="origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
                 </row>
                 <row>
-                	<cell type="label" labelfor="title"  label="TITLE"/>
-                	<cell type="field" id="title" name="title" uitype="text" isrequired="true"/>
+                    <cell type="label" labelfor="title"  label="TITLE"/>
+                    <cell type="field" id="title" name="title" uitype="text" isrequired="true"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="copyrightHolder" label="COPYRIGHT_HOLDER"/>
@@ -1730,30 +1730,30 @@
                 <row>
                     <cell type="label" labelfor="fileCreatedDate" />
                     <cell type="field" id="fileCreatedDate" name="fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
-                </row>			
+                </row>            
                 <row>
                     <cell type="label" labelfor="mimeType" />
                     <cell type="field" id="mimeType" name="mimeType" uitype="text"/>
-                </row>	
+                </row>    
                 <row>
                     <cell type="label" labelfor="remarks" />
                     <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
-                </row>				
+                </row>                
                 <!--<row>
                     <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
                 </row> -->
                 <row>
                     <cell type="label" labelfor="type" />
                     <cell type="field" id="type" name="type" uitype="text"/>
-                </row>	
+                </row>    
                 <row>
                     <cell type="label" labelfor="subtype" />
                     <cell type="field" id="subtype" name="subtype" uitype="text"/>
-                </row>	
+                </row>    
                 <row>
                     <cell type="label" labelfor="metadataText" />
                     <cell type="field" id="metadataText" name="metadataText" uitype="text"/>
-                </row>					
+                </row>                    
                 <row>
                     <cell type="label" labelfor="dateImaged" />
                     <cell type="field" id="dateImaged" name="dateImaged" uitype="text"/>
@@ -1763,19 +1763,19 @@
                     <cell type="field" id="copyrightDate" name="copyrightDate" uitype="text"/>
                 </row>
                 <row>
-                	<cell type="label" labelfor="ispub" label=""/>
-                	<cell type="field" id="ispub" name="isPublic" uitype="checkbox" label="Make Public"/>
-                </row>				
+                    <cell type="label" labelfor="ispub" label=""/>
+                    <cell type="field" id="ispub" name="isPublic" uitype="checkbox" label="Make Public"/>
+                </row>                
                 <!--<row>
                     <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachmentImageAttribute" colspan="3" />
                 </row>
-				
-    		    <row>
-    		        <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
-    		    </row> 
-				-->
-    		</rows>
-		</viewdef>
+                
+                <row>
+                    <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
+                </row> 
+                -->
+            </rows>
+        </viewdef>
                 
 <!--
 
@@ -1799,7 +1799,7 @@
                 </row>
             </rows>
         </viewdef>
-		
+        
         <viewdef
             type="formtable"
             name="AttachmentMetadata Table"
