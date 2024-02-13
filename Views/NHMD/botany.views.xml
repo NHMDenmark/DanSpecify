@@ -457,6 +457,10 @@
                     <cell type="label" labelfor="34"/>
                     <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="11"/>
                 </row>   
+                <row>
+                    <cell type="label" labelfor="rem"/>
+                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
+                </row>
 
 <!--        <row>
           <cell type="panel" id="Frankenpanel" name="Frankenpanel"  coldef="p,2px,f:p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
