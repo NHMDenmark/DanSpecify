@@ -231,8 +231,12 @@
 			
                 <row>
 				<!--Home Collection -->
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="reservedText2" uitype="combobox" picklist="Collections" colspan="1"/>
+					<cell type="label" labelfor="2" colspan="1"/>
+					<cell type="field" id="2" name="reservedText2" uitype="combobox" picklist="Collections" colspan="2"/>
+					<cell type="label" labelfor="curator" colspan="1"/>
+					<cell type="field" id="curator" name="text1" uitype="combobox" picklist="Curators" colspan="2"/>
+					<cell type="label" labelfor="collmanager" colspan="1"/>
+					<cell type="field" id="collmanager" name="text2" uitype="combobox" picklist="Collection Managers" colspan="2"/>
                 </row>
 				
 				<row>
@@ -774,10 +778,17 @@
                 </row>
 
                 <row>
+				<!--Condition summary-->
+                    <cell type="label" labelfor="trecondsum"/>
+                    <cell type="field" id="trecondsum" name="text4" uitype="textareabrief" rows="2" colspan="10"/>
+                </row>
+				
+                <row>
 				<!--Additional notes-->
                     <cell type="label" labelfor="treremarks"/>
                     <cell type="field" id="treremarks" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
+				
 
 				<row>
 				<!--Treatment by-->
@@ -823,10 +834,17 @@
                 </row>
 
                 <row>
+				<!--Condition summary-->
+                    <cell type="label" labelfor="trecondsum"/>
+                    <cell type="field" id="trecondsum" name="text4" uitype="textareabrief" rows="2" colspan="10"/>
+                </row>
+				
+                <row>
 				<!--Additional notes-->
                     <cell type="label" labelfor="treremarks"/>
                     <cell type="field" id="treremarks" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
+				
 
 				<row>
 				<!--Treatment by-->
