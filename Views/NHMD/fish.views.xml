@@ -209,7 +209,8 @@
 					<cell type="label" labelfor="3"/>
                     <cell type="field" id="3" name="accession" colspan="1" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
                     <cell type="label" labelfor="t5"/>
-                    <cell type="field" id="t5" name="text5" colspan="1" uitype="text"/> <!-- Label (Etiket) --> 
+                    <cell type="field" id="t5" name="text5" colspan="5" uitype="text"/> <!-- Label (Etiket) --> 
+                    <cell type="field" id="yn4" name="yesNo4" colspan="3" uitype="checkbox" initialize="editable=true"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="t8"/>
@@ -248,7 +249,7 @@
                     <cell type="field" id="7" name="collectingEvent" uitype="querycbx" initialize="name=CollectingEvent;clonebtn=true" colspan="15"/>
                 </row>
                 <row>
-                    <cell type="subview" viewname="Preparation" id="8" name="preparations" defaulttype="table" colspan="15" rows="3"/>
+                    <cell type="subview" viewname="Preparation" id="8" name="preparations" defaulttype="table" colspan="23" rows="4"/>
                 </row>
                 <row>
                     <cell type="subview" id="15" viewname="FishAttributes" name="collectionObjectAttribute" colspan="23"/>
@@ -696,8 +697,8 @@
             <desc><![CDATA[Preparation for Collection Object form.]]></desc>
             <enableRules/>
 
-            <columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
+            <columnDef>100px,2px,250px,5px,100px,2px,200px,5px,100px,2px,100px,2px,100px,p:g</columnDef>
+            <columnDef os="lnx">115px,2px,200px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
             <columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
