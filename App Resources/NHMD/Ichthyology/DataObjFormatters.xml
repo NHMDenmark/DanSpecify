@@ -165,7 +165,9 @@
         >
         <switch single="true">
             <fields>
-                <field>startDate</field>
+                <field>locality.localityName</field>
+                <field sep=", ">startDate</field>
+                <field sep=", ">stationFieldNumber</field>
             </fields>
         </switch>
     </format>
