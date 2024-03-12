@@ -49,7 +49,8 @@ To be able to use any of our Specify installations, you need to have a user acco
 
 The Specify7 installations for each of the Danish Natural History Museums are accessible via these URLs: 
 - NHMD (Copenhagen): https://specify-snm.science.ku.dk/specify/ 
-- NHMA (Aarhus): https://specify-nhma.science.ku.dk/specify/ 
+- NHMA (Aarhus): https://specify-nhma.science.ku.dk/specify/
+- Aarhus Universitet Herbarium: https://specify-au.science.ku.dk/specify/ 
 - Fur & Mors: https://specify-muserum.science.ku.dk/accounts/login/?next=/specify/ 
 - Museum Sønderjylland (Gram): https://specify-msjn.science.ku.dk/specify/ 
 - Østsjællands Museum (Faxe): https://specify-oesm.science.ku.dk/specify/  
