@@ -3,7 +3,7 @@
   <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">  
     <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>    
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="https://ror.org/040ck2b86"/>
-    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="CB"/>
+    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="C"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
     <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Vascular Plants"/> 
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
