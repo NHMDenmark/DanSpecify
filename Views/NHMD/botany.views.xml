@@ -445,17 +445,18 @@
                     <cell type="field" id="2" name="projectNumber" uitype="text"/>
                 </row>
                 <row>
-                    <cell type="label" label=""/>
-                    <cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
-                    <cell type="label" label="" />
-                    <cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+                    <cell type="label" labelfor="subDataset"/>
+                    <cell type="field" id="subDataset" name="text3" uitype="text"/>
                     <cell type="label" labelfor="oj"/>
                     <cell type="field" id="oj" name="objectCondition" uitype="text"/>
+					<cell type="label" label="" />
+                    <cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
                 </row>
-                
                 <row>
                     <cell type="label" labelfor="34"/>
-                    <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="11"/>
+                    <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="5"/>
+					<cell type="label" label=""/>
+                    <cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
                 </row>   
                 <row>
                     <cell type="label" labelfor="rem"/>
