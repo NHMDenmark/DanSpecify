@@ -445,17 +445,18 @@
                     <cell type="field" id="2" name="projectNumber" uitype="text"/>
                 </row>
                 <row>
-                    <cell type="label" label=""/>
-                    <cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
-                    <cell type="label" label="" />
-                    <cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+                    <cell type="label" labelfor="subDataset"/>
+                    <cell type="field" id="subDataset" name="text3" uitype="text"/>
                     <cell type="label" labelfor="oj"/>
                     <cell type="field" id="oj" name="objectCondition" uitype="text"/>
+					<cell type="label" label="" />
+                    <cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
                 </row>
-                
                 <row>
                     <cell type="label" labelfor="34"/>
-                    <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="11"/>
+                    <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="5"/>
+					<cell type="label" label=""/>
+                    <cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
                 </row>   
                 <row>
                     <cell type="label" labelfor="rem"/>
@@ -681,8 +682,9 @@
 
             <rows>
                 <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7"/>
+				    <cell type="label" labelfor="1"/>
+                    <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="5"/>
+					<cell type="label" labelfor="3"/>
                     <cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
                 </row>
                 <row>
@@ -698,6 +700,8 @@
                     <cell type="field" id="13" name="preferredTaxon" uitype="text" readonly="true" colspan="5"/>
                     <cell type="label" labelfor="11"/>
                     <cell type="field" id="11" name="nameUsage" uitype="combobox"/>
+					<cell type="label" labelfor="storunder"/>
+                    <cell type="field" id="storunder" name="yesNo3" uitype="checkbox"/> 
                 </row>
                 <row>
                     <cell type="label" labelfor="7"/>
