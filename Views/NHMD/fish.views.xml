@@ -724,18 +724,14 @@
                     <cell type="command" id="ShowLoansBtn" name="ShowLoansBtn" label="SHOW_INTERACTIONS" ignore="true"/>
                     <cell type="field" id="isOnLoan" name="isOnLoan" uitype="checkbox" label="IS_ON_LOAN" readonly="true"/>
                 </row> 
-                <!--<row>
-                    <cell type="label" labelfor="desc"/>
-                    <cell type="field" id="desc" name="description" uitype="text"/>
-                    <cell type="label" labelfor="n1"/>
-                    <cell type="field" id="n1" name="number1" uitype="text"/>
-                    <cell type="label" labelfor="n2"/>
-                    <cell type="field" id="n2" name="number2" uitype="text"/>
-                </row>
                 <row>
+                    <cell type="label" labelfor="desc"/>
+                    <cell type="field" id="desc" name="description" uitype="text" colspan="14"/>
+                </row>
+                <!-- <row>
                     <cell type="subview" id="ms" viewname="MaterialSample" name="materialSamples" initialize="align=right;btn=true;icon=MaterialSample"/>
                     <cell type="label" labelfor="rem"/>
-                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
+                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="sn"/>
@@ -750,6 +746,10 @@
                     <cell type="field" id="t1" name="text1" uitype="text"/>
                     <cell type="label" labelfor="t2"/>
                     <cell type="field" id="t2" name="text2" uitype="text"/>
+                    <cell type="label" labelfor="n1"/>
+                    <cell type="field" id="n1" name="number1" uitype="text"/>
+                    <cell type="label" labelfor="n2"/>
+                    <cell type="field" id="n2" name="number2" uitype="text"/>
                 </row>
                 <row>
                     <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
