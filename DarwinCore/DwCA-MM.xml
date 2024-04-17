@@ -5,7 +5,7 @@
     <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/mci8-ehqk"/>
     <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="MM"/>
     <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
-    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Mammalogy Collection"/> 
+    <!--<field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum Denmark | Mammalogy Collection"/> -->
     <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/legalcode"/>
     <queries>
         <query contextTableId="1" name="CollObjectsMM.csv">
