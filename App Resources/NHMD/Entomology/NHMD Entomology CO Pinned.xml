@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="NHMD Entomology CO Pinned"
+		 columnCount="16"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="31"
+		 columnSpacing="2"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="1,9-determinations,4.taxon.Subfamily" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Species Author" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Tribe" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Species" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Order" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Class" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subgenus" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subspecies Author" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subspecies" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subtribe" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<field name="1,10,2.locality.minElevation" class="java.lang.Double"/>
+	<field name="1,10,2,3.geography.Country" class="java.lang.String"/>
+	<field name="1,31.container.name" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.County" class="java.lang.String"/>
+	<field name="1,10.collectingevent.method" class="java.lang.String"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
+	<field name="1,10,2.locality.longitude1" class="java.math.BigDecimal"/>
+	<field name="1,10.collectingevent.endDate" class="java.lang.String"/>
+	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1,10.collectingevent.remarks" class="java.lang.String"/>
+	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.State" class="java.lang.String"/>
+	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
+	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="10"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="32"
+						y="0"
+						width="0"
+						height="10"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.05" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="16"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="32"
+						y="0"
+						width="0"
+						height="16"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.05" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="1"
+						width="31"
+						height="14"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="10"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

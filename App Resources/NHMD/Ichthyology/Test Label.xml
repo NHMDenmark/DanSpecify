@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Test Label" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="5128af74-d14f-4315-b473-ff65b4bcd7a8">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
+	<field name="1.collectionobject.altCatalogNumber" class="java.lang.String"/>
+	<field name="1.collectionobject.text2" class="java.lang.String"/>
+	<field name="1,5-cataloger.agent.cataloger" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogedDate" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.determinations" class="java.lang.String"/>
+	<field name="1,10.collectingevent.collectingEvent" class="java.lang.String"/>
+	<field name="1,63-preparations.preparation.preparations" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="106" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="4311d7cb-3e6c-4f15-8c38-2e838722926e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df28b10d-ca6d-4dbb-af12-0bfabf6a2603"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="e03afc54-69b1-4f1c-871c-da3f87bd54ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df28b10d-ca6d-4dbb-af12-0bfabf6a2603"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Catalog Number:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="30" width="100" height="30" uuid="6002380c-ce2e-4425-89db-872bc70dbbf3"/>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="30" uuid="aafded90-471c-4f89-983e-32033913e03b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alt Cat Number:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="60" width="100" height="30" uuid="ba66920e-5e93-4742-bad1-b2ee7cd96fd6"/>
+				<textFieldExpression><![CDATA[$F{1,5-cataloger.agent.cataloger}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="30" uuid="1cf23a9f-ed60-49f0-ae15-43f00ce579eb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cataloged By:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="30" uuid="bf11ef9f-ce25-488b-9b1d-db5367a4e37f"/>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.catalogedDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="6ebf7885-7dc1-4cf2-a336-4d5285834c90"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cataloged Date: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="30" width="100" height="30" uuid="83d04b98-d6f6-4341-817e-2fddc8f43062"/>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.collectingEvent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="30" width="100" height="30" uuid="c1df90f6-ec7a-4bf3-9d5c-ba47ae158f80"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Collecting Event:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="60" width="100" height="30" uuid="fd8362a7-ca90-4792-8d57-6f7dd8d2b8aa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Determinations:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="60" width="224" height="30" uuid="89b82400-dd99-46be-ac1e-fdba9c63d91d"/>
+				<textFieldExpression><![CDATA[$F{1,9-determinations.determination.determinations}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="30" width="100" height="30" uuid="dc6806fb-af08-4fdf-9e81-6d704d7036ee"/>
+				<textFieldExpression><![CDATA[$F{1,63-preparations.preparation.preparations}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="0" width="100" height="30" uuid="5ab07b46-4482-4bcb-9736-e2950bf1a00c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Preparations:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band height="50" splitType="Stretch"/>
+	</summary>
+</jasperReport>

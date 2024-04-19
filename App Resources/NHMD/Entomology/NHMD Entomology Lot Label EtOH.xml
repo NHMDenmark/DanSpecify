@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="NHMD Entomology Lot Label EtOH"
+		 columnCount="4"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="132"
+		 columnSpacing="2"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+	<field name="1,9-determinations,4.taxon.Subtribe" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.County" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Class" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subspecies Author" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Species" class="java.lang.String"/>
+	<field name="1,10.collectingevent.remarks" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.Country" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subspecies" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.State" class="java.lang.String"/>
+	<field name="1,31.container.name" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Tribe" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Order" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Species Author" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subfamily" class="java.lang.String"/>
+	<field name="1,10,2.locality.minElevation" class="java.lang.Double"/>
+	<field name="1,10,2.locality.longitude1" class="java.math.BigDecimal"/>
+	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Subgenus" class="java.lang.String"/>
+	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<field name="1,10.collectingevent.method" class="java.lang.String"/>
+	<field name="1,10.collectingevent.endDate" class="java.lang.String"/>
+	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1,10.collectingevent.startDateNumericYear" class="java.lang.Integer"/>
+	<field name="1,10.collectingevent.endDateNumericDay" class="java.lang.Integer"/>
+	<field name="1,10.collectingevent.startDateNumericMonth" class="java.lang.Integer"/>
+	<field name="1,10.collectingevent.startDateNumericDay" class="java.lang.Integer"/>
+	<field name="1,10.collectingevent.endDateNumericMonth" class="java.lang.Integer"/>
+	<field name="1,10.collectingevent.endDateNumericYear" class="java.lang.Integer"/>
+	<field name="1,10,2.locality.originalLatLongUnit" class="java.lang.Integer"/>
+	<field name="1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Suborder" class="java.lang.String"/>
+	<field name="1,7.accession.text1" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="20"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="133"
+						y="0"
+						width="0"
+						height="20"
+						key="line-5"
+						stretchType="RelativeToBandHeight"/>
+					<graphicElement stretchType="RelativeToBandHeight">
+					<pen lineWidth="0.1" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="19"
+						width="132"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.1" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="59"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="1"
+						width="131"
+						height="8"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="5" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,31.container.name} != null ? $F{1,31.container.name} : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="9"
+						width="130"
+						height="7"
+						key="textField"/>
+					<box></box>
+					<textElement isStyledText="true">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>"+$F{1,10,2,3.geography.Country}+"</style>"
+	+ ( $F{1,10,2,3.geography.State} != null ? ": "+$F{1,10,2,3.geography.State} : "" )
+	+ ( $F{1,10,2,3.geography.County} != null ? ": "+$F{1,10,2,3.geography.County} : "" )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="23"
+						width="130"
+						height="7"
+						key="textField"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[($F{1,10,2.locality.latitude1} != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.latitude1}, $F{1,10,2.locality.originalLatLongUnit}, true)
+		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.latitude1}, true) + ", "
+	+ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.longitude1}, $F{1,10,2.locality.originalLatLongUnit}, false)
+		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.longitude1}, false)
+: "") + ($F{1,10,2.locality.minElevation} != null || $F{1,10,2.locality.maxElevation} != null ? ", " : "") +
+(( $F{1,10,2.locality.minElevation} != null ? $F{1,10,2.locality.minElevation}.intValue() + ($F{1,10,2.locality.minElevation} != null && $F{1,10,2.locality.maxElevation} != null ? "-" : "") : "" )
+	+ ( $F{1,10,2.locality.maxElevation} != null ? $F{1,10,2.locality.maxElevation}.intValue() : "" )
+	+ ( $F{1,10,2.locality.minElevation} != null || $F{1,10,2.locality.maxElevation} != null ? "m.a.s.l." : "" ))]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="16"
+						width="130"
+						height="7"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2.locality.localityName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="30"
+						width="130"
+						height="7"
+						key="textField"
+						positionType="Float"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10.collectingevent.remarks} != null ? $F{1,10.collectingevent.remarks} : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="44"
+						width="130"
+						height="7"
+						key="textField"
+						positionType="Float"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[!$F{1,10,30-collectors.collector.collectors}.isEmpty() ? "leg. " + $F{1,10,30-collectors.collector.collectors} : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="37"
+						width="130"
+						height="7"
+						key="textField-1"
+						positionType="Float"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10.collectingevent.method} != null ? $F{1,10.collectingevent.method} + " " : ""
++ (($F{1,10.collectingevent.startDateNumericDay} == null ? "" : $F{1,10.collectingevent.startDateNumericDay} + "-").toString()
++ ($F{1,10.collectingevent.startDateNumericMonth} == null ? "" : $F{1,10.collectingevent.startDateNumericMonth} + "-").toString().replace("10","X").replace("11","XI").replace("12","XII").replace("1","I").replace("2","II").replace("3","III").replace("4","IV").replace("5","V").replace("6","VI").replace("7","VII").replace("8","VIII").replace("9","IX")
++ ($F{1,10.collectingevent.startDateNumericYear} == null ? "" : $F{1,10.collectingevent.startDateNumericYear} + "").toString()
++ ($F{1,10.collectingevent.endDateNumericYear} != null ? "–" : "" )
++ ($F{1,10.collectingevent.endDateNumericDay} == null ? "" : $F{1,10.collectingevent.endDateNumericDay} + "-").toString()
++ ($F{1,10.collectingevent.endDateNumericMonth} == null ? "" : $F{1,10.collectingevent.endDateNumericMonth} + "-").toString().replace("10","X").replace("11","XI").replace("12","XII").replace("1","I").replace("2","II").replace("3","III").replace("4","IV").replace("5","V").replace("6","VI").replace("7","VII").replace("8","VIII").replace("9","IX")
++ ($F{1,10.collectingevent.endDateNumericYear} == null ? "" : $F{1,10.collectingevent.endDateNumericYear} + "").toString())]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="58"
+						width="132"
+						height="0"
+						key="line-7"
+						positionType="Float"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.1" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="51"
+						width="130"
+						height="7"
+						key="textField-3"
+						positionType="Float"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,63-preparations,65.preptype.name}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="20"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="133"
+						y="0"
+						width="0"
+						height="20"
+						key="line-6"
+						stretchType="RelativeToBandHeight"/>
+					<graphicElement stretchType="RelativeToBandHeight">
+					<pen lineWidth="0.1" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>
