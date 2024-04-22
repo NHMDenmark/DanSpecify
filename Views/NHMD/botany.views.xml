@@ -456,7 +456,7 @@
                     <cell type="label" labelfor="34"/>
                     <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="5"/>
 					<cell type="label" label=""/>
-                    <cell type="field" id="Unlabelled" name="yesno2" uitype="checkbox" initialize="editable=true" />
+                    <cell type="field" id="Unlabelled" name="yesNo2" uitype="checkbox" initialize="editable=true" />
                 </row>   
                 <row>
                     <cell type="label" labelfor="rem"/>
