@@ -362,7 +362,8 @@
                 </row>
                 <row>
                     <cell type="label" labelfor="13"/>
-                    <cell type="field" id="13" name="preferredTaxon" uitype="text" readonly="true" colspan="9"/>
+                    <cell type="field" id="13" name="preferredTaxon" uitype="text" readonly="true" colspan="7"/>
+                    <cell type="field" id="storedUnder" name="yesNo3" uitype="checkbox"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="7"/>
