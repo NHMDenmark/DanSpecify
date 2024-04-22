@@ -163,7 +163,7 @@
           <cell type="label" labelfor="1"/>
           <cell type="field" id="1" name="stationFieldNumber" uitype="text"/>
           <cell type="label" labelfor="2"/>
-          <cell type="field" id="2" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
+          <cell type="field" id="2" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date" isrequired="true"/>
           <cell type="label" labelfor="9"/>
           <cell type="field" id="9" name="startTime" uitype="text"/>
         </row>
@@ -171,7 +171,7 @@
           <cell type="label" labelfor="3"/>
           <cell type="field" id="3" name="method" uitype="combobox"/>
           <cell type="label" labelfor="10"/>
-          <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
+          <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date" isrequired="true"/>
           <cell type="label" labelfor="7"/>
           <cell type="field" id="7" name="endTime" uitype="text"/>
         </row>
@@ -241,19 +241,19 @@
       <rows>
         <row>
           <cell type="label" labelfor="7"/>
-          <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
+          <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision;required=true" uifieldformatter="Date" isrequired="true"/>
           <cell type="label" labelfor="10"/>
-          <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
+          <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date" isrequired="true"/>
           <!--<cell type="label" labelfor="3"/>
           <cell type="field" id="3" name="method" uitype="combobox"/>-->
         </row>
         <row>
           <cell type="label" labelfor="4"/>
-          <cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/>
+          <cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10" isrequired="true"/>
         </row>
         <row>
           <cell type="label" labelfor="vl"/>
-          <cell type="field" id="vl" name="verbatimLocality" uitype="text" colspan="10"/>
+          <cell type="field" id="vl" name="verbatimLocality" uitype="text" colspan="10" isrequired="true"/>
         </row>
         <row>
           <cell type="label" labelfor="6"/>
@@ -287,15 +287,18 @@
           <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
         </row>
         <row>
+          <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
+        </row>
+        <row>
           <cell type="label" labelfor="4"/>
           <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
           <cell type="label" labelfor="5"/>
           <cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today"/>
           <cell type="label" labelfor="excoll"/>
-          <cell type="field" id="excoll" name="text3" uitype="text"/>
+          <cell type="field" id="excoll" name="text3" uitype="text" isrequired="true"/>
         </row>
         <row>
-          <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5"/>
+          <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5" isrequired="true"/>
         </row>
         <row>
           <cell type="subview" id="15" viewname="EntoAttributes" name="collectionObjectAttribute" colspan="12"/>
@@ -596,7 +599,7 @@
       <rows>
         <row>
           <cell type="label" labelfor="1"/>
-          <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7"/>
+          <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7" isrequired="true"/>
           <cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
         </row>
         <!--<row>
@@ -1136,7 +1139,7 @@
           <cell type="label" labelfor="7"/>
           <cell type="field" id="7" name="prepType" uitype="combobox" picklist="PrepType" default="Pinned"/>
           <cell type="label" labelfor="4"/>
-          <cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
+          <cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3" isrequired="true"/>
         </row>
         <row>
            <cell type="label" labelfor="3"/>
