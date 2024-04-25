@@ -170,6 +170,39 @@
         <altview name="ReferenceWorkSub Edit" viewdef="ReferenceWorkSub" mode="edit"/>
       </altviews>
     </view>
+        
+        
+        <view name="Container"
+            class="edu.ku.brc.specify.datamodel.Container"  
+            isinternal="false"
+            busrules="edu.ku.brc.specify.datamodel.busrules.ContainerBusRules">
+            <desc><![CDATA[Conservation Description.]]></desc>
+            <altviews>
+                <altview name="Container View" viewdef="Container" mode="view" default="true"/>
+                <altview name="Container Edit" viewdef="Container" mode="edit" />
+            </altviews>
+        </view>
+        
+        <view name="ContainerBrief"
+             class="edu.ku.brc.specify.datamodel.Container"  
+             isinternal="true"
+             busrules="edu.ku.brc.specify.datamodel.busrules.ContainerBusRules">
+            <desc><![CDATA[Conservation Description.]]></desc>
+            <altviews>
+                <altview name="ContainerBrief View" viewdef="ContainerBrief" mode="view" default="true"/>
+                <altview name="ContainerBrief Edit" viewdef="ContainerBrief" mode="edit" />
+            </altviews>
+        </view>
+        
+        <view name="ContainerBriefTable"
+            class="edu.ku.brc.specify.datamodel.Container"  
+             isinternal="true">
+            <desc><![CDATA[Conservation Description.]]></desc>
+            <altviews>
+                <altview name="ContainerBrief Table View" viewdef="ContainerBrief Table" mode="view" default="true"/>
+                <altview name="ContainerBrief Table Edit" viewdef="ContainerBrief Table" mode="edit" />
+            </altviews>
+        </view>
 
   </views>
 
@@ -494,9 +527,11 @@
           <cell type="label" labelfor="visibility"/>
           <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
           <!--<cell type="field" id="visibility" name="visibility" uitype="checkbox" initialize="editable=true" default="true"/>-->
+          <cell type="label" label=""/>
+          <cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="7" rows="3"/>
         </row>
         <row>
-          <cell type="panel" id="Frankenpanel" name="Frankenpanel"  coldef="p,2px,f:p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+          <!--<cell type="panel" id="Frankenpanel" name="Frankenpanel"  coldef="p,2px,f:p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
             <rows>
               <row>
                 <cell type="panel" id="ContainerPanel" name="ContainerPanel" coldef="p" rowdef="p" colspan="3">
@@ -514,9 +549,9 @@
                 </cell>
               </row>
             </rows>
-          </cell>
-          <cell type="label" label=""/>
-          <cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="7" rows="3"/>
+          </cell>-->
+          <cell type="label" labelfor="34"/>
+          <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="9"/>
         </row>
         <row>
           <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
@@ -869,7 +904,7 @@
           <cell type="label" labelfor="stage"/>
           <cell type="field" id="stage" name="text4" uitype="combobox"/>
         </row>
-		<row>
+        <row>
           <cell type="label" labelfor="fwleft"/>
           <cell type="field" id="fwleft" name="text6" uitype="text"/>
           <cell type="label" labelfor="fwright"/>
@@ -927,14 +962,14 @@
         <row>
           <cell type="label" labelfor="localityName"/>
           <cell type="field" id="localityName" name="localityName" uitype="text" colspan="16"/>
-        </row>		
+        </row>        
         <row>
-			<!-- Broad Geographic Region -->
+            <!-- Broad Geographic Region -->
             <cell type="label" labelfor="t4"/>
             <cell type="field" id="t4" name="text4" uitype="combobox" colspan="5"/>
-			<!-- BGR Source -->
-			<cell type="label" labelfor="t5"/>
-			<cell type="field" id="t5" name="text5" uitype="combobox" colspan="5"/>			
+            <!-- BGR Source -->
+            <cell type="label" labelfor="t5"/>
+            <cell type="field" id="t5" name="text5" uitype="combobox" colspan="5"/>            
             <!--<cell type="label" labelfor="t2"/>
             <cell type="field" id="t2" name="text2" uitype="combobox" colspan="3"/>-->
         </row>
@@ -1222,6 +1257,121 @@
         </row>
       </rows>
     </viewdef>
+    
+    <viewdef
+            type="form"
+            name="Container"
+            class="edu.ku.brc.specify.datamodel.Container"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
+            useresourcelabels="true">
+            <desc><![CDATA[Container Description]]></desc>
+            <enableRules/>
+            
+            <columnDef>100px,2px,178px,5px,108px,2px,130px,5px,100px,2px,195px,0px,15px,p:g</columnDef>
+            <columnDef os="lnx">115px,2px,196px,2px,113px,2px,150px,2px,115px,5px,215px,0px,15px,p:g</columnDef>
+            <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
+            <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2px"/>
+
+            <rows>
+                <row> 
+                    <cell type="label" labelfor="nm"/>
+                    <cell type="field" id="nm" name="name" uitype="text"/>
+                    <cell type="label" labelfor="typ"/>
+                    <cell type="field" id="typ" name="type" uitype="combobox"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="parent"/>
+                    <cell type="field" id="parent" name="parent" uitype="querycbx" initialize="name=Container;displaydlg=ContainerDisplay;searchdlg=ContainerSearch" colspan="10"/>                
+                </row>
+                
+             <!-- this is not yet functioning. Only displays one catalog number at a time, and not in any ranking. 
+                <row>
+                    <cell type="label" label="COLOBJ"  initialize="align=right"/>
+                    <cell type="field" id="this_" name="this" uitype="plugin" initialize="name=ContainersColObjPlugin"/>                
+                    <cell type="label" label="CONTNR_COLOBJ" initialize="align=left" colspan="5"/>
+                </row>
+            -->    
+                <row>
+                    <cell type="label" labelfor="desc"/>
+                    <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="10"/> 
+                </row>
+                <row>
+                    <cell type="subview" id="collectionObjects" name="collectionObjects" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=Additional specimens in this container" defaulttype="table" colspan="13"/>
+                </row>                
+            <!-- Not working- data entered does not persist after saving, and is not populated back to the CO form.    
+                <row>
+                    <cell type="subview" id="collectionObjectKids" name="collectionObjectKids" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=COLOBJ_IN_CONTR" defaulttype="table" colspan="13"/>               
+                </row>
+                <row>
+                    <cell type="subview" id="children" name="children" viewname="ContainerBriefTable" initialize="addsearch=true;title=SUBCONTAINERS" defaulttype="table" colspan="13"/>               
+                </row>
+            -->    
+           </rows>
+        </viewdef>
+        
+        <viewdef
+            type="formtable"
+            name="ContainerBrief Table"
+            class="edu.ku.brc.specify.datamodel.Container"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[Container grid view for Container form for children.]]></desc>
+            <definition>ContainerBrief</definition>
+        </viewdef>   
+        <viewdef
+            type="form"
+            name="ContainerBrief"
+            class="edu.ku.brc.specify.datamodel.Container"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
+            useresourcelabels="true">
+            <desc><![CDATA[Container Description]]></desc>
+            <enableRules/>
+            
+            <columnDef>100px,2px,178px,5px,108px,2px,130px,5px,100px,2px,195px,0px,15px,p:g</columnDef>
+            <columnDef os="lnx">115px,2px,196px,2px,113px,2px,150px,2px,115px,5px,215px,0px,15px,p:g</columnDef>
+            <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
+            <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2px"/>
+
+            <rows>
+                <row> 
+                    <cell type="label" labelfor="nm"/>
+                    <cell type="field" id="nm" name="name" uitype="text"/>
+                    <cell type="label" labelfor="typ"/>
+                    <cell type="field" id="typ" name="type" uitype="combobox"/>
+                </row>        
+                <row>
+                    <cell type="label" labelfor="parent"/>
+                    <cell type="field" id="parent" name="parent" uitype="querycbx" initialize="name=Container;displaydlg=ContainerDisplay;searchdlg=ContainerSearch" colspan="10"/>                
+                </row>
+        <!--using 'Parent' instead                
+                <row>
+                    <cell type="label" label="COLOBJ"  initialize="align=right"/>
+                    <cell type="field" id="this_" name="this" uitype="plugin" initialize="name=ContainersColObjPlugin"/>                
+                    <cell type="label" label="CONTNR_COLOBJ" initialize="align=left" colspan="5"/>
+                </row>
+        -->                
+                <row>
+                    <cell type="label" labelfor="desc"/>
+                    <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="10"/> 
+                </row>
+                <row>
+                    <cell type="subview" id="collectionObjects" name="collectionObjects" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=Additional specimens in this container" defaulttype="table" colspan="13"/>
+                </row>
+            <!-- This is not working properly. See notes in code of main Container form. 
+                
+                    <cell type="subview" id="collectionObjectKids" name="collectionObjectKids" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=COLOBJ_IN_CONTR" defaulttype="table" colspan="13"/>               
+                
+            -->    
+           </rows>
+        </viewdef>
+
+        
+    
+    
   </viewdefs>
 
 </viewset>
