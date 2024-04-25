@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewset name="Attachment Metadata" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <views>
+	        <view name="ObjectAttachment"
+            class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
+            busrules="edu.ku.brc.specify.datamodel.busrules.AttachmentBusRules"
+            resourcelabels="false">
+            <desc><![CDATA[The Object-Attachment View.]]></desc>
+            <altviews>
+                <altview name="ObjectAttachment Icon View"  viewdef="ObjectAttachment IconView" mode="view"/>
+                <altview name="ObjectAttachment Icon Edit"  viewdef="ObjectAttachment IconView" mode="edit"/>
+                <altview name="ObjectAttachment Table View" viewdef="ObjectAttachment Table"    mode="view" />
+                <altview name="ObjectAttachment Table Edit" viewdef="ObjectAttachment Table"    mode="edit"/>
+                <altview name="ObjectAttachment Form View"  viewdef="ObjectAttachment Form"     label="Form" mode="view" default="true"/>
+                <altview name="ObjectAttachment Form Edit"  viewdef="ObjectAttachment Form"     label="Form" mode="edit"/>
+            </altviews>
+        </view>	
+	
+        <view name="ObjectAttachmentIconOnly"
+            class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
+            busrules="edu.ku.brc.specify.datamodel.busrules.AttachmentBusRules"
+            resourcelabels="false">
+            <desc><![CDATA[The Object-Attachment View.]]></desc>
+            <altviews>
+                <altview name="ObjectAttachment Icon View"  viewdef="ObjectAttachment IconView" label="Thumb" mode="view" default="true"/>
+                <altview name="ObjectAttachment Icon Edit"  viewdef="ObjectAttachment IconView" label="Thumb" mode="edit"/>
+            </altviews>
+        </view>
+
+		<view name="CollectionObjectAttachment"
+			class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
+			busrules="edu.ku.brc.specify.datamodel.busrules.AttachmentBusRules"
+			resourcelabels="false">
+			<desc><![CDATA[The Collection Object-Attachment View.]]></desc>
+            <altviews>
+                <altview name="CollectionObjectAttachment Icon View"  viewdef="CollectionObjectAttachment IconView" mode="view"/>
+                <altview name="CollectionObjectAttachment Icon Edit"  viewdef="CollectionObjectAttachment IconView" mode="edit"/>
+                <altview name="CollectionObjectAttachment Table View" viewdef="CollectionObjectAttachment Table"    mode="view" />
+                <altview name="CollectionObjectAttachment Table Edit" viewdef="CollectionObjectAttachment Table"    mode="edit"/>
+                <altview name="CollectionObjectAttachment Form View"  viewdef="CollectionObjectAttachment Form"     label="Form" mode="view" default="true"/>
+                <altview name="CollectionObjectAttachment Form Edit"  viewdef="CollectionObjectAttachment Form" 	label="Form" mode="edit"/>
+            </altviews>
+        </view>
+
+<!--		
+		<view name="AttachmentMetadata"
+            class="edu.ku.brc.specify.datamodel.AttachmentMetadata"
+            resourecelabels="false">
+            <desc><![CDATA[The AttachmentMetadata subform.]]></desc>
+            <altviews>
+                <altview name="AttachmentMetadata View"  viewdef="AttachmentMetadata"  label="Form"  mode="view" />
+                <altview name="AttachmentMetadata Edit"  viewdef="AttachmentMetadata"  label="Form"  mode="edit" default="true"/>
+            </altviews>
+        </view>
+-->        
+        
+    </views>
+    
+    
+    <viewdefs>
+
+        <viewdef
+            type="formtable"
+            name="ObjectAttachment Table"
+            class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[ObjectAttachment grid view.]]></desc>
+            <definition>ObjectAttachment Form</definition>
+        </viewdef>
+
+        <viewdef
+            type="formtable"
+            name="CollectionObjectAttachment Table"
+            class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[ObjectAttachment grid view.]]></desc>
+            <definition>ObjectAttachment Form</definition>
+        </viewdef>
+        
+        <viewdef
+            type="iconview"
+            name="ObjectAttachment IconView"
+            class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[The ObjectAttachment Icon Viewer]]></desc>
+        </viewdef>
+
+        <viewdef
+            type="iconview"
+            name="CollectionObjectAttachment IconView"
+            class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[The ObjectAttachment Icon Viewer]]></desc>
+        </viewdef>
+
+        <viewdef
+            type="form"
+            name="CollectionObjectAttachment Form"
+            class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
+            useresourcelabels="true">
+            <desc><![CDATA[The CollectionObjectAttachment form.]]></desc>
+            
+            <!--<columnDef>110px,2dlu,p:g,5dlu,100px,2dlu,85px</columnDef> -->
+            <columnDef>p,5dlu,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2px"/>
+
+              <rows>
+                <row>
+                    <cell type="label" labelfor="origFilename" label="FILENAME"/>
+                    <cell type="field" id="origFilename" name="origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
+                </row>
+                <row>
+                      <cell type="label" labelfor="title"  label="TITLE"/>
+                    <cell type="field" id="title" name="title" isrequired="true"/>
+                </row>
+                <!--<row>
+                    <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
+                </row> -->
+                <row>
+                    <cell type="label" labelfor="dateImaged" label="DATE_IMAGED"/>
+                    <cell type="field" id="dateImaged" name="dateImaged" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="fileCreatedDate" label="FILE_CREATED_DATE"/>
+                    <cell type="field" id="fileCreatedDate" name="fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="copyrightHolder" label="COPYRIGHT_HOLDER"/>
+                    <cell type="field" id="copyrightHolder" name="copyrightHolder" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="copyrightDate" label="COPYRIGHT_DATE"/>
+                    <cell type="field" id="copyrightDate" name="copyrightDate" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="attachmentLocation" label="ATTACHMENT_LOCATION"/>
+                    <cell type="field" id="attachmentLocation" name="attachmentLocation" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="isPublic" label="is public"/>
+                    <cell type="field" id="isPublic" name="isPublic" isrequired="true" uitype="checkbox"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="license" label="LICENSE"/>
+                    <cell type="field" id="license" name="license" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="credit" label="CREDIT"/>
+                    <cell type="field" id="credit" name="credit" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="mimeType" label="MIME_TYPE"/>
+                    <cell type="field" id="mimeType" name="mimeType" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="remarks" label="REMARKS"/>
+                    <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
+                </row>
+                <!--<row>
+                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachmentImageAttribute" colspan="3" />
+                </row>-->
+            </rows>
+        </viewdef>
+        
+ 
+        <viewdef
+            type="form"
+            name="ObjectAttachment Form"
+            class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
+            useresourcelabels="true">
+            <desc><![CDATA[The ObjectAttachment form.]]></desc>
+            
+            <columnDef>p,2px,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2px"/>
+
+    		<rows>
+                <row>
+                    <cell type="label" labelfor="origFilename" label="FILENAME"/>
+                    <cell type="field" id="origFilename" name="origFilename" initialize="editoncreate=true" uitype="browse" isrequired="true"/>
+                </row>
+                <row>
+                	<cell type="label" labelfor="title"  label="TITLE"/>
+                	<cell type="field" id="title" name="title" uitype="text" isrequired="true"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="copyrightHolder" label="COPYRIGHT_HOLDER"/>
+                    <cell type="field" id="copyrightHolder" name="copyrightHolder" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="license" label="LICENSE"/>
+                    <cell type="field" id="license" name="license" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="credit" label="CREDIT"/>
+                    <cell type="field" id="credit" name="credit" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="attachmentLocation" />
+                    <cell type="field" id="attachmentLocation" name="attachmentLocation" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="fileCreatedDate" />
+                    <cell type="field" id="fileCreatedDate" name="fileCreatedDate" uitype= "formattedtext" uifieldformatter="Date" default="today"/>
+                </row>			
+                <row>
+                    <cell type="label" labelfor="mimeType" />
+                    <cell type="field" id="mimeType" name="mimeType" uitype="text"/>
+                </row>	
+                <row>
+                    <cell type="label" labelfor="remarks" />
+                    <cell type="field" id="remarks" name="remarks" uitype="textareabrief" rows="2"/>
+                </row>				
+                <!--<row>
+                    <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
+                </row> -->
+                <row>
+                    <cell type="label" labelfor="type" />
+                    <cell type="field" id="type" name="type" uitype="text"/>
+                </row>	
+                <row>
+                    <cell type="label" labelfor="subtype" />
+                    <cell type="field" id="subtype" name="subtype" uitype="text"/>
+                </row>	
+                <row>
+                    <cell type="label" labelfor="metadataText" />
+                    <cell type="field" id="metadataText" name="metadataText" uitype="text"/>
+                </row>					
+                <row>
+                    <cell type="label" labelfor="dateImaged" />
+                    <cell type="field" id="dateImaged" name="dateImaged" uitype="text"/>
+                </row>
+                <row>
+                    <cell type="label" labelfor="copyrightDate" />
+                    <cell type="field" id="copyrightDate" name="copyrightDate" uitype="text"/>
+                </row>
+                <row>
+                	<cell type="label" labelfor="ispub" label=""/>
+                	<cell type="field" id="ispub" name="isPublic" uitype="checkbox" label="Make Public"/>
+                </row>				
+                <!--<row>
+                    <cell type="subview" id="imageatt" viewname="AttachmentImageAttribute" name="attachmentImageAttribute" colspan="3" />
+                </row>
+				
+    		    <row>
+    		        <cell type="subview" id="metadata" name="metadata" viewname="AttachmentMetadata" colspan="3"/>
+    		    </row> 
+				-->
+    		</rows>
+		</viewdef>
+                
+<!--
+
+        <viewdef
+            type="form"
+            name="AttachmentMetadata"
+            class="edu.ku.brc.specify.datamodel.AttachmentMetadata"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[The AttachmentMetadata Form.]]></desc>
+            
+            <columnDef>80px,2dlu,p:g,5dlu,80px,2dlu,p:g</columnDef>
+            <rowDef auto="true" cell="p" sep="2dlu"/>
+
+            <rows>
+                <row>
+                    <cell type="label" labelfor="name"/>
+                    <cell type="field" isrequired="true" id="name" name="name" uitype="text"/>
+                    <cell type="label" labelfor="value"/>
+                    <cell type="field" isrequired="true" id="value" name="value" uitype="text"/>
+                </row>
+            </rows>
+        </viewdef>
+		
+        <viewdef
+            type="formtable"
+            name="AttachmentMetadata Table"
+            class="edu.ku.brc.specify.datamodel.AttachmentMetadata"
+            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
+            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+            <desc><![CDATA[AttachmentMetadata Grid View.]]></desc>
+            <definition>AttachmentMetadata</definition>
+        </viewdef>
+-->
+		
+    </viewdefs>
+</viewset>

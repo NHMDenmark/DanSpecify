@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <viewset name="Botany Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     
     <views>
@@ -452,7 +452,6 @@
 					<cell type="label" label="" />
                     <cell type="field" id="Publish" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
                 </row>
-                
                 <row>
                     <cell type="label" labelfor="34"/>
                     <cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="5"/>
@@ -682,8 +681,8 @@
             <rowDef auto="true" cell="p" sep="2px"/>
 
             <rows>
-				<row>
-                    <cell type="label" labelfor="1"/>
+                <row>
+				    <cell type="label" labelfor="1"/>
                     <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="5"/>
 					<cell type="label" labelfor="3"/>
                     <cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
