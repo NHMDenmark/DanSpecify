@@ -37,20 +37,20 @@
 		<band height="30" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="160" splitType="Stretch">
+		<band height="165" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement key="staticText-1" x="-3" y="0" width="180" height="13" uuid="d01c8ddf-9ed2-4a9d-9ed0-86a564709346"/>
-				<textElement textAlignment="Center" markup="styled">
-					<font size="9" isBold="true"/>
+				<reportElement key="staticText-1" x="-3" y="0" width="180" height="13" isPrintWhenDetailOverflows="true" uuid="d01c8ddf-9ed2-4a9d-9ed0-86a564709346"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Natural History Museum Denmark]]></text>
+				<text><![CDATA[NATURAL HISTORY MUSEUM DENMARK]]></text>
 			</staticText>
 			<line>
 				<reportElement key="line-1" x="0" y="13" width="175" height="1" uuid="f415ed52-c235-4594-8883-f5be7f97b58d"/>
 			</line>
 			<staticText>
-				<reportElement x="0" y="43" width="22" height="11" uuid="1586a138-4e77-49df-bab7-1f8eb9fd80e9">
+				<reportElement x="0" y="43" width="25" height="11" uuid="1586a138-4e77-49df-bab7-1f8eb9fd80e9">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -60,7 +60,7 @@
 				<text><![CDATA[Loc.:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="99" width="22" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
+				<reportElement x="0" y="99" width="25" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -74,7 +74,7 @@
 				<text><![CDATA[Leg.:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="109" y="136" width="18" height="11" uuid="c97a8d0f-d073-45a3-aaeb-48f8a4904e2a"/>
+				<reportElement x="95" y="136" width="18" height="11" uuid="c97a8d0f-d073-45a3-aaeb-48f8a4904e2a"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -151,7 +151,7 @@
 				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? $F{1,10.collectingevent.startDate} : ""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="110" width="22" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
+				<reportElement x="0" y="110" width="25" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -172,7 +172,7 @@
 				<reportElement key="line-1" x="0" y="134" width="175" height="1" uuid="5b231213-48b2-45b5-8e76-f32e02821f78"/>
 			</line>
 			<textField>
-				<reportElement x="127" y="136" width="48" height="22" uuid="3dba7cd3-8d84-4bb3-8acd-f7e70dd3c92d">
+				<reportElement x="110" y="136" width="67" height="11" isPrintWhenDetailOverflows="true" uuid="3dba7cd3-8d84-4bb3-8acd-f7e70dd3c92d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4fff38ae-2c1e-464d-a70c-bcf40a31efae"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -182,17 +182,40 @@
 				<textFieldExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null ? $F{1.collectionobject.altCatalogNumber} : ""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="22" y="136" width="87" height="22" uuid="10b37017-5d0a-4b67-bfcb-ced7da38b59f">
+				<reportElement x="18" y="136" width="78" height="11" uuid="10b37017-5d0a-4b67-bfcb-ced7da38b59f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="34036178-79aa-4c15-b5f6-ee5025eec845"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{1,9-determinations,5-determiner.agent.determiner} != null ? $F{1,9-determinations,5-determiner.agent.determiner} : "") +" " + 
-($F{1,9-determinations.determination.determinedDate} != null ? $F{1,9-determinations.determination.determinedDate} : "") 
+				<textFieldExpression><![CDATA[($F{1,9-determinations,5-determiner.agent.determiner} != null ? $F{1,9-determinations,5-determiner.agent.determiner} : "") 
 ]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="18" y="147" width="78" height="11" uuid="a9afa7fb-176f-4d29-be23-2dc8fc2d6381">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3da6ea11-4dcf-4f15-95d3-477bd722982f"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations.determination.determinedDate} != null ? $F{1,9-determinations.determination.determinedDate} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="147" width="67" height="11" uuid="69b95c4e-610e-4c70-83ac-ccc587fd36cd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ac0f2ae-3ae1-4c08-a26d-0edf7f0cc4bb"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="161" width="178" height="1" uuid="b26953c2-c649-46c8-83a9-733937cc2b53"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>
