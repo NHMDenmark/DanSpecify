@@ -1,28 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="Standard Label"
-		 columnCount="3"
-		 printOrder="Vertical"
-		 orientation="Portrait"
-		 pageWidth="595"
-		 pageHeight="842"
-		 columnWidth="175"
-		 columnSpacing="5"
-		 leftMargin="30"
-		 rightMargin="30"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Label" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="175" columnSpacing="5" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" scriptletClass="edu.ku.brc.specify.config.Scriptlet" uuid="081440a5-7c53-426e-966a-76aa3f6b45de">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
 	<field name="1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
 	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
@@ -59,252 +40,169 @@
 	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
 	<field name="1,10.collectingevent.endDateNumericDay" class="java.lang.Integer"/>
 	<field name="1,93.collectionobjectattribute.text1" class="java.lang.String"/>
-
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="30"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="148"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="16"
-						width="175"
-						height="10"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font size="8" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="30"
-						width="175"
-						height="10"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center" isStyledText="true">
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{1,9-determinations,4.taxon.Genus} != null ?
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="148" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="16" width="175" height="11" uuid="14ff77c7-4028-42e5-90a5-819c59df633e"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="30" width="175" height="12" uuid="b34aee7e-d15b-4555-ac41-8b8e74ea966b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="styled">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,9-determinations,4.taxon.Genus} != null ?
 	"<style isItalic='true'>" + $F{1,9-determinations,4.taxon.fullName} + "</style>" :
 	$F{1,9-determinations,4.taxon.fullName}) +
 	($F{1,9-determinations,4.taxon.author} != null ? " " + $F{1,9-determinations,4.taxon.author} : "") +
 	($F{1,9-determinations.determination.typeStatusName} != null ?
 		" <style isBold='true'>" + $F{1,9-determinations.determination.typeStatusName}.toUpperCase() + "</style>" :
 		"")]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="0"
-						y="0"
-						width="175"
-						height="10"
-						key="staticText-1"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font size="8"/>
-					</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="0" width="175" height="10" uuid="4d56ee62-b47f-42bd-9756-1642777aa517"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
 				<text><![CDATA[NATURAL HISTORY MUSEUM OF DENMARK]]></text>
-				</staticText>
-				<line direction="TopDown">
-					<reportElement
-						x="0"
-						y="10"
-						width="175"
-						height="0"
-						key="line-1"/>
-					<graphicElement stretchType="NoStretch"/>
-				</line>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="44"
-						width="175"
-						height="10"
-						key="textField"
-						positionType="Float"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="8" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>Loc. </style>" +
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="10" width="175" height="1" uuid="d1a5c257-88f7-4448-8420-387c89e19007"/>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField" positionType="Float" x="0" y="42" width="175" height="12" uuid="1fd341a6-39be-46b0-ab95-83ccabee4664">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Loc. </style>" +
 	( $F{1,10,2.locality.localityName} != null ? $F{1,10,2.locality.localityName} : "unknown" ) +
 	( $F{1,10,2,3.geography.Continent} != null ? " (" +
 		( $F{1,10,2,3.geography.Continent} != null ? $F{1,10,2,3.geography.Continent} : "" ) +
 		( $F{1,10,2,3.geography.Country} != null ? ", " + $F{1,10,2,3.geography.Country} : "" ) + ")" : "" )]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="56"
-						width="175"
-						height="10"
-						key="textField"
-						positionType="Float"/>
-					<box></box>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{1,10,2.locality.latitude1} != null ?
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField" positionType="Float" x="0" y="54" width="175" height="12" uuid="7bf56dfa-0519-4946-8ac9-7b2c975dfe65">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.latitude1} != null ?
 	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.latitude1}, $F{1,10,2.locality.originalLatLongUnit}, true)
 		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.latitude1}, true) + ", "
 	+ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.longitude1}, $F{1,10,2.locality.originalLatLongUnit}, false)
 		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.longitude1}, false)
 : ""]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="68"
-						width="175"
-						height="10"
-						key="textField-1"
-						positionType="Float"
-						isRemoveLineWhenBlank="true"/>
-					<box></box>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{1,10,2,124-localityDetails.localitydetail.startDepth} != null ?
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField-1" positionType="Float" x="0" y="66" width="175" height="12" isRemoveLineWhenBlank="true" uuid="7dfeaa50-538f-41b4-9ee4-cc17675d6d68">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2,124-localityDetails.localitydetail.startDepth} != null ?
 	"depth: " +
 		$F{1,10,2,124-localityDetails.localitydetail.startDepth} + "m" +
 		( $F{1,10,2,124-localityDetails.localitydetail.endDepth} != null ?
 			"-" + $F{1,10,2,124-localityDetails.localitydetail.endDepth} + "m" :
 			"" ) :
 	""]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="80"
-						width="175"
-						height="10"
-						key="textField-2"
-						positionType="Float"
-						isRemoveLineWhenBlank="true"/>
-					<box></box>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{1,10,2.locality.minElevation} != null ?
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="##0.00" isBlankWhenNull="false">
+				<reportElement key="textField-2" positionType="Float" x="0" y="78" width="175" height="12" isRemoveLineWhenBlank="true" uuid="ccd2b826-7a12-4eaa-81c0-e0a90d64affc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.minElevation} != null ?
 	"elevation: " +
 		$F{1,10,2.locality.minElevation} +
 		( $F{1,10,2.locality.maxElevation} != null ?
 			"-" + $F{1,10,2.locality.maxElevation} :
 			"" ) :
 	""]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="92"
-						width="175"
-						height="10"
-						key="textField-3"
-						positionType="Float"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="8" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>Date: </style>" +
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-3" positionType="Float" x="0" y="90" width="175" height="12" uuid="679e79f3-1ced-4e85-a559-b8709292ad9c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Date: </style>" +
 	( $F{1,10.collectingevent.startDate} != null ?
 		$F{1,10.collectingevent.startDate} + ( !$F{1,10.collectingevent.endDate}.isEmpty() ? "-" + $F{1,10.collectingevent.endDate} : "" ) :
 		"unknown" )]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="104"
-						width="175"
-						height="10"
-						key="textField-4"
-						positionType="Float"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="8" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>Legit: </style>" +
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-4" positionType="Float" x="0" y="102" width="175" height="12" uuid="d55c2866-54d1-41d7-9588-f364238dbdc0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Legit: </style>" +
 	( !$F{1,10,30-collectors.collector.collectors}.isEmpty() ? $F{1,10,30-collectors.collector.collectors} : "unknown" ) + 
 	( $F{1,10,87.collectingtrip.collectingTripName} != null ?
 		", <style isBold='true'>Exp. </style>" + $F{1,10,87.collectingtrip.collectingTripName} +
 			( $F{1,10.collectingevent.text3} != null ? ", <style isBold='true'>St.</style> " + $F{1,10.collectingevent.text3} : "" ) :
 		"" )]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="116"
-						width="175"
-						height="10"
-						key="textField-5"
-						positionType="Float"
-						isRemoveLineWhenBlank="true"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="8" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10.collectingevent.method} != null ? "<style isBold='true'>Gear: </style>" + $F{1,10.collectingevent.method} : ""]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="131"
-						width="175"
-						height="10"
-						key="textField-6"
-						positionType="Float"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="8" isUnderline="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>Det. </style>" +
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-5" positionType="Float" x="0" y="114" width="175" height="12" isRemoveLineWhenBlank="true" uuid="634486b1-5939-4187-8ff3-2ac4786e4b58">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.method} != null ? "<style isBold='true'>Gear: </style>" + $F{1,10.collectingevent.method} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-6" positionType="Float" x="0" y="131" width="175" height="10" uuid="44f9307e-42b6-476f-b703-0c8c8ad96d4e"/>
+				<textElement markup="styled">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>Det. </style>" +
 	( $F{1,9-determinations,5-determiner.agent.determiner} != null ?
 		$F{1,9-determinations,5-determiner.agent.determiner} + ( !$F{1,9-determinations.determination.determinedDate}.isEmpty() ? " " + $F{1,9-determinations.determination.determinedDate} : "" ) :
 		"unknown" )]]></textFieldExpression>
-				</textField>
-				<line direction="TopDown">
-					<reportElement
-						x="0"
-						y="128"
-						width="175"
-						height="0"
-						key="line-2"
-						positionType="Float"/>
-					<graphicElement stretchType="NoStretch"/>
-				</line>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="30"  isSplitAllowed="true" >
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageFooter>
-		<lastPageFooter>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</lastPageFooter>
-		<summary>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</summary>
+			</textField>
+			<line>
+				<reportElement key="line-2" positionType="Float" x="0" y="128" width="175" height="1" uuid="edebe19a-bed9-41d6-b1ef-885cdc68e025"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>
