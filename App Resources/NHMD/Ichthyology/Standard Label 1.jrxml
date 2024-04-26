@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Label 1" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="185" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2830d7c-6475-47a9-900d-77990efb1ea7">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject.altCatalogNumber" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
+	<field name="1.collectionobject.text2" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.taxon" class="java.lang.String"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="1,10,2.locality.lat1text" class="java.lang.String"/>
+	<field name="1,10,2.locality.long1text" class="java.lang.String"/>
+	<field name="1,10,92.collectingeventattribute.number1" class="java.math.BigDecimal"/>
+	<field name="1,10,92.collectingeventattribute.number2" class="java.math.BigDecimal"/>
+	<field name="1,10,87.collectingtrip.cruise" class="java.lang.String"/>
+	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
+	<field name="1,10,92.collectingeventattribute.text10" class="java.lang.String"/>
+	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1,63-preparations.preparation.preparations" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<columnHeader>
+		<band height="30" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="110" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement key="staticText-1" x="-3" y="0" width="180" height="13" isPrintWhenDetailOverflows="true" uuid="109ab6c0-3e0a-4c81-a640-a0b45e6e8eeb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM DENMARK]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="13" width="175" height="1" uuid="660a881e-f791-4bf6-b1ac-3d4da87a5d8f"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="15" width="71" height="11" uuid="ba084a6d-d170-43e4-b408-f216a778296c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7e3e257a-0594-4bab-ac1d-588d6a838455"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null ? $F{1.collectionobject.altCatalogNumber} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="15" width="71" height="11" uuid="045aeb74-09d0-411d-811a-17f147b6cdd6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26fc4067-0606-49a6-8422-1053012569db"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="87" width="25" height="11" uuid="0bd563ae-a5d8-4afc-a858-ef6a82a6018d"/>
+				<textElement markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNA: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="15" width="35" height="11" uuid="da6b6a92-a95e-43ed-a07f-6e3262041e59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,63-preparations.preparation.preparations}.contains("Spm.: ") ?  "Spm.:" +
+$F{1,63-preparations.preparation.preparations}.split("Spm.: ")[1] + "'"  : "!"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="27" width="100" height="11" uuid="ecbf4cdf-89fd-42fa-bb62-6219953e1ffd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02b9584f-1573-4ee4-bef5-1eeb65fa1fba"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.Family}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="27" width="77" height="11" uuid="cc876a52-1d0c-4dea-a5af-b0e75aec3b32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="206c5d21-0cab-4e40-9b30-c2c26334b312"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.text2} != null ? 
+"P-gr.: " + $F{1.collectionobject.text2} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="39" width="177" height="11" uuid="70a82fac-0989-4871-8ec2-f8bcca03810d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c4bfaf7-61a5-4a06-8aae-0877be74b7d9"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.taxon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="51" width="177" height="11" uuid="1409599f-c5c6-41d9-8593-d31d4812cd9d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c614811c-3e3d-4998-8977-4abad669b580"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.localityName} != null ? 
+$F{1,10,2.locality.localityName} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="63" width="100" height="11" uuid="583edd5c-2e76-4aa6-a57c-b5d8d7593d70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0ebfb55-13bc-45ea-8a3c-d6a626df30ec"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2.locality.lat1text} != null ? $F{1,10,2.locality.lat1text} : ""
++ " - " + 
+$F{1,10,2.locality.long1text} != null ? $F{1,10,2.locality.long1text} : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="63" width="77" height="11" uuid="c9a47ad9-9a9d-4bd0-9555-4d10fe44fa88">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="545a6823-b248-41ba-8116-79e3fd95b74c"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,92.collectingeventattribute.number1} != null ? 
+$F{1,10,92.collectingeventattribute.number2} != null ? 
+"Depth: " + $F{1,10,92.collectingeventattribute.number1} + " - " + $F{1,10,92.collectingeventattribute.number2} + " m" : 
+"Depth: " + $F{1,10,92.collectingeventattribute.number1} + " m"
+: ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="75" width="177" height="11" uuid="c187d37c-caa5-4fb4-99a7-0013078dd182">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64cedd9f-91d0-4274-8fb0-9eb3eae55fb7"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,10,87.collectingtrip.cruise} != null ? "Cr.: " + $F{1,10,87.collectingtrip.cruise} : "") + 
+($F{1,10.collectingevent.stationFieldNumber} != null ? "St.: " + $F{1,10.collectingevent.stationFieldNumber} : "") +
+($F{1,10,92.collectingeventattribute.text10} != null ? ", " + $F{1,10,92.collectingeventattribute.text10} : "")
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="87" width="100" height="11" uuid="4c2c0777-c7fc-4d6f-80c2-548e86e4c050">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72d5d12c-5584-4096-86e9-ca2289b0ee0d"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? "Coll.date: " + $F{1,10.collectingevent.startDate} : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

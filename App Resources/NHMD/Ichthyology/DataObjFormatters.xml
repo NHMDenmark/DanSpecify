@@ -687,7 +687,7 @@
         <switch single="true">
             <fields>
                 <field formatter="PrepType">prepType</field>
-                <field type="int" format="%d" sep=" - ">countAmt</field>
+                <field type="int" format="%d" sep=" Spm.: ">countAmt</field>
             </fields>
         </switch>
     </format>
@@ -768,6 +768,7 @@
         <switch single="true">
             <fields>
                 <field>fullName</field>
+                <field sep=" ">author</field>
             </fields>
         </switch>
     </format>
