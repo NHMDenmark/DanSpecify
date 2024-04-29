@@ -133,27 +133,6 @@
             </altviews>
         </view>
         
-        <view name="ContainerBrief"
-             class="edu.ku.brc.specify.datamodel.Container"  
-             isinternal="true"
-             busrules="edu.ku.brc.specify.datamodel.busrules.ContainerBusRules">
-            <desc><![CDATA[Conservation Description.]]></desc>
-            <altviews>
-                <altview name="ContainerBrief View" viewdef="ContainerBrief" mode="view" default="true"/>
-                <altview name="ContainerBrief Edit" viewdef="ContainerBrief" mode="edit" />
-            </altviews>
-        </view>
-        
-        <view name="ContainerBriefTable"
-            class="edu.ku.brc.specify.datamodel.Container"  
-             isinternal="true">
-            <desc><![CDATA[Conservation Description.]]></desc>
-            <altviews>
-                <altview name="ContainerBrief Table View" viewdef="ContainerBrief Table" mode="view" default="true"/>
-                <altview name="ContainerBrief Table Edit" viewdef="ContainerBrief Table" mode="edit" />
-            </altviews>
-        </view>
-        
     </views>  
 
     <viewdefs>
@@ -167,9 +146,6 @@
             <enableRules/>
             
             <columnDef>99px,2px,300px,2px,89px,2px,50px,2px,50px,2px,70px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,2px,50px,p:g</columnDef>
-            <!--<columnDef os="lnx">115px,2px,195px,5px,125px,2px,210px,5px,125px,2px,131px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>-->
             <rowDef auto="true" cell="p" sep="2px"/>
 
             <rows>
@@ -200,7 +176,7 @@
                     <cell type="field" id="jrndate" name="this" uitype="plugin" colspan="1" initialize="name=PartialDateUI;df=date1;tp=date1Precision" uifieldformatter="Date"/>
                     
                     <cell type="label" labelfor="t3"/>
-                    <cell type="field" id="t3" name="text3" colspan="3" uitype="text"/> <!-- Journal Number -->					
+                    <cell type="field" id="t3" name="text3" colspan="3" uitype="text"/> <!-- Journal Number -->
 					
                     <cell type="label" labelfor="reservedtxt"/>
                     <cell type="field" id="reservedtxt" name="reservedText" colspan="3" uitype="text"/> <!-- Tilvækst -->
@@ -409,9 +385,6 @@
             <enableRules/>
 
             <columnDef>99px,2px,200px,2px,76px,2px,200px,5px,90px,2px,140px,0px,p:g</columnDef>
-            <!--<columnDef os="lnx">115px,2px,210px,5px,110px,2px,205px,5px,105px,2px,156px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,260px,5px,100px,2px,238px,5px,108px,2px,180px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>-->
             <rowDef auto="true" cell="p" sep="2px"/>
 
             <rows>
@@ -501,9 +474,6 @@
             <desc><![CDATA[Form For OtherIdentifier]]></desc>
             
             <columnDef>100px,2px,115px,5px,55px,2px,115px,5px,104px,2px,115px,5px,85px,2px,115px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,120px,5px,75px,2px,120px,5px,125px,2px,120px,5px,99px,2px,120px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,140px,5px,75px,2px,140px,5px,130px,2px,140px,5px,109px,2px,145px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
             <rowDef auto="true" sep="2px" cell="p"/>
 
             <rows>
@@ -698,9 +668,6 @@
             <enableRules/>
 
             <columnDef>100px,2px,300px,5px,100px,2px,200px,5px,100px,2px,100px,2px,100px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,200px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
             <rowDef auto="true" cell="p" sep="2dlu"/>
 
@@ -783,9 +750,6 @@
             <desc><![CDATA[Collecting Event]]></desc>
             
             <columnDef>100px,2px,100px,5px,100px,2px,100px,5px,100px,5px,100px,5px,100px,5px,100px,5px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,240px,5px,100px,2px,215px,5px,106px,2px,125px,0px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,246px,5px,115px,2px,270px,5px,110px,2px,145px,0px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
             
             <rows>
@@ -819,14 +783,22 @@
                     <cell type="label" labelfor="6"/>
                     <cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
-				<!--<row>  
+				<row>  
 					<cell type="label" labelfor="haul"/>
                     <cell type="field" id="haul" name="text2" uitype="text" colspan="1"/>     
 					<cell type="label" labelfor="gear"/>
                     <cell type="field" id="gear" name="text3" uitype="text" colspan="1"/>      
 					<cell type="label" labelfor="wire"/>
                     <cell type="field" id="wire" name="text4" uitype="text" colspan="1"/>      
-				</row>-->
+				</row>
+                <row>
+                    <cell type="label" labelfor="10"/>
+                    <cell type="field" id="10" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip" colspan="5"/> 
+                    <!--<cell type="label" labelfor="edv"/>
+                    <cell type="field" id="edv" name="endDateVerbatim" uitype="text"/>
+                    <cell type="label" labelfor="sdv"/>
+                    <cell type="field" id="sdv" name="startDateVerbatim" uitype="text"/>-->
+                </row>
                 <row>
                  <cell type="subview" id="8" name="collectingEventAttribute" viewname="CollectingEventAttribute" colspan="13"/>
                 </row>                
@@ -849,14 +821,6 @@
                 </row>
                 <!--<row>
                  <cell type="subview" id="8" name="collectingEventAttribute" viewname="CollectingEventAttribute" colspan="13"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="10"/>
-                    <cell type="field" id="10" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip" colspan="5"/> 
-                    <cell type="label" labelfor="edv"/>
-                    <cell type="field" id="edv" name="endDateVerbatim" uitype="text"/>
-                    <cell type="label" labelfor="sdv"/>
-                    <cell type="field" id="sdv" name="startDateVerbatim" uitype="text"/>
                 </row>
                 <row>
                     <cell type="label" labelfor="3"/>
@@ -890,9 +854,6 @@
             <desc><![CDATA[Collecting Event]]></desc>
             
             <columnDef>100px,2px,108px,5px,75px,2px,108px,5px,80px,2px,108px,5px,85px,2px,140px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,115px,5px,85px,2px,115px,5px,100px,2px,115px,5px,99px,2px,150px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,145px,5px,93px,2px,145px,5px,93px,2px,125px,5px,99px,2px,179px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
             
             <rows>
@@ -1022,9 +983,6 @@
               <enableRules/>
               
               <columnDef>100px,2px,120px,5px,100px,2px,98px,5px,95px,2px,98px,5px,95px,2px,98px,p:g</columnDef>
-              <columnDef os="lnx">115px,2px,152px,5px,107px,2px,100px,5px,110px,2px,100px,5px,110px,2px,100px,p:g</columnDef>
-              <columnDef os="mac">130px,2px,150px,5px,127px,2px,121px,5px,120px,2px,121px,5px,119px,2px,121px,p:g</columnDef>
-              <columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
               <rowDef auto="true" cell="p" sep="2px"/>
 		  
               <rows>
@@ -1061,9 +1019,6 @@
               <enableRules/>
               
               <columnDef>105px,2px,120px,5px,100px,2px,95px,5px,102px,2px,95px,5px,97px,2px,95px,p:g</columnDef>
-              <columnDef os="lnx">115px,2px,117px,5px,110px,2px,105px,5px,121px,2px,105px,5px,116px,2px,105px,p:g</columnDef>
-              <columnDef os="mac">130px,2px,130px,5px,118px,2px,130px,5px,121px,2px,130px,5px,120px,2px,130px,p:g</columnDef>
-              <columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
               <rowDef auto="true" cell="p" sep="2px"/>
 		  
               <rows>
@@ -1089,9 +1044,6 @@
             <desc><![CDATA[Locality]]></desc>
             
             <columnDef>100px,2px,150px,5px,292px,2px,156px,120px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,175px,5px,242px,2px,175px,201px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,160px,5px,347px,2px,160px,226px,15px,p,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
             <enableRules>
                 <rule id="georef"><![CDATA[localityName.isNotEmpty() && geography.isNotEmpty()]]></rule>
@@ -1146,7 +1098,7 @@
             </rows>
         </viewdef>
         
-                <viewdef
+        <viewdef
             type="form"
             name="Container"
             class="edu.ku.brc.specify.datamodel.Container"
@@ -1157,9 +1109,6 @@
             <enableRules/>
             
             <columnDef>100px,2px,178px,5px,108px,2px,130px,5px,100px,2px,195px,0px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,196px,2px,113px,2px,150px,2px,115px,5px,215px,0px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
 
             <rows>
@@ -1172,89 +1121,16 @@
                 <row>
                     <cell type="label" labelfor="parent"/>
                     <cell type="field" id="parent" name="parent" uitype="querycbx" initialize="name=Container;displaydlg=ContainerDisplay;searchdlg=ContainerSearch" colspan="10"/>                
-                </row>
-                
-             <!-- this is not yet functioning. Only displays one catalog number at a time, and not in any ranking. 
-                <row>
-                    <cell type="label" label="COLOBJ"  initialize="align=right"/>
-                    <cell type="field" id="this_" name="this" uitype="plugin" initialize="name=ContainersColObjPlugin"/>                
-                    <cell type="label" label="CONTNR_COLOBJ" initialize="align=left" colspan="5"/>
-                </row>
-            -->    
+                </row>  
                 <row>
                     <cell type="label" labelfor="desc"/>
                     <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="10"/> 
                 </row>
                 <row>
                     <cell type="subview" id="collectionObjects" name="collectionObjects" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=Additional specimens in this container" defaulttype="table" colspan="13"/>
-                </row>                
-            <!-- Not working- data entered does not persist after saving, and is not populated back to the CO form.    
-                <row>
-                    <cell type="subview" id="collectionObjectKids" name="collectionObjectKids" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=COLOBJ_IN_CONTR" defaulttype="table" colspan="13"/>               
                 </row>
-                <row>
-                    <cell type="subview" id="children" name="children" viewname="ContainerBriefTable" initialize="addsearch=true;title=SUBCONTAINERS" defaulttype="table" colspan="13"/>               
-                </row>
-            -->    
            </rows>
         </viewdef>
         
-        <viewdef
-            type="formtable"
-            name="ContainerBrief Table"
-            class="edu.ku.brc.specify.datamodel.Container"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Container grid view for Container form for children.]]></desc>
-            <definition>ContainerBrief</definition>
-        </viewdef>   
-        <viewdef
-            type="form"
-            name="ContainerBrief"
-            class="edu.ku.brc.specify.datamodel.Container"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
-            useresourcelabels="true">
-            <desc><![CDATA[Container Description]]></desc>
-            <enableRules/>
-            
-            <columnDef>100px,2px,178px,5px,108px,2px,130px,5px,100px,2px,195px,0px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,196px,2px,113px,2px,150px,2px,115px,5px,215px,0px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-
-            <rows>
-                <row> 
-                    <cell type="label" labelfor="nm"/>
-                    <cell type="field" id="nm" name="name" uitype="text"/>
-                    <cell type="label" labelfor="typ"/>
-                    <cell type="field" id="typ" name="type" uitype="combobox"/>
-                </row>        
-                <row>
-                    <cell type="label" labelfor="parent"/>
-                    <cell type="field" id="parent" name="parent" uitype="querycbx" initialize="name=Container;displaydlg=ContainerDisplay;searchdlg=ContainerSearch" colspan="10"/>                
-                </row>
-        <!--using 'Parent' instead                
-                <row>
-                    <cell type="label" label="COLOBJ"  initialize="align=right"/>
-                    <cell type="field" id="this_" name="this" uitype="plugin" initialize="name=ContainersColObjPlugin"/>                
-                    <cell type="label" label="CONTNR_COLOBJ" initialize="align=left" colspan="5"/>
-                </row>
-        -->                
-                <row>
-                    <cell type="label" labelfor="desc"/>
-                    <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="10"/> 
-                </row>
-                <row>
-                    <cell type="subview" id="collectionObjects" name="collectionObjects" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=Additional specimens in this container" defaulttype="table" colspan="13"/>
-                </row>
-            <!-- This is not working properly. See notes in code of main Container form. 
-                
-                    <cell type="subview" id="collectionObjectKids" name="collectionObjectKids" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=COLOBJ_IN_CONTR" defaulttype="table" colspan="13"/>               
-                
-            -->    
-           </rows>
-        </viewdef>
     </viewdefs>
 </viewset>

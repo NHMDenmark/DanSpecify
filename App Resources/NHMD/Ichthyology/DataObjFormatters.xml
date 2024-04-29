@@ -217,7 +217,7 @@
         >
         <switch single="true">
             <fields>
-                <field>collectingTripName</field>
+                <field>cruise</field>
             </fields>
         </switch>
     </format>
