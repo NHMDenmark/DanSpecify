@@ -31,7 +31,7 @@
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
 	<detail>
-		<band height="100" splitType="Stretch">
+		<band height="103" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
 				<reportElement key="staticText-1" x="0" y="0" width="177" height="13" isPrintWhenDetailOverflows="true" uuid="109ab6c0-3e0a-4c81-a640-a0b45e6e8eeb"/>
@@ -72,14 +72,16 @@
 				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="100" y="87" width="25" height="11" uuid="0bd563ae-a5d8-4afc-a858-ef6a82a6018d"/>
+				<reportElement x="110" y="87" width="25" height="11" uuid="0bd563ae-a5d8-4afc-a858-ef6a82a6018d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DNA: ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="134" y="15" width="41" height="11" uuid="da6b6a92-a95e-43ed-a07f-6e3262041e59">
+				<reportElement x="132" y="15" width="45" height="11" uuid="da6b6a92-a95e-43ed-a07f-6e3262041e59">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -100,14 +102,14 @@
 				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.Family}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="105" y="27" width="70" height="11" uuid="cc876a52-1d0c-4dea-a5af-b0e75aec3b32">
+				<reportElement x="132" y="27" width="45" height="11" uuid="cc876a52-1d0c-4dea-a5af-b0e75aec3b32">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="206c5d21-0cab-4e40-9b30-c2c26334b312"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1.collectionobject.text2} != null ? 
-"P-gr.: " + $F{1.collectionobject.text2} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.text2} != null ? $F{1.collectionobject.text2} : ""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="5" y="39" width="146" height="11" uuid="70a82fac-0989-4871-8ec2-f8bcca03810d">
@@ -129,7 +131,7 @@
 $F{1,10,2.locality.localityName} : ""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="5" y="63" width="90" height="11" uuid="583edd5c-2e76-4aa6-a57c-b5d8d7593d70">
+				<reportElement x="5" y="63" width="80" height="11" uuid="583edd5c-2e76-4aa6-a57c-b5d8d7593d70">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0ebfb55-13bc-45ea-8a3c-d6a626df30ec"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -141,38 +143,47 @@ $F{1,10,2.locality.localityName} : ""]]></textFieldExpression>
  : ""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="95" y="63" width="80" height="11" uuid="c9a47ad9-9a9d-4bd0-9555-4d10fe44fa88">
+				<reportElement x="116" y="63" width="61" height="11" uuid="c9a47ad9-9a9d-4bd0-9555-4d10fe44fa88">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="545a6823-b248-41ba-8116-79e3fd95b74c"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<textElement textAlignment="Right" markup="styled">
+				<textElement textAlignment="Left" markup="styled">
 					<font fontName="Arial" size="8" isItalic="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,10,92.collectingeventattribute.number1} != null ? 
 $F{1,10,92.collectingeventattribute.number2} != null ? 
-"<b>Depth:</b> " + $F{1,10,92.collectingeventattribute.number1} + " - " + $F{1,10,92.collectingeventattribute.number2} + " m" : 
-"<b>Depth:</b> " + $F{1,10,92.collectingeventattribute.number1} + " m"
+($F{1,10,92.collectingeventattribute.number1}.setScale(0, BigDecimal.ROUND_HALF_UP)) + " - " + ($F{1,10,92.collectingeventattribute.number2}.setScale(0, BigDecimal.ROUND_HALF_UP)) + " m" : 
+($F{1,10,92.collectingeventattribute.number1}.setScale(0, BigDecimal.ROUND_HALF_UP)) + " m" 
 : ""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="5" y="75" width="170" height="11" uuid="c187d37c-caa5-4fb4-99a7-0013078dd182">
+				<reportElement x="5" y="75" width="172" height="11" uuid="c187d37c-caa5-4fb4-99a7-0013078dd182">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64cedd9f-91d0-4274-8fb0-9eb3eae55fb7"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{1,10,87.collectingtrip.cruise} != null ? "<b>Cr.:</b> " + $F{1,10,87.collectingtrip.cruise} : "") + 
-($F{1,10.collectingevent.stationFieldNumber} != null ? "<b>St.:</b> " + $F{1,10.collectingevent.stationFieldNumber} : "") +
+				<textFieldExpression><![CDATA[($F{1,10,87.collectingtrip.cruise} != null ? "<b>Cr.:</b> " + $F{1,10,87.collectingtrip.cruise} + " " : "") + 
+($F{1,10.collectingevent.stationFieldNumber} != null ? "<b>St.:</b> " + $F{1,10.collectingevent.stationFieldNumber} + " " : "") +
 ($F{1,10,92.collectingeventattribute.text10} != null ? ", " + $F{1,10,92.collectingeventattribute.text10} : "")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="5" y="87" width="93" height="11" uuid="4c2c0777-c7fc-4d6f-80c2-548e86e4c050">
+				<reportElement x="43" y="87" width="65" height="11" uuid="4c2c0777-c7fc-4d6f-80c2-548e86e4c050">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72d5d12c-5584-4096-86e9-ca2289b0ee0d"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement markup="styled">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? "<b>Coll.date:</b> " + $F{1,10.collectingevent.startDate} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? 
+$F{1,10.collectingevent.startDate}.toString().split("-").length == 3 ?
+(new SimpleDateFormat("yyyy-MM-dd")).parse($F{1,10.collectingevent.startDate}) :
+$F{1,10.collectingevent.startDate}.toString().split("-").length == 2 ?
+(new SimpleDateFormat("yyyy-MM")).parse($F{1,10.collectingevent.startDate}) : 
+$F{1,10.collectingevent.startDate}.toString() + " * "
+: ""]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement key="line-1" x="0" y="99" width="182" height="1" uuid="86073a49-f2dd-41c9-acc4-30ed94c2131e">
@@ -205,6 +216,31 @@ $F{1,10,92.collectingeventattribute.number2} != null ?
 					<pen lineWidth="0.25"/>
 				</graphicElement>
 			</line>
+			<staticText>
+				<reportElement x="5" y="87" width="38" height="11" uuid="6ed9d094-2eff-4d6e-9668-224f18f684b5"/>
+				<textElement markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Coll.date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="27" width="22" height="11" uuid="d48c5ecf-ded3-4c52-a35b-83e6de64b104">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[P-gr.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="63" width="27" height="11" uuid="c4056e5b-4b4a-489d-a9f9-77fc930f5465">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Depth:]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
