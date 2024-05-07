@@ -137,7 +137,14 @@
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? $F{1,10.collectingevent.startDate} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? 
+$F{1,10.collectingevent.startDate}.toString().split("-").length == 3 ?
+(new SimpleDateFormat("yyyy-MM-dd")).parse($F{1,10.collectingevent.startDate}) :
+$F{1,10.collectingevent.startDate}.toString().split("-").length == 2 ?
+(new SimpleDateFormat("yyyy-MM")).parse($F{1,10.collectingevent.startDate}) : 
+$F{1,10.collectingevent.startDate}
+: ""]]></textFieldExpression>
+				<patternExpression><![CDATA["dd MMM yyyy"]]></patternExpression>
 			</textField>
 			<staticText>
 				<reportElement x="0" y="98" width="25" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
