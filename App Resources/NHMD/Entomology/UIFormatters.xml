@@ -4,72 +4,61 @@
   <autonumber>edu.ku.brc.specify.dbsupport.AccessionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="AA"/>
+    <field type="alphanumeric" size="2" value="EN"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="true" name="AccessionNumberByYear" class="edu.ku.brc.specify.datamodel.Accession" fieldname="accessionNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.AccessionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="AA"/>
+    <field type="alphanumeric" size="2" value="EN"/>
     <field type="separator" size="1" value="-"/>
     <field type="alphanumeric" size="3" value="AAA"/>
   </format>
-
   <format system="true" name="AccessionStringFormatter" class="edu.ku.brc.specify.datamodel.Accession" fieldname="accessionNumber">
-    <field type="alphanumeric" size="10" value="AAAAAAAAAA"/>
+    <field type="alphanumeric" size="11" value="AAAAAAAAAAA"/>
   </format>
-
   <format system="false" name="CatalogNumber" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="6" inc="true"/>
   </format>
-
   <format system="false" name="CatalogNumberAlphaNumByYear" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="6" inc="true"/>
   </format>
-
   <format system="true" name="CatalogNumberNumeric" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber" default="false" length="9">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumber</autonumber>
     <external>edu.ku.brc.specify.ui.CatalogNumberUIFieldFormatter</external>
   </format>
-
   <format system="true" name="CatalogNumberString" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber" default="false">
     <external>edu.ku.brc.specify.ui.CatalogNumberStringUIFieldFormatter</external>
   </format>
-
   <format system="true" name="Date" class="java.util.Date" type="date" partialdate="Full">
   </format>
-
   <format system="true" name="DeaccessionNumber" class="edu.ku.brc.specify.datamodel.Deaccession" fieldname="deaccessionNumber">
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="AA"/>
+    <field type="alphanumeric" size="2" value="EN"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3"/>
   </format>
-
   <format system="true" name="GiftNumber" class="edu.ku.brc.specify.datamodel.Gift" fieldname="giftNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="true" name="InfoRequestNumber" class="edu.ku.brc.specify.datamodel.InfoRequest" fieldname="infoReqNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="false" name="Loan Number EN" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
@@ -78,64 +67,50 @@
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="true" name="LoanNumber" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="false" name="MSJN" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumberAlphaNum</autonumber>
     <field type="constant" size="4" value="MSJN"/>
     <field type="separator" size="1" value=" "/>
     <field type="numeric" size="7" inc="true"/>
   </format>
-
   <format system="true" name="NumericBigDecimal" class="java.math.BigDecimal" type="numeric">
     <field type="numeric" size="15"/>
   </format>
-
   <format system="true" name="NumericByte" class="java.lang.Byte" type="numeric">
     <field type="numeric" size="3"/>
   </format>
-
   <format system="true" name="NumericDouble" class="java.lang.Double" type="numeric">
     <field type="numeric" size="10"/>
   </format>
-
   <format system="true" name="NumericFloat" class="java.lang.Float" type="numeric">
     <field type="numeric" size="10"/>
   </format>
-
   <format system="true" name="NumericInteger" class="java.lang.Integer" type="numeric">
     <field type="numeric" size="10"/>
   </format>
-
   <format system="true" name="NumericLong" class="java.lang.Long" type="numeric">
     <field type="numeric" size="10"/>
   </format>
-
   <format system="true" name="NumericShort" class="java.lang.Short" type="numeric">
     <field type="numeric" size="5"/>
   </format>
-
   <format system="false" name="OESM" class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber">
   <autonumber>edu.ku.brc.specify.dbsupport.CollectionAutoNumberAlphaNum</autonumber>
     <field type="constant" size="4" value="OESM"/>
     <field type="numeric" size="5" inc="true"/>
   </format>
-
   <format system="false" name="PartialDate" class="java.util.Date" type="date" partialdate="Full">
   </format>
-
   <format system="false" name="PartialDateMonth" class="java.util.Date" type="date" partialdate="Month">
   </format>
-
   <format system="false" name="PartialDateYear" class="java.util.Date" type="date" partialdate="Year">
   </format>
-
   <format system="false" name="PermitNumber" class="edu.ku.brc.specify.datamodel.Permit" fieldname="permitNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
@@ -144,7 +119,6 @@
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="false" name="RANumber" class="edu.ku.brc.specify.datamodel.RepositoryAgreement" fieldname="repositoryAgreementNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
@@ -153,9 +127,6 @@
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-
   <format system="true" name="SearchDate" class="java.util.Date" type="date" partialdate="Search">
   </format>
-
-
 </formats>
