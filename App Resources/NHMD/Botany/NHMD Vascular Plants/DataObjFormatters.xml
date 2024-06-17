@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
-
     <format
         name="AttachmentURI"
         title="AttachmentURI"
@@ -11,7 +10,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Attachment"
         title="Attachment"
@@ -24,7 +22,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectionObjectAttachment"
         title="CollectionObjectAttachment"
@@ -37,7 +34,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Accession"
         title="Accession"
@@ -50,7 +46,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="AccessionAgent"
         title="AccessionAgent"
@@ -64,7 +59,6 @@
             </fields>
         </switch>
     </format>
-
 <!-- <format
         name="CatalogNumber"
         title="CatalogNumber"
@@ -77,7 +71,6 @@
             </fields>
         </switch>
     </format> -->
-
     <format
         name="AccessionAuthorization"
         title="AccessionAuthorization"
@@ -90,7 +83,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Address"
         title="Address"
@@ -107,7 +99,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Agent"
         title="Agent"
@@ -130,7 +121,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Author"
         title="Author"
@@ -143,7 +133,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="AutoNumberingScheme"
         title="AutoNumberingScheme"
@@ -156,7 +145,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Borrow"
         title="Borrow"
@@ -169,7 +157,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectingEvent"
         title="CollectingEvent"
@@ -186,7 +173,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectingEventDetail"
         title="CollectingEventDetail"
@@ -198,7 +184,6 @@
           </external>
         </switch>
     </format>
-
     <format
         name="CollectingEventSFN"
         title="CollectingEventSFN"
@@ -211,7 +196,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectingEventStartDate"
         title="CollectingEventStartDate"
@@ -223,7 +207,6 @@
           </external>
         </switch>
     </format>
-
     <format
         name="CollectingTrip"
         title="CollectingTrip"
@@ -236,7 +219,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Collection"
         title="Collection"
@@ -249,7 +231,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectionObject"
         title="CollectionObject"
@@ -262,7 +243,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="CollectionRelType"
         title="CollectionRelType"
@@ -275,7 +255,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Collector"
         title="Collector"
@@ -288,7 +267,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Container"
         title="Container"
@@ -301,7 +279,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="DNAPrimer"
         title="DNAPrimer"
@@ -314,7 +291,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="DataType"
         title="DataType"
@@ -327,7 +303,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Deaccession"
         title="Deaccession"
@@ -340,7 +315,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Determination"
         title="Determination"
@@ -357,7 +331,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="DeterminationCitation"
         title="DeterminationCitation"
@@ -370,7 +343,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Discipline"
         title="Discipline"
@@ -383,7 +355,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Division"
         title="Division"
@@ -396,7 +367,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="FieldNotebookPage"
         title="FieldNotebookPage"
@@ -410,7 +380,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="FundingAgent"
         title="FundingAgent"
@@ -423,7 +392,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Geography"
         title="Geography"
@@ -436,7 +404,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="GeographyTreeDef"
         title="GeographyTreeDef"
@@ -449,7 +416,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="GeographyTreeDefItem"
         title="GeographyTreeDefItem"
@@ -462,7 +428,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="GeologicTimePeriod"
         title="GeologicTimePeriod"
@@ -475,7 +440,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="GeologicTimePeriodTreeDef"
         title="GeologicTimePeriodTreeDef"
@@ -488,7 +452,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Journal"
         title="Journal"
@@ -501,7 +464,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LithoStrat"
         title="LithoStrat"
@@ -514,7 +476,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LithoStratTreeDef"
         title="LithoStratTreeDef"
@@ -527,7 +488,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LithoStratTreeDefItem"
         title="LithoStratTreeDefItem"
@@ -540,7 +500,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Loan"
         title="Loan"
@@ -553,7 +512,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LoanAgent"
         title="LoanAgent"
@@ -567,7 +525,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LoanPreparation"
         title="LoanPreparation"
@@ -577,7 +534,6 @@
         <switch single="true">
         </switch>
     </format>
-
     <format
         name="LoanReturnPreparation"
         title="LoanReturnPreparation"
@@ -591,7 +547,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Locality"
         title="Locality"
@@ -609,7 +564,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="LocalityLatitude"
         title="LocalityLatitude"
@@ -624,7 +578,6 @@
           </external>
         </switch>
     </format>
-
     <format
         name="LocalityLongitude"
         title="LocalityLongitude"
@@ -639,7 +592,6 @@
           </external>
         </switch>
     </format>
-
     <format
         name="other_identifier"
         title="other_identifier"
@@ -655,7 +607,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="PaleoContext"
         title="PaleoContext"
@@ -670,7 +621,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Permit"
         title="Permit"
@@ -683,7 +633,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="PrepType"
         title="PrepType"
@@ -696,7 +645,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Preparation"
         title="Preparation"
@@ -710,7 +658,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="ReferenceWork"
         title="ReferenceWork"
@@ -723,7 +670,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Shipment"
         title="Shipment"
@@ -738,7 +684,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Storage"
         title="Storage"
@@ -751,7 +696,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="StorageTreeDef"
         title="StorageTreeDef"
@@ -764,7 +708,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="StorageTreeDefItem"
         title="StorageTreeDefItem"
@@ -777,7 +720,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="Taxon"
         title="Taxon"
@@ -791,7 +733,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="TaxonCitation"
         title="TaxonCitation"
@@ -804,7 +745,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="TaxonTreeDef"
         title="TaxonTreeDef"
@@ -817,7 +757,6 @@
             </fields>
         </switch>
     </format>
-
     <format
         name="TaxonTreeDefItem"
         title="TaxonTreeDefItem"
@@ -830,7 +769,6 @@
             </fields>
         </switch>
     </format>
-
   <aggregators>
     <aggregator name="AccessionAgent"
                 title="AccessionAgent"
@@ -842,7 +780,6 @@
                 format="AccessionAgent"
                 orderfieldname=""
                />
-
     <aggregator name="AccessionAttachment"
                 title="AccessionAttachment"
                 class="edu.ku.brc.specify.datamodel.AccessionAttachment"
@@ -853,7 +790,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="AccessionAuthorization"
                 title="AccessionAuthorization"
                 class="edu.ku.brc.specify.datamodel.AccessionAuthorization"
@@ -864,7 +800,6 @@
                 format="AccessionAuthorization"
                 orderfieldname=""
                />
-
     <aggregator name="Address"
                 title="Address"
                 class="edu.ku.brc.specify.datamodel.Address"
@@ -875,7 +810,6 @@
                 format="Address"
                 orderfieldname=""
                />
-
     <aggregator name="AgentAttachment"
                 title="AgentAttachment"
                 class="edu.ku.brc.specify.datamodel.AgentAttachment"
@@ -886,7 +820,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="Author"
                 title="Author"
                 class="edu.ku.brc.specify.datamodel.Author"
@@ -897,7 +830,6 @@
                 format="Author"
                 orderfieldname="orderNumber"
                />
-
     <aggregator name="BorrowAttachment"
                 title="BorrowAttachment"
                 class="edu.ku.brc.specify.datamodel.BorrowAttachment"
@@ -908,7 +840,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="CollectingEventAttachment"
                 title="CollectingEventAttachment"
                 class="edu.ku.brc.specify.datamodel.CollectingEventAttachment"
@@ -919,7 +850,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="CollectionObject"
                 title="CollectionObject"
                 class="edu.ku.brc.specify.datamodel.CollectionObject"
@@ -930,7 +860,6 @@
                 format="CollectionObject"
                 orderfieldname=""
                />
-
     <aggregator name="CollectionObjectAttachment"
                 title="CollectionObjectAttachment"
                 class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
@@ -941,7 +870,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="Collector"
                 title="Collector"
                 class="edu.ku.brc.specify.datamodel.Collector"
@@ -952,7 +880,6 @@
                 format="Collector"
                 orderfieldname="orderNumber"
                />
-
     <aggregator name="ConservDescriptionAttachment"
                 title="ConservDescriptionAttachment"
                 class="edu.ku.brc.specify.datamodel.ConservDescriptionAttachment"
@@ -963,7 +890,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="ConservEventAttachment"
                 title="ConservEventAttachment"
                 class="edu.ku.brc.specify.datamodel.ConservEventAttachment"
@@ -974,7 +900,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="DNASequenceAttachment"
                 title="DNASequenceAttachment"
                 class="edu.ku.brc.specify.datamodel.DNASequenceAttachment"
@@ -985,7 +910,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="DNASequencingRunAttachment"
                 title="DNASequencingRunAttachment"
                 class="edu.ku.brc.specify.datamodel.DNASequencingRunAttachment"
@@ -996,7 +920,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="Determination"
                 title="Determination"
                 class="edu.ku.brc.specify.datamodel.Determination"
@@ -1007,7 +930,6 @@
                 format="Determination"
                 orderfieldname=""
                />
-
     <aggregator name="DeterminationCitation"
                 title="DeterminationCitation"
                 class="edu.ku.brc.specify.datamodel.DeterminationCitation"
@@ -1018,7 +940,6 @@
                 format="DeterminationCitation"
                 orderfieldname=""
                />
-
     <aggregator name="DwC Media"
                 title="DwC Media"
                 class="edu.ku.brc.specify.datamodel.Attachment"
@@ -1029,7 +950,6 @@
                 format="Public Media"
                 orderfieldname=""
                />
-
     <aggregator name="FieldNotebookAttachment"
                 title="FieldNotebookAttachment"
                 class="edu.ku.brc.specify.datamodel.FieldNotebookAttachment"
@@ -1040,7 +960,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="FieldNotebookPageAttachment"
                 title="FieldNotebookPageAttachment"
                 class="edu.ku.brc.specify.datamodel.FieldNotebookPageAttachment"
@@ -1051,7 +970,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="FieldNotebookPageSetAttachment"
                 title="FieldNotebookPageSetAttachment"
                 class="edu.ku.brc.specify.datamodel.FieldNotebookPageSetAttachment"
@@ -1062,7 +980,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="FundingAgent"
                 title="FundingAgent"
                 class="edu.ku.brc.specify.datamodel.FundingAgent"
@@ -1073,7 +990,6 @@
                 format="FundingAgent"
                 orderfieldname="orderNumber"
                />
-
     <aggregator name="GiftAttachment"
                 title="GiftAttachment"
                 class="edu.ku.brc.specify.datamodel.GiftAttachment"
@@ -1084,7 +1000,6 @@
                 format="LoanAgent"
                 orderfieldname=""
                />
-
     <aggregator name="LoanAgent"
                 title="LoanAgent"
                 class="edu.ku.brc.specify.datamodel.LoanAgent"
@@ -1095,7 +1010,6 @@
                 format="LoanAgent"
                 orderfieldname=""
                />
-
     <aggregator name="LoanAttachment"
                 title="LoanAttachment"
                 class="edu.ku.brc.specify.datamodel.LoanAttachment"
@@ -1106,7 +1020,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="LoanPrep"
                 title="LoanPrep"
                 class="edu.ku.brc.specify.datamodel.LoanPreparation"
@@ -1117,7 +1030,6 @@
                 format="LoanPreparation"
                 orderfieldname=""
                />
-
     <aggregator name="LoanReturnPrep"
                 title="Loan Return Prep"
                 class="edu.ku.brc.specify.datamodel.LoanReturnPreparation"
@@ -1128,7 +1040,6 @@
                 format="LoanReturnPreparation"
                 orderfieldname=""
                />
-
     <aggregator name="LocalityAttachment"
                 title="LocalityAttachment"
                 class="edu.ku.brc.specify.datamodel.LocalityAttachment"
@@ -1139,7 +1050,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="PermitAttachment"
                 title="PermitAttachment"
                 class="edu.ku.brc.specify.datamodel.PermitAttachment"
@@ -1150,7 +1060,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="Preparation"
                 title="Preparation"
                 class="edu.ku.brc.specify.datamodel.Preparation"
@@ -1161,7 +1070,6 @@
                 format="Preparation"
                 orderfieldname=""
                />
-
     <aggregator name="PreparationAttachment"
                 title="PreparationAttachment"
                 class="edu.ku.brc.specify.datamodel.PreparationAttachment"
@@ -1172,7 +1080,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="ReferenceWorkAttachment"
                 title="ReferenceWorkAttachment"
                 class="edu.ku.brc.specify.datamodel.ReferenceWorkAttachment"
@@ -1183,7 +1090,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="RepositoryAgreementAttachment"
                 title="RepositoryAgreementAttachment"
                 class="edu.ku.brc.specify.datamodel.RepositoryAgreementAttachment"
@@ -1194,7 +1100,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="TaxonAttachment"
                 title="TaxonAttachment"
                 class="edu.ku.brc.specify.datamodel.TaxonAttachment"
@@ -1205,7 +1110,6 @@
                 format="identity"
                 orderfieldname="ordinal"
                />
-
     <aggregator name="other_identifiers"
                 title="other_identifiers"
                 class="edu.ku.brc.specify.datamodel.OtherIdentifier"
@@ -1216,7 +1120,5 @@
                 format="other_identifier"
                 orderfieldname=""
                />
-
   </aggregators>
-
 </formatters>
