@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<archive>
+  <core rowType="http://rs.tdwg.org/dwc/terms/Occurrence">
+    <field term="http://rs.tdwg.org/dwc/terms/institutionCode" value="NHMD"/>
+    <field term="http://rs.tdwg.org/dwc/terms/institutionID" value="http://grbio.org/cool/xxx"/>
+    <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/deed.en_US"/>
+    <field term="http://purl.org/dc/terms/accessRights" value="http://snm.ku.dk/xxx"/>
+    <field term="http://rs.tdwg.org/dwc/terms/collectionCode" value="AV"/>
+    <field term="http://rs.tdwg.org/dwc/terms/basisOfRecord" value="PreservedSpecimen"/>
+    <field term="http://rs.tdwg.org/dwc/terms/datasetName" value="Natural History Museum of Denmark ornithological collection"/>
+    <field term="http://rs.tdwg.org/dwc/terms/kingdom" value="Animalia"/>
+    <field term="http://rs.tdwg.org/dwc/terms/phylum" value="Chordata"/>
+    <field term="http://rs.tdwg.org/dwc/terms/class" value="Aves"/>
+    <queries>
+      <query contextTableId="1" name="occurrence.txt">
+        <id    term="http://rs.tdwg.org/dwc/terms/occurrenceID" isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.guid" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/catalogNumber" isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.catalogNumber" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers" isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.altCatalogNumber" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/fieldNumber" isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.fieldNumber" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/typeStatus" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/eventDate" isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.startDate" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/recordedBy" isNot="false" isRelFld="true" oper="1" stringId="1,10,30-collectors.collector.collectors" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/eventRemarks" isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.remarks" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/preparations" isNot="false" isRelFld="true" oper="1" stringId="1,63-preparations.preparation.preparations" value=""/>
+        <field term="http://purl.org/dc/terms/modified" isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.timestampModified" value=""/>
+        <field isNot="false" isRelFld="false" oper="6" stringId="1,9-determinations.determination.isCurrent" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/order" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Order" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/family" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Family" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/genus" isNot="false" isRelFld="false" oper="11" stringId="1,9-determinations,4-preferredTaxon.taxon.Genus" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/specificEpithet" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Species" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/scientificName" isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/continent" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Continent" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/country" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Country" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/stateProvince" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.State" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/county" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/higherGeography" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/islandGroup" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,124-localitydetails.localitydetail.islandGroup" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/island" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,124-localitydetails.localitydetail.island" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/waterBody" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,124-localitydetails.localitydetail.waterBody" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/locality" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.localityName" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/locationRemarks" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.remarks" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/decimalLongitude" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.longitude1" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.latitude1" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.latitude1" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.maxUncertaintyEst" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/geodeticDatum" isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.datum" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate" isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geocoorddetails.geocoorddetail.geoRefDetDate" value=""/>
+        <field term="http://rs.tdwg.org/dwc/terms/sex" isNot="false" isRelFld="false" oper="1" stringId="1,93.collectionobjectattribute.text1" value=""/>
+      </query>
+    </queries>
+  </core>
+  <extension rowType="http://rs.tdwg.org/ac/terms/Multimedia">
+    <field term="http://purl.org/dc/terms/license" value="http://creativecommons.org/licenses/by/4.0/deed.en_US"/>
+    <field term="http://purl.org/dc/terms/accessRights" value="http://snm.ku.dk/xxx"/>
+    <queries>
+      <query contextTableId="1" name="attachment.csv">
+	<id    isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.guid" value=""/>
+	<field term="http://purl.org/dc/terms/identifier" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.guid" value=""/>
+        <field isNot="false" isRelFld="false" oper="6" stringId="1,111-collectionobjectattachments,41.attachment.isPublic" value=""/>
+        <field term="http://purl.org/dc/terms/identifier" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.guid" value=""/>
+        <field term="http://rs.tdwg.org/ac/terms/accessURI" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.attachmentLocation" value=""/>
+        <field term="http://purl.org/dc/terms/title" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.title" value=""/>
+        <field term="http://purl.org/dc/terms/format" isNot="false" isRelFld="false" oper="10" stringId="1,111-collectionobjectattachments,41.attachment.mimeType" value="image/jpeg,image/tif"/>
+        <field term="http://ns.adobe.com/xap/1.0/rights/Owner" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.copyrightHolder" value=""/>
+        <field term="http://purl.org/dc/terms/license" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.license" value=""/>
+        <field term="http://rs.tdwg.org/ac/terms/licenseLogoURL" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.licenseLogoUrl" value=""/>
+        <field term="http://ns.adobe.com/photoshop/1.0/Credit" isNot="false" isRelFld="false" oper="1" stringId="1,111-collectionobjectattachments,41.attachment.credit" value=""/>
+      </query>
+    </queries>
+  </extension>
+</archive>
