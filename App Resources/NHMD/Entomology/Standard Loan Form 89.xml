@@ -21,9 +21,7 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
-
 	<parameter name="RPT_IMAGE_DIR" isForPrompting="false" class="java.lang.String"/>
-
 	<field name="52.loan.currentDueDate" class="java.lang.String"/>
 	<field name="52.loan.loanDate" class="java.lang.String"/>
 	<field name="52.loan.loanNumber" class="java.lang.String"/>
@@ -40,7 +38,6 @@
 	<field name="52,54-loanPreparations,63,65.preptype.name" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
 	<field name="52,54-loanPreparations,63,1.collectionobject.altCatalogNumber" class="java.lang.String"/>
-
 		<background>
 			<band height="741"  isSplitAllowed="true" >
 				<image  scaleImage="RetainShape" onErrorType="Blank" isUsingCache="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
