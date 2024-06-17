@@ -18,6 +18,8 @@
 	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
 	<field name="1.collectionobject.text2" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.taxon" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.author" class="java.lang.String"/>
 	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
 	<field name="1,10,2.locality.lat1text" class="java.lang.String"/>
 	<field name="1,10,2.locality.long1text" class="java.lang.String"/>
@@ -26,6 +28,7 @@
 	<field name="1,10,87.collectingtrip.cruise" class="java.lang.String"/>
 	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
 	<field name="1,10,92.collectingeventattribute.text10" class="java.lang.String"/>
+	<field name="1,10.collectingevent.verbatimDate" class="java.lang.String"/>
 	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
 	<field name="1,63-preparations.preparation.preparations" class="java.lang.String"/>
 	<field name="id" class="java.lang.Integer"/>
@@ -122,10 +125,13 @@
 				<reportElement x="5" y="39" width="175" height="11" uuid="70a82fac-0989-4871-8ec2-f8bcca03810d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c4bfaf7-61a5-4a06-8aae-0877be74b7d9"/>
 				</reportElement>
-				<textElement markup="styled">
+				<textElement markup="html">
 					<font fontName="Arial" size="8" isItalic="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.taxon} != null ? $F{1,9-determinations,4.taxon.taxon} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.taxon} != null ? 
+	"<i>".concat($F{1,9-determinations,4.taxon.fullName}).concat("</i>").concat( " ")
+	         .concat($F{1,9-determinations,4.taxon.author}) 
+	: ""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="5" y="51" width="175" height="11" uuid="1409599f-c5c6-41d9-8593-d31d4812cd9d">
@@ -259,7 +265,13 @@ $F{1,10.collectingevent.startDate}.toString()
 				<textElement textAlignment="Left">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1,63-preparations.preparation.preparations}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1,63-preparations.preparation.preparations}.contains(";") ? 
+	$F{1,63-preparations.preparation.preparations}.split(";")[0].contains("Tissue sample") ? 
+  	     $F{1,63-preparations.preparation.preparations}.split(";")[0] :
+         $F{1,63-preparations.preparation.preparations}.split(";")[1].contains("Tissue sample") ? 
+         	     $F{1,63-preparations.preparation.preparations}.split(";")[1].split("\\|")[1] : "..."
+: $F{1,63-preparations.preparation.preparations}.contains("Tissue sample") ? 
+   $F{1,63-preparations.preparation.preparations}.split("\\|")[1] : "-"]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
