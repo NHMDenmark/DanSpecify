@@ -21,8 +21,6 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
-
-
 	<field name="1,10,2,3.geography.Country" class="java.lang.String"/>
 	<field name="1,9-determinations,5-determiner.agent.determiner" class="java.lang.String"/>
 	<field name="1,10.collectingevent.text3" class="java.lang.String"/>
@@ -59,7 +57,6 @@
 	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
 	<field name="1,9-determinations,4,4-acceptedTaxon.taxon.author" class="java.lang.String"/>
 	<field name="1,9-determinations,4,4-acceptedTaxon.taxon.fullName" class="java.lang.String"/>
-
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>

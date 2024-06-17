@@ -50,7 +50,6 @@
         </query>
     </queries>
   </core>
-
     <!-- Reference Extension -->
     <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
         <queries>
@@ -99,5 +98,4 @@
 	    </query>
         </queries>
     </extension>
-
 </archive>

@@ -20,8 +20,6 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
-
-
 	<field name="1,9-determinations,4.taxon.Subfamily" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Species Author" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Tribe" class="java.lang.String"/>
@@ -52,7 +50,6 @@
 	<field name="1,10,2,3.geography.State" class="java.lang.String"/>
 	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
 	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
-
 		<background>
 			<band height="0"  isSplitAllowed="true" >
 			</band>

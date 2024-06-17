@@ -41,8 +41,8 @@
             <field term="http://rs.tdwg.org/dwc/terms/genus"                 isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations,4-preferredTaxon.taxon.Genus"      value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/specificEpithet"       isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations,4-preferredTaxon.taxon.Species"    value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"  isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations,4-preferredTaxon.taxon.Subspecies" value=""/> 
-			<field term="http://rs.tdwg.org/dwc/terms/scientificName"        isNot="false" isRelFld="false" oper="8" stringId="1,9-determinations,4.taxon.fullName" value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
+            <field term="http://rs.tdwg.org/dwc/terms/scientificName"        isNot="false" isRelFld="false" oper="8" stringId="1,9-determinations,4.taxon.fullName" value=""/> 
+           <field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"      isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1"  stringId="1,9-determinations.determination.typeStatusName"      value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/identifiedBy"          isNot="false" isRelFld="true"  oper="8"  stringId="1,9-determinations,5-determiner.agent.determiner"     value=""/>
             <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"           value=""/> 
@@ -53,7 +53,6 @@
         </query>
     </queries>
   </core>
-
     <!-- Reference Extension -->
     <extension rowType="http://rs.gbif.org/terms/1.0/Reference">
         <queries>
@@ -63,7 +62,8 @@
                 <field term="http://purl.org/dc/terms/date"             isNot="false" isRelFld="false" oper="1" stringId="69.referencework.workDate" value=""/>
                 <field term="http://purl.org/dc/terms/title"            isNot="false" isRelFld="false" oper="1" stringId="69.referencework.title" value=""/>
                 <field term="http://purl.org/dc/terms/source"           isNot="false" isRelFld="true"  oper="1" stringId="69,51.journal.journal" value=""/>
-                <field term="http://purl.org/dc/terms/identifier"       isNot="false" isRelFld="false" oper="1" stringId="69.referencework.text1" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"       isNot="false" isRelFld="false" oper="1" stringId="69.referencework.doi" value=""/>
+                <field term="http://purl.org/dc/terms/type"     stringId="69.referencework.referenceWorkType" oper="8" value="" isNot="false" isRelFld="false"/>
             </query>
         </queries>
     </extension>
@@ -84,7 +84,6 @@
             </query>
         </queries>
     </extension>
-
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>
@@ -103,5 +102,4 @@
         </query>
         </queries>
     </extension>
-
 </archive>

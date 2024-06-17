@@ -21,8 +21,6 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
-
-
 	<field name="1,10,2.locality.longitude1" class="java.math.BigDecimal"/>
 	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
 	<field name="1,10,30-collectors,5.agent.lastName" class="java.lang.String"/>
@@ -49,7 +47,6 @@
 	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
 	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
 	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
-
 	<variable name="Latitude" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.latitude1}, $F{1,10,2.locality.originalLatLongUnit}, true) +
 ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.latitude1}, true)]]></variableExpression>
@@ -152,7 +149,6 @@ $F{1,10,2,3.geography.name}+ ", " + $F{1,10,2.locality.localityName} + ", " +
 	+ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.longitude1}, $F{1,10,2.locality.originalLatLongUnit}, false)
 		+ " " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.longitude1}, false)
 : "") + ", " + ($F{1,10,2.locality.maxElevation}==null?(($F{1,10,2.locality.minElevation}==null?"":$F{1,10,2.locality.minElevation} + "m,")): $F{1,10,2.locality.minElevation} + "-" + $F{1,10,2.locality.maxElevation} + "m,") + "\n" +
-
 $F{1,10,30-collectors.collector.collectors} + " leg. " + 
 "<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">NHMD</style>"]]></textFieldExpression>
 				</textField>

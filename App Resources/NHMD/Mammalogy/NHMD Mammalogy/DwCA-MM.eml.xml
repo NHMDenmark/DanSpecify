@@ -41,7 +41,7 @@
       <phone>+45 22369539</phone>
       <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
 	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
-      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <onlineUrl>https://snm.ku.dk/ansatte/samlinger/?id=228929&amp;vis=medarbejder</onlineUrl>
 	  <role>distributor</role>
     </associatedParty>
     <associatedParty>
@@ -69,7 +69,7 @@
       <para xml:lang="EN">We have a large collection of whales from Greenland and Denmark, and large series of sperm whale, narwhal, beluga, harbor porpoise and white-beaked dolphin.</para>
       <para xml:lang="DA">Pattedyrsamlingen omfatter ca. 56.000 genstande, hvoraf den ældste dateres tilbage til 1649. Cirka 1.600 af verdens 5.488 (estimeret i april 2015) pattedyrarter er repræsenteret.</para>
       <para xml:lang="DA">Vi har imponerende serier af de fleste danske og grønlandske pattedyr, inklusive land- og havkødædere (isbjørn, polarræv, rødrev, hvalros, sæler), gnavere (røde egern), mårdyr (eurasatisk odder, europæisk grævling, mår, væsler, murmeldyr, skedehornede (moskusokse), hjortedyr (rensdyr, hjorte, rådyr) og flagermus. Det geografiske område for vores materiale inkluderer desuden særligt rige samlinger fra Østafrika, Sudan, Sydøstasien og Brasilien (inkl. Det nylige materiale fra Lagoa Santa, der blev indsamlet af PW Lund i midten af 1880'erne).</para>
-      <para xml:lang="DA">Vi har en stor samling af hvaler fra Grønland og Danmark, og store serier af sædhval, narhval, hvidhval, marsvin og hvidnæbbet delfin. </para>      
+      <para xml:lang="DA">Vi har en stor samling af hvaler fra Grønland og Danmark, hvoriblandt en stor serie af kaskelothval, narhval, hvidhval, marsvin og hvidnæbbet delfin. </para>      
     </abstract>
     <keywordSet>
       <keyword>mammals</keyword>
