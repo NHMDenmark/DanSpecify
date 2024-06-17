@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <viewset name="Common" i18nresname="common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
 	<views>
 	
 		<view name="Taxon" class="edu.ku.brc.specify.datamodel.Taxon" busrules="edu.ku.brc.specify.datamodel.busrules.TaxonBusRules" isinternal="false" resourcelabels="false">
@@ -10,16 +9,13 @@
 				<altview name="Taxon Edit" viewdef="Taxon" mode="edit" default="true"/>
 			</altviews>
 		</view>
-
 		<view name="TaxonSubform" class="edu.ku.brc.specify.datamodel.Taxon" busrules="edu.ku.brc.specify.datamodel.busrules.TaxonBusRules" resourcelabels="false">
 			<desc><![CDATA[Taxon data entry form.]]></desc>
 			<altviews>
 				<altview name="Taxon Children View" viewdef="TaxonSubform" mode="view"/>
 			</altviews>
 		</view>
-
 	</views>
-
 <!--
 ######################################################################################################
 ######################################################################################################
@@ -27,9 +23,7 @@
 ######################################################################################################
 ######################################################################################################
 ######################################################################################################
-
                 Beginning of ViewDefs
-
 ######################################################################################################
 ######################################################################################################
 ######################################################################################################
@@ -37,9 +31,7 @@
 ######################################################################################################
 ######################################################################################################
 -->
-
 	<viewdefs>
-
 		<viewdef name="Taxon" type="form" class="edu.ku.brc.specify.datamodel.Taxon" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
 			<desc><![CDATA[New Taxon Node Form]]></desc>
 			<enableRules>
@@ -185,7 +177,6 @@
 				</row>-->
 			</rows>
 		</viewdef>
-
 		<viewdef name="TaxonSubform" type="form" class="edu.ku.brc.specify.datamodel.Taxon" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc><![CDATA[New Taxon Node Form]]></desc>
 			<enableRules>
@@ -204,7 +195,6 @@
 				</row>
 			</rows>
 		</viewdef>
-
 		<viewdef
 			name="TaxonLabelFormattingPlugin"
 			type="form" class="edu.ku.brc.specify.datamodel.Taxon" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
@@ -218,8 +208,5 @@
 				</row>
 			</rows>
 		</viewdef>
-
-
 	</viewdefs>
-
 </viewset>
