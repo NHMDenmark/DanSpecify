@@ -1,0 +1,8 @@
+<channel>
+    <title>MSJN Collections DarwinCore RSS Feed</title>
+    <description>RSS Feed for collection data of the Museum Southern Jutland - Paleontology</description>
+    <item collectionId="4" userId="8" notifyUserId="8" definition="DarwinCoreMSJN" metadata="DarwinCoreMSJN.eml" days="1" filename="DarwinCoreMSJN.zip" publish="true">
+      <title>MSJN Paleontology Collection</title>
+      <id>bfc887bc-8ae0-4878-8454-28887ab3faf0</id>
+    </item> 
+</channel>

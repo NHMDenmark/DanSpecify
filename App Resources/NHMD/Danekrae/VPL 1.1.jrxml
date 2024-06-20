@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="VPL 1.1"
+		 columnCount="2"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="267"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="1,10.collectingevent.endDate" class="java.lang.String"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.fullName" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.Species" class="java.lang.String"/>
+	<field name="1.collectionobject.altCatalogNumber" class="java.lang.String"/>
+	<field name="1.collectionobject.fieldNumber" class="java.lang.String"/>
+	<field name="1,32,46-chronosStrat.geologictimeperiod.fullName" class="java.lang.String"/>
+	<field name="1,32,46-chronosStratEnd.geologictimeperiod.fullName" class="java.lang.String"/>
+	<field name="1,32,100.lithostrat.fullName" class="java.lang.String"/>
+	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
+	<field name="1,9-determinations,5-determiner.agent.determiner" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.determinedDate" class="java.lang.String"/>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="144"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="1"
+						y="1"
+						width="263"
+						height="143"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.1" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="5"
+						width="123"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD–"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="3"
+						y="131"
+						width="258"
+						height="10"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="Helvetica" size="7" isBold="false"/>
+					</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM OF DENMARK]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="5"
+						y="35"
+						width="256"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Arial" pdfFontName="Helvetica" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,9-determinations,4.taxon.fullName} != null 
+	? ( $F{1,9-determinations,4.taxon.Genus} != null ? "<style isItalic = \"true\">" + $F{1,9-determinations,4.taxon.fullName} + "</style>" + ($F{1,9-determinations,4.taxon.Species} != null ? "" : " sp.") : $F{1,9-determinations,4.taxon.fullName} )
+	: "indet"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="76"
+						width="256"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2.locality.localityName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="89"
+						width="256"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2,3.geography.fullName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="102"
+						width="255"
+						height="10"
+						key="textField">
+							<printWhenExpression><![CDATA[!$F{1,10,30-collectors.collector.collectors}.isEmpty() || !$F{1,10.collectingevent.startDate}.isEmpty()]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Leg: "+$F{1,10,30-collectors.collector.collectors} +
+( $F{1,10.collectingevent.startDate}.isEmpty() ? "" : ", " + $F{1,10.collectingevent.startDate} + ( $F{1,10.collectingevent.endDate}.isEmpty() ? "" : "-" + $F{1,10.collectingevent.endDate} ) )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="115"
+						width="168"
+						height="10"
+						key="textField">
+							<printWhenExpression><![CDATA[$F{1,9-determinations,5-determiner.agent.determiner} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Det: " + $F{1,9-determinations,5-determiner.agent.determiner} + ( $F{1,9-determinations.determination.determinedDate}.isEmpty() ? "" : ", " + $F{1,9-determinations.determination.determinedDate})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="141"
+						y="5"
+						width="120"
+						height="10"
+						key="textField">
+							<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["ex-" + $F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="141"
+						y="19"
+						width="120"
+						height="10"
+						key="textField-1">
+							<printWhenExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Field no. " + $F{1.collectionobject.fieldNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="50"
+						width="256"
+						height="10"
+						key="textField-2"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,32,46-chronosStrat.geologictimeperiod.fullName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="63"
+						width="256"
+						height="10"
+						key="textField-3"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,32,100.lithostrat.fullName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="5"
+						y="19"
+						width="123"
+						height="12"
+						key="textField-4"/>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,9-determinations.determination.typeStatusName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,127 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
+    <title xml:lang="eng">NHMD Quaternary Zoology Collection</title>
+    <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.1.1">
+       <section xml:lang="EN"></section>
+       <para xml:lang="EN"></para>
+       <markdown></markdown>
+    </description>
+    <creator>
+      <individualName>
+        <givenName>Bent</givenName>
+        <surName>Lindow</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Worker</positionName>
+      <electronicMailAddress>lindow@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/ansatte/samlinger/?pure=da/persons/132801</onlineUrl>
+      <userId directory="http://orcid.org/">0000-0002-1864-4221</userId>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Bent</givenName>
+        <surName>Lindow</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager of Vertebrate Paleontology </positionName>
+      <electronicMailAddress>lindow@snm.ku.dk</electronicMailAddress>
+      <onlineUrl>https://snm.ku.dk/ansatte/samlinger/?pure=da/persons/132801</onlineUrl>
+      <userId directory="http://orcid.org/">0000-0002-1864-4221</userId>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Knud</givenName>
+        <surName>Rosenlund</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Collection Manager of Vertebrate Paleontology </positionName>
+      <onlineUrl>https://snm.ku.dk/ansatte/ansatte/?pure=da/persons/41991</onlineUrl>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Kurt</givenName>
+        <surName>Kjær</surName>
+      </individualName>
+      <organizationName>GLOBE</organizationName>
+      <positionName>Professor</positionName>
+      <electronicMailAddress>kurtk@sund.ku.dk</electronicMailAddress>
+      <onlineUrl>https://globe.ku.dk/staff-list/?pure=en/persons/77403</onlineUrl>
+      <userId directory="http://orcid.org/">0000-0002-8871-5179</userId>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/ansatte/samlinger/?id=228929&amp;vis=medarbejder</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Zsuzsanna</givenName>
+        <surName>Papp</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone></phone>
+      <electronicMailAddress>zsuzsanna.papp@snm.ku.dk</electronicMailAddress>
+      <role>distributor</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para xml:lang="EN">The Quaternary Zoology collection only comprises of faunal skeletal remains (archaeological and geological) from the Quaternary period (the last 2.6 million years). The main focuses are the Danish and Greenlandic faunal remains but due to a couple of historical collections it is also very strong in South American faunal remains (including, as the only exception, some human remains) and to some extent faunal remains from Western Asia and South East Asia.</para>
+      <!--<para xml:lang="EN">Apart from a few scattered older remains, the Danish collection cover the Eemian interglacial (approx. 130.000-115.000 years ago) with a handful of primary deposits of herbivores and a few scattered secondary deposits, the Weichselian glaciation (approx. 115.000-11.700 years ago) with lots of re-deposited bones from herbivores, primarily woolly mammoth (Mammuthus primigenius) and, from the late glacial period, primary deposits of reindeer (Rangifer tarandus) – some of which represents butchery remains from the earliest signs of humans in Denmark: hunter gatherers from the Hamburgian culture. Primarily though the Danish collection comprises of faunal remains from archaeological and geological sites from the Holocene interglacial (11.700-present). It comprises millions of skeletal remains from fish, amphibians, reptiles, birds and mammals (not including humans which are stored at the Laboratory of Forensic Anthropology, Unit of Forensic Anthropology, University of Copenhagen.</para>
+      <para xml:lang="EN">The Greenlandic collection consists almost solely of faunal remains from archaeological and geological sites from the Holocene interglacial. These again are primarily faunal remains from archaeological sites ranging from the earliest paleo-Eskimo Saqqaq culture (4500-2800 years ago), over the Norse settlements (10th-15th centuries), to the Thule culture (13th-19th centuries), and recent Inuit settlements (19th and 20th century). The collection is administered by the Natural History Museum of Denmark but all remains excavated since 1980, all paleo-Eskimo remains, and all Norse remains, belong to the Greenland National Museum and Archives. All work on these faunal remains will therefore require a written consent from the director or deputy. All human remains are stored at the Laboratory of Forensic Anthropology.</para>
+      <para xml:lang="EN">The South American collection consists of faunal, and some human, remains from primarily Argentina and Brazil collected in the 19th century. The Brazilian remains originate from cave deposits and are of Late Pleistocene to Holocene age. They comprise mainly of the remains of smaller vertebrates but also remains from mega fauna are represented. It contains several type specimens described by Peter Wilhelm Lund and Herluf Winge. The Argentinian remains are almost all from mega fauna and are of Mid Pleistocene to Late Pleistocene age. Major mammalian taxa represented in the South American collection are Rodentia, Xenartha and Carnivora. The collection contains approx. 100.000 bones (or fragments thereof) from larger vertebrates, 2½ million bones (or fragments thereof) from smaller vertebrates, and approx. 1300 matrix blocks (breccia) containing unprepared bones and fragments.</para>
+      <para xml:lang="EN">The Western Asia and South East Asia collections are the results of several well documented international collaborations and contain faunal remains from archaeological sites in for example Jordan, United Arab Emirates, Iran, and Thailand, covering cultural periods like the Neolithic, Bronze Age, Iron Age and Islamic Periods.The rest of the collection is a mix of faunal remains from all over the world. Of some interest it is noteworthy to mention remains from various archaeological sites in Canada and Alaska (U.S.A.), and also from Sudan.</para>-->
+    </abstract>
+    <keywordSet>
+      <keyword>quaternary</keyword>
+      <keyword>vertebrate</keyword>
+      <keyword>paleontology</keyword>
+      <keyword>zoology</keyword>
+      <keyword>geology</keyword>
+      <keyword>Denmark</keyword>
+      <keyword>Copenhagen</keyword>
+      <keyword>Greenland</keyword>
+      <keyword>Denmark</keyword>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Occurrence</keyword>
+      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>   
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+      <identifier>CC-BY</identifier>
+    </licensed>
+  <pubDate>2023-12-15</pubDate>
+</dataset>
+</eml:eml>

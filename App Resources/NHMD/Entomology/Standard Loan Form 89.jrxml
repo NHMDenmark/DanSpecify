@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Standard Loan Form"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="595"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="true">
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<parameter name="RPT_IMAGE_DIR" isForPrompting="false" class="java.lang.String"/>
+	<field name="52.loan.currentDueDate" class="java.lang.String"/>
+	<field name="52.loan.loanDate" class="java.lang.String"/>
+	<field name="52.loan.loanNumber" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1.collectionobject.catalogNumber" class="java.lang.Object"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.quantity" class="java.lang.Integer"/>
+	<field name="52,54-loanPreparations,63,1,10,2,3.geography.Country" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.descriptionOfMaterial" class="java.lang.String"/>
+	<field name="52,54-loanPreparations.loanpreparation.outComments" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,65.preptype.name" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
+	<field name="52,54-loanPreparations,63,1.collectionobject.altCatalogNumber" class="java.lang.String"/>
+		<background>
+			<band height="741"  isSplitAllowed="true" >
+				<image  scaleImage="RetainShape" onErrorType="Blank" isUsingCache="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="450"
+						y="74"
+						width="91"
+						height="126"
+						key="image-1">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/logo/KU.jpeg")]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="448"
+						y="259"
+						width="130"
+						height="18"
+						forecolor="#000000"
+						key="textField-1">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Single">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{52.loan.loanDate}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="190"
+						width="595"
+						height="1"
+						forecolor="#911A1E"
+						key="line-17">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<staticText>
+					<reportElement
+						x="57"
+						y="22"
+						width="364"
+						height="16"
+						forecolor="#000000"
+						key="staticText-6">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="11" isPdfEmbedded ="true"/>
+					</textElement>
+				<text><![CDATA[N A T U R A L   H I S T O R Y   M U S E U M   O F   D E N M A R K]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="40"
+						width="325"
+						height="14"
+						forecolor="#000000"
+						key="staticText-7">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<text><![CDATA[U N I V E R S I T Y   OF   C O P E N H A G E N]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="531"
+						y="100"
+						width="20"
+						height="7"
+						key="textField">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} >= 2]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica" size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="448"
+						y="294"
+						width="130"
+						height="18"
+						forecolor="#000000"
+						key="textField-8"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement isStyledText="true" lineSpacing="Single">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold='true'>COLLECTIONS</style>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="448"
+						y="325"
+						width="130"
+						height="58"
+						forecolor="#000000"
+						key="textField-9"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Double">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.Title").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.Title").toUpperCase() + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.FirstName").toUpperCase() + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.MiddleInitial").toUpperCase() + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.LastName").toUpperCase() + "\n"
++ "STATENS NATURHISTORISKE MUSEUM\n"
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Address").toUpperCase() + "\n"
++ ( ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Address2").isEmpty() ? "" : ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Address2").toUpperCase() + "\n")
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.PostalCode").toUpperCase() + " "
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.City").toUpperCase() + "\n"
++ "DENMARK"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="448"
+						y="455"
+						width="130"
+						height="32"
+						forecolor="#000000"
+						key="textField-11"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Double">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.Email")
++ "\nhttp://snm.ku.dk/english/"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="490"
+						y="427"
+						width="88"
+						height="10"
+						forecolor="#000000"
+						key="textField-13"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Single">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Phone2").toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="490"
+						y="413"
+						width="88"
+						height="10"
+						forecolor="#000000"
+						key="textField-14"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Single">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Phone1").toUpperCase()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="448"
+						y="398"
+						width="26"
+						height="10"
+						forecolor="#000000"
+						key="staticText-24"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[TEL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="448"
+						y="413"
+						width="26"
+						height="10"
+						forecolor="#000000"
+						key="staticText-25"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[DIR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="448"
+						y="427"
+						width="26"
+						height="10"
+						forecolor="#000000"
+						key="staticText-27"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1 && !((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Phone2").isEmpty()]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[MOB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="474"
+						y="398"
+						width="104"
+						height="10"
+						forecolor="#000000"
+						key="staticText-28"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[+ 45 35 32 22 22]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="474"
+						y="413"
+						width="16"
+						height="10"
+						forecolor="#000000"
+						key="staticText-29"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[+ 45]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="474"
+						y="427"
+						width="16"
+						height="10"
+						forecolor="#000000"
+						key="staticText-31"
+						positionType="Float"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1 && !((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","address.Phone2").isEmpty()]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[+ 45]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="448"
+						y="501"
+						width="130"
+						height="76"
+						forecolor="#000000"
+						key="textField-15"
+						positionType="Float">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement lineSpacing="Double">
+						<font fontName="Arial" size="7" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["REF: Loan of material\n"
++ "LOAN: NHMD " + $F{52.loan.loanNumber} + "\n"
++ "Please specify on inquiry"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="604"
+						width="162"
+						height="14"
+						key="textField-18">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.Title") != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.Title") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.FirstName") + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.MiddleInitial") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"preparer","agent.LastName") + " "]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="57"
+						y="604"
+						width="162"
+						height="0"
+						key="line-21">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="57"
+						y="552"
+						width="162"
+						height="16"
+						key="staticText-46">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[Loan prepared by:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="421"
+						y="100"
+						width="110"
+						height="7"
+						key="textField-22">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} >= 2]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" pdfFontName="Helvetica" size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA["LOAN NHMD " + $F{52.loan.loanNumber} + ", PAGE " + $V{PAGE_NUMBER} + " OF "]]></textFieldExpression>
+				</textField>
+				<image  scaleImage="RetainShape" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="448"
+						y="720"
+						width="130"
+						height="20"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="barcode-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[it.businesslogic.ireport.barcode.BcImage.getBarcodeImage(6,$F{52.loan.loanNumber},false,false,null,0,0)]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="57"
+						y="525"
+						width="102"
+						height="16"
+						key="staticText-67">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[Loan authorized by:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="164"
+						y="525"
+						width="218"
+						height="16"
+						key="textField-23">
+							<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.Title") != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.Title") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.FirstName") + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.MiddleInitial") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"authoriser","agent.LastName") + " "]]></textFieldExpression>
+				</textField>
+			</band>
+		</background>
+		<title>
+			<band height="606"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="159"
+						y="281"
+						width="262"
+						height="16"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Title") != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Title") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.FirstName") + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.MiddleInitial") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.LastName")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="73"
+						width="364"
+						height="100"
+						key="textField-2"
+						stretchType="RelativeToTallestObject"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Title").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Title") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.FirstName") + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.MiddleInitial").toUpperCase() + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.LastName") + "\n"
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.Address") + "\n"
++ ( ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.Address2").isEmpty() ? "" : ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.Address2") + "\n")
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.PostalCode") + " "
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.City") + "\n"
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","address.Country")
++ (!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Email").isEmpty() ?
+	"\ne-mail: " + ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"borrower","agent.Email") :
+	"" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="57"
+						y="281"
+						width="86"
+						height="16"
+						key="staticText-13"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[Loan issued to:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="308"
+						width="86"
+						height="16"
+						key="staticText-14"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.LastName").isEmpty()]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[On behalf of:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="159"
+						y="308"
+						width="262"
+						height="16"
+						key="textField-3"
+						isRemoveLineWhenBlank="true"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[(((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.Title") != null ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.Title") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.FirstName") + " " +
+(!((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.MiddleInitial").isEmpty() ?
+	((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.MiddleInitial") + " " :
+	"" )
++ ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getByLoanAgentRole($F{52.loan.loanNumber},"investigator","agent.LastName")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="253"
+						width="364"
+						height="16"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Loan Number: NHMD " + $F{52.loan.loanNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="335"
+						width="364"
+						height="16"
+						key="textField-16"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["under the conditions detailed on page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="57"
+						y="391"
+						width="364"
+						height="16"
+						key="staticText-36"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[See page 2 for an itemized list of the loan contents:]]></text>
+				</staticText>
+				<break>
+					<reportElement
+						x="0"
+						y="605"
+						width="595"
+						height="0"
+						key="element-1"/>
+				</break>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="419"
+						width="364"
+						height="33"
+						key="textField-20"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Please sign the form and indicate any damage to the material that you notice upon receipt on page " + ($V{PAGE_NUMBER} - 1)]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="57"
+						y="363"
+						width="364"
+						height="16"
+						key="textField-21"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Return of the material is expected no later than " + $F{52.loan.currentDueDate}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="100"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="33"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="57"
+						y="0"
+						width="364"
+						height="14"
+						key="staticText-9"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Loan contents itemized]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="139"
+						y="22"
+						width="282"
+						height="11"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Detailed Information]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="57"
+						y="32"
+						width="364"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<staticText>
+					<reportElement
+						x="59"
+						y="22"
+						width="76"
+						height="11"
+						key="staticText-33"/>
+					<box></box>
+					<textElement textAlignment="Justified">
+						<font fontName="Times New Roman" pdfFontName="Times-Bold" size="9" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Catalog №]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="44"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						x="57"
+						y="0"
+						width="364"
+						height="44"
+						backcolor="#EEEEEE"
+						key="rectangle-1">
+							<printWhenExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch" fill="Solid" >
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="59"
+						y="0"
+						width="76"
+						height="11"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD "+$F{52,54-loanPreparations,63,1.collectionobject.catalogNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="139"
+						y="0"
+						width="282"
+						height="11"
+						key="textField"/>
+					<box></box>
+					<textElement isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Scientific name: "
++ ($F{52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus} != null ?
+	"<style isItalic='true'>" + $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon}+ " </style>" :
+	$F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="139"
+						y="22"
+						width="282"
+						height="11"
+						key="textField"
+						isRemoveLineWhenBlank="true">
+							<printWhenExpression><![CDATA[$F{52,54-loanPreparations,63,1,10,2,3.geography.Country} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Country of origin: " + $F{52,54-loanPreparations,63,1,10,2,3.geography.Country}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="139"
+						y="33"
+						width="282"
+						height="11"
+						key="textField"
+						positionType="Float"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9" isItalic="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Remarks on condition: " + ($F{52,54-loanPreparations.loanpreparation.outComments} != null ? $F{52,54-loanPreparations.loanpreparation.outComments} : "none")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="139"
+						y="11"
+						width="282"
+						height="11"
+						key="textField-17"/>
+					<box></box>
+					<textElement isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Quantity and description of material: " + $F{52,54-loanPreparations.loanpreparation.quantity} + " "
++ ($F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} != null ? $F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} : $F{52,54-loanPreparations,63,65.preptype.name})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="70"
+						y="22"
+						width="65"
+						height="11"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName} != null ? $F{52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName} : ""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="70"
+						y="11"
+						width="65"
+						height="11"
+						key="textField-24"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Helvetica-Bold" size="9" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{52,54-loanPreparations,63,1.collectionobject.altCatalogNumber} != null ? ("(" + $F{52,54-loanPreparations,63,1.collectionobject.altCatalogNumber}+ ")") : ""]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="19"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="231"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="57"
+						y="81"
+						width="364"
+						height="100"
+						key="staticText-42"/>
+					<box>					<pen lineWidth="0.25" lineStyle="Solid"/>
+					<topPen lineWidth="0.25" lineStyle="Solid"/>
+					<leftPen lineWidth="0.25" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.25" lineStyle="Solid"/>
+					<rightPen lineWidth="0.25" lineStyle="Solid"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="5"/>
+					</textElement>
+				<text><![CDATA[Remarks on the condition of the material as recieved (to be filled in by the borrower—You can also annotate on the right margin):]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="57"
+						y="61"
+						width="160"
+						height="0"
+						key="line-20"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="57"
+						y="1"
+						width="364"
+						height="14"
+						key="staticText-43"/>
+					<box></box>
+					<textElement>
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12"/>
+					</textElement>
+				<text><![CDATA[I hereby acknowledge receipt the loan and all of its contents:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="61"
+						width="160"
+						height="14"
+						key="staticText-44"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="9"/>
+					</textElement>
+				<text><![CDATA[date/signature]]></text>
+				</staticText>
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="802"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="57"
+						y="100"
+						width="364"
+						height="16"
+						key="staticText-23"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[General Terms]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="120"
+						width="364"
+						height="10"
+						key="staticText-51"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Restrictions]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="130"
+						width="364"
+						height="67"
+						key="staticText-52"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- forwarding of loans to third parties is not allowed without approval of the lending institution
+- no changes to original labels are allowed
+- no changes to specimens are allowed without permission (including pedestals/armatures, sheets, etc. to which the object is fixed)
+- annotations by the borrower should not be permanently attached but provided in an accompanying letter, on loosely attached slips etc or in a database according to guidelines provided by the lending institution
+- if an object is damaged, no repairs are allowed without consultation with the owning institution]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="204"
+						width="364"
+						height="10"
+						key="staticText-53"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Non-DNA destructive sampling e.g. dissections of insect genitalia, flowers etc]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="214"
+						width="364"
+						height="47"
+						key="staticText-54"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- non-DNA destructive sampling by the borrower is only allowed after approval by the lending institute
+- unused fragments of specimens etc are the property of the owner and must be returned in an appropriate capsule etc and clearly labelled
+- if destructive sampling leads to other products (such as slides or geological objects) and the borrower is allowed to keep these, the institute of origin has the right to ask for duplicates]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="269"
+						width="364"
+						height="10"
+						key="staticText-55"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[The loan term and loan extensions]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="279"
+						width="364"
+						height="47"
+						key="staticText-56"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- the maximum initial period for research loans is 12 months
+- if approved for extension, the renewal period will be for 6 to 12 months with the possibility to extend twice; the maximum loan duration is therefore 3 years
+- when applying for an extension after 12 months, the reason behind this extension has to be made clear in the application, including a scientific progress report on the work conducted so far and the work that still has to be done
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="334"
+						width="364"
+						height="10"
+						key="staticText-57"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Photos and copyright]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="344"
+						width="364"
+						height="47"
+						key="staticText-58"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- taking images is only allowed after written approval by the owning institution and only for scientific, non- commercial use
+- references to images must be added to the specimen, e.g. in separate letter or in a collection database according to guidelines provided by lending institution
+- images will be available to the owning institution]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="400"
+						width="364"
+						height="10"
+						key="staticText-59"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Acknowledgements and feedback]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="410"
+						width="364"
+						height="19"
+						key="staticText-60"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- the borrower must use the correct name or acronym of the lending institute as indicated
+- publications arising from research on specimens are to be sent to the loaning institution (preferably as pdf)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="438"
+						width="364"
+						height="10"
+						key="staticText-61"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Costs
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="448"
+						width="364"
+						height="28"
+						key="staticText-62"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- the costs incurred by the lending institution in servicing outgoing loans are normally borne by this institution. If there are any significant additional costs for instance for special transport methods, it reserves the right to recover these costs but should inform the borrower of these before the loan is dispatched]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="485"
+						width="364"
+						height="10"
+						key="staticText-63"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Housing, security, environmental conditions, packaging & transport]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="495"
+						width="364"
+						height="111"
+						key="staticText-64"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- the institution in which the loan (or material associated with the loan e.g. documentation) is to be housed and used must in all respects be safe, secure and conform to the recommendations and requirements of the lending institution
+- where necessary specialised transportation in compliance with dangerous goods regulations i.e. IATA must be adhered to. Similarly, all CITES and import, export laws must be followed
+- loans will only be sent to institutions who have specified the way the borrowed objects will be disinfected upon receipt. This report is needed only once and will be applicable to all future loans unless changes to disinfection are made. The protocol must be acceptable to the lending institution
+- loans are to be returned preferably in the original packing
+- confirmation has to be sent upon receipt as well as when the loan is to be sent back
+- in exceptional circumstances e.g. fragile specimens, the institutes involved must agree on the means of transport, but it is the owner who decides. The lending institution can request to return the loan by an official carrier company, by registered mail or e.g. personal transport]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="614"
+						width="364"
+						height="10"
+						key="staticText-65"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Failure to comply with this policy or any terms & conditions imposed]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="57"
+						y="624"
+						width="364"
+						height="56"
+						key="staticText-66"/>
+					<box></box>
+					<textElement textAlignment="Left" isStyledText="true">
+						<font fontName="Times New Roman" pdfFontName="Times-Roman" size="8" isBold="false"/>
+					</textElement>
+				<text><![CDATA[- the loaning institution shall contact (in writing) the borrower and the borrowing institution (e.g. the head of the organisation they are employed by) and request that the situation is rectified immediately
+- following the above, if the approved borrower still fails to comply with this written request, the lending institution shall be entitled to terminate the loan and recover the loaned items immediately
+- if the lending Institution is forced to terminate the loan it may apply sanctions to future interactions with both the borrower and the borrowing institution]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>
