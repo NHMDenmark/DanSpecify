@@ -75,7 +75,7 @@
 						key="image-logo"/>
 					<box></box>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/ireportslogo/msjn.png")]]></imageExpression>
+					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/ireportslogo/msjn.png")]]></imageExpression>
 				</image>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
