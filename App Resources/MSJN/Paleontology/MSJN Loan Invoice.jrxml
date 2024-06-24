@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MSJN Loan Invoice v5" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="42" bottomMargin="20" scriptletClass="edu.ku.brc.specify.config.Scriptlet" uuid="ec85af8d-e1c0-4f9b-9f91-711a6aade1ec">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MSJN Loan Invoice v5" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="42" bottomMargin="20" uuid="ec85af8d-e1c0-4f9b-9f91-711a6aade1ec">
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -176,12 +176,18 @@
 				<text><![CDATA[<html><b>MUSEUM SØNDERJYLLAND,</b><p/>NATURHISTORIE<p/>LERGRAVSVEJ 2<p/>DK-6510 GRAM<p/>Danmark</html>]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-6" x="228" y="22" width="247" height="51" uuid="67af2b44-ca0e-433f-80ca-3caaf1d703f1"/>
+				<reportElement key="textField-6" x="228" y="21" width="247" height="51" uuid="67af2b44-ca0e-433f-80ca-3caaf1d703f1"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>"))
-.replace("- authorizer", "")
-: "- No authorizer defined! - ")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- authorizer", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- authorizer", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- authorizer", "")
+:
+"- No authorizer defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="staticText-10" x="6" y="6" width="470" height="15" uuid="e6b13094-3bb8-465c-a1f8-2ed84bb32b19"/>
@@ -206,10 +212,16 @@
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-7" x="6" y="94" width="470" height="58" uuid="0e2f4d85-917e-4a18-bb9a-07be64188bc4"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>"))
-.replace("- borrower", "")
-: "- No borrower defined! - ")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- borrower", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- borrower", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- borrower", "")
+:
+"- No borrower defined! - "]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement key="line-10" x="0" y="154" width="480" height="1" uuid="5e3e343a-3e72-4eb4-939d-7495279e5ede"/>
@@ -282,16 +294,38 @@
 				<reportElement key="textField-10" x="6" y="372" width="230" height="46" uuid="747b0443-f30d-438b-bb00-e6d03af8a831"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT AF</b><p/>" + 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+:
+"- No authorizer defined! - ")
 + "</html>"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-11" x="246" y="372" width="229" height="46" uuid="e2b91f23-51d7-485a-843c-481092416bd9"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT TIL</b><p/>" + 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+:
+"- No borrower defined! - ")
 + "</html>"]]></textFieldExpression>
 			</textField>
 			<line>

@@ -154,6 +154,15 @@
 	</lastPageFooter>
 	<summary>
 		<band height="420" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-17" x="0" y="-177" width="476" height="575" forecolor="#FF3333" uuid="246fe94d-1b8b-4ffa-8305-fe4547f5526a">
+					<printWhenExpression><![CDATA[$F{52.loan.isClosed} != true]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="104" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[THIS LOAN IS NOT CLOSED!]]></text>
+			</staticText>
 			<line>
 				<reportElement key="line-6" x="1" y="1" width="480" height="1" uuid="c594ea2e-9513-498d-b2ce-8e49a46bfcf9"/>
 			</line>
@@ -173,10 +182,16 @@
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-6" x="6" y="23" width="469" height="51" uuid="c3112fc6-a924-44e8-a0fc-cc6c939ffadb"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>"))
-.replace("- authorizer", "")
-: "- No authorizer defined! - ")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- authorizer", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- authorizer", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- authorizer", "")
+:
+"- No authorizer defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="staticText-11" x="6" y="82" width="470" height="15" uuid="b0543b7b-9941-4016-94ab-e5aa1ed46714"/>
@@ -194,10 +209,16 @@
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-7" x="6" y="98" width="470" height="64" uuid="32549963-2683-43ce-9949-0e82dc9c021d"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA[($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>"))
-.replace("- borrower", "")
-: "- No borrower defined! - ")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- borrower", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- borrower", "")
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- borrower", "")
+:
+"- No borrower defined! - "]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement key="line-10" x="0" y="164" width="480" height="1" uuid="a5cccfb3-081d-45ef-8339-d8a07ab80281"/>
@@ -253,30 +274,43 @@
 				<reportElement key="textField-10" x="6" y="360" width="230" height="54" uuid="5a9a3fea-56c9-4677-8676-e871c37ee429"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, MODTAGET AF</b><p/>" + 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+:
+"- No authorizer defined! - ")
 + "</html>"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-11" x="246" y="360" width="229" height="54" uuid="9ffeedc7-e03f-47b9-9cbd-380a5d66a9e1"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, RETURNERET AF</b><p/>" + 
+($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+: 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+:
+"- No borrower defined! - ")
 + "</html>"]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement key="line-16" x="0" y="419" width="480" height="1" uuid="2d8816bc-2189-406e-bea0-11246d04a3a6"/>
 			</line>
-			<staticText>
-				<reportElement key="staticText-17" x="0" y="-177" width="476" height="575" forecolor="#FF3333" uuid="246fe94d-1b8b-4ffa-8305-fe4547f5526a">
-					<printWhenExpression><![CDATA[$F{52.loan.isClosed} != true]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="104" isBold="true" pdfFontName="Helvetica-Bold"/>
-				</textElement>
-				<text><![CDATA[THIS LOAN IS NOT CLOSED!]]></text>
-			</staticText>
 		</band>
 	</summary>
 </jasperReport>
