@@ -1,19 +1,19 @@
- <?xml version="1.0" encoding="UTF-8"  ?>
+<?xml version="1.0" encoding="UTF-8"  ?>
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="MSJN Label 110 x 70"
-		 columnCount="1"
+		 name="MSJN Label 47 x 32"
+		 columnCount="4"
 		 printOrder="Vertical"
 		 orientation="Portrait"
 		 pageWidth="595"
 		 pageHeight="842"
-		 columnWidth="561"
+		 columnWidth="133"
 		 columnSpacing="0"
-		 leftMargin="20"
-		 rightMargin="0"
-		 topMargin="5"
-		 bottomMargin="10"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
 		 whenNoDataType="NoPages"
 		 isTitleNewPage="false"
 		 isSummaryNewPage="false">
@@ -50,68 +50,81 @@
 			</band>
 		</pageHeader>
 		<columnHeader>
-			<band height="10"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="203"  isSplitAllowed="true" >
+			<band height="1"  isSplitAllowed="true" >
 				<line direction="TopDown">
 					<reportElement
 						x="0"
 						y="0"
-						width="325"
-						height="1"
-						key="line-top"/>
+						width="133"
+						height="0"
+						key="line-5"/>
 					<graphicElement stretchType="NoStretch">
 					<pen lineWidth="0.01" lineStyle="Solid"/>
 </graphicElement>
 				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="93"  isSplitAllowed="true" >
 				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="15"
-						y="8"
-						width="73"
-						height="28"
+						y="3"
+						width="34"
+						height="13"
 						key="image-logo"/>
 					<box></box>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/ireportslogo/msjn.png")]]></imageExpression>
+					<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/ireportslogo/msjn.png")]]></imageExpression>
 				</image>
-				<staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="100"
-						y="10"
-						width="200"
-						height="25"
-						key="Naturhistorie"/>
+						x="9"
+						y="50"
+						width="115"
+						height="10"
+						key="localityName"/>
 					<box></box>
 					<textElement>
-						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+						<font size="6"/>
 					</textElement>
-				<text><![CDATA[NATURHISTORIE]]></text>
-				</staticText>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2.locality.localityName} != null ? $F{1,10,2.locality.localityName} : "ukendt lokalitet"]]></textFieldExpression>
+				</textField>
 				<line direction="TopDown">
 					<reportElement
-						x="10"
-						y="45"
-						width="295"
+						x="6"
+						y="19"
+						width="121"
 						height="0"
 						key="thick-line-upper"/>
 					<graphicElement stretchType="NoStretch">
-					<pen lineWidth="2.0" lineStyle="Solid"/>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
 </graphicElement>
 				</line>
+				<staticText>
+					<reportElement
+						x="50"
+						y="7"
+						width="83"
+						height="12"
+						key="Naturhistorie"/>
+					<box></box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[NATURHISTORIE]]></text>
+				</staticText>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="10"
-						y="50"
-						width="290"
-						height="30"
+						x="9"
+						y="23"
+						width="115"
+						height="20"
 						key="taxonName"
 						isPrintWhenDetailOverflows="true"/>
 					<box></box>
 					<textElement verticalAlignment="Middle" markup="html">
-						<font size="12"/>
+						<font size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["<html><b>" +
 ($F{1,9-determinations,4-preferredTaxon.taxon.fullName} != null ? 
@@ -119,83 +132,70 @@
 	: "indet") +
 "</b></html>"]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="10"
-						y="91"
-						width="290"
-						height="25"
-						key="localityName"/>
-					<box></box>
-					<textElement verticalAlignment="Middle">
-						<font size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2.locality.localityName} != null ? $F{1,10,2.locality.localityName} : "ukendt lokalitet"]]></textFieldExpression>
-				</textField>
 				<line direction="TopDown">
 					<reportElement
-						x="10"
-						y="85"
-						width="295"
+						x="6"
+						y="47"
+						width="121"
 						height="0"
 						key="thick-line-lower"/>
 					<graphicElement stretchType="NoStretch">
-					<pen lineWidth="2.0" lineStyle="Solid"/>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
 </graphicElement>
 				</line>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="10"
-						y="117"
-						width="290"
-						height="25"
-						key="Stratigraphy">
-							<printWhenExpression><![CDATA[$F{1,10,32.paleocontext.paleoContextName} != null]]></printWhenExpression>
-						</reportElement>
-					<box></box>
-					<textElement verticalAlignment="Middle">
-						<font size="12"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,32.paleocontext.paleoContextName}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="10"
-						y="143"
-						width="290"
-						height="25"
+						x="9"
+						y="70"
+						width="115"
+						height="10"
 						key="altCatalogNr">
 							<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
 						</reportElement>
 					<box></box>
-					<textElement verticalAlignment="Middle">
-						<font size="12"/>
+					<textElement>
+						<font size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="10"
-						y="170"
-						width="150"
-						height="25"
+						x="9"
+						y="60"
+						width="115"
+						height="10"
+						key="Stratigraphy">
+							<printWhenExpression><![CDATA[$F{1,10,32.paleocontext.paleoContextName} != null]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,32.paleocontext.paleoContextName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="9"
+						y="80"
+						width="55"
+						height="10"
 						key="CatalogNumber"/>
 					<box></box>
-					<textElement verticalAlignment="Middle">
-						<font fontName="SansSerif" pdfFontName="Helvetica" size="14" isBold="false"/>
+					<textElement>
+						<font size="6" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["MSJN "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="170"
-						y="170"
-						width="130"
-						height="25"
+						x="68"
+						y="80"
+						width="56"
+						height="10"
 						key="regDate"/>
 					<box></box>
-					<textElement verticalAlignment="Middle">
-						<font size="14"/>
+					<textElement>
+						<font size="6"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["Reg.dato: " + ($F{1.collectionobject.catalogedDateNumericYear} != null ? $F{1.collectionobject.catalogedDateNumericYear} : "")]]></textFieldExpression>
 				</textField>
@@ -204,7 +204,7 @@
 						x="0"
 						y="0"
 						width="0"
-						height="198"
+						height="93"
 						key="left-line"/>
 					<graphicElement stretchType="NoStretch">
 					<pen lineWidth="0.01" lineStyle="Solid"/>
@@ -212,10 +212,21 @@
 				</line>
 				<line direction="TopDown">
 					<reportElement
+						x="535"
+						y="0"
+						width="0"
+						height="93"
+						key="line-far-right"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<line direction="TopDown">
+					<reportElement
 						x="0"
-						y="198"
-						width="325"
-						height="1"
+						y="92"
+						width="133"
+						height="0"
 						key="line-bottom"/>
 					<graphicElement stretchType="NoStretch">
 					<pen lineWidth="0.01" lineStyle="Solid"/>
@@ -223,10 +234,10 @@
 				</line>
 				<line direction="TopDown">
 					<reportElement
-						x="325"
+						x="133"
 						y="0"
 						width="0"
-						height="198"
+						height="93"
 						key="line-right"/>
 					<graphicElement stretchType="NoStretch">
 					<pen lineWidth="0.01" lineStyle="Solid"/>
@@ -235,7 +246,7 @@
 			</band>
 		</detail>
 		<columnFooter>
-			<band height="0"  isSplitAllowed="true" >
+			<band height="30"  isSplitAllowed="true" >
 			</band>
 		</columnFooter>
 		<pageFooter>
