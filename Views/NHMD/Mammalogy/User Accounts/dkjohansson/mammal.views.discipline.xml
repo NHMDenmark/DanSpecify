@@ -252,14 +252,20 @@
 			<columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
 			<rowDef auto="true" cell="p" sep="2px"/>
 			<rows>
-				<row>
-					<cell type="label" labelfor="1"/>
-					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-					<cell type="label" labelfor="4"/>
-					<cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
-					<cell type="label" labelfor="5"/>
-					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today" colspan="3"/>
-				</row>
+                <row>
+                    <cell type="label" labelfor="1"/>
+                    <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
+                    <cell type="label" labelfor="14"/>
+                    <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
+                    <cell type="label" labelfor="cnnumber"/>
+                    <cell type="field" id="cnnumber" name="text3" uitype="text"/>
+                </row>     
+		<row>
+      <cell type="label" labelfor="4"/>
+			<cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
+			<cell type="label" labelfor="5"/>
+			<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today" colspan="3"/>
+		</row>
 				<row>
 					<cell type="label" labelfor="3"/>
 					<cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
