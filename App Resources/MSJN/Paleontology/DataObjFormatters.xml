@@ -6,7 +6,7 @@
         class="edu.ku.brc.specify.datamodel.Attachment">
         <switch single="false" field="isPublic">
             <fields value="true">
-                <field sep="https://specify-attachments.science.ku.dk/static/NHMD_Vertebrate_Paleontology/originals/">attachmentLocation</field>
+                <field sep="https://specify-attachments.science.ku.dk/static/MSJN_Paleontology/originals/">attachmentLocation</field>
             </fields>
         </switch>
     </format>
@@ -59,10 +59,12 @@
         <switch single="true">
             <fields>
                 <field>address</field>
-                <field sep=" ">address2</field>
-                <field sep=", ">city</field>
-                <field sep=", ">state</field>
-                <field sep=" ">postalCode</field>
+                <field sep="|">address2</field>
+                <field sep="|">postalCode</field>
+                <field sep=" ">city</field>
+                <field sep="|">state</field>
+                <field sep="|">country</field>
+                <field sep="|">phone1</field>
             </fields>
         </switch>
     </format>
@@ -98,9 +100,12 @@
         >
         <switch single="true">
             <fields>
-                <field sep=" ">title</field>
+                <field sep="">title</field>
                 <field sep=" ">firstName</field>
-                <field sep=" ">lastName</field>                
+                <field sep=" ">middleInitial</field>
+                <field sep=" ">lastName</field>
+                <field sep="|">addresses</field>   
+                <field sep="|">email</field>
             </fields>
         </switch>
     </format>
@@ -246,7 +251,7 @@
         >
         <switch single="true">
             <fields>
-                <field uifieldformatter="CatalogNumber">catalogNumber</field>
+                <field sep="MSJN-" uifieldformatter="CatalogNumber">catalogNumber</field>
             </fields>
         </switch>
     </format>
@@ -551,7 +556,7 @@
         >
         <switch single="true">
             <fields>
-                <field formatter="Agent">agent</field>
+                <field formatter="specialAgent">agent</field>
                 <field sep=" - ">role</field>
             </fields>
         </switch>

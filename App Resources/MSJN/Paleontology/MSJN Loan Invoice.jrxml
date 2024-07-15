@@ -312,7 +312,7 @@ $F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-11" x="246" y="372" width="229" height="46" uuid="e2b91f23-51d7-485a-843c-481092416bd9"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT TIL</b><p/>" + 
+				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT AF</b><p/>" + 
 ($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
