@@ -386,19 +386,19 @@
 			<rowDef auto="true" sep="2px" cell="p"/>
 	
             <rows>
-
+<!--
 			   	<row>
-					<!--Packed temporary-->
+					<Packed temporary>
 					<cell type="field" id="34" uitype="checkbox" name="yesNo1" label="Packed for temporary storage"  initialize="editable=true"/>
 					<cell type="label" label=""/> 
-					<!--Date of packing-->
+					<Date of packing>
                     <cell type="label" labelfor="d4"/>
                     <cell type="field" id="d4" name="date4" uitype="formattedtext" uifieldformatter="Date"/>
 					<cell type="label" labelfor="pstagent3"/>
 					<cell type="field" id="pstagent3" name="text3" uitype="combobox" picklist="Conservators" colspan="1" />
 
 				</row>
-			   	
+-->		   	
 					
 				<row>
 					<!--Frozen-->
@@ -434,7 +434,11 @@
 
 				</row>
 
-
+			   	<row>
+					<!--Crate number-->
+					<cell type="label" labelfor="cratenumber"/>
+					<cell type="field" id="cratenumber" name="text5" uitype="text" />
+				</row>
 				
             </rows>
         </viewdef>
