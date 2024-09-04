@@ -56,7 +56,9 @@ The Specify7 installations for each of the Danish Natural History Museums are ac
 - Østsjællands Museum (Faxe): https://specify-oesm.science.ku.dk/specify/  
 - Naturama (Svendbord): https://specify-naturama.science.ku.dk/specify/
 - FIMUS (Esbjerg): https://specify-fimus.science.ku.dk/specify/
-- Test database: https://specify-test.science.ku.dk/specify/
+- Test databases:
+    * https://specify-test1.science.ku.dk/specify/
+    * https://specify-test2.science.ku.dk/specify/
 
 ## How do I create a support ticket? 
 
