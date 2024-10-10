@@ -220,18 +220,6 @@
             </fields>
         </switch>
     </format>
-    <format 
-        name="CatalogNumberNHMD" 
-        title="CatalogNumberNHMD" 
-        class="edu.ku.brc.specify.datamodel.CollectionObject" fieldname="catalogNumber"
-        >
-        <switch single="true">
-            <fields>       
-               <field type="constant" size="4" value="NHMD"/>
-               <field type="numeric" size="9" inc="true"/>
-            </fields> 
-        </switch>
-    </format>
     <format
         name="CollectionRelType"
         title="CollectionRelType"

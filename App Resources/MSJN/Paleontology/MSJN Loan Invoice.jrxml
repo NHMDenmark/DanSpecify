@@ -4,24 +4,24 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
-	<field name="52.loan.remarks" class="java.lang.String"/>
+	<field name="52.loan.loanNumber" class="java.lang.String"/>
 	<field name="52.loan.isClosed" class="java.lang.Boolean"/>
-	<field name="52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.Genus" class="java.lang.String"/>
+	<field name="52.loan.loanDate" class="java.lang.String"/>
+	<field name="52.loan.currentDueDate" class="java.lang.String"/>
 	<field name="52.loan.dateClosed" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.isResolved" class="java.lang.Boolean"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.Genus" class="java.lang.String"/>
 	<field name="52.loan.text1" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.descriptionOfMaterial" class="java.lang.String"/>
 	<field name="52,71-shipments.shipment.shipmentMethod" class="java.lang.String"/>
-	<field name="52.loan.loanNumber" class="java.lang.Object"/>
+	<field name="52.loan.remarks" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.outComments" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations,4-preferredTaxon.taxon.fullName" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.receivedComments" class="java.lang.String"/>
-	<field name="52.loan.loanDate" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.quantity" class="java.lang.Integer"/>
-	<field name="52,53-loanagents.loanagent.loanAgents" class="java.lang.String"/>
+	<field name="52,53-loanAgents.loanagent.loanAgents" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.inComments" class="java.lang.String"/>
-	<field name="52,54-loanpreparations,63,1.collectionobject.catalogNumber" class="java.lang.Object"/>
-	<field name="52.loan.currentDueDate" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
 	<background>
@@ -118,7 +118,7 @@
 				<textElement markup="html">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{52,54-loanpreparations,63,1.collectionobject.catalogNumber} != null ? "MSJN "+ $F{52,54-loanpreparations,63,1.collectionobject.catalogNumber} : "intet")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{52,54-loanPreparations,63,1.collectionobject.catalogNumber} != null ? "MSJN "+ $F{52,54-loanPreparations,63,1.collectionobject.catalogNumber} : "intet")]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-3" x="80" y="2" width="91" height="14" uuid="18494b2d-45c1-4da7-a472-20d4822f869d"/>
@@ -176,7 +176,7 @@
 				<text><![CDATA[<html><b>MUSEUM SØNDERJYLLAND,</b><p/>NATURHISTORIE<p/>LERGRAVSVEJ 2<p/>DK-6510 GRAM<p/>Danmark</html>]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-6" x="228" y="21" width="247" height="51" uuid="67af2b44-ca0e-433f-80ca-3caaf1d703f1"/>
+				<reportElement key="textField-6" x="228" y="21" width="247" height="53" uuid="67af2b44-ca0e-433f-80ca-3caaf1d703f1"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
 $F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- authorizer", "")
@@ -212,14 +212,14 @@ $F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").re
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-7" x="6" y="94" width="470" height="58" uuid="0e2f4d85-917e-4a18-bb9a-07be64188bc4"/>
 				<textElement markup="html"/>
-				<textFieldExpression><![CDATA[$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- borrower", "")
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].replace("|", "<br/>").replace("- borrower", "")
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- borrower", "")
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].replace("|", "<br/>").replace("- borrower", "")
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- borrower", "")
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").replace("- borrower", "")
 :
 "- No borrower defined! - "]]></textFieldExpression>
 			</textField>
@@ -294,17 +294,17 @@ $F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].replace("|", "<br/>").re
 				<reportElement key="textField-10" x="6" y="372" width="230" height="46" uuid="747b0443-f30d-438b-bb00-e6d03af8a831"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT AF</b><p/>" + 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+($F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("authorizer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("authorizer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("authorizer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
 :
 "- No authorizer defined! - ")
 + "</html>"]]></textFieldExpression>
@@ -313,17 +313,17 @@ $F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
 				<reportElement key="textField-11" x="246" y="372" width="229" height="46" uuid="e2b91f23-51d7-485a-843c-481092416bd9"/>
 				<textElement markup="html"/>
 				<textFieldExpression><![CDATA["<html><b>DATO, UDLÅNT AF</b><p/>" + 
-($F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
+($F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].indexOf("|"))
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].indexOf("|"))
 : 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].substring(0,
-$F{52,53-loanagents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].substring(0,
+$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].indexOf("|"))
 :
 "- No borrower defined! - ")
 + "</html>"]]></textFieldExpression>
