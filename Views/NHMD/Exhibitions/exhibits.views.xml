@@ -790,7 +790,7 @@
 				<row>
 				<!--Treatment undertaken-->
                     <cell type="label" labelfor="tretreatment"/>
-                    <cell type="field" id="tretretment" name="text5" uitype="textareabrief" rows="2" colspan="10"/>
+                    <cell type="field" id="tretreatment" name="text5" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
 				
                 <row>
@@ -852,7 +852,7 @@
 				<row>
 				<!--Treatment undertaken-->
                     <cell type="label" labelfor="tretreatment"/>
-                    <cell type="field" id="tretretment" name="text5" uitype="textareabrief" rows="2" colspan="10"/>
+                    <cell type="field" id="tretreatment" name="text5" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
 				
                 <row>
