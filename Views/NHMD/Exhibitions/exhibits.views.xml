@@ -10,7 +10,6 @@
 				<altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
 			</altviews>
 		</view>
-
 		<view name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" resourcelabels="false">
 			<desc><![CDATA[CollectingEvent SubForm]]></desc>
 			<altviews>
@@ -62,7 +61,6 @@
                 <altview name="CollectionObjectProperty Table Edit" viewdef="CollectionObjectProperty Table" mode="edit"/>
             </altviews>
         </view>
-
 		
 		
 		
@@ -104,7 +102,6 @@
 				<altview name="Determination Table Edit" viewdef="Determination Table" mode="edit"/>
 			</altviews>
 		</view>
-
 		<view name="DeterminationViewOnly" class="edu.ku.brc.specify.datamodel.Determination" isexternal="true" resourcelabels="false">
 			<desc><![CDATA[Subform within the Collection Object form.]]></desc>
 				<altviews>
@@ -113,9 +110,7 @@
 		</view>
 	
 	
-
 <!--
-
 		
     <view name="ConservEvent" class="edu.ku.brc.specify.datamodel.ConservEvent" busrules="edu.ku.brc.specify.datamodel.busrules.ConservEventBusRules">
       <desc><![CDATA[Conservation Event]]></desc>
@@ -124,8 +119,6 @@
         <altview name="Conservation Event Edit" viewdef="ConservEvent" mode="edit" default="true"/>
       </altviews>
     </view>
-
-
     <view name="ConservEventSub" class="edu.ku.brc.specify.datamodel.ConservEvent" busrules="edu.ku.brc.specify.datamodel.busrules.ConservEventBusRules">
       <desc><![CDATA[Conservation Event]]></desc>
       <altviews>
@@ -133,7 +126,6 @@
         <altview name="ConservationEventSub Edit" viewdef="ConservEventsub" mode="edit" />
       </altviews>
     </view>
-
         <view name="ConservDescriptionSub"
               class="edu.ku.brc.specify.datamodel.ConservDescription"
               busrules="edu.ku.brc.specify.datamodel.busrules.ConservDescriptionBusRules"
@@ -146,7 +138,6 @@
         </view>
 		
 		-->
-
         <view name="Preparation"
               class="edu.ku.brc.specify.datamodel.Preparation"
               busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules"
@@ -159,8 +150,6 @@
                 <altview name="Preparation Edit" viewdef="Preparation" mode="edit" default="true"/>
             </altviews>
         </view>
-
-
        <view name="TreatmentEvent"
               class="edu.ku.brc.specify.datamodel.TreatmentEvent"
               busrules="edu.ku.brc.specify.datamodel.busrules.TreatmentEventBusRules"
@@ -172,7 +161,6 @@
                 <altview name="TreatmentEvent Edit" viewdef="TreatmentEvent" mode="edit"/>
             </altviews>
         </view>
-
         <view name="TreatmentEventSub"
               class="edu.ku.brc.specify.datamodel.TreatmentEvent"
               busrules="edu.ku.brc.specify.datamodel.busrules.TreatmentEventBusRules"
@@ -183,12 +171,10 @@
                 <altview name="TreatmentEventSub Edit" viewdef="TreatmentEventSub" mode="edit"/>
             </altviews>
         </view>
-
 		
     </views>
     
 	
-
     <viewdefs>
         
         <viewdef
@@ -205,7 +191,6 @@
             <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
 				<!--Catalog Number	-->
@@ -247,8 +232,6 @@
 					<cell type="field" id="width" name="reservedInteger3" uitype="int"/>
 					<cell type="label" labelfor="depth"/>
 					<cell type="field" id="depth" name="number2" uitype="float"/>
-
-
 				</row>
 				
 				<row>
@@ -257,7 +240,6 @@
 					<cell type="field" id="diameter" name="integer1" uitype="int"/>
 					<cell type="label" labelfor="weight"/>
 					<cell type="field" id="weight" name="integer2" uitype="int"/>
-
 				</row>
 				
 				<row>
@@ -280,13 +262,10 @@
                 <row>
                     <cell type="subview" viewname="Preparation" id="8" name="preparations" colspan="15" rows="3"/>
                 </row>
-
-
 				<row>
 					<cell type="subview" viewname="TreatmentEvent" id="te" name="treatmentEvents" defaulttype="table" colspan="15" rows="3" />
                 </row>
                 
-
 				<row>
 					<cell type="subview" viewname="CollectingEventSub" id="ce" name="collectingEvent" colspan="13" rows="5"/>
 				</row>			
@@ -302,7 +281,6 @@
                 </row>
               
 				
-
 				
 				<row>
                     <cell type="subview" viewname="ConservDescription" id="cd" name="conservDescriptions" defaulttype="table" colspan="15" rows="3"/>
@@ -312,12 +290,10 @@
 				<row>
 					<cell type="subview" id="15" viewname="ExhibitsAttributes" name="collectionObjectAttribute" colspan="13"/>
 				</row>
-
 				<row>
 					<cell type="label" labelfor="ce"/>
                     <cell type="subview" viewname="ConservEvent" id="ce" name="conservEvent"  colspan="17" rows="5"/>
                 </row>
-
 				
 				<row>
 					<cell type="label" labelfor="oj"/>
@@ -357,20 +333,15 @@
 		</viewdef>
 		
 		
-
-
-
 		<viewdef
                 type="formtable"
                 name="CollectionObjectProperty Table"
                 class="edu.ku.brc.specify.datamodel.CollectionObjectProperty"
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-
             <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
             <definition>CollectionObjectProperty</definition>
         </viewdef>
-
         <viewdef
                 type="form"
                 name="CollectionObjectProperty"
@@ -378,7 +349,6 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Form For OtherIdentifier]]></desc>
-
             <columnDef>100px,2px,110px,5px,75px,2px,110px,5px,94px,2px,110px,5px,95px,2px,110px,0px,p:g</columnDef>
 			<columnDef os="lnx">115px,2px,120px,5px,85px,2px,120px,5px,105px,2px,120px,5px,109px,2px,120px,0px,p:g</columnDef>
 			<columnDef os="mac">130px,2px,140px,5px,95px,2px,140px,5px,115px,2px,140px,5px,109px,2px,140px,0px,p:g</columnDef>
@@ -396,7 +366,6 @@
                     <cell type="field" id="d4" name="date4" uitype="formattedtext" uifieldformatter="Date"/>
 					<cell type="label" labelfor="pstagent3"/>
 					<cell type="field" id="pstagent3" name="text3" uitype="combobox" picklist="Conservators" colspan="1" />
-
 				</row>
 -->		   	
 					
@@ -412,7 +381,6 @@
 					<cell type="label" labelfor="pstagent"/>
 					<cell type="field" id="pstagent" name="text24" uitype="combobox" picklist="Conservators" colspan="1" />
                     
-
 				</row>
 				
 				<row>
@@ -431,9 +399,7 @@
 					<cell type="label" labelfor="pstagent2"/>
 					<cell type="field" id="pstagent2" name="text2" uitype="combobox" picklist="Conservators" colspan="1" />
                     
-
 				</row>
-
 			   	<row>
 					<!--Crate number-->
 					<cell type="label" labelfor="cratenumber"/>
@@ -442,7 +408,6 @@
 				
             </rows>
         </viewdef>
-
 		
 		
 		<viewdef 
@@ -454,7 +419,6 @@
 			<desc><![CDATA[Determination subform table for Collection Object form.]]></desc>
 			<definition>Determination</definition>
 		</viewdef>
-
 		<viewdef 
 			name="Determination" 
 			type="form" 
@@ -517,30 +481,23 @@
 					<cell type="field" id="t6" name="text6" uitype="combobox" picklist="Mounting system" colspan="1"/>
 				</row>
 				
-
 			</rows>
 		</viewdef>
-
-
         <viewdef
             type="formtable" name="Preparation Table" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
             <definition>Preparation</definition>
         </viewdef>
-
-
                 
         <viewdef
             type="form" name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
             <desc><![CDATA[Preparation for Collection Object form.]]></desc>
             <enableRules/>
-
             <columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
             <columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
-
             <rows>
                 <row>
 				<!--Preparation type -->
@@ -584,7 +541,6 @@
 					<cell type="label" labelfor="container"/>
 					<cell type="field" id="container" name="text6" uitype="combobox" picklist="PrepSubContainer" colspan="1"/>
 				</row>
-
 				<row>
 				<!--PrepSubtypes3 -->
 					<cell type="label" labelfor="geology"/>
@@ -622,15 +578,10 @@
 					<cell type="label" labelfor="prepmove"/>
                     <cell type="field" id="prepmove" name="text10" uitype="combobox" picklist="MovedBy" colspan="1"/>
 				</row>
-
-
-
             </rows>
         </viewdef>
 		
-
 		
-
         <viewdef 
 			type="form" 
 			name="ConservDescription" 
@@ -646,7 +597,6 @@
             <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
 				
 				
@@ -676,20 +626,17 @@
                     <cell type="label" labelfor="ermountcode"/>
                     <cell type="field" id="ermountcode" name="description" uitype="text" />
                 </row>
-
                 <row>
 				<!--Mount Description-->
                     <cell type="label" labelfor="ermountdesc"/>
                     <cell type="field" id="ermountdesc" name="text2" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>				
 				
-
                 <row>
 				<!--Handling Requirements-->
                     <cell type="label" labelfor="erhandling"/>
                     <cell type="field" id="erhandling" name="text1" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
-
 			</rows>
 			
 		</viewdef>
@@ -710,7 +657,6 @@
             <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
 				
 				
@@ -719,7 +665,6 @@
 					<cell type="label" labelfor="7"/>
 					<cell type="field" id="7" name="treatmentReport" uitype="textareabrief" rows="2" colspan="10"/>
 				</row>
-
 		
 				<row>
 				Treatment by
@@ -752,7 +697,6 @@
 				
 			</rows>
 		</viewdef> -->
-
        <viewdef
                 type="form"
                 name="TreatmentEvent"
@@ -760,7 +704,6 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Form For Treatment Event]]></desc>
-
             <columnDef>100px,2px,138px,5px,115px,2px,143px,5px,110px,2px,205px,0px,15px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,155px,5px,135px,2px,155px,5px,136px,2px,205px,0px,15px,p:g</columnDef>
             <columnDef os="mac">130px,2px,170px,5px,155px,2px,170px,5px,150px,2px,239px,0px,15px,p:g</columnDef>
@@ -780,7 +723,6 @@
                     <cell type="label" labelfor="tredate"/>
                     <cell type="field" id="tredate" name="dateReceived" uitype="formattedtext" uifieldformatter="Date"/> 
                 </row>
-
                 <row>
 				<!--Condition summary-->
                     <cell type="label" labelfor="trecondsum"/>
@@ -793,7 +735,6 @@
                     <cell type="field" id="treremarks" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
 				
-
 				<row>
 				<!--Treatment by-->
 					<cell type="label" labelfor="treagent"/>
@@ -803,12 +744,8 @@
                     <cell type="field" id="tredt" name="dateCompleted" uitype="formattedtext" uifieldformatter="Date"/> 
                 </row>
 				
-
-
-
             </rows>
         </viewdef>
-
         <viewdef
                 type="form"
                 name="TreatmentEventSub"
@@ -816,7 +753,6 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Form For Treatment Event]]></desc>
-
             <columnDef>100px,2px,138px,5px,115px,2px,143px,5px,110px,2px,205px,0px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,155px,5px,135px,2px,155px,5px,136px,2px,205px,0px,p:g</columnDef>
             <columnDef os="mac">130px,2px,170px,5px,155px,2px,170px,5px,150px,2px,239px,0px,p:g</columnDef>
@@ -836,7 +772,6 @@
                     <cell type="label" labelfor="tredate"/>
                     <cell type="field" id="tredate" name="dateReceived" uitype="formattedtext" uifieldformatter="Date"/> 
                 </row>
-
                 <row>
 				<!--Condition summary-->
                     <cell type="label" labelfor="trecondsum"/>
@@ -849,7 +784,6 @@
                     <cell type="field" id="treremarks" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
 				
-
 				<row>
 				<!--Treatment by-->
 					<cell type="label" labelfor="treagent"/>
@@ -859,11 +793,9 @@
                     <cell type="field" id="tredt" name="dateCompleted" uitype="formattedtext" uifieldformatter="Date"/> 
                 </row>
 				
-
 				
 			</rows>
         </viewdef>
-
 		
 		<viewdef type="form" name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 		  <desc><![CDATA[Collecting Event]]></desc>
@@ -884,7 +816,6 @@
 		  
 		  </rows>
 		</viewdef>
-
 		<viewdef type="form" name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 		  <desc><![CDATA[Collecting Event]]></desc>
 		  <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
@@ -903,7 +834,6 @@
 			</row>
 		  </rows>
 		</viewdef>
-
 <!--        
         <viewdef
             type="iconview"
@@ -1025,7 +955,6 @@
 		</viewdef>
 -->
 			
-
 		
     </viewdefs>
 </viewset>
