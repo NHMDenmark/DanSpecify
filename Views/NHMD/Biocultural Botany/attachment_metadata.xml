@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewset name="Attachment Metadata" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
+     
     <views>
 	        <view name="ObjectAttachment"
             class="edu.ku.brc.specify.datamodel.ObjectAttachmentIFace"
