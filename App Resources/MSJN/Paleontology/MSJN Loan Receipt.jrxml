@@ -41,7 +41,7 @@
 			</staticText>
 			<image>
 				<reportElement key="image-1" x="0" y="0" width="140" height="57" uuid="73888134-0327-46ee-9dbb-717cb7b43d88"/>
-				<imageExpression><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/ireportslogo/msjn_large.png")]]></imageExpression>
+				<imageExpression><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/static/img/logo/msjn_large.png")]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement key="staticText-2" x="140" y="2" width="340" height="54" uuid="99e1a7d0-5813-434a-ae2c-eb559152e064"/>

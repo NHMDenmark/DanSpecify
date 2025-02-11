@@ -107,7 +107,7 @@
 				<reportElement key="image-1" x="450" y="74" width="91" height="126" uuid="65b534a0-cd8b-4eb4-876c-8da93c857219">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
-				<imageExpression><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/KU.jpeg")]]></imageExpression>
+				<imageExpression><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/logo/KU.jpeg")]]></imageExpression>
 			</image>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement key="textField-1" x="448" y="259" width="130" height="18" forecolor="#000000" uuid="4553b2ea-3328-47bb-b59e-7eadfa23edac">

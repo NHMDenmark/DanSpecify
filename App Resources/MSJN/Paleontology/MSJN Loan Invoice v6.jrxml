@@ -35,7 +35,7 @@
 			</staticText>
 			<image>
 				<reportElement key="image-1" x="0" y="0" width="140" height="57" uuid="86f56f67-3816-46cb-a65b-6b33334a0193"/>
-				<imageExpression><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/ireportslogo/msjn_large.png")]]></imageExpression>
+				<imageExpression><![CDATA[new java.net.URL("https://specify-msjn.science.ku.dk/static/img/logo/msjn_large.png")]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement key="staticText-2" x="140" y="2" width="340" height="54" uuid="7b5916f7-a81b-454c-a829-e7fec9f9f141"/>
