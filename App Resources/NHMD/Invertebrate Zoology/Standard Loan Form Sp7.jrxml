@@ -67,20 +67,20 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 				<textElement markup="html">
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.role} + "<br/>" +
-$F{52,53-loanAgents,5.agent.title} + "<br/>" + 
-$F{52,53-loanAgents,5.agent.firstName} + "<br/>" + 
-$F{52,53-loanAgents,5.agent.middleInitial} + "<br/>" + 
-$F{52,53-loanAgents,5.agent.lastName} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.addresses} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.address} + "<br/>" + 
-$F{52,53-loanAgents,5,8-addresses.address.address2} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.postalCode} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.city} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.country} + "<br/>" + 
-$F{52,53-loanAgents,5.agent.email} + "<br/>" + 
-$F{52,53-loanAgents,5,8-addresses.address.phone2} + "<br/>" +
-$F{52,53-loanAgents,5,8-addresses.address.phone1} + "<br/>"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{52,53-loanAgents,5.agent.title} == null ? "" : $F{52,53-loanAgents,5.agent.title}) + " " +
+($F{52,53-loanAgents,5.agent.firstName} == null ? "" : $F{52,53-loanAgents,5.agent.firstName}) + " " +
+($F{52,53-loanAgents,5.agent.middleInitial} == null ? "" : $F{52,53-loanAgents,5.agent.middleInitial}) + " " +
+($F{52,53-loanAgents,5.agent.lastName} == null ? "" : $F{52,53-loanAgents,5.agent.lastName}) + " " +
+"(" + ($F{52,53-loanAgents.loanagent.role} == null ? "" : $F{52,53-loanAgents.loanagent.role}) + ")<br/>" +
+($F{52,53-loanAgents,5,8-addresses.address.address} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.address}) + "<br/>" +
+($F{52,53-loanAgents,5,8-addresses.address.address2} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.address2}) + "<br/>" +
+($F{52,53-loanAgents,5,8-addresses.address.postalCode} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.postalCode}) + " " +
+($F{52,53-loanAgents,5,8-addresses.address.city} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.city}) + ", " +
+($F{52,53-loanAgents,5,8-addresses.address.country} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.country}) + "<br/>" +
+"e-mail: " + ($F{52,53-loanAgents,5.agent.email} == null ? "" : $F{52,53-loanAgents,5.agent.email}) + "<br/>" +
+"phone: " + ($F{52,53-loanAgents,5,8-addresses.address.phone1} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.phone1}) + "<br/>" +
+"mobile: " + ($F{52,53-loanAgents,5,8-addresses.address.phone2} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.phone2}) + "<br/>"
+]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="staticText-13" x="57" y="281" width="86" height="16" uuid="2e4411fc-edff-4938-bb2c-5af374991e2c"/>
@@ -101,15 +101,15 @@ $F{52,53-loanAgents,5,8-addresses.address.phone1} + "<br/>"]]></textFieldExpress
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("investigator") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("|", "<br/>").replace("- investigator", "")
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("investigator") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("|", "<br/>").replace("- investigator", "")
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("investigator") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("|", "<br/>").replace("- investigator", "")
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("investigator") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").replace("- investigator", "")
-: "- No investigator defined! - "]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("preparer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("|", "<br/>").replace("- preparer", "")
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("preparer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("|", "<br/>").replace("- preparer", "")
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("preparer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("|", "<br/>").replace("- preparer", "")
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("preparer") ? 
+$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").replace("- preparer", "")
+: "- No preparer defined! - "]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField" x="57" y="253" width="364" height="16" uuid="47eeae61-37df-4afe-8084-0335c93a8679"/>
@@ -153,7 +153,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 				<reportElement key="image-1" x="450" y="74" width="91" height="126" uuid="65b534a0-cd8b-4eb4-876c-8da93c857219">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
-				<imageExpression><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/KU.jpeg")]]></imageExpression>
+				<imageExpression><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/logo/KU.jpeg")]]></imageExpression>
 			</image>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement key="textField-1" x="448" y="259" width="130" height="18" forecolor="#000000" uuid="4553b2ea-3328-47bb-b59e-7eadfa23edac">
@@ -202,16 +202,6 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 				<textFieldExpression><![CDATA["<style isBold='true'>COLLECTIONS</style>"]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-9" positionType="Float" x="448" y="325" width="130" height="58" forecolor="#000000" uuid="50093120-aa6c-4ee4-acb6-9055276f4e8c">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font fontName="Arial" size="7" isBold="false"/>
-					<paragraph lineSpacing="Double"/>
-				</textElement>
-				<textFieldExpression><![CDATA[]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement key="textField-11" positionType="Float" x="448" y="455" width="130" height="32" forecolor="#000000" uuid="3c0678af-7f47-47f1-8331-dda7375f761d">
 					<printWhenExpression><![CDATA[$V{isPreparerRow}]]></printWhenExpression>
 				</reportElement>
@@ -229,7 +219,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 					<font fontName="Arial" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents,5,8-addresses.address.phone2}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{52,53-loanAgents,5,8-addresses.address.phone2} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.phone2})]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement key="textField-14" positionType="Float" x="490" y="413" width="88" height="10" forecolor="#000000" uuid="ca9f8318-67be-496d-af71-d8865d45e2ca">
@@ -308,7 +298,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 + "Please specify on inquiry"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-18" x="57" y="592" width="162" height="14" uuid="7418bab9-7f4b-4c93-aac5-cdc1c0838a82">
+				<reportElement key="textField-18" x="57" y="567" width="162" height="14" uuid="7418bab9-7f4b-4c93-aac5-cdc1c0838a82">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -325,12 +315,12 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 : "- No preparer defined! - "]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement key="line-21" x="57" y="604" width="162" height="1" uuid="25fac93a-9dcb-4575-93db-5af494b17a4b">
+				<reportElement key="line-21" x="57" y="579" width="162" height="1" uuid="25fac93a-9dcb-4575-93db-5af494b17a4b">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-46" x="57" y="552" width="162" height="16" uuid="08595880-c569-4beb-b16a-87201a72a88c">
+				<reportElement key="staticText-46" x="57" y="499" width="162" height="16" uuid="08595880-c569-4beb-b16a-87201a72a88c">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -339,7 +329,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 				<text><![CDATA[Loan prepared by:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-67" x="57" y="525" width="102" height="16" uuid="f44164ab-bef7-4414-a298-5d0dc42da193">
+				<reportElement key="staticText-67" x="57" y="472" width="102" height="16" uuid="f44164ab-bef7-4414-a298-5d0dc42da193">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -348,7 +338,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").r
 				<text><![CDATA[Loan authorized by:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-23" x="164" y="525" width="218" height="16" uuid="9680c657-b4a1-41a3-b752-8fa222c7258f">
+				<reportElement key="textField-23" x="164" y="472" width="218" height="16" uuid="9680c657-b4a1-41a3-b752-8fa222c7258f">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Left">
@@ -364,10 +354,19 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("|", "<br/>").r
 $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("|", "<br/>").replace("- authoriser", "")
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="63" y="473" width="358" height="30" uuid="564c7372-6aa6-4555-a41b-1429b315d468"/>
-				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement key="staticText-24" positionType="Float" x="448" y="319" width="130" height="72" forecolor="#000000" uuid="17cc6587-e180-4659-889c-cff0e4740510">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM of DENMARK
+STATENS NATURHISTORISKE MUSEUM
+
+ØSTER VOLDGADE 5-7 
+1350 COPENHAGEN K]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
