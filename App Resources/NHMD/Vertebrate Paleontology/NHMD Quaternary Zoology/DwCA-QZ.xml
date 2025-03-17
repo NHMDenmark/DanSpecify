@@ -76,16 +76,20 @@
     <!-- Simple Multimedia Extension -->
     <extension rowType="http://rs.gbif.org/terms/1.0/Multimedia">
         <queries>
-            <query contextTableId="111" name="Media.csv">
-                <id                                                       isNot="false" isRelFld="false" oper="1"  stringId="111,1.collectionobject.guid"             value=""/>
-                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="true"  oper="1"  stringId="111,41.attachment.attachment" value=""   formatName="AttachmentURI"/>
-                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="0"  stringId="111,41.attachment.mimeType"              value="image%"/>
-                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.title"                 value=""/>
-                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.credit"                value=""/>
-                <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="111,41.attachment.license"                value=""/>
+            <query contextTableId="41" name="Media.csv">
+                <id                                                       isNot="false" isRelFld="false" oper="1"  stringId="41,111-collectionObjectAttachments,1.collectionobject.guid" value=""/>
+                <field term="http://purl.org/dc/terms/identifier"         isNot="false" isRelFld="false" oper="8"  stringId="41.attachment." formatName="AttachmentURI" value=""/>
+                <field term="http://purl.org/dc/terms/format"             isNot="false" isRelFld="false" oper="0"  stringId="41.attachment.mimeType"            value="image%"/>
+                <field term="http://purl.org/dc/terms/title"              isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.title"               value=""/>
+                <field term="http://purl.org/dc/terms/creator"            isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.credit"          value=""/>
+                <field term="http://purl.org/dc/terms/license"            isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.license"         value=""/>
+                <field term="http://purl.org/dc/terms/rightsHolder"       isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.copyrightholder" value=""/>
+                <field term="http://purl.org/dc/terms/source"             isNot="false" isRelFld="false" oper="1"  stringId="41.attachment.LicenseLogoUrl"  value=""/>
+                <field isNot="true" isRelFld="false" oper="7" stringId="41.attachment.isPublic" value=""/>
             </query>
         </queries>
     </extension>
+
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>
