@@ -90,7 +90,7 @@
 				<textFieldExpression><![CDATA["Leg: " + 
 ($F{1,10,30-collectors.collector.collectors} == null || $F{1,10,30-collectors.collector.collectors}.isEmpty() ? "" : $F{1,10,30-collectors.collector.collectors}) + 
 ($F{1,10.collectingevent.startDate} == null || $F{1,10.collectingevent.startDate}.isEmpty() ? "" : ", " + $F{1,10.collectingevent.startDate} + 
-($F{1,10.collectingevent.endDate} == null || $F{1,10.collectingevent.endDate}.isEmpty() ? "" : "-" + $F{1,10.collectingevent.endDate}))]]></textFieldExpression>
+($F{1,10.collectingevent.endDate} == null || $F{1,10.collectingevent.endDate}.isEmpty() ? "" : " to " + $F{1,10.collectingevent.endDate}))]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField" x="5" y="115" width="168" height="10" uuid="73b8f338-104c-4c07-a2c7-45813508d2be">
