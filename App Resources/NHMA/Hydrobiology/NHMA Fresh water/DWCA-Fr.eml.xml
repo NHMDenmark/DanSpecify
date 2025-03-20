@@ -1,0 +1,84 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="48824c48-20b0-417c-b591-d775c6d41b2c" scope="system" system="Specify" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.0.2/eml.xsd" xml:lang="eng">
+  <dataset>
+    <alternateIdentifier>b03eb233-f072-4a12-b9a6-58c2ac0fae36</alternateIdentifier>
+    <title xml:lang="eng">Natural History Museum Aarhus Freshwater Collection</title>
+    <description />
+    <associatedParty>
+      <individualName>
+        <givenName>Kent</givenName>
+        <surName>Olsen</surName>
+      </individualName>
+      <organizationName>Natural History Museum Aarhus</organizationName>
+      <positionName>Curator</positionName>
+      <electronicMailAddress>kent@molslab.dk</electronicMailAddress>
+	  <phone>+45 40 27 20 30</phone>
+      <onlineUrl>https://www.naturhistoriskmuseum.dk/natural-history-museum-aarhus/about/employees/videnskabelige-medarbejdere/kent-olsen</onlineUrl>
+      <role>curator</role>
+    </associatedParty>
+    <metadataProvider>
+      <individualName>
+        <givenName>Hans Viborg</givenName>
+        <surName>Kristensen</surName>
+      </individualName>
+      <organizationName>Natural History Museum Aarhus</organizationName>
+      <positionName>Collections manager</positionName>
+      <electronicMailAddress>hans@nathist.dk</electronicMailAddress>
+	  <phone>+45 40 27 13 73</phone>
+      <onlineUrl>https://www.naturhistoriskmuseum.dk/om-museet/medarbejdere/videnskab/hans-viborg-kristensen</onlineUrl>
+      <role>collection manager</role>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Fedor Alexander</givenName>
+        <surName>Steeman</surName>
+      </individualName>
+      <organizationName>Natural History Museum of Denmark</organizationName>
+      <positionName>Data Coordinator</positionName>
+      <address>
+        <deliveryPoint>Universitetsparken 15</deliveryPoint>
+        <city>Copenhagen</city>
+        <administrativeArea>Capital Region of Denmark</administrativeArea>
+        <postalCode>2100</postalCode>
+        <country>DK</country>
+      </address>
+      <phone>+45 22369539</phone>
+      <electronicMailAddress>fedor.steeman@snm.ku.dk</electronicMailAddress>
+	  <userId directory="http://orcid.org/">0000-0002-2153-8104</userId>
+      <onlineUrl>https://snm.ku.dk/english/</onlineUrl>
+      <role>distributor</role>
+    </associatedParty>
+    <language>eng</language>
+    <abstract>
+      <para xml:lang="EN">The limnology (freshwater invertebrate) collection contains ca 140,000 ethanol preserved specimen of aquatic invertebrates from Denmark and ca 26,000 from adjacent countries. A very thorough sampling from Danish freshwater streams, ponds and lakes makes this collection very valuable for the understanding of aquatic ecosystems.</para>
+      <para xml:lang="DA"></para>
+    </abstract>
+    <keywordSet>
+      <keyword>invertebrate</keyword>
+      <keyword>zoology</keyword>
+      <keyword>hydrobiology</keyword>
+      <keyword>Denmark</keyword>
+      <keyword>Aarhus</keyword>
+      <keyword>limnology</keyword>
+      <keyword>freshwater</keyword>
+      <keyword>aquatic</keyword>
+      <keywordThesaurus>n/a</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Specimen</keyword>
+      <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Occurrence</keyword>
+      <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+        <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+      </intellectualRights>   
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>http://creativecommons.org/licenses/by/4.0/legalcode</url>
+      <identifier>CC-BY</identifier>
+    </licensed>
+  <pubDate>2024-04-10</pubDate>
+</dataset>
+</eml:eml>

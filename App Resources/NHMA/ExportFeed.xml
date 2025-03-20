@@ -1,0 +1,24 @@
+<channel>
+    <title>NHMA Collections DarwinCore RSS Feed</title>
+    <description>RSS Feed for collection data of the Natural Museum Aarhus</description>
+    <item collectionId="4" userId="31" notifyUserId="31" definition="DwCA-Fr" metadata="DwCA-Fr.eml" days="1" filename="DwCA-F.zip" publish="true">
+      <title>NHMA Freshwater Collection</title>
+      <id>5be0c2fb-903a-4a2a-96ee-12f03882ef45</id>
+    </item> 
+    <item collectionId="32769" userId="31" notifyUserId="31" definition="DwCA-En" metadata="DwCA-En.eml" days="1" filename="DwCA-E.zip" publish="true">
+      <title>NHMA Entomology Collection</title>
+      <id>a18fc157-7541-4f68-ae50-abf31ce8dc34</id>
+    </item>
+    <item collectionId="65538" userId="31" notifyUserId="31" definition="DwCA-V" metadata="DwCA-V.eml" days="1" filename="DwCA-V.zip" publish="true">
+      <title>NHMA Vertebrate Collection</title>
+      <id>74b1e1dc-d948-45d5-b84c-42ffbb6da58a</id>
+    </item>
+    <item collectionId="98304" userId="31" notifyUserId="31" definition="DwCA-I" metadata="DwCA-I.eml" days="1" filename="DwCA-I.zip" publish="true">
+      <title>NHMA Invertebrates Wet Collection</title>
+      <id>b038d558-967b-461f-9bff-6eb519f5af0c</id>
+    </item>
+    <item collectionId="196609" userId="31" notifyUserId="31" definition="DwCA-Ma" metadata="DwCA-Ma.eml" days="1" filename="DwCA-M.zip" publish="true">
+      <title>NHMA Malacology Collection</title>
+      <id>492ac57f-fb94-475f-8233-0c0f3aadffa8</id>
+    </item>  
+</channel>
