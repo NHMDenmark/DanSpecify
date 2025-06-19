@@ -49,4 +49,8 @@
       <title>NHMD Ichthyology Collection</title>
       <id>4e763ba7-f3b0-4896-823d-e0c067c17b3c</id>
     </item>
+	<item collectionId="884736" userId="71" notifyUserId="71" definition="DwCA-CF" metadata="DwCA-CF.eml" days="1" filename="DwCA-CF.zip" publish="true">
+      <title>NHMD Mycology Collection</title>
+      <id>f7b7749f-d243-4f64-9fc1-b9b34c690acb</id>
+    </item>
 </channel>
