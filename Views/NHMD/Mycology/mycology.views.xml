@@ -3,7 +3,6 @@
     
     <views>
         <!-- Common Views -->
-
         <view name="Accession" class="edu.ku.brc.specify.datamodel.Accession" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionBusRules">
           <desc><![CDATA[The Accession form.]]></desc>
           <altviews>
@@ -11,7 +10,6 @@
             <altview name="Accession Edit" viewdef="Accession" mode="edit"/>
           </altviews>
         </view>
-
         <!-- Collection Specific Views -->
         
         
@@ -27,7 +25,6 @@
                   <altview name="COS Table View" viewdef="AccessionItems Table" mode="view"/>
               </altviews>      
          </view>
-
         <view name="CollectingEvent"
             class="edu.ku.brc.specify.datamodel.CollectingEvent"
             busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules"
@@ -50,7 +47,6 @@
                 <altview name="CollectingEventSub Edit" viewdef="CollectingEventSub" mode="edit"/>
             </altviews>
         </view>    
-
         <view name="CollectingTrip"
               class="edu.ku.brc.specify.datamodel.CollectingTrip"
               busrules="edu.ku.brc.specify.datamodel.busrules.CollectingTripBusRules"
@@ -61,7 +57,6 @@
                 <altview name="CollectingTrip Edit" viewdef="CollectingTrip" mode="edit"/>
             </altviews>
         </view>
-
         <view name="CollectingTripForm"
               class="edu.ku.brc.specify.datamodel.CollectingTrip"
               busrules="edu.ku.brc.specify.datamodel.busrules.CollectingTripBusRules"
@@ -73,7 +68,6 @@
                 <altview name="CollectingTripForm Edit" viewdef="CollectingTripForm" mode="edit"/>
             </altviews>
         </view>
-
         
         <view name="CollectionObject"
             class="edu.ku.brc.specify.datamodel.CollectionObject"
@@ -138,7 +132,6 @@
                 <altview name="ObjectAttachment Icon Edit"  viewdef="ObjectAttachment IconView" label="Thumb" mode="edit"/>
             </altviews>
         </view>
-
         <view name="CollectionObjectAttachment"
             class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment"
             busrules="edu.ku.brc.specify.datamodel.busrules.AttachmentBusRules"
@@ -219,7 +212,6 @@
             <altview name="GeoCoordDetail Edit" viewdef="GeoCoordDetail" mode="edit" default="true"/>
           </altviews>
         </view>        
-
         <view name="Locality" class="edu.ku.brc.specify.datamodel.Locality" busrules="edu.ku.brc.specify.datamodel.busrules.LocalityBusRules" isinternal="false">
             <desc><![CDATA[Locality form.]]></desc>
             <altviews>
@@ -227,7 +219,6 @@
                 <altview name="Locality Edit" viewdef="Locality" mode="edit" default="true"/>
             </altviews>
         </view>
-
         <view name="Preparation"
               class="edu.ku.brc.specify.datamodel.Preparation"
               busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules"
@@ -279,7 +270,6 @@
     
     <viewdefs>
         <!-- Common Views -->
-
         <viewdef type="form" name="Accession" class="edu.ku.brc.specify.datamodel.Accession" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
           <desc><![CDATA[The Accession form.]]></desc>
           <enableRules/>
@@ -409,7 +399,6 @@
             </row>-->
           </rows>
         </viewdef>
-
         <!-- Collection Specific Views -->
         
         <viewdef
@@ -426,7 +415,6 @@
             <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="1"/>
@@ -462,7 +450,6 @@
                     <cell type="label" labelfor="rem"/>
                     <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
-
 <!--        <row>
           <cell type="panel" id="Frankenpanel" name="Frankenpanel"  coldef="p,2px,f:p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
             <rows>
@@ -679,7 +666,6 @@
             <columnDef os="mac">130px,2px,260px,5px,100px,2px,238px,5px,108px,2px,180px,0px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
 				    <cell type="label" labelfor="1"/>
@@ -926,13 +912,11 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[CollectingTrip Form - unknown use in database]]></desc>
-
             <columnDef>100px,2px,291px,5px,100px,2px,110px,5px,100px,2px,110px,0px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,346px,5px,100px,2px,120px,5px,100px,2px,120px,0px,p:g</columnDef>
             <columnDef os="mac">130px,2px,421px,5px,105px,2px,130px,5px,100px,2px,130px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(4),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="1"/>
@@ -961,8 +945,6 @@
                 </row>
             </rows>
         </viewdef>
-
-
         <viewdef
                 type="form"
                 name="CollectingTripForm"
@@ -970,13 +952,11 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[CollectingTrip Form]]></desc>
-
             <columnDef>100px,2px,291px,5px,100px,2px,110px,5px,100px,2px,110px,0px,15px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,346px,5px,100px,2px,120px,5px,100px,2px,120px,0px,15px,p:g</columnDef>
             <columnDef os="mac">130px,2px,421px,5px,105px,2px,130px,5px,100px,2px,130px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(4),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="1"/>
@@ -1034,7 +1014,6 @@
                 </row>-->
             </rows>
         </viewdef>
-
     <viewdef type="form" name="GeoCoordDetail" class="edu.ku.brc.specify.datamodel.GeoCoordDetail" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Sub Collecting Event]]></desc>
       <columnDef>100px,2px,195px,5px,115px,2px,131px,5px,140px,2px,130px,p:g</columnDef>
@@ -1074,8 +1053,6 @@
         </row>
       </rows>
     </viewdef>
-
-
         <viewdef
             type="form"
             name="Locality"
@@ -1213,7 +1190,6 @@
                 </row>-->
             </rows>
         </viewdef>
-
                  
         <viewdef
             type="formtable"
@@ -1234,13 +1210,11 @@
             useresourcelabels="true">
             <desc><![CDATA[Preparation for Collection Object form.]]></desc>
             <enableRules/>
-
             <columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
             <columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
             <columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="7"/>
@@ -1388,18 +1362,15 @@
                 </row>
              </rows>
         </viewdef>
-
         <viewdef
                 type="formtable"
                 name="CollectionObjectProperty Table"
                 class="edu.ku.brc.specify.datamodel.CollectionObjectProperty"
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-
             <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
             <definition>CollectionObjectProperty</definition>
         </viewdef>
-
         <viewdef
                 type="form"
                 name="CollectionObjectProperty"
@@ -1407,7 +1378,6 @@
                 gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
                 settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[Form For CollectionObjectProperty]]></desc>
-
             <columnDef>50px,2px,240px,2px,50px,2px,100px,2px,50px,2px,100px,2px,50px,2px,100px,2px,100px,2px,50px,2px,100px</columnDef>
             <columnDef os="lnx">105px,2px,210px,5px,220px,2px,363px</columnDef>
             <columnDef os="mac">115px,2px,230px,5px,240px,2px,423px</columnDef>
@@ -1599,7 +1569,6 @@
                  </row>
             </rows>
         </viewdef> 
-
         <viewdef
             type="formtable"
             name="ObjectAttachment Table"
@@ -1609,7 +1578,6 @@
             <desc><![CDATA[ObjectAttachment grid view.]]></desc>
             <definition>ObjectAttachment Form</definition>
         </viewdef>
-
         <viewdef
             type="formtable"
             name="CollectionObjectAttachment Table"
@@ -1628,7 +1596,6 @@
             settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[The ObjectAttachment Icon Viewer]]></desc>
         </viewdef>
-
         <viewdef
             type="iconview"
             name="CollectionObjectAttachment IconView"
@@ -1637,7 +1604,6 @@
             settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
             <desc><![CDATA[The ObjectAttachment Icon Viewer]]></desc>
         </viewdef>
-
         <viewdef
             type="form"
             name="CollectionObjectAttachment Form"
@@ -1650,7 +1616,6 @@
             <!--<columnDef>110px,2dlu,p:g,5dlu,100px,2dlu,85px</columnDef> -->
             <columnDef>p,5dlu,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
               <rows>
                 <row>
                     <cell type="label" labelfor="origFilename" label="FILENAME"/>
@@ -1721,7 +1686,6 @@
             
             <columnDef>p,2px,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="origFilename" label="FILENAME"/>
@@ -1798,7 +1762,6 @@
         </viewdef>
                 
 <!--
-
         <viewdef
             type="form"
             name="AttachmentMetadata"
@@ -1809,7 +1772,6 @@
             
             <columnDef>80px,2dlu,p:g,5dlu,80px,2dlu,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2dlu"/>
-
             <rows>
                 <row>
                     <cell type="label" labelfor="name"/>
@@ -1830,8 +1792,6 @@
             <definition>AttachmentMetadata</definition>
         </viewdef>
 -->
-
-
                 <viewdef
             type="form"
             name="Container"
@@ -1847,7 +1807,6 @@
             <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row> 
                     <cell type="label" labelfor="nm"/>
@@ -1909,7 +1868,6 @@
             <columnDef os="mac">130px,2px,216px,2px,133px,2px,170px,2px,135px,5px,235px,0px,15px,p:g</columnDef>
             <columnDef os="exp">p,2px,p:g,2px,p:g(2),5px,p:g,2px,p:g(2),5px:g,p,2px,p:g,0px,p,p:g</columnDef>
             <rowDef auto="true" cell="p" sep="2px"/>
-
             <rows>
                 <row> 
                     <cell type="label" labelfor="nm"/>
@@ -1942,7 +1900,6 @@
             -->    
            </rows>
         </viewdef>
-
         
     </viewdefs>
 </viewset>
