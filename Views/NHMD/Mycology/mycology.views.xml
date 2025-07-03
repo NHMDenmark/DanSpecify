@@ -698,6 +698,10 @@
                     <cell type="field" id="6" name="typeStatusName" uitype="combobox"/>
                 </row>
                 <row>
+				    <cell type="label" labelfor="verbataxon"/>
+                    <cell type="field" id="verbataxon" name="text1" uitype="text" colspan="7"/>
+                </row>	
+                <row>
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
                 </row>
