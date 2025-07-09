@@ -13,13 +13,13 @@
 	<field name="52,54-loanPreparations.loanpreparation.descriptionOfMaterial" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.author" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,10,2,3.geography.Country" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.outComments" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,65.preptype.name" class="java.lang.String"/>
-	<field name="52,54-loanPreparations,63,54-loanPreparations.loanpreparation.isResolved" class="java.lang.Boolean"/>
-	<field name="52,54-loanPreparations,63,54-loanPreparations,63,65.preptype.name" class="java.lang.String"/>
 	<field name="52,53-loanAgents.loanagent.loanAgents" class="java.lang.String"/>
 	<field name="52,53-loanAgents.loanagent.role" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5.agent.title" class="java.lang.String"/>
@@ -33,8 +33,8 @@
 	<field name="52,53-loanAgents,5,8-addresses.address.city" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5,8-addresses.address.country" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5.agent.email" class="java.lang.String"/>
-	<field name="52,53-loanAgents,5,8-addresses.address.phone2" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5,8-addresses.address.phone1" class="java.lang.String"/>
+	<field name="52,53-loanAgents,5,8-addresses.address.phone2" class="java.lang.String"/>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
 	<variable name="isPreparerRow" class="java.lang.Boolean" incrementType="Report" calculation="System">
@@ -43,7 +43,7 @@
 	<background>
 		<band height="760" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 4]]></printWhenExpression>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 0]]></printWhenExpression>
 			<staticText>
 				<reportElement x="49" y="18" width="514" height="25" uuid="4911f7f6-a44d-4dce-b073-b78c7815ca32">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -71,7 +71,6 @@
 					<font fontName="Arial" size="10" isBold="false"/>
 				</textElement>
 				<text><![CDATA[This document is information for everyone who receives preserved material for research, collections, or the like, from outside Denmark.
-
 Preserved and non-infectious material, e.g., dried preserved insects, dry preserved bones, specimen preserved in ethanol, but also material such as pure DNA, RNA, proteins, blood and tissue.]]></text>
 			</staticText>
 			<staticText>
@@ -376,7 +375,6 @@ Denmark]]></text>
 					<paragraph firstLineIndent="0" leftIndent="0"/>
 				</textElement>
 				<text><![CDATA[Issuing/adding/sending COMMERCIAL INVOICES - this implies you are sending commercial goods that are traded as samples (which will be taxed).
-
 Issuing/adding/sending Manufacturer’s Declarations - this implies you are a commercial manufacturer, and your shipment contains manufactured (commercial) goods (that are or can be traded).]]></text>
 			</staticText>
 			<staticText>
@@ -411,8 +409,6 @@ Issuing/adding/sending Manufacturer’s Declarations - this implies you are a co
 					<paragraph firstLineIndent="0" leftIndent="0"/>
 				</textElement>
 				<text><![CDATA[● 
-
-
 ● ]]></text>
 			</staticText>
 		</band>
@@ -676,7 +672,6 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				</textElement>
 				<text><![CDATA[NATURAL HISTORY 
 MUSEUM DENMARK
-
 ØSTER VOLDGADE 5-7 
 1350 COPENHAGEN K]]></text>
 			</staticText>
@@ -767,20 +762,20 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				<text><![CDATA[Loan contents itemized]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-3" x="139" y="22" width="102" height="11" uuid="414eb887-6ae5-4330-9449-40437b34db65"/>
+				<reportElement key="staticText-3" x="139" y="20" width="102" height="11" uuid="414eb887-6ae5-4330-9449-40437b34db65"/>
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Detailed Information]]></text>
 			</staticText>
 			<line>
-				<reportElement key="line-1" x="57" y="32" width="511" height="1" uuid="f694fdb0-b604-4e92-b9ab-edadb373c56c"/>
+				<reportElement key="line-1" x="57" y="30" width="511" height="1" uuid="f694fdb0-b604-4e92-b9ab-edadb373c56c"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-33" x="59" y="22" width="76" height="11" uuid="b3ad5be3-5edd-4791-b816-6f7aa223c2bc"/>
+				<reportElement key="staticText-33" x="59" y="20" width="76" height="11" uuid="b3ad5be3-5edd-4791-b816-6f7aa223c2bc"/>
 				<textElement textAlignment="Justified">
 					<font fontName="Times New Roman" size="9" isBold="true"/>
 				</textElement>
@@ -789,10 +784,10 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="67" splitType="Stretch">
+		<band height="50" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<rectangle>
-				<reportElement key="rectangle-1" x="57" y="0" width="511" height="44" backcolor="#EEEEEE" uuid="1859bbf9-b5b1-497c-a905-4bdda5876ed3">
+				<reportElement key="rectangle-1" x="57" y="-2" width="511" height="44" backcolor="#EEEEEE" uuid="1859bbf9-b5b1-497c-a905-4bdda5876ed3">
 					<printWhenExpression><![CDATA[$V{REPORT_COUNT}%2==0]]></printWhenExpression>
 				</reportElement>
 				<graphicElement fill="Solid">
@@ -800,24 +795,25 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				</graphicElement>
 			</rectangle>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="59" y="0" width="76" height="11" uuid="4728d411-9518-4d54-b91d-091aed3954cd"/>
+				<reportElement key="textField" x="59" y="-2" width="76" height="11" uuid="4728d411-9518-4d54-b91d-091aed3954cd"/>
 				<textElement textAlignment="Left">
 					<font fontName="Times New Roman" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["NHMD "+$F{52,54-loanPreparations,63,1.collectionobject.catalogNumber}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField" x="139" y="0" width="429" height="11" uuid="8309922c-bc06-4461-9571-0102055b0139"/>
+				<reportElement key="textField" x="139" y="-2" width="429" height="11" uuid="8309922c-bc06-4461-9571-0102055b0139"/>
 				<textElement markup="styled">
 					<font fontName="Times New Roman" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Scientific name: "
 + ($F{52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus} != null ?
-    "<i>" + $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon}.replace("&", "&amp;") + "</i>" :
-    $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon}.replace("&", "&amp;"))]]></textFieldExpression>
+	"<i>" +$F{52,54-loanPreparations,63,1,9-determinations,4.taxon.fullName} + "</i> " +
+     	$F{52,54-loanPreparations,63,1,9-determinations,4.taxon.author}.replace("&", "&amp;") : 
+    "- no determination recorded -")]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement key="textField" x="139" y="22" width="429" height="11" isRemoveLineWhenBlank="true" uuid="680ce1a8-40e9-449a-ba69-f9bc49caf79e">
+				<reportElement key="textField" x="139" y="20" width="429" height="11" isRemoveLineWhenBlank="true" uuid="680ce1a8-40e9-449a-ba69-f9bc49caf79e">
 					<printWhenExpression><![CDATA[$F{52,54-loanPreparations,63,1,10,2,3.geography.Country} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -826,14 +822,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				<textFieldExpression><![CDATA["Country of origin: " + $F{52,54-loanPreparations,63,1,10,2,3.geography.Country}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" positionType="Float" x="139" y="33" width="429" height="11" uuid="f892c867-6438-4936-969b-e1464514c21b"/>
+				<reportElement key="textField" positionType="Float" x="139" y="31" width="429" height="11" uuid="f892c867-6438-4936-969b-e1464514c21b"/>
 				<textElement>
 					<font fontName="Times New Roman" size="9" isItalic="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Remarks on condition: " + ($F{52,54-loanPreparations.loanpreparation.outComments} != null ? $F{52,54-loanPreparations.loanpreparation.outComments} : "none")]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-17" x="139" y="11" width="429" height="11" uuid="d7630465-d9b0-4803-801b-901a3fe94532"/>
+				<reportElement key="textField-17" x="139" y="9" width="429" height="11" uuid="d7630465-d9b0-4803-801b-901a3fe94532"/>
 				<textElement markup="styled">
 					<font fontName="Times New Roman" size="9"/>
 				</textElement>
@@ -841,14 +837,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 + ($F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} != null ? $F{52,54-loanPreparations.loanpreparation.descriptionOfMaterial} : $F{52,54-loanPreparations,63,65.preptype.name})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="70" y="22" width="65" height="11" uuid="db02c2f4-a581-4845-b986-222309598b50"/>
+				<reportElement key="textField" x="70" y="20" width="65" height="11" uuid="db02c2f4-a581-4845-b986-222309598b50"/>
 				<textElement textAlignment="Left">
 					<font fontName="Times New Roman" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName} != null ? $F{52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName} : ""]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-24" x="70" y="11" width="65" height="11" uuid="b238dc96-c72b-4068-9111-f2cfe31c55b3"/>
+				<reportElement key="textField-24" x="70" y="9" width="65" height="11" uuid="b238dc96-c72b-4068-9111-f2cfe31c55b3"/>
 				<textElement textAlignment="Left">
 					<font fontName="Times New Roman" size="9" isBold="false"/>
 				</textElement>
@@ -856,9 +852,6 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="30" splitType="Stretch"/>
-	</columnFooter>
 	<pageFooter>
 		<band height="50" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -888,7 +881,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<text><![CDATA[I hereby acknowledge receipt the loan and all of its contents:]]></text>
+				<text><![CDATA[I hereby acknowledge receipt of the loan and all of its contents:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-44" x="57" y="61" width="160" height="14" uuid="9aaffe71-97f0-4b02-a470-cb2831dcacfc"/>
