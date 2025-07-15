@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Label 1" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="b2830d7c-6475-47a9-900d-77990efb1ea7">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="31.container.name" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.Family" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations.determination.typeStatusName" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,5-determiner.agent.determiner" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10,2,3.geography.fullName" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10,2.locality.lat1text" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10,2.locality.long1text" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10,87.collectingtrip.collectingTrip" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,63-preparations,58.storage.storage" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,63-preparations,65.preptype.name" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,63-preparations,58.storage.Room" class="java.lang.String"/>
+	<field name="31,1-collectionObjects.collectionobject.collectionObjects" class="java.lang.String"/>
+	<field name="31,1-collectionObjects.collectionobject.timestampModifiedNumericYear" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<detail>
+		<band height="250" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement key="staticText-1" x="8" y="3" width="527" height="24" isPrintWhenDetailOverflows="true" uuid="109ab6c0-3e0a-4c81-a640-a0b45e6e8eeb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM DENMARK]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="14" y="29" width="512" height="1" uuid="660a881e-f791-4bf6-b1ac-3d4da87a5d8f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="35" width="362" height="45" uuid="ba084a6d-d170-43e4-b408-f216a778296c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7e3e257a-0594-4bab-ac1d-588d6a838455"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31.container.name} != null ? "ZMUC " + $F{31.container.name} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="397" y="33" width="129" height="22" uuid="da6b6a92-a95e-43ed-a07f-6e3262041e59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Spm: " + $F{31,1-collectionObjects.collectionobject.collectionObjects}.split(";").length]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="104" width="517" height="34" uuid="70a82fac-0989-4871-8ec2-f8bcca03810d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c4bfaf7-61a5-4a06-8aae-0877be74b7d9"/>
+				</reportElement>
+				<textElement markup="html">
+					<font size="14" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b><i><u>" + $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName} + "</u></i></b> " + $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="140" width="518" height="27" uuid="1409599f-c5c6-41d9-8593-d31d4812cd9d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c614811c-3e3d-4998-8977-4abad669b580"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{31,1-collectionObjects,10,2.locality.localityName} != null ? 
+$F{31,1-collectionObjects,10,2.locality.localityName} : "") 
++ " " + 
+($F{31,1-collectionObjects,10,2,3.geography.fullName} != null ? 
+$F{31,1-collectionObjects,10,2,3.geography.fullName} : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="168" width="104" height="21" uuid="583edd5c-2e76-4aa6-a57c-b5d8d7593d70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0ebfb55-13bc-45ea-8a3c-d6a626df30ec"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{31,1-collectionObjects,10,2.locality.lat1text} != null ? $F{31,1-collectionObjects,10,2.locality.lat1text} : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="192" width="526" height="27" uuid="c187d37c-caa5-4fb4-99a7-0013078dd182">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="64cedd9f-91d0-4274-8fb0-9eb3eae55fb7"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{31,1-collectionObjects,10,87.collectingtrip.collectingTrip} != null ?  $F{31,1-collectionObjects,10,87.collectingtrip.collectingTrip} : "") 
++ 
+($F{31,1-collectionObjects,10.collectingevent.stationFieldNumber} != null ? 
+"  " + $F{31,1-collectionObjects,10.collectingevent.stationFieldNumber} : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="220" width="256" height="25" uuid="4c2c0777-c7fc-4d6f-80c2-548e86e4c050">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72d5d12c-5584-4096-86e9-ca2289b0ee0d"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,10.collectingevent.startDate} != null ? "Coll.date: " + $F{31,1-collectionObjects,10.collectingevent.startDate} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="8" y="82" width="362" height="21" uuid="b1988151-59b4-404d-94f0-ecf454f6075e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02b9584f-1573-4ee4-bef5-1eeb65fa1fba"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.Family}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="397" y="56" width="129" height="22" uuid="4542e6fd-4079-4967-997a-ae164367fa43">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,63-preparations,58.storage.storage}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="398" y="81" width="127" height="22" uuid="53b4b5a9-819b-45aa-b9f1-2773d1e0f496">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations.determination.typeStatusName} != null ? 
+$F{31,1-collectionObjects,9-determinations.determination.typeStatusName} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="304" y="220" width="233" height="25" uuid="cb574c06-456d-4bec-98e0-463cd7d9f993">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d255005b-f6c8-4f6f-a7ca-7b1772ebbaf7"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations,5-determiner.agent.determiner} != null ? "Det.:  " +
+$F{31,1-collectionObjects,9-determinations,5-determiner.agent.determiner} : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="121" y="168" width="104" height="21" uuid="e1ca386d-0f65-4f9d-a6fe-10ff4b0cfccf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0ebfb55-13bc-45ea-8a3c-d6a626df30ec"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{31,1-collectionObjects,10,2.locality.long1text} != null ? $F{31,1-collectionObjects,10,2.locality.long1text} : "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="112" y="172" width="9" height="11" uuid="c64e2652-43f2-464a-9889-4536bf98b50d"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
