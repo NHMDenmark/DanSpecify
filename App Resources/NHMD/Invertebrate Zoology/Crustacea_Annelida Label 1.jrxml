@@ -41,7 +41,7 @@
 			<line>
 				<reportElement key="line-1" x="0" y="10" width="175" height="1" uuid="602ab2c3-049d-45dd-9a1d-599b133c6475"/>
 			</line>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="0" y="13" width="91" height="11" uuid="39654d89-f320-4b70-b331-29c9b9ba81d7">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="59c1d74a-da64-4fd0-a356-fab6a000ce8f"/>
 				</reportElement>
@@ -50,7 +50,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA["NHMD"+ $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="92" y="13" width="83" height="11" uuid="0a15620a-2a50-4662-b30f-468eedd99277">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e195283-c1c7-4f64-9bd6-5923dc78cbc4"/>
 				</reportElement>
@@ -59,7 +59,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,9-determinations.determination.typeStatusName} != null ? $F{1,9-determinations.determination.typeStatusName}.toUpperCase() : ""]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="0" y="25" width="111" height="28" uuid="0485a4d0-49c5-4386-b61f-7a354c2d8c8f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="96170f71-576a-407f-ad13-f5a99cc2c9c0"/>
 				</reportElement>
@@ -74,7 +74,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 			</line>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="111" y="25" width="64" height="28" uuid="b7ee943f-6626-4244-a8af-0aa5ceec6026">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="886e4a1e-9060-41e4-9fa0-604ff6359447"/>
 				</reportElement>
@@ -83,7 +83,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.Author}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="1" y="125" width="127" height="22" uuid="e1e04c6f-5bbe-46dc-9d8a-3f4c287eb062">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cebc1c4d-3f43-4efc-9ccb-8cf9099c3e04"/>
 				</reportElement>
@@ -92,7 +92,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Det. " + $F{1,9-determinations,5-determiner.agent.determiner} + " " + ($F{1,9-determinations.determination.determinedDate} != null ? $F{1,9-determinations.determination.determinedDate}  : "" )]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="22" y="53" width="91" height="22" uuid="c323c1d1-8d5a-489b-a92a-da3f975e0f36">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="907f6e19-f458-4fcf-b99a-4767d21702fe"/>
 				</reportElement>
@@ -111,7 +111,7 @@
 				</textElement>
 				<text><![CDATA[Loc.]]></text>
 			</staticText>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="116" y="53" width="59" height="22" uuid="d87e601c-3900-41d9-9595-77724b790ffe">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8efde616-9d9b-431f-915f-f9854ff81483"/>
 				</reportElement>
@@ -120,7 +120,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,10,2,3.geography.fullName} != null ? $F{1,10,2,3.geography.fullName} : ""]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="22" y="75" width="153" height="11" uuid="8f04782e-33b9-42ad-acf6-ddc5e8be408e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6fac34c-64b1-4a51-9803-0117f402f008"/>
 				</reportElement>
@@ -130,7 +130,7 @@
 				<textFieldExpression><![CDATA[($F{1,10,2.locality.lat1text} != null ? $F{1,10,2.locality.lat1text}  + ","  : "") + 
 ($F{1,10,2.locality.long1text} != null ? $F{1,10,2.locality.long1text} : "")]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="22" y="87" width="153" height="11" uuid="dfe87c8d-3823-406a-ad2a-928b1e7153e8">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d205d63-38a7-41bf-8313-829e32c9c2b7"/>
 				</reportElement>
@@ -147,7 +147,7 @@
 				</textElement>
 				<text><![CDATA[Date:]]></text>
 			</staticText>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="22" y="99" width="153" height="11" uuid="61bde663-5a56-4784-8f21-4da071282115">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d8dceff-b298-4bfd-a9ad-5522cc60a6e9"/>
 				</reportElement>
@@ -163,7 +163,7 @@
 				</textElement>
 				<text><![CDATA[Legit:]]></text>
 			</staticText>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="22" y="111" width="153" height="11" uuid="0640f059-ec04-4680-95c1-a7e8743a2ea0">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="38dabcc6-8bac-4be5-ae79-070a2cde309a"/>
 				</reportElement>
@@ -179,7 +179,7 @@
 				</textElement>
 				<text><![CDATA[Cnt:]]></text>
 			</staticText>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="141" y="125" width="10" height="11" uuid="b8955b3b-0bd2-4c4f-9064-e952780a599c">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a33d55e5-3041-4235-98f5-1dc0c27f605a"/>
 				</reportElement>
@@ -189,7 +189,7 @@
 				<textFieldExpression><![CDATA[($F{1,63-preparations.preparation.countAmt} != null ? $F{1,63-preparations.preparation.countAmt} : "") + " " + 
 ($F{1,93.collectionobjectattribute.text1} == "Male"? "♂": ($F{1,93.collectionobjectattribute.text1} == "Female"? "♀":""))]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement x="150" y="125" width="25" height="11" uuid="cfd4ff23-8637-44e2-b85d-b658e0bc3391">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f93a8c2a-8259-4d13-a688-add6c24d723e"/>
 				</reportElement>
