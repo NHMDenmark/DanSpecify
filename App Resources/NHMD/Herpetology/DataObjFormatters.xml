@@ -450,8 +450,8 @@
 	<format name="Determiner" title="Determiner" class="edu.ku.brc.specify.datamodel.Determiner" default="true">
 		<switch single="true">
 			<fields>
-				<field sep=" ">agent.firstName</field>
 				<field sep=" ">agent.lastName</field>
+				<field sep=", ">agent.firstName</field>
 			</fields>
 		</switch>
 	</format>
