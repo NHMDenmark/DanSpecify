@@ -4,7 +4,7 @@ This is the user guide with a brief and focused introduction to how to use vario
 
 1. [Getting Started with Specify](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/1.%20Getting%20Started.md)
 1. [Data Entry](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/2.%20Data%20Entry.md) (coming soon)
-1. [Querying Data](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/3.%20Querying%20Data.md) (coming soon)
+1. [Querying Data](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/3.%20Querying%20Data.md)
 1. [Taxon Tree](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/4.%20Taxon%20Tree.md) (coming soon)
 1. [Loans](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/5.%20Loans.md) (coming soon)
 1. [Accessions](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/6.%20Accessions.md)  (coming soon)
