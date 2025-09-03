@@ -40,383 +40,6 @@
 	<variable name="isPreparerRow" class="java.lang.Boolean" incrementType="Report" calculation="System">
 		<variableExpression><![CDATA[$F{52,53-loanAgents.loanagent.role}.equals("preparer")]]></variableExpression>
 	</variable>
-	<background>
-		<band height="760" splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 4]]></printWhenExpression>
-			<staticText>
-				<reportElement x="49" y="18" width="514" height="25" uuid="4911f7f6-a44d-4dce-b073-b78c7815ca32">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement>
-					<font size="15" isBold="true"/>
-				</textElement>
-				<text><![CDATA[GUIDELINES FOR SHIPPING OF PRESERVED MATERIAL TO DENMARK]]></text>
-			</staticText>
-			<line>
-				<reportElement x="48" y="43" width="512" height="1" uuid="4f917158-6f68-456e-8189-44d036c8a557">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-			</line>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="48" width="512" height="58" uuid="ed9ff4a2-aadc-4e96-bdc2-c33a34d1bad0">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[This document is information for everyone who receives preserved material for research, collections, or the like, from outside Denmark.
-
-Preserved and non-infectious material, e.g., dried preserved insects, dry preserved bones, specimen preserved in ethanol, but also material such as pure DNA, RNA, proteins, blood and tissue.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="118" width="512" height="14" uuid="11a8c234-9dbd-444a-9b84-734e80d94a6c">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[KEY REQUIREMENTS]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="132" width="512" height="21" uuid="b6ded5d8-66c7-4c3e-bd95-581dd6013931">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Please be aware that the following information must be included on the shipping documents:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="154" width="228" height="21" uuid="5480c5af-b90d-46ae-a054-23f509d89e66">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Company Address:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="154" width="199" height="56" uuid="cb4f05ef-d6db-4cc4-b5aa-3c1ff97ecd39">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[University of Copenhagen
-Natural History Museum of Denmark
-Att: Abbrev. for location + contact name (e.g., Att: ZM Ib Hansen)
-Øster Farimagsgade 5
-DK - 1353 Copenhagen
-Denmark]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="210" width="228" height="21" uuid="171051b9-1781-46c3-9552-a85aa1c9163c">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Contact Name:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="210" width="275" height="26" uuid="d2fc28e7-d687-41ad-bb27-36ca29c88931">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Name of the person to receive the material or the responsible curator for the department to receive the material.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="239" width="229" height="12" uuid="fd2f1f7d-5167-44ec-9ce4-70095e0e4b22">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Abbreviation for Location]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="281" y="251" width="275" height="45" uuid="87aea570-e1e0-403f-a674-fd4b412a2b84">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" markup="html">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[<b>ZM</b> (Zoological Museum, Universitetsparken) <br/>
-<b>PP</b> (Priorparken, Brøndby) <br/>
-<b>GM</b> (Geological Museum, Øster Voldgade) <br/>]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="251" width="229" height="21" uuid="a48a082b-76e7-4fc3-9785-dad3a7a76d57">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Please use one of the following abbreviations:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="281" y="307" width="275" height="26" uuid="d6444ded-c68b-413b-8657-c365230f85b4">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[DK 2997 9812]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="307" width="229" height="12" uuid="a4cfb84d-450a-4f7b-ac70-74f74350887e">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[EORI-Number: ]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="319" width="229" height="11" uuid="3a959b36-a3c0-4627-bf47-d48f3b5340df">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="8" isBold="false"/>
-				</textElement>
-				<text><![CDATA[(Economic Operator Registration and Identification)]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="51" y="335" width="503" height="44" uuid="bc49ef60-2507-4915-b2e2-2b1f1ba30cbc">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[It is very important that the address contains University of Copenhagen, since we do not have an import custom number for the NHMD, so when the shipping companies search for the museum in their databases, they cannot find us and presume that we do not have permit to import, and the material will therefore be detained at customs.]]></text>
-			</staticText>
-			<line>
-				<reportElement x="50" y="379" width="512" height="1" uuid="16296ab0-83bd-42e4-be48-9e1b305c8804">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-			</line>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="390" width="512" height="16" uuid="1ac3e87d-05af-4296-bd41-79cf53e7b8d0">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[ACCURATE GOODS DESCRIPTION]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="410" width="279" height="16" uuid="fb507083-5562-4c98-a348-94b60bea294e">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Preserved museum objects / Preserved material]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="410" width="229" height="16" uuid="4401bd41-9fdb-4eed-b940-3178000ce235">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Description of Goods:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="428" width="279" height="16" uuid="678f5207-ec47-4d3d-867a-d0be0180c280">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" markup="html">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[e.g., Ground Beetle (<i>Nebria rufescens</i>)]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="430" width="229" height="16" uuid="65465a38-db34-4fd8-8758-6ec377cf7618">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Name of species/taxonomy:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="446" width="279" height="16" uuid="666d4744-f39b-45f8-a17e-b20caf41b621">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[e.g., 3 pinned specimens]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="450" width="229" height="16" uuid="9a2d9d79-8009-478a-a00b-aa7604340e3d">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Number of specimens/samples:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="464" width="279" height="39" uuid="8bd59216-8d7e-40f3-96b4-7db9c1adf4ef">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[e.g., loaned/transferred/exchanged for Biodiversity / Taxonomic / Molecular / Phylogenetic / Anthropological / Archaeozoological / Palaeontological Research]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="470" width="229" height="16" uuid="e8bc0a08-f0f0-45ec-93c0-73d3156a6fc2">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Description of Goods:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="280" y="520" width="275" height="15" uuid="a5943e29-cff2-43a7-861f-de38dc26b08a">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[9705 29 00]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="520" width="229" height="16" uuid="f55f27d0-bea1-47df-add4-f043f5a3df21">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Customs Tariff Code:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="540" width="513" height="28" uuid="0ca40e1d-4a21-40ec-be38-20c53f90f067">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Customs Code for all other zoological, botanical, mineralogical, anatomical, or paleontological specimens that are not categorized as 'extinct' or 'endangered'.]]></text>
-			</staticText>
-			<line>
-				<reportElement x="50" y="580" width="512" height="1" uuid="f0b8aa30-e4ed-4a39-b744-f7c2d9698f54">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-			</line>
-			<staticText>
-				<reportElement key="staticText-52" x="51" y="591" width="512" height="18" uuid="16e144fa-adea-4503-85bb-4ea2b2af0764">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[AVOID]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="64" y="614" width="485" height="63" uuid="7d577211-2019-46b1-b5c7-dded7e91256e">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
-					<paragraph firstLineIndent="0" leftIndent="0"/>
-				</textElement>
-				<text><![CDATA[Issuing/adding/sending COMMERCIAL INVOICES - this implies you are sending commercial goods that are traded as samples (which will be taxed).
-
-Issuing/adding/sending Manufacturer’s Declarations - this implies you are a commercial manufacturer, and your shipment contains manufactured (commercial) goods (that are or can be traded).]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="50" y="692" width="429" height="18" uuid="b11e70d4-616c-4ffc-9d22-79214b5c079f">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Please note other rules apply for CITES specimens and non-preserved material.]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="484" y="745" width="66" height="14" uuid="d64cbaa2-3f64-441d-ab8d-fdd364e40e6b">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9" isBold="false"/>
-				</textElement>
-				<text><![CDATA[TT / 16.9.2024]]></text>
-			</staticText>
-			<staticText>
-				<reportElement key="staticText-52" x="53" y="614" width="11" height="63" uuid="a4c8e44f-a18a-4e0b-b296-933d03296c7f">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
-					<paragraph firstLineIndent="0" leftIndent="0"/>
-				</textElement>
-				<text><![CDATA[● 
-
-
-● ]]></text>
-			</staticText>
-		</band>
-	</background>
 	<title>
 		<band height="606" splitType="Stretch">
 			<textField isBlankWhenNull="false">
@@ -424,14 +47,14 @@ Issuing/adding/sending Manufacturer’s Declarations - this implies you are a co
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("borrower") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- borrower", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("borrower") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- borrower", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("borrower") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- borrower", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("borrower") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- borrower", "").split(" \\| ")[0]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("borrower") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- borrower", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("borrower") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- borrower", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("borrower") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- borrower", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("borrower") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- borrower", "").split("\\|")[0].trim()
 : "- No borrower defined! - "]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
@@ -442,7 +65,7 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- borrower", "
 				<textFieldExpression><![CDATA[($F{52,53-loanAgents,5.agent.title} == null ? "" : $F{52,53-loanAgents,5.agent.title}) + " " +
 ($F{52,53-loanAgents,5.agent.firstName} == null ? "" : $F{52,53-loanAgents,5.agent.firstName}) + " " +
 ($F{52,53-loanAgents,5.agent.middleInitial} == null ? "" : $F{52,53-loanAgents,5.agent.middleInitial}) + " " +
-($F{52,53-loanAgents,5.agent.lastName} == null ? "" : $F{52,53-loanAgents,5.agent.lastName}) + " " +
+($F{52,53-loanAgents,5.agent.lastName} == null ? "" : $F{52,53-loanAgents,5.agent.lastName}) + "<br/> " +
 ($F{52,53-loanAgents,5,8-addresses.address.address} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.address}) + "<br/>" +
 ($F{52,53-loanAgents,5,8-addresses.address.address2} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.address2}) + "<br/>" +
 ($F{52,53-loanAgents,5,8-addresses.address.postalCode} == null ? "" : $F{52,53-loanAgents,5,8-addresses.address.postalCode}) + " " +
@@ -471,14 +94,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- borrower", "
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("receiver") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- receiver", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("receiver") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- receiver", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("receiver") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- receiver", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("receiver") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- receiver", "").split(" \\| ")[0]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("receiver") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- receiver", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("receiver") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- receiver", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("receiver") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- receiver", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("receiver") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- receiver", "").split("\\|")[0].trim()
 : "- No receiver defined! - "]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
@@ -617,14 +240,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- receiver", "
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("preparer") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- preparer", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("preparer") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- preparer", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("preparer") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- preparer", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("preparer") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- preparer", "").split(" \\| ")[0]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("preparer") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- preparer", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("preparer") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- preparer", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("preparer") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- preparer", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("preparer") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- preparer", "").split("\\|")[0].trim()
 : "- No preparer defined! - "]]></textFieldExpression>
 			</textField>
 			<line>
@@ -657,14 +280,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- preparer", "
 				<textElement textAlignment="Left">
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser", "").split(" \\| ")[0]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- authoriser", "").split("\\|")[0].trim()
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -688,14 +311,14 @@ MUSEUM DENMARK
 					<font fontName="Arial" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- authoriser", "").split(" \\| ")[0]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser", "").split(" \\| ")[0]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- authoriser", "").split("\\|")[0].trim()
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
@@ -706,14 +329,14 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 					<font fontName="Arial" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[0].replace("- authoriser", "").split(" \\| ")[1]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[1].replace("- authoriser", "").split(" \\| ")[1]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[2].replace("- authoriser", "").split(" \\| ")[1]
-: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].contains("authoriser") ? 
-$F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser", "").split(" \\| ")[1]
+				<textFieldExpression><![CDATA[$F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- authoriser", "").split("\\|")[1].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- authoriser", "").split("\\|")[1].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- authoriser", "").split("\\|")[1].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- authoriser", "").split("\\|")[1].trim()
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -1072,9 +695,6 @@ $F{52,53-loanAgents.loanagent.loanAgents} .split(";")[3].replace("- authoriser",
 				</textElement>
 				<text><![CDATA[Costs]]></text>
 			</staticText>
-			<break>
-				<reportElement x="0" y="659" width="99" height="1" uuid="8bf6f889-4210-4502-a264-948e1ddc90fd"/>
-			</break>
 		</band>
 	</summary>
 </jasperReport>

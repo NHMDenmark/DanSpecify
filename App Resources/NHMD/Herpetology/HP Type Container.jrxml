@@ -17,6 +17,8 @@
 	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.Subfamily" class="java.lang.String"/>
 	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName" class="java.lang.String"/>
 	<field name="31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="31,1-collectionObjects,9-determinations,4.taxon.author" class="java.lang.String"/>
 	<field name="31,1-collectionObjects,9-determinations.determination.typeStatusName" class="java.lang.String"/>
 	<field name="31,1-collectionObjects,10,2.locality.localityName" class="java.lang.String"/>
 	<field name="31,1-collectionObjects,10,2,3.geography.Country" class="java.lang.String"/>
@@ -31,6 +33,8 @@
 	<field name="31,1-collectionObjects,9-determinations.determination.determinedDate" class="java.lang.String"/>
 	<field name="31.container.name" class="java.lang.String"/>
 	<field name="31.container.timestampCreated" class="java.lang.String"/>
+	<field name="31,5-modifiedByAgent.agent.lastName" class="java.lang.String"/>
+	<field name="31.container.timestampModified" class="java.lang.String"/>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
 	<background>
@@ -50,7 +54,7 @@
 				<reportElement key="line-1" x="3" y="13" width="218" height="1" uuid="f415ed52-c235-4594-8883-f5be7f97b58d"/>
 			</line>
 			<staticText>
-				<reportElement x="3" y="48" width="22" height="11" uuid="1586a138-4e77-49df-bab7-1f8eb9fd80e9">
+				<reportElement x="3" y="79" width="22" height="11" uuid="1586a138-4e77-49df-bab7-1f8eb9fd80e9">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -60,7 +64,7 @@
 				<text><![CDATA[Loc.:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="3" y="102" width="22" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
+				<reportElement x="3" y="112" width="22" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -83,25 +87,17 @@
 				<text><![CDATA[Jrn:]]></text>
 			</staticText>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="3" y="25" width="218" height="13" uuid="d2b9e6ad-3576-41fd-8f82-87771187ee5b">
+				<reportElement x="3" y="36" width="218" height="24" uuid="d2b9e6ad-3576-41fd-8f82-87771187ee5b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1172ca79-d0e6-486a-bbe8-7edbdbe71b0f"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="html">
-					<font isBold="true" isItalic="true"/>
+					<font isBold="false" isItalic="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<i><b>" + $F{31,1-collectionObjects,9-determinations,4.taxon.fullName} +  "</b></i> <br/>" + $F{31,1-collectionObjects,9-determinations,4.taxon.author}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="3" y="38" width="218" height="8" uuid="ca4bd486-1053-47e1-b9d7-5e15b31aec0f">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d52f1b2c-a539-4ff6-ab22-b12ee8f3c406"/>
-				</reportElement>
-				<textElement>
-					<font size="6"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author} != null ? $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author} : ""]]></textFieldExpression>
-			</textField>
-			<textField textAdjust="ScaleFont">
-				<reportElement x="25" y="48" width="196" height="43" uuid="9229081c-2492-4f1e-928d-d226d2536659">
+				<reportElement x="25" y="79" width="196" height="22" uuid="9229081c-2492-4f1e-928d-d226d2536659">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="026f3ab2-5cd5-4ddb-8a41-6818a4e03c89"/>
 				</reportElement>
 				<textElement>
@@ -111,7 +107,7 @@
 ($F{31,1-collectionObjects,10,2,3.geography.Country} != null ? "; " + $F{31,1-collectionObjects,10,2,3.geography.Country} : "")]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="25" y="91" width="54" height="11" uuid="901c5e9f-12c5-4ce6-acd4-97ba65cf9bd2">
+				<reportElement x="25" y="101" width="54" height="11" uuid="901c5e9f-12c5-4ce6-acd4-97ba65cf9bd2">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2c02ca0-7e90-4df7-8088-5dac0896ddb6"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -121,7 +117,7 @@
 				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,10,2.locality.lat1text} != null ? $F{31,1-collectionObjects,10,2.locality.lat1text} : ""]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="79" y="91" width="54" height="11" uuid="acfca39d-1909-4b67-ab60-de1047327c94">
+				<reportElement x="79" y="101" width="54" height="11" uuid="acfca39d-1909-4b67-ab60-de1047327c94">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6dc16e21-05be-4d71-8eee-d90981e19373"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -132,7 +128,7 @@
 				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,10,2.locality.long1text} != null ? $F{31,1-collectionObjects,10,2.locality.long1text} : ""]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="133" y="91" width="88" height="11" uuid="bfcbc379-3a4c-4e57-831e-5b8728f350a6">
+				<reportElement x="133" y="101" width="88" height="11" uuid="bfcbc379-3a4c-4e57-831e-5b8728f350a6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d04655b-bafc-49bc-938a-1891f0323a12"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -143,7 +139,7 @@
 				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,10,2.locality.minElevation} != null ? $F{31,1-collectionObjects,10,2.locality.minElevation}.setScale(0, BigDecimal.ROUND_HALF_UP) + " m" : ""]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="25" y="102" width="80" height="11" uuid="1733c77c-5223-4706-ad8d-fdd6cc8fefc1">
+				<reportElement x="25" y="112" width="80" height="11" uuid="1733c77c-5223-4706-ad8d-fdd6cc8fefc1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2377e4e-c33d-4d61-95d4-67042ba5253c"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -153,14 +149,14 @@
 				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,10.collectingevent.startDate} != null ? $F{31,1-collectionObjects,10.collectingevent.startDate} : ""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="3" y="113" width="22" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
+				<reportElement x="3" y="123" width="22" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Coll.:]]></text>
 			</staticText>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="25" y="113" width="196" height="20" uuid="7b6e2200-c6c5-4706-935b-b0513a137274">
+				<reportElement x="25" y="123" width="196" height="11" uuid="7b6e2200-c6c5-4706-935b-b0513a137274">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92c92239-f129-4622-bdee-05fb4f45ee41"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -218,7 +214,7 @@
 				</graphicElement>
 			</line>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="3" y="14" width="120" height="11" uuid="9f4606c7-cfeb-49d8-9533-536e7a763e18">
+				<reportElement x="3" y="25" width="157" height="11" uuid="9f4606c7-cfeb-49d8-9533-536e7a763e18">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2377e4e-c33d-4d61-95d4-67042ba5253c"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -231,7 +227,7 @@
 : "")]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="123" y="14" width="98" height="11" uuid="8fc078f1-edc0-45bd-9559-972fb20bd22c">
+				<reportElement x="160" y="14" width="60" height="11" uuid="8fc078f1-edc0-45bd-9559-972fb20bd22c">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2377e4e-c33d-4d61-95d4-67042ba5253c"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -239,6 +235,25 @@
 					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations.determination.typeStatusName} != null ? $F{31,1-collectionObjects,9-determinations.determination.typeStatusName} : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="60" width="24" height="11" uuid="baf3b100-d0e3-4db1-a6cb-1ed403ffd412">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Curr.:]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="27" y="60" width="194" height="11" uuid="5872cd1b-a4e6-4f9b-bc09-efbb6fe4ca20">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1172ca79-d0e6-486a-bbe8-7edbdbe71b0f"/>
+				</reportElement>
+				<textElement markup="html">
+					<font size="8" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
