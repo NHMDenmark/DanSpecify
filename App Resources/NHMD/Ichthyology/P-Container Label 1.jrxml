@@ -74,7 +74,10 @@
 				<textElement markup="html">
 					<font size="14" isBold="false" isItalic="false" isUnderline="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA["<b><i><u>" + $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName} + "</u></i></b> " + $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<b><i><u>" + $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.fullName} + "</u></i></b> " + 
+($F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author} != null ?
+ $F{31,1-collectionObjects,9-determinations,4-preferredTaxon.taxon.author} : " sp."	 
+)]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="8" y="140" width="518" height="27" uuid="1409599f-c5c6-41d9-8593-d31d4812cd9d">
@@ -84,8 +87,8 @@
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{31,1-collectionObjects,10,2.locality.localityName} != null ? 
-$F{31,1-collectionObjects,10,2.locality.localityName} : "") 
-+ " " + 
+($F{31,1-collectionObjects,10,2.locality.localityName} + ", ") : "") 
++ 
 ($F{31,1-collectionObjects,10,2,3.geography.fullName} != null ? 
 $F{31,1-collectionObjects,10,2,3.geography.fullName} : "")]]></textFieldExpression>
 			</textField>
