@@ -26,6 +26,12 @@
             <field term="http://rs.tdwg.org/dwc/terms/stateProvince"         isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.State" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/county"                isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.County" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude"       isNot="false" isRelFld="false" oper="8" stringId="1,10,2.locality.latitude1" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/decimalLongitude"      isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.longitude1" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/footprintWKT"          isNot="false" isRelFld="false" oper="8" stringId="1,10,2.locality.text3" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/decimalLatitude"       isNot="false" isRelFld="false" oper="8" stringId="1,10,2.locality.lat1text" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/decimalLongitude"      isNot="false" isRelFld="false" oper="8" stringId="1,10,2.locality.long1text" value="" />
+            <field term="http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters" isNot="false" isRelFld="false" oper="8" stringId="1,10,2.locality.latLongAccuracy" value=""/>
             <!-- Determination & Taxonomy -->
             <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Phylum"     value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/class"                 isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Class"      value=""/>
