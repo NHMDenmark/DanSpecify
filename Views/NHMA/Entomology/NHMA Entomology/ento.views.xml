@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewset name="Ento Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<viewset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Ento Views" i18nresname="views">
 	<views>
 		<view name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules">
 			<desc>The Collection Object Subform for Accessions.</desc>
@@ -215,7 +215,6 @@
 			<columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
 			<rowDef auto="true" cell="p" sep="2px"/>
 			<rows>
-					
 				<row>
 					<cell type="label" labelfor="7"/>
 					<cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
@@ -224,11 +223,8 @@
 					<cell type="label" labelfor="13"/>
 					<cell type="field" id="13" name="verbatimDate" uitype="text" colspan="2"/>
 				</row>
-		
-				<row>	
-					<!--<cell type="label" labelfor="3"/>
-          <cell type="field" id="3" name="method" uitype="combobox"/>-->
-				</row>
+				<row><!--<cell type="label" labelfor="3"/>
+          <cell type="field" id="3" name="method" uitype="combobox"/>--></row>
 				<row>
 					<cell type="label" labelfor="4"/>
 					<cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10" isrequired="true"/>
@@ -250,7 +246,7 @@
 				</row>
 			</rows>
 		</viewdef>
-		<viewdef type="form" name="Collection Object" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+		<viewdef name="Collection Object" class="edu.ku.brc.specify.datamodel.CollectionObject" type="form" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>The Collection Object form.</desc>
 			<enableRules/>
 			<columnDef>100px,2px,225px,5px,91px,2px,210px,5px,94px,2px,106px,15px,p:g</columnDef>
@@ -269,9 +265,6 @@
 					<cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
 				</row>
 				<row>
-					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true"/>
-				</row>
-				<row>
 					<cell type="label" labelfor="4"/>
 					<cell type="field" id="4" name="cataloger" uitype="querycbx" isrequired="true" initialize="name=Agent"/>
 					<!-- initialize="name=Agent;title=Catalog Agent" -->
@@ -279,6 +272,10 @@
 					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today"/>
 					<cell type="label" labelfor="excoll"/>
 					<cell type="field" id="excoll" name="text3" uitype="text" isrequired="true"/>
+				</row>
+				<row>
+					<cell type="label" labelfor=""/>
+					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
 				</row>
 				<row>
 					<cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5" isrequired="true"/>
@@ -559,12 +556,11 @@
           <cell type="label" labelfor="t1"/>
           <cell type="field" id="t1" name="text1" uitype="text" colspan="3"/>
         </row>-->
-		<row>
-			<cell type="label" labelfor="t1"/>
-			<cell type="field" id="t1" name="text1" uitype="text" colspan="9"/>
-			<!--verbatim determination-->
-		</row>
-		
+				<row>
+					<cell type="label" labelfor="t1"/>
+					<cell type="field" id="t1" name="text1" uitype="text" colspan="9"/>
+					<!--verbatim determination-->
+				</row>
 				<row>
 					<cell type="label" labelfor="7"/>
 					<cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=determinedDate;tp=determinedDatePrecision" uifieldformatter="Date"/>
@@ -651,8 +647,8 @@
 			<rowDef auto="true" sep="2px" cell="p"/>
 			<rows>
 				<row>
-				<cell type="label" labelfor="sex"/>
-          <cell type="field" id="sex" name="text1" uitype="combobox" picklist="Sex"/>
+					<cell type="label" labelfor="sex"/>
+					<cell type="field" id="sex" name="text1" uitype="combobox" picklist="Sex"/>
 					<cell type="label" labelfor="stage"/>
 					<cell type="field" id="stage" name="text4" uitype="combobox" default="adult"/>
 				</row>
@@ -1076,7 +1072,7 @@
 			<desc>Preparation subform table for Collection Object form.</desc>
 			<definition>Preparation</definition>
 		</viewdef>
-		<viewdef type="form" name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
+		<viewdef name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" type="form" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
 			<desc>Preparation for Collection Object form.</desc>
 			<enableRules/>
 			<columnDef>100px,2px,133px,5px,101px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
@@ -1086,14 +1082,14 @@
 			<rowDef auto="true" cell="p" sep="2dlu"/>
 			<rows>
 				<row>
-					<cell type="label" labelfor="7"/>
-					<cell type="field" id="7" name="prepType" uitype="combobox" picklist="PrepType" default="Pinned"/>
 					<cell type="label" labelfor="4"/>
-					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3" isrequired="true"/>
+					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="13" isrequired="true"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="3"/>
 					<cell type="field" id="3" name="countAmt" uitype="text" default="1"/>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="prepType" uitype="combobox" picklist="PrepType" default="Pinned"/>
 					<cell type="label" labelfor="prepdate"/>
 					<cell type="field" id="prepdate" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date"/>
 				</row>
