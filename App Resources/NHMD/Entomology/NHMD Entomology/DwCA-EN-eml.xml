@@ -2,8 +2,7 @@
   <dataset>
     <alternateIdentifier>e9a9d022-6c43-11eb-a20c-dbb51733737e</alternateIdentifier>
     <title xml:lang="eng">NHMD Entomology Collection</title>
-      <description xml:lang="" xmlns="https://eml.ecoinformatics.org/documentation-2.1.1">
-       </description>
+      <description/>
     <creator>
       <individualName>
         <givenName>Nikolaj </givenName>
