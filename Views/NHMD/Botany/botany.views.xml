@@ -1396,7 +1396,6 @@
 				<!-- This is not working properly. See notes in code of main Container form. 
                 
                     <cell type="subview" id="collectionObjectKids" name="collectionObjectKids" viewname="CollectionObjectSubTable" initialize="addsearch=true;title=COLOBJ_IN_CONTR" defaulttype="table" colspan="13"/>               
-                
             -->
 			</rows>
 		</viewdef>
