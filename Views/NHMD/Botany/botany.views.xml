@@ -89,7 +89,7 @@
 			<desc>The Determiners Form.</desc>
 			<altviews>
 				<altview name="Determiner View" viewdef="Determiner" mode="view" validated="false" default="true"/>
-				<altview name="Determiner Edit" viewdef="Determiner" mode="edit" validated="true"/>
+				<altview name="Determiner Edit" viewdef="Determiner" mode="edit" validated="true"/>																					
 			</altviews>
 		</view>
 		<view name="Determiners" class="edu.ku.brc.specify.datamodel.Determiner" busrules="edu.ku.brc.specify.datamodel.busrules.DeterminerBusRules">
@@ -638,7 +638,7 @@
 		</viewdef>
 		<viewdef type="form" name="Determiner" class="edu.ku.brc.specify.datamodel.Determiner" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>The Determiner form.</desc>
-			<enableRules/>
+			<enableRules/>										 
 			<columnDef>105px,2px,210px,5px,100px,2px,98px,300px,p:g</columnDef>
 			<columnDef os="lnx">135px,2px,230px,5px,120px,2px,118px,325px,p:g</columnDef>
 			<columnDef os="mac">130px,2px,215px,5px,140px,2px,138px,395px,p:g</columnDef>
