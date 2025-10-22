@@ -1889,7 +1889,7 @@
                     <cell type="field" id="this_" name="this" uitype="plugin" initialize="name=ContainersColObjPlugin"/>                
                     <cell type="label" label="CONTNR_COLOBJ" initialize="align=left" colspan="5"/>
                 </row>
-        -->                
+        -->               
                 <row>
                     <cell type="label" labelfor="desc"/>
                     <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="10"/> 
