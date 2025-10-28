@@ -25,6 +25,7 @@
                 <field term="http://rs.tdwg.org/dwc/terms/infraspecificEpithet" stringId="1,9-determinations,4.taxon.Subspecies" oper="11" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/verbatimIdentification" stringId="1,9-determinations.determination.text1" oper="11" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/scientificName" isNot="false" isRelFld="false" oper="8" stringId="1,9-determinations,4.taxon.fullName" value=""/>
+				<field term="http://rs.tdwg.org/dwc/terms/identifiedBy"          isNot="false" isRelFld="true"  oper="8"  stringId="1,9-determinations,167-determiners,5.agent.agent"     value=""/>
                 <field term="http://rs.tdwg.org/dwc/terms/typeStatus" stringId="1,9-determinations.determination.typeStatusName" oper="1" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/identificationQualifier" stringId="1,9-determinations.determination.qualifier" oper="8" value="" isNot="false" isRelFld="false"/>
                 <!-- Collecting event -->
