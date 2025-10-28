@@ -82,7 +82,6 @@
             </query>
         </queries>
     </extension>
-
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>
