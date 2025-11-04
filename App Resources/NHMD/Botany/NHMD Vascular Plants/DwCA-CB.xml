@@ -44,7 +44,7 @@
 			<field term="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"     isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.fullName"   value=""/> 
             <field term="http://rs.tdwg.org/dwc/terms/typeStatus"            isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations.determination.typeStatusName"      value=""/>
             <field                                                           isNot="false" isRelFld="false" oper="13" stringId="1,9-determinations.determination.isCurrent"          value=""/> 
-            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy"          isNot="false" isRelFld="true"  oper="8"  stringId="1,9-determinations,5-determiner.agent.determiner"     value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy"          isNot="false" isRelFld="true"  oper="8"  stringId="1,9-determinations,167-determiners,5.agent.agent"     value=""/>
             <!-- Preparations --> 
             <field term="http://rs.tdwg.org/dwc/terms/preparations"          isNot="false" isRelFld="true"  oper="11" stringId="1,63-preparations.preparation.preparations" value=""/>
             <!-- Publishable -->
@@ -89,7 +89,7 @@
             <query contextTableId="9" name="Determinations.csv">
                 <id isNot="false" isRelFld="false" oper="1"  stringId="9,1.collectionobject.guid" value=""/>
 	            <field term="http://rs.tdwg.org/dwc/terms/identificationID" isNot="false" isRelFld="false" oper="1" stringId="9.determination.guid" value=""/>
-	            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy" isNot="false" isRelFld="true" oper="1" stringId="9,5-determiner.agent.determiner" value=""/>
+	            <field term="http://rs.tdwg.org/dwc/terms/identifiedBy" isNot="false" isRelFld="true" oper="8" stringId="9,167-determiners,5.agent.agent" value=""/>
 	            <field term="http://rs.tdwg.org/dwc/terms/dateIdentified" isNot="false" isRelFld="false" oper="1" stringId="9.determination.determinedDate" value=""/>
 	            <field term="http://rs.tdwg.org/dwc/terms/identificationReferences" isNot="false" isRelFld="true" oper="1" stringId="9,38-determinationcitations.determinationcitation.determinationCitations" value=""/>
 	            <field term="http://rs.tdwg.org/dwc/terms/identificationRemarks" isNot="false" isRelFld="false" oper="1" stringId="9.determination.remarks" value=""/>

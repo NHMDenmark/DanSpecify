@@ -46,8 +46,9 @@
 				<field>lastName</field>
 			</fields>
 			<fields value="1">
-				<field>lastName</field>
-				<field sep=", ">firstName</field>
+				<field>firstName</field>
+				<field sep=" ">middleInitial</field>
+				<field sep=" ">lastName</field>
 			</fields>
 			<fields value="2">
 				<field>lastName</field>
@@ -439,6 +440,7 @@
 		<switch single="true">
 			<fields>
 				<field>fullName</field>
+				<field sep=" ">author</field>        
 			</fields>
 		</switch>
 	</format>
@@ -466,7 +468,7 @@
 	<format name="Attachment_mediaURL" title="Attachment_mediaURL" class="edu.ku.brc.specify.datamodel.Attachment" default="">
 		<switch single="true" field="isPublic">
 			<fields value="true">
-				<field sep=" https://specify-media.science.ku.dk/fileget?coll=NHMD+Entomology&amp;type=O&amp;filename=">attachmentLocation</field>
+				<field sep="https://specify-media.science.ku.dk/fileget?coll=NHMD+Entomology&amp;type=O&amp;filename=">attachmentLocation</field>
 			</fields>
 		</switch>
 	</format>
