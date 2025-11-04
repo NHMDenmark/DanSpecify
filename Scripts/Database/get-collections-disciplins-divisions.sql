@@ -27,9 +27,8 @@ SELECT -- * --
 
 -- agents
 SELECT a.AgentID, a.FirstName, a.LastName, a.Email, a.Remarks, a.SpecifyUserID, a.DivisionID FROM agent a 
-	WHERE (a.LastName = 'Steeman'
-	OR a.FirstName = 'Allison')
-	AND a.DivisionID = 688128
+	WHERE (a.LastName = 'Soelberg');
+	--	AND a.DivisionID = 688128
 	-- WHERE a.FirstName = 'Aslak'
 -- Natural History Museum of Denmark
 
