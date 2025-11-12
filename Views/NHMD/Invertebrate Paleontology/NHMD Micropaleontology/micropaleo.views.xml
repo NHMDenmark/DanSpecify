@@ -1,255 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewset name="Paleo Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
-    <views>
-        
-         <view name="AccessionItems"
-              class="edu.ku.brc.specify.datamodel.CollectionObject"
-              usedefbusrule="false"
-              resourcelabels="false">
-              <desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
-              <altviews>
-                  <altview name="COS View"       viewdef="AccessionItems" mode="view"/>
-                  <altview name="COS Edit"       viewdef="AccessionItems" mode="edit" default="true"/>
-                  <altview name="COS Table Edit" viewdef="AccessionItems Table" mode="edit"/>
-                  <altview name="COS Table View" viewdef="AccessionItems Table" mode="view"/>
-              </altviews>      
-         </view>
-
-        <view name="CollectingEvent"
-            class="edu.ku.brc.specify.datamodel.CollectingEvent"
-            busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules"
-            isinternal="false"
-            resourcelabels="false">
-            <desc><![CDATA[CollectingEvent Form]]></desc>
-            <altviews>
-                <altview name="CollectingEvent View" viewdef="CollectingEvent" mode="view" default="true"/>
-                <altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
-            </altviews>
-        </view>
-
-        <view name="CollectingEventSub"
-            class="edu.ku.brc.specify.datamodel.CollectingEvent"
-            busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules"
-            resourcelabels="false">
-            <desc><![CDATA[CollectingEvent SubForm]]></desc>
-            <altviews>
-                <altview name="CollectingEventSub View" viewdef="CollectingEventSub" mode="view" default="true"/>
-                <altview name="CollectingEventSub Edit" viewdef="CollectingEventSub" mode="edit"/>
-            </altviews>
-        </view>
-        
-        <view name="CollectionObject"
-            class="edu.ku.brc.specify.datamodel.CollectionObject"
-            busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules"
-            isinternal="false"
-            resourcelabels="false"
-            >
-            <desc><![CDATA[The Collection Object form.]]></desc>
-            <altviews>
-                <altview name="Collection Object View" viewdef="Collection Object" mode="view"/>
-                <altview name="Collection Object Edit" viewdef="Collection Object" mode="edit" default="true"/>
-            </altviews>
-        </view>
-        
-        <view name="CollectionObjectCitation"
-            class="edu.ku.brc.specify.datamodel.CollectionObjectCitation"
-            resourcelabels="false"
-            >
-            <desc><![CDATA[The Collection Object form.]]></desc>
-            <altviews>
-                <altview name="CollectionObjectCitation View" viewdef="CollectionObjectCitation" mode="view"/>
-                <altview name="CollectionObjectCitation Edit" viewdef="CollectionObjectCitation" mode="edit" default="true"/>
-            </altviews>
-        </view>      
-        
-         <view name="CollectionObjectSub"
-              class="edu.ku.brc.specify.datamodel.CollectionObject"
-              usedefbusrule="false"
-              resourcelabels="false">
-              <desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
-              <altviews>
-                  <altview name="COS View"       viewdef="CollectionObjectSub" mode="view"/>
-                  <altview name="COS Edit"       viewdef="CollectionObjectSub" mode="edit" default="true"/>
-                  <!-- <altview name="COS Table Edit" viewdef="CollectionObjectSub Table" mode="edit"/>
+	<views>
+		<view name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules">
+			<desc>The Collection Object Subform for Accessions.</desc>
+			<altviews>
+				<altview name="COS View" viewdef="AccessionItems" mode="view"/>
+				<altview name="COS Edit" viewdef="AccessionItems" mode="edit" default="true"/>
+				<altview name="COS Table Edit" viewdef="AccessionItems Table" mode="edit"/>
+				<altview name="COS Table View" viewdef="AccessionItems Table" mode="view"/>
+			</altviews>
+		</view>
+		<view name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" isinternal="false" resourcelabels="false">
+			<desc>CollectingEvent Form</desc>
+			<altviews>
+				<altview name="CollectingEvent View" viewdef="CollectingEvent" mode="view" default="true"/>
+				<altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
+			</altviews>
+		</view>
+		<view name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" resourcelabels="false">
+			<desc>CollectingEvent SubForm</desc>
+			<altviews>
+				<altview name="CollectingEventSub View" viewdef="CollectingEventSub" mode="view" default="true"/>
+				<altview name="CollectingEventSub Edit" viewdef="CollectingEventSub" mode="edit"/>
+			</altviews>
+		</view>
+		<view name="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules" isinternal="false" resourcelabels="false">
+			<desc>The Collection Object form.</desc>
+			<altviews>
+				<altview name="Collection Object View" viewdef="Collection Object" mode="view"/>
+				<altview name="Collection Object Edit" viewdef="Collection Object" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="CollectionObjectCitation" class="edu.ku.brc.specify.datamodel.CollectionObjectCitation" resourcelabels="false">
+			<desc>The Collection Object form.</desc>
+			<altviews>
+				<altview name="CollectionObjectCitation View" viewdef="CollectionObjectCitation" mode="view"/>
+				<altview name="CollectionObjectCitation Edit" viewdef="CollectionObjectCitation" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="CollectionObjectSub" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules">
+			<desc>The Collection Object Subform for Accessions.</desc>
+			<altviews>
+				<altview name="COS View" viewdef="CollectionObjectSub" mode="view"/>
+				<altview name="COS Edit" viewdef="CollectionObjectSub" mode="edit" default="true"/>
+				<!-- <altview name="COS Table Edit" viewdef="CollectionObjectSub Table" mode="edit"/>
                   <altview name="COS Table View" viewdef="CollectionObjectSub Table" mode="view"/>  -->
-              </altviews>      
-         </view>
-
-        <view name="Determination"
-              class="edu.ku.brc.specify.datamodel.Determination"
-              busrules="edu.ku.brc.specify.datamodel.busrules.DeterminationBusRules" 
-              isexternal="true"
-              resourcelabels="false">
-            <desc><![CDATA[Subform within the Collection Object form.]]></desc>
-            <altviews>
-                <altview name="Determination View"       viewdef="Determination" mode="view"/>
-                <altview name="Determination Edit"       viewdef="Determination" mode="edit" default="true"/>
-                <altview name="Determination Table View" viewdef="Determination Table" mode="view"/>
-                <altview name="Determination Table Edit" viewdef="Determination Table" mode="edit"/>
-            </altviews>
-        </view>
-        
-        <view name="DeterminationViewOnly"
-            class="edu.ku.brc.specify.datamodel.Determination"
-            isexternal="true"
-            resourcelabels="false">
-            <desc><![CDATA[Subform within the Collection Object form.]]></desc>
-            <altviews>
-                <altview name="Determination View"       viewdef="Determination" mode="view" default="true"/>
-            </altviews>
-        </view>
-
-        <view name="Locality"
-              class="edu.ku.brc.specify.datamodel.Locality"
-              busrules="edu.ku.brc.specify.datamodel.busrules.LocalityBusRules"
-              isinternal="false">
-            <desc><![CDATA[Locality form.]]></desc>
-            <altviews>
-                <altview name="Locality View" viewdef="Locality" mode="view"/>
-                <altview name="Locality Edit" viewdef="Locality" mode="edit" default="true"/>
-            </altviews>
-        </view>
-        
-		
-		
-        <view name="LocalityDetail"
-            class="edu.ku.brc.specify.datamodel.LocalityDetail"
-            >
-            <desc><![CDATA[LocalityDetail form.]]></desc>
-            <altviews>
-                <altview name="LocalityDetail View" viewdef="LocalityDetail" mode="view"/>
-                <altview name="LocalityDetail Edit" viewdef="LocalityDetail" mode="edit" default="true"/>
-            </altviews>
-        </view>
-
-        <view name="PaleoAttributes"
-            class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute"
-            resourcelabels="false">
-            <desc><![CDATA[Subform within the Collection Object form.]]></desc>
-            <altviews>
-                <altview name="PaleoAttributes View" viewdef="PaleoAttributes" mode="view"/>
-                <altview name="PaleoAttributes Edit" viewdef="PaleoAttributes" mode="edit" default="true"/>
-            </altviews>
-        </view>
-
-        <view name="PaleoContext"
-            class="edu.ku.brc.specify.datamodel.PaleoContext"
-            isinternal="true"
-            resourcelabels="false">
-            <desc><![CDATA[PaleoContext form.]]></desc>
-            <altviews>
-                <altview name="PaleoContext View" viewdef="PaleoContext" mode="view"/>
-                <altview name="PaleoContext Edit" viewdef="PaleoContext" mode="edit" default="true"/>
-            </altviews>
-        </view>
-
-        <view name="Preparation"
-              class="edu.ku.brc.specify.datamodel.Preparation"
-              busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules"
-               resourcelabels="false">
-            <desc><![CDATA[Subform within the Preparation form.]]></desc>
-            <altviews>
-                <altview name="Preparation Table View" viewdef="Preparation Table" mode="view"/>
-                <altview name="Preparation Table Edit" viewdef="Preparation Table" mode="edit"/>
-                <altview name="Preparation View" viewdef="Preparation" mode="view"/>
-                <altview name="Preparation Edit" viewdef="Preparation" mode="edit" default="true"/>
-            </altviews>
-        </view>
-        
-        <view name="SubPaleoContext"
-            class="edu.ku.brc.specify.datamodel.PaleoContext"
-            isinternal="true"
-            resourcelabels="false">
-            <desc><![CDATA[PaleoContext subform within Collection Object form.]]></desc>
-            <altviews>
-                <altview name="SubPaleoContext View" viewdef="SubPaleoContext" mode="view"/>
-                <altview name="SubPaleoContext Edit" viewdef="SubPaleoContext" mode="edit" default="true"/>
-            </altviews>
-        </view>
-        
-    </views>
-    
-    
-    <viewdefs>
-        
-        <viewdef
-            type="form"
-            name="Collection Object"
-            class="edu.ku.brc.specify.datamodel.CollectionObject"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[The Collection Object form.]]></desc>
-            <enableRules/>
-            
-            <columnDef>100px,2px,195px,5px,96px,2px,210px,5px,94px,2px,116px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,195px,5px,125px,2px,210px,5px,125px,2px,131px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-
-            <rows>
-                <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-                    <cell type="label" labelfor="14"/>
-                    <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="projectNumber" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="fn"/>
-                    <cell type="field" id="fn" name="fieldNumber" uitype="text"/>
-                </row>
-    <row>
-        <cell type="label" label="" colspan="9"/>
-        <cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
-    </row>
-                <row>
-                    <cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5"/>
-                </row>
-                <row>
-                    <cell type="subview" viewname="CollectingEventSub" id="21" name="collectingEvent" colspan="12" rows="5"/>
-                </row>
-                <row>
-                    <cell type="subview" viewname="Preparation" id="8" name="preparations" defaulttype="table" rows="3" colspan="12"/>
-                </row>
-                <row>
-                    <cell type="subview" id="7" name="collectionObjectCitations" viewname="CollectionObjectCitation" colspan="12"/>                    
-                </row>
-                <row>
-                    <cell type="separator" label="Attachments" colspan="12"/>
-                </row>
-                <row>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="collectionObjectAttachments" colspan="5" initialize="icon=CollectionObjectAttachment" defaulttype="icon"/>
-                    <cell type="panel" id="116" name="outerPanel" coldef="p,2px,p:g,5px,p,2px,p:g" rowdef="p,4px,p,4px,p" colspan="5">
-                        <rows>
-    			<row>
-                    <cell type="label" labelfor="10"/>
-                    <cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true"  uifieldformatter="Agent"/>
-                    <cell type="label" labelfor="11"/>
-                    <cell type="field" id="11" name="timestampModified" uitype="label" readonly="true"/>
-    			</row>
-    			<row>
-                    <cell type="label" labelfor="guid"/>
-                    <cell type="field" id="guid" name="guid" uitype="text" colspan="5" readonly="true"/>
-    			</row>
-                            <row>
-                                <cell type="field" id="113" uitype="checkbox" name="generateLabelChk" label="Generate Label on Save" ignore="true" default="true" initialize="visible=false"/>
-                                <cell type="command" id="114" name="generateLabelBtn" label="Generate Label" ignore="true" default="true" initialize="visible=false;align=right"/>
-                            </row>
-                        </rows>
-                    </cell>
-                </row>
-                <!--<row>
+			</altviews>
+		</view>
+		<view name="Determination" class="edu.ku.brc.specify.datamodel.Determination" busrules="edu.ku.brc.specify.datamodel.busrules.DeterminationBusRules" isexternal="true" resourcelabels="false">
+			<desc>Subform within the Collection Object form.</desc>
+			<altviews>
+				<altview name="Determination View" viewdef="Determination" mode="view"/>
+				<altview name="Determination Edit" viewdef="Determination" mode="edit" default="true"/>
+				<altview name="Determination Table View" viewdef="Determination Table" mode="view"/>
+				<altview name="Determination Table Edit" viewdef="Determination Table" mode="edit"/>
+			</altviews>
+		</view>
+		<view name="DeterminationViewOnly" class="edu.ku.brc.specify.datamodel.Determination" isexternal="true" resourcelabels="false" busrules="edu.ku.brc.specify.datamodel.busrules.DeterminationBusRules">
+			<desc>Subform within the Collection Object form.</desc>
+			<altviews>
+				<altview name="Determination View" viewdef="Determination" mode="view" default="true"/>
+			</altviews>
+		</view>
+		<view name="Locality" class="edu.ku.brc.specify.datamodel.Locality" busrules="edu.ku.brc.specify.datamodel.busrules.LocalityBusRules" isinternal="false">
+			<desc>Locality form.</desc>
+			<altviews>
+				<altview name="Locality View" viewdef="Locality" mode="view"/>
+				<altview name="Locality Edit" viewdef="Locality" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="LocalityDetail" class="edu.ku.brc.specify.datamodel.LocalityDetail">
+			<desc>LocalityDetail form.</desc>
+			<altviews>
+				<altview name="LocalityDetail View" viewdef="LocalityDetail" mode="view"/>
+				<altview name="LocalityDetail Edit" viewdef="LocalityDetail" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="PaleoAttributes" class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute" resourcelabels="false">
+			<desc>Subform within the Collection Object form.</desc>
+			<altviews>
+				<altview name="PaleoAttributes View" viewdef="PaleoAttributes" mode="view"/>
+				<altview name="PaleoAttributes Edit" viewdef="PaleoAttributes" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="PaleoContext" class="edu.ku.brc.specify.datamodel.PaleoContext" isinternal="true" resourcelabels="false">
+			<desc>PaleoContext form.</desc>
+			<altviews>
+				<altview name="PaleoContext View" viewdef="PaleoContext" mode="view"/>
+				<altview name="PaleoContext Edit" viewdef="PaleoContext" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules" resourcelabels="false">
+			<desc>Subform within the Preparation form.</desc>
+			<altviews>
+				<altview name="Preparation Table View" viewdef="Preparation Table" mode="view"/>
+				<altview name="Preparation Table Edit" viewdef="Preparation Table" mode="edit"/>
+				<altview name="Preparation View" viewdef="Preparation" mode="view"/>
+				<altview name="Preparation Edit" viewdef="Preparation" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="SubPaleoContext" class="edu.ku.brc.specify.datamodel.PaleoContext" isinternal="true" resourcelabels="false">
+			<desc>PaleoContext subform within Collection Object form.</desc>
+			<altviews>
+				<altview name="SubPaleoContext View" viewdef="SubPaleoContext" mode="view"/>
+				<altview name="SubPaleoContext Edit" viewdef="SubPaleoContext" mode="edit" default="true"/>
+			</altviews>
+		</view>
+		<view name="Accession" class="edu.ku.brc.specify.datamodel.Accession" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionBusRules">
+			<desc>The Accession form.</desc>
+			<altviews>
+				<altview name="Accession View" viewdef="Accession" mode="view" default="true"/>
+				<altview name="Accession Edit" viewdef="Accession" mode="edit"/>
+			</altviews>
+		</view>
+	</views>
+	<viewdefs>
+		<viewdef type="form" name="Collection Object" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>The Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,195px,5px,96px,2px,210px,5px,94px,2px,116px,15px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,195px,5px,125px,2px,210px,5px,125px,2px,131px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,215px,5px,128px,2px,260px,5px,138px,2px,145px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,min(p;250px),5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),p,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
+					<cell type="label" labelfor="14"/>
+					<cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="cataloger" uitype="querycbx" initialize="name=Agent;title=Catalog Agent" isrequired="true"/>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="projectNumber" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="fn"/>
+					<cell type="field" id="fn" name="fieldNumber" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" label="" colspan="9"/>
+					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="CollectingEventSub" id="21" name="collectingEvent" colspan="12" rows="5"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="Preparation" id="8" name="preparations" defaulttype="table" rows="3" colspan="12"/>
+				</row>
+				<row>
+					<cell type="subview" id="7" name="collectionObjectCitations" viewname="CollectionObjectCitation" colspan="12"/>
+				</row>
+				<row>
+					<cell type="separator" label="Attachments" colspan="12"/>
+				</row>
+				<row>
+					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="collectionObjectAttachments" colspan="5" initialize="icon=CollectionObjectAttachment" defaulttype="icon"/>
+					<cell type="panel" id="116" name="outerPanel" coldef="p,2px,p:g,5px,p,2px,p:g" rowdef="p,4px,p,4px,p" colspan="5">
+						<rows>
+							<row>
+								<cell type="label" labelfor="10"/>
+								<cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
+								<cell type="label" labelfor="11"/>
+								<cell type="field" id="11" name="timestampModified" uitype="label" readonly="true"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="guid"/>
+								<cell type="field" id="guid" name="guid" uitype="text" colspan="5" readonly="true"/>
+							</row>
+							<row>
+								<cell type="field" id="113" uitype="checkbox" name="generateLabelChk" label="Generate Label on Save" ignore="true" default="true" initialize="visible=false"/>
+								<cell type="command" id="114" name="generateLabelBtn" label="Generate Label" ignore="true" default="true" initialize="visible=false;align=right"/>
+							</row>
+						</rows>
+					</cell>
+				</row>
+				<!--<row>
                     <cell type="subview" viewname="SubPaleoContext" id="pcem" name="paleoContext" defaulttype="table" colspan="12"/>
                 </row> 
                 <row>
@@ -368,62 +303,48 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-
-
-        <viewdef
-            type="formtable"
-            name="Determination Table"
-            class="edu.ku.brc.specify.datamodel.Determination"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Determination subform table for Collection Object form.]]></desc>
-            <definition>Determination</definition>
-        </viewdef>
-        
-        <viewdef
-            name="Determination"
-            type="form"
-            class="edu.ku.brc.specify.datamodel.Determination"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Determination subform for Collection Object form.]]></desc>
-            <enableRules/>
-
-            <columnDef>100px,2px,210px,5px,76px,2px,200px,5px,90px,2px,140px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,210px,5px,110px,2px,205px,5px,105px,2px,156px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,260px,5px,100px,2px,238px,5px,108px,2px,180px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-
-            <rows>
-                <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7"/>
-                    <cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="13"/>
-                    <cell type="field" id="13" name="preferredTaxon" uitype="text" readonly="true" colspan="9"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="7"/>
-                    <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=determinedDate;tp=determinedDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" name="determiner" uitype="querycbx" initialize="name=Agent"/>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="typeStatusName" uitype="combobox"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="t1"/><!-- Foraminifera Ecology Picklist -->
-                    <cell type="field" id="t1" name="text1" uitype="combobox"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="12"/>
-                    <cell type="field" id="12" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
-                </row>
-                <!--<row>
+			</rows>
+		</viewdef>
+		<viewdef type="formtable" name="Determination Table" class="edu.ku.brc.specify.datamodel.Determination" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Determination subform table for Collection Object form.</desc>
+			<definition>Determination</definition>
+		</viewdef>
+		<viewdef name="Determination" type="form" class="edu.ku.brc.specify.datamodel.Determination" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Determination subform for Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,210px,5px,76px,2px,200px,5px,90px,2px,140px,0px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,210px,5px,110px,2px,205px,5px,105px,2px,156px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,260px,5px,100px,2px,238px,5px,108px,2px,180px,0px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="taxon" uitype="querycbx" initialize="name=Taxon" colspan="7"/>
+					<cell type="field" id="3" name="isCurrent" uitype="checkbox"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="13"/>
+					<cell type="field" id="13" name="preferredTaxon" uitype="text" readonly="true" colspan="9"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=determinedDate;tp=determinedDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="determiner" uitype="querycbx" initialize="name=Agent"/>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="typeStatusName" uitype="combobox"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="t1"/>
+					<!-- Foraminifera Ecology Picklist -->
+					<cell type="field" id="t1" name="text1" uitype="combobox"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="12"/>
+					<cell type="field" id="12" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="9"/>
                     <cell type="field" id="9" name="addendum" uitype="text"/>            
                     <cell type="label" labelfor="an"/>
@@ -480,134 +401,118 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-                
-        <viewdef
-            type="form"
-            name="CollectingEventSub"
-            class="edu.ku.brc.specify.datamodel.CollectingEvent"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Collecting Event]]></desc>
-
-            <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,210px,5px,105px,2px,210px,5px,125px,2px,136px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,260px,5px,85px,2px,260px,5px,115px,2px,166px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-            
-            <rows>
-                <row>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" name="stationFieldNumber" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="method" uitype="combobox"/>
-                    <cell type="label" label=""/>
-                    <cell type="subview" id="1" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=right;btn=true;icon=CollectingEventAttachment"/>
-                </row>
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Collecting Event</desc>
+			<columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,210px,5px,105px,2px,210px,5px,125px,2px,136px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,260px,5px,85px,2px,260px,5px,115px,2px,166px,0px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g(2),0px</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
 				<row>
-                    <cell type="label" labelfor="collectornr"/>
-                    <cell type="field" id="collectornr" name="text1" uitype="text"/>
-                    <cell type="label" labelfor="colltrip"/>
-                    <cell type="field" id="colltrip" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip"/>
-                    <cell type="label" labelfor="sitenrsrc"/>
-                    <cell type="field" id="sitenrsrc" name="text2" uitype="text"/>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="stationFieldNumber" uitype="text"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="method" uitype="combobox"/>
+					<cell type="label" label=""/>
+					<cell type="subview" id="1" viewname="ObjectAttachment" name="collectingEventAttachments" initialize="align=right;btn=true;icon=CollectingEventAttachment"/>
 				</row>
-                <row>
-                    <cell type="label" labelfor="7"/>
-                    <cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="8"/>
-                    <cell type="field" id="8" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="13"/>
-                    <cell type="field" id="13" name="verbatimDate" uitype="text" colspan="2"/>   
-                </row>
-                <row>
-                    <cell type="label" labelfor="pcsh"/>
-                    <cell type="field" uitype="querycbx" id="pcsh" name="paleoContext" initialize="name=PaleoContext" colspan="7"/>
-                    <cell type="field" id="pm" name="this" uitype="plugin" initialize="name=PaleoMap;title=Paleo Map"/>
-                </row> 
-                <row>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/> 
-                </row>
-                <row>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
-                </row>
-                <row>
-                    <cell type="subview" viewname="Collectors" id="12" name="collectors" colspan="12" rows="3"/>
-                </row>
-            </rows>
-        </viewdef>
-
-        <viewdef
-            type="form"
-            name="CollectingEvent"
-            class="edu.ku.brc.specify.datamodel.CollectingEvent"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Collecting Event]]></desc>
-            
-            <columnDef>100px,2px,200px,5px,90px,2px,210px,5px,96px,2px,115px,0px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,240px,5px,100px,2px,215px,5px,106px,2px,125px,0px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,251px,5px,130px,2px,270px,5px,130px,2px,130px,0px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,max(p;190px),5px:g,p,2px,p,5px:g,p,2px,110px,p,p,p:g</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-            
-            <rows>
-                <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="stationFieldNumber" uitype="text"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="9"/>
-                    <cell type="field" id="9" name="startTime" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="method" uitype="combobox"/>
-                    <cell type="label" labelfor="10"/>
-                    <cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
-                    <cell type="label" labelfor="7"/>
-                    <cell type="field" id="7" name="endTime" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/> 
-                </row>
-                <row>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
-                </row>
-                <row>
-                    <cell type="subview" viewname="Collectors" id="5" name="collectors" colspan="13" rows="3"/>
-                </row>
-                <row>
-                    <cell type="subview" viewname="CollectionObjectSub" id="11" colspan="13" rows="3" name="collectionObjects" initialize="addsearch=true"/>
-                </row>
-                <row>
-                    <cell type="separator" label="Attachments" colspan="13"/>
-                </row>
-                <row>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="collectingEventAttachments" colspan="13" initialize="btn=true;icon=CollectingEventAttachment"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="pcsh"/>
-                    <cell type="field" uitype="querycbx" id="pcsh" name="paleoContext" initialize="name=PaleoContext" colspan="10"/>
-                </row> 
-                <row>
-                 <cell type="subview" id="8" name="collectingEventAttribute" viewname="CollectingEventAttribute" colspan="13"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="10"/>
-                    <cell type="field" id="10" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip" colspan="5"/> 
-                    <cell type="label" labelfor="edv"/>
-                    <cell type="field" id="edv" name="endDateVerbatim" uitype="text"/>
-                    <cell type="label" labelfor="sdv"/>
-                    <cell type="field" id="sdv" name="startDateVerbatim" uitype="text"/>
-                </row>
-            <!--<row>
+				<row>
+					<cell type="label" labelfor="collectornr"/>
+					<cell type="field" id="collectornr" name="text1" uitype="text"/>
+					<cell type="label" labelfor="colltrip"/>
+					<cell type="field" id="colltrip" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip"/>
+					<cell type="label" labelfor="sitenrsrc"/>
+					<cell type="field" id="sitenrsrc" name="text2" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="8"/>
+					<cell type="field" id="8" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="13"/>
+					<cell type="field" id="13" name="verbatimDate" uitype="text" colspan="2"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="pcsh"/>
+					<cell type="field" uitype="querycbx" id="pcsh" name="paleoContext" initialize="name=PaleoContext" colspan="7"/>
+					<cell type="field" id="pm" name="this" uitype="plugin" initialize="name=PaleoMap;title=Paleo Map"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="Collectors" id="12" name="collectors" colspan="12" rows="3"/>
+				</row>
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Collecting Event</desc>
+			<columnDef>100px,2px,200px,5px,90px,2px,210px,5px,96px,2px,115px,0px,15px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,240px,5px,100px,2px,215px,5px,106px,2px,125px,0px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,251px,5px,130px,2px,270px,5px,130px,2px,130px,0px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,max(p;190px),5px:g,p,2px,p,5px:g,p,2px,110px,p,p,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="stationFieldNumber" uitype="text"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" uitype="plugin" name="this" initialize="name=PartialDateUI;df=startDate;tp=startDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="9"/>
+					<cell type="field" id="9" name="startTime" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="method" uitype="combobox"/>
+					<cell type="label" labelfor="10"/>
+					<cell type="field" id="10" uitype="plugin" name="this" initialize="name=PartialDateUI;df=endDate;tp=endDatePrecision" uifieldformatter="Date"/>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="endTime" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="locality" uitype="querycbx" initialize="name=Locality;title=Locality;clonebtn=true" colspan="10"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="Collectors" id="5" name="collectors" colspan="13" rows="3"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="CollectionObjectSub" id="11" colspan="13" rows="3" name="collectionObjects" initialize="addsearch=true"/>
+				</row>
+				<row>
+					<cell type="separator" label="Attachments" colspan="13"/>
+				</row>
+				<row>
+					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="collectingEventAttachments" colspan="13" initialize="btn=true;icon=CollectingEventAttachment"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="pcsh"/>
+					<cell type="field" uitype="querycbx" id="pcsh" name="paleoContext" initialize="name=PaleoContext" colspan="10"/>
+				</row>
+				<row>
+					<cell type="subview" id="8" name="collectingEventAttribute" viewname="CollectingEventAttribute" colspan="13"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="10"/>
+					<cell type="field" id="10" name="collectingTrip" uitype="querycbx" initialize="name=CollectingTrip;title=CollectingTrip" colspan="5"/>
+					<cell type="label" labelfor="edv"/>
+					<cell type="field" id="edv" name="endDateVerbatim" uitype="text"/>
+					<cell type="label" labelfor="sdv"/>
+					<cell type="field" id="sdv" name="startDateVerbatim" uitype="text"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="3"/>
                     <cell type="field" id="3" name="method" uitype="combobox"/>
                     <cell type="label" labelfor="13"/>
@@ -627,65 +532,50 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-
-        <viewdef
-            type="formtable"
-            name="Preparation Table"
-            class="edu.ku.brc.specify.datamodel.Preparation"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
-            <definition>Preparation</definition>
-        </viewdef>
-                
-        <viewdef
-            type="form"
-            name="Preparation"
-            class="edu.ku.brc.specify.datamodel.Preparation"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj"
-            useresourcelabels="true">
-            <desc><![CDATA[Preparation for Collection Object form.]]></desc>
-            <enableRules/>
-
-            <columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
-            <rowDef auto="true" cell="p" sep="2dlu"/>
-
-            <rows>
-                <row>
-                    <cell type="label" labelfor="7"/>
-                    <cell type="field" id="7" name="prepType" uitype="combobox" picklist="PrepType"/>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date"/>
-                    <cell type="field" id="isOnLoan" name="isOnLoan" uitype="checkbox" label="IS_ON_LOAN" readonly="true"/>
-                    <cell type="command" id="ShowLoansBtn" name="ShowLoansBtn" label="SHOW_INTERACTIONS" ignore="true"/>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="preparationAttachments" initialize="align=right;btn=true;icon=PreparationAttachment"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="countAmt" uitype="text"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="preparedByAgent" uitype="querycbx" initialize="name=Agent"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="desc"/>
-                    <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="6"/>
-                    <cell type="label" labelfor="t1"/>
-                    <cell type="field" id="t1" name="text1" uitype="text" colspan="3"/>
-                <!--<cell type="label" labelfor="t2"/>
+			</rows>
+		</viewdef>
+		<viewdef type="formtable" name="Preparation Table" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Preparation subform table for Collection Object form.</desc>
+			<definition>Preparation</definition>
+		</viewdef>
+		<viewdef type="form" name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
+			<desc>Preparation for Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,133px,5px,91px,2px,210px,5px,87px,2px,123px,2px,70px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,150px,5px,110px,2px,223px,5px,100px,2px,126px,2px,75px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,165px,5px,110px,2px,260px,5px,105px,2px,174px,2px,70px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g,5px:g,p,2px,p:g,10px,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="prepType" uitype="combobox" picklist="PrepType"/>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date"/>
+					<cell type="field" id="isOnLoan" name="isOnLoan" uitype="checkbox" label="IS_ON_LOAN" readonly="true"/>
+					<cell type="command" id="ShowLoansBtn" name="ShowLoansBtn" label="SHOW_INTERACTIONS" ignore="true"/>
+					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="preparationAttachments" initialize="align=right;btn=true;icon=PreparationAttachment"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="countAmt" uitype="text"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="preparedByAgent" uitype="querycbx" initialize="name=Agent"/>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="desc"/>
+					<cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="6"/>
+					<cell type="label" labelfor="t1"/>
+					<cell type="field" id="t1" name="text1" uitype="text" colspan="3"/>
+					<!--<cell type="label" labelfor="t2"/>
                     <cell type="field" id="t2" name="text2" uitype="text"/>-->
-                </row>
-                <row>
-                    <cell type="label" labelfor="rem"/>
-                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
-                </row> 
+				</row>
+				<row>
+					<cell type="label" labelfor="rem"/>
+					<cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
+				</row>
 				<!--
                 <row>
                     <cell type="subview" id="ms" viewname="MaterialSample" name="materialSamples" initialize="align=right;btn=true;icon=MaterialSample"/>
@@ -724,33 +614,25 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-        
-        <viewdef 
-            type="form" 
-            name="CollectionObjectCitation" 
-            class="edu.ku.brc.specify.datamodel.CollectionObjectCitation" 
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" 
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Form For CollectionObjectCitation]]></desc>
-
-            <columnDef>100px,2px,210px,515px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,215px,585px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,236px,664px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,p:g</columnDef>
-            <rowDef auto="true" sep="2px" cell="p"/>
-
-            <rows>
-              <row>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="referenceWork" uitype="querycbx" initialize="name=ReferenceWork;title=ReferenceWork"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="remarks" uitype="textareabrief" rows="2" colspan="2"/>
-                </row>
-                <!--<row>
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="CollectionObjectCitation" class="edu.ku.brc.specify.datamodel.CollectionObjectCitation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Form For CollectionObjectCitation</desc>
+			<columnDef>100px,2px,210px,515px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,215px,585px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,236px,664px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g,p:g</columnDef>
+			<rowDef auto="true" sep="2px" cell="p"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="referenceWork" uitype="querycbx" initialize="name=ReferenceWork;title=ReferenceWork"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="remarks" uitype="textareabrief" rows="2" colspan="2"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="9"/>
                     <cell type="field" id="9" name="createdByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
                     <cell type="label" labelfor="10"/>
@@ -762,42 +644,34 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-  
-        <viewdef
-            name="PaleoContext"
-            type="form"
-            class="edu.ku.brc.specify.datamodel.PaleoContext"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Paleocontext form.]]></desc>
-            <enableRules/>
-            
-            <columnDef>100px,2px,295px,5px,120px,2px,295px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,324px,5px,145px,2px,324px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,365px,5px,163px,2px,365px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
-            <rowDef auto="true" cell="p" sep="2dlu"/>
-            
-            <rows>
-                <row>
-                    <cell type="label" labelfor="pcn"/>
-                    <cell type="field" id="pcn" name="paleoContextName" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="lithoStrat" uitype="querycbx" initialize="name=LithoStrat"/> 
-                </row>
-                <row>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="chronosStrat" uitype="querycbx" initialize="name=ChronosStrat;displaydlg=ChronosStratDisplay;searchdlg=ChronosStratSearch" isrequired="false"/>
-                    <cell type="label" labelfor="t1"/>
-                    <cell type="field" id="t1" name="text1" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="remarks" uitype="textareabrief" rows="2" colspan="6"/>                    
-                </row>
-                <!--<row>
+			</rows>
+		</viewdef>
+		<viewdef name="PaleoContext" type="form" class="edu.ku.brc.specify.datamodel.PaleoContext" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Paleocontext form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,295px,5px,120px,2px,295px,0px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,324px,5px,145px,2px,324px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,365px,5px,163px,2px,365px,0px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="pcn"/>
+					<cell type="field" id="pcn" name="paleoContextName" uitype="text"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="lithoStrat" uitype="querycbx" initialize="name=LithoStrat"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="chronosStrat" uitype="querycbx" initialize="name=ChronosStrat;displaydlg=ChronosStratDisplay;searchdlg=ChronosStratSearch" isrequired="false"/>
+					<cell type="label" labelfor="t1"/>
+					<cell type="field" id="t1" name="text1" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="remarks" uitype="textareabrief" rows="2" colspan="6"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="5"/>
                     <cell type="field" id="5" name="chronosStratEnd" uitype="querycbx" initialize="name=ChronosStrat;displaydlg=ChronosStratDisplay;searchdlg=ChronosStratSearch" isrequired="false"/>
                     <cell type="label" labelfor="1"/>
@@ -842,38 +716,30 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-                
-        <viewdef
-            name="SubPaleoContext"
-            type="form"
-            class="edu.ku.brc.specify.datamodel.PaleoContext"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Stratigraphy subform within Collection Object form.]]></desc>
-            <enableRules/>
-            
-            <columnDef>100px,2px,195px,5px,59px,2px,195px,5px,67px,2px,195px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,210px,5px,74px,2px,210px,5px,82px,2px,210px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,236px,5px,82px,2px,236px,5px,96px,2px,236px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g,0px</columnDef>
-            <rowDef auto="true" cell="p" sep="2dlu"/>
-            
-            <rows>
-                <row>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="chronosStrat" uitype="querycbx" initialize="name=ChronosStrat;displaydlg=ChronosStratDisplay;searchdlg=ChronosStratSearch" isrequired="false"/>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="bioStrat" uitype="querycbx" initialize="name=BioStrat;displaydlg=BioStratDisplay;searchdlg=BioStratSearch" isrequired="false"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="lithoStrat" uitype="querycbx" initialize="name=LithoStrat"/> 
-                </row>
-                <row>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>                    
-                </row>
-                <!--<row>
+			</rows>
+		</viewdef>
+		<viewdef name="SubPaleoContext" type="form" class="edu.ku.brc.specify.datamodel.PaleoContext" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Stratigraphy subform within Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,195px,5px,59px,2px,195px,5px,67px,2px,195px,0px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,210px,5px,74px,2px,210px,5px,82px,2px,210px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,236px,5px,82px,2px,236px,5px,96px,2px,236px,0px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g,5px:g,p,2px,p:g,0px</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="chronosStrat" uitype="querycbx" initialize="name=ChronosStrat;displaydlg=ChronosStratDisplay;searchdlg=ChronosStratSearch" isrequired="false"/>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="bioStrat" uitype="querycbx" initialize="name=BioStrat;displaydlg=BioStratDisplay;searchdlg=BioStratSearch" isrequired="false"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="lithoStrat" uitype="querycbx" initialize="name=LithoStrat"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="remarks" uitype="textareabrief" rows="2" colspan="10"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="bd"/>
                     <cell type="field" id="bd" name="bottomDistance" uitype="text"/>
                     <cell type="label" labelfor="2"/>
@@ -917,57 +783,49 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-        
-        <viewdef
-            type="form"
-            name="PaleoAttributes"
-            class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Form For OtherIdentifier]]></desc>
-            
-            <columnDef>100px,2px,115px,5px,75px,2px,115px,5px,109px,2px,115px,5px,60px,2px,115px,0px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,120px,5px,95px,2px,120px,5px,130px,2px,120px,5px,74px,2px,120px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,140px,5px,95px,2px,140px,5px,135px,2px,140px,5px,84px,2px,145px,0px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
-            <rowDef auto="true" sep="2px" cell="p"/>
-
-            <rows>
-                <row>
-                    <cell type="label" labelfor="bd"/>
-                    <cell type="field" id="bd" name="bottomDistance" uitype="text"/>
-                    <cell type="label" labelfor="td"/>
-                    <cell type="field" id="td" name="topDistance" uitype="text"/>
-                    <cell type="label" labelfor="du"/>
-                    <cell type="field" id="du" name="distanceUnits" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="pd"/>
-                    <cell type="field" id="pd" name="positionState" uitype="text"/>
-                    <cell type="label" labelfor="dir"/>
-                    <cell type="field" id="dir" name="direction" uitype="text"/>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="text1" uitype="text"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="text2" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="text3" uitype="text"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="text4" uitype="text"/>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" name="text5" uitype="text"/>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="text6" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="22"/>
-                    <cell type="field" id="22" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
-                </row> 
-              <!--<row>
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="PaleoAttributes" class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Form For OtherIdentifier</desc>
+			<columnDef>100px,2px,115px,5px,75px,2px,115px,5px,109px,2px,115px,5px,60px,2px,115px,0px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,120px,5px,95px,2px,120px,5px,130px,2px,120px,5px,74px,2px,120px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,140px,5px,95px,2px,140px,5px,135px,2px,140px,5px,84px,2px,145px,0px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px</columnDef>
+			<rowDef auto="true" sep="2px" cell="p"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="bd"/>
+					<cell type="field" id="bd" name="bottomDistance" uitype="text"/>
+					<cell type="label" labelfor="td"/>
+					<cell type="field" id="td" name="topDistance" uitype="text"/>
+					<cell type="label" labelfor="du"/>
+					<cell type="field" id="du" name="distanceUnits" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="pd"/>
+					<cell type="field" id="pd" name="positionState" uitype="text"/>
+					<cell type="label" labelfor="dir"/>
+					<cell type="field" id="dir" name="direction" uitype="text"/>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="text1" uitype="text"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="text2" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="text3" uitype="text"/>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="text4" uitype="text"/>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="text5" uitype="text"/>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="text6" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="22"/>
+					<cell type="field" id="22" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="7"/>
                     <cell type="field" id="7" name="text7" uitype="text"/>
                     <cell type="label" labelfor="20"/>
@@ -1116,180 +974,149 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-                 
-        <viewdef
-            type="formtable"
-            name="AccessionItems Table"
-            class="edu.ku.brc.specify.datamodel.CollectionObject"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Accession Items]]></desc>
-            <definition>AccessionItems</definition>
-        </viewdef>
-        
-        <viewdef
-              type="form"
-              name="AccessionItems"
-              class="edu.ku.brc.specify.datamodel.CollectionObject"
-              gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-              settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-              <desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
-              <enableRules/>
-              
-              <columnDef>105px,2px,120px,5px,100px,2px,95px,5px,102px,2px,95px,5px,97px,2px,95px,p:g</columnDef>
-              <columnDef os="lnx">115px,2px,117px,5px,110px,2px,105px,5px,121px,2px,105px,5px,116px,2px,105px,p:g</columnDef>
-              <columnDef os="mac">130px,2px,130px,5px,118px,2px,130px,5px,121px,2px,130px,5px,120px,2px,130px,p:g</columnDef>
-              <columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
-              <rowDef auto="true" cell="p" sep="2px"/>
-		  
-              <rows>
-                <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="altCatalogNumber" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="collection.collectionName" uitype="dsptextfield"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="projectNumber" uitype="text"/>
-                </row>
-             </rows>
-        </viewdef>
-        
-        <viewdef
-            type="formtable"
-            name="CollectionObjectSub Table"
-            class="edu.ku.brc.specify.datamodel.CollectionObject"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Collection Object subform table for appraisal and Project forms.]]></desc>
-            <definition>CollectionObjectSub</definition>
-        </viewdef>
-        
-        <viewdef
-              type="form"
-              name="CollectionObjectSub"
-              class="edu.ku.brc.specify.datamodel.CollectionObject"
-              gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-              settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-              <desc><![CDATA[The Collection Object Subform for appraisal and project forms.]]></desc>
-              <enableRules/>
-              
-              <columnDef>100px,2px,120px,5px,100px,2px,98px,5px,95px,2px,98px,5px,95px,2px,98px,p:g</columnDef>
-              <columnDef os="lnx">115px,2px,152px,5px,107px,2px,100px,5px,110px,2px,100px,5px,110px,2px,100px,p:g</columnDef>
-              <columnDef os="mac">130px,2px,150px,5px,127px,2px,121px,5px,120px,2px,121px,5px,119px,2px,121px,p:g</columnDef>
-              <columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
-              <rowDef auto="true" cell="p" sep="2px"/>
-		  
-                <rows>
-                <row>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="altCatalogNumber" uitype="text"/>
-                    <cell type="label" labelfor="3"/>
-                    <cell type="field" id="3" name="collection.collectionName" uitype="dsptextfield"/>
-                    <cell type="label" labelfor="4"/>
-                    <cell type="field" id="4" name="projectNumber" uitype="text"/>
-                </row>
-             </rows>
-        </viewdef>
-        
-        <viewdef
-                type="form"
-                name="Locality"
-                class="edu.ku.brc.specify.datamodel.Locality"
-                gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-                settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[Locality]]></desc>
-
-            <columnDef>100px,2px,90px,5px,90px,2px,90px,5px,105px,2px,126px,5px,105px,2px,98px,0px,15px,p:g</columnDef>
-            <columnDef os="lnx">115px,2px,120px,5px,94px,2px,100px,5px,115px,2px,110px,5px,125px,2px,115px,0px,15px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,120px,5px,116px,2px,120px,5px,137px,2px,120px,5px,146px,2px,120px,0px,15px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(3),5px:g,p,2px,p:g(3),5px:g,p,2px,p:g(3),5px:g,p,2px,p:g(3),0px,p,p:g</columnDef>
-            <rowDef auto="true" cell="p" sep="2dlu"/>
-            <enableRules>
-                <rule id="georef"><![CDATA[localityName.isNotEmpty() && geography.isNotEmpty()]]></rule>
-            </enableRules>
-
-            <rows>
-                <row>
-                    <cell type="label" labelfor="localityName"/>
-                    <cell type="field" id="localityName" name="localityName" uitype="text" colspan="14"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="geography"/>
-                    <cell type="field" id="geography" name="geography" uitype="querycbx" initialize="name=Geography" colspan="14"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="5"/>
-                    <cell type="field" id="5" name="this" uitype="plugin" initialize="name=LatLonUI" colspan="11"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="2"/>
-                    <cell type="field" id="2" name="datum" uitype="text" colspan="3"/>
-                    <cell type="label" label=""/>
-                    <cell type="label" labelfor="6"/>
-                    <cell type="field" id="6" name="latLongMethod" uitype="text" colspan="3"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="np"/>
-                    <cell type="field" id="np" name="namedPlace" uitype="text" colspan="5"/>
-                    <cell type="label" labelfor="rnp" colspan="3"/>
-                    <cell type="field" id="rnp" name="relationToNamedPlace" uitype="text"/><!--
+			</rows>
+		</viewdef>
+		<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Accession Items</desc>
+			<definition>AccessionItems</definition>
+		</viewdef>
+		<viewdef name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" type="form" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>The Collection Object Subform for Accessions.</desc>
+			<enableRules/>
+			<columnDef>105px,2px,120px,5px,100px,2px,95px,5px,102px,2px,95px,5px,97px,2px,95px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,117px,5px,110px,2px,105px,5px,121px,2px,105px,5px,116px,2px,105px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,130px,5px,118px,2px,130px,5px,121px,2px,130px,5px,120px,2px,130px,p:g</columnDef>
+			<columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="altCatalogNumber" uitype="text"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="collection.collectionName" uitype="dsptextfield"/>
+					<!--<cell type="label" labelfor="4"/>
+			<!<cell type="field" id="4" name="projectNumber" uitype="text"/>-->
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="currentDetermination.preferredTaxon.fullName" uitype="dsptextfield"/>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="currentDetermination.typeStatusName" uitype="dsptextfield"/>
+				</row>
+			</rows>
+		</viewdef>
+		<viewdef type="formtable" name="CollectionObjectSub Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Collection Object subform table for appraisal and Project forms.</desc>
+			<definition>CollectionObjectSub</definition>
+		</viewdef>
+		<viewdef type="form" name="CollectionObjectSub" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>The Collection Object Subform for appraisal and project forms.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,120px,5px,100px,2px,98px,5px,95px,2px,98px,5px,95px,2px,98px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,152px,5px,107px,2px,100px,5px,110px,2px,100px,5px,110px,2px,100px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,150px,5px,127px,2px,121px,5px,120px,2px,121px,5px,119px,2px,121px,p:g</columnDef>
+			<columnDef os="exp">p,2px,min(p;150px),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="altCatalogNumber" uitype="text"/>
+					<cell type="label" labelfor="3"/>
+					<cell type="field" id="3" name="collection.collectionName" uitype="dsptextfield"/>
+					<cell type="label" labelfor="4"/>
+					<cell type="field" id="4" name="projectNumber" uitype="text"/>
+				</row>
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="Locality" class="edu.ku.brc.specify.datamodel.Locality" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>Locality</desc>
+			<columnDef>100px,2px,90px,5px,90px,2px,90px,5px,105px,2px,126px,5px,105px,2px,98px,0px,15px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,120px,5px,94px,2px,100px,5px,115px,2px,110px,5px,125px,2px,115px,0px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,120px,5px,116px,2px,120px,5px,137px,2px,120px,5px,146px,2px,120px,0px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g(3),5px:g,p,2px,p:g(3),5px:g,p,2px,p:g(3),5px:g,p,2px,p:g(3),0px,p,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<enableRules>
+				<rule id="georef">localityName.isNotEmpty() &amp;&amp; geography.isNotEmpty()</rule>
+			</enableRules>
+			<rows>
+				<row>
+					<cell type="label" labelfor="localityName"/>
+					<cell type="field" id="localityName" name="localityName" uitype="text" colspan="14"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="geography"/>
+					<cell type="field" id="geography" name="geography" uitype="querycbx" initialize="name=Geography" colspan="14"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="5"/>
+					<cell type="field" id="5" name="this" uitype="plugin" initialize="name=LatLonUI" colspan="11"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="datum" uitype="text" colspan="3"/>
+					<cell type="label" label=""/>
+					<cell type="label" labelfor="6"/>
+					<cell type="field" id="6" name="latLongMethod" uitype="text" colspan="3"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="np"/>
+					<cell type="field" id="np" name="namedPlace" uitype="text" colspan="5"/>
+					<cell type="label" labelfor="rnp" colspan="3"/>
+					<cell type="field" id="rnp" name="relationToNamedPlace" uitype="text"/>
+					<!--
                     <cell type="label" labelfor="oeu"/>
                     <cell type="field" id="oeu" name="originalElevationUnit" uitype="text"/>-->
-                </row> 
-                <row>
-                    <cell type="label" labelfor="rem"/>
-                    <cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
-                <!--<cell type="label" labelfor="sn"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="rem"/>
+					<cell type="field" id="rem" name="remarks" uitype="textareabrief" rows="2" colspan="14"/>
+					<!--<cell type="label" labelfor="sn"/>
                     <cell type="field" id="sn" name="shortName" uitype="text"/>-->
-                </row>
-                <row>
-                    <cell type="subview" id="7" name="geoCoordDetails" viewname="GeoCoordDetail" colspan="17"/>
-                </row>
-                <row>
-                    <cell type="subview" id="8" name="localityDetails" viewname="LocalityDetail" colspan="17"/>
-                </row>
-                <row>
-                    <cell type="separator" label="Elevation" colspan="17"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="9"/>
-                    <cell type="field" id="9" name="minElevation" uitype="text"/>
-                    <cell type="label" labelfor="10"/>
-                    <cell type="field" id="10" name="maxElevation" uitype="text"/>
-                    <cell type="label" labelfor="11"/>
-                    <cell type="field" id="11" name="elevationMethod" uitype="text"/>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="elevationAccuracy" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="separator" label="Plugins" colspan="17"/>
-                </row>
-                <row>
-                    <cell type="panel" id="outerPanel" name="outerPanel" coldef="p,f:p:g,p,f:p:g,p,f:p:g,p,f:p:g" rowdef="p" colspan="12">
-                        <rows>
-                            <row>
-                                <cell type="label" label=" "/>
-                                <cell type="field" id="georef" name="this" uitype="plugin" initialize="name=LocalityGeoRef;title=Geo Ref;geoid=geography;locid=localityName;llid=5" colspan="1"/>
-                                <cell type="field" id="ge" name="this" uitype="plugin" initialize="name=LocalityGoogleEarth;title=Google Earth;watch=5" colspan="1"/>
-                            </row>
-                        </rows>
-                    </cell>
-                </row>
-                <row>
-                    <cell type="separator" label="Attachments" colspan="17"/>
-                </row>
-                <row>
-                    <cell type="subview" id="attachments" viewname="ObjectAttachment" name="localityAttachments" colspan="3" initialize="btn=true;icon=LocalityAttachment"/>
-                    <cell type="label" labelfor="guid"/>
-                    <cell type="field" id="guid" name="guid" uitype="text" colspan="5" readonly="true"/>
-                </row>
-                <!--<row>
+				</row>
+				<row>
+					<cell type="subview" id="7" name="geoCoordDetails" viewname="GeoCoordDetail" colspan="17"/>
+				</row>
+				<row>
+					<cell type="subview" id="8" name="localityDetails" viewname="LocalityDetail" colspan="17"/>
+				</row>
+				<row>
+					<cell type="separator" label="Elevation" colspan="17"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="9"/>
+					<cell type="field" id="9" name="minElevation" uitype="text"/>
+					<cell type="label" labelfor="10"/>
+					<cell type="field" id="10" name="maxElevation" uitype="text"/>
+					<cell type="label" labelfor="11"/>
+					<cell type="field" id="11" name="elevationMethod" uitype="text"/>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="elevationAccuracy" uitype="text"/>
+				</row>
+				<row>
+					<cell type="separator" label="Plugins" colspan="17"/>
+				</row>
+				<row>
+					<cell type="panel" id="outerPanel" name="outerPanel" coldef="p,f:p:g,p,f:p:g,p,f:p:g,p,f:p:g" rowdef="p" colspan="12">
+						<rows>
+							<row>
+								<cell type="label" label=" "/>
+								<cell type="field" id="georef" name="this" uitype="plugin" initialize="name=LocalityGeoRef;title=Geo Ref;geoid=geography;locid=localityName;llid=5" colspan="1"/>
+								<cell type="field" id="ge" name="this" uitype="plugin" initialize="name=LocalityGoogleEarth;title=Google Earth;watch=5" colspan="1"/>
+							</row>
+						</rows>
+					</cell>
+				</row>
+				<row>
+					<cell type="separator" label="Attachments" colspan="17"/>
+				</row>
+				<row>
+					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="localityAttachments" colspan="3" initialize="btn=true;icon=LocalityAttachment"/>
+					<cell type="label" labelfor="guid"/>
+					<cell type="field" id="guid" name="guid" uitype="text" colspan="5" readonly="true"/>
+				</row>
+				<!--<row>
                     <cell type="subview" id="10" viewname="LocalityCitation" name="localityCitations" colspan="12"/>
                 </row>
                 <row>
@@ -1321,64 +1148,56 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-
-
-        <viewdef
-            type="form"
-            name="LocalityDetail"
-            class="edu.ku.brc.specify.datamodel.LocalityDetail"
-            gettable="edu.ku.brc.af.ui.forms.DataGetterForObj"
-            settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
-            <desc><![CDATA[LocalityDetail subform for Locality]]></desc>
-            
-            <columnDef>100px,2px,100px,2px,120px,2px,120px,2px,100px,2px,120px,2px,90px,2px,120px,p:g</columnDef>
-            <columnDef os="lnx">113px,2px,125px,5px,110px,2px,125px,5px,74px,2px,115px,5px,105px,2px,115px,0px,p:g</columnDef>
-            <columnDef os="mac">130px,2px,120px,5px,136px,2px,140px,5px,112px,2px,120px,5px,131px,2px,120px,p:g</columnDef>
-            <columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
-            <rowDef auto="true" cell="p" sep="2px"/>
-            
-            <rows>
-                <row><!--
+			</rows>
+		</viewdef>
+		<viewdef type="form" name="LocalityDetail" class="edu.ku.brc.specify.datamodel.LocalityDetail" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>LocalityDetail subform for Locality</desc>
+			<columnDef>100px,2px,100px,2px,120px,2px,120px,2px,100px,2px,120px,2px,90px,2px,120px,p:g</columnDef>
+			<columnDef os="lnx">113px,2px,125px,5px,110px,2px,125px,5px,74px,2px,115px,5px,105px,2px,115px,0px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,120px,5px,136px,2px,140px,5px,112px,2px,120px,5px,131px,2px,120px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2)</columnDef>
+			<rowDef auto="true" cell="p" sep="2px"/>
+			<rows>
+				<row>
+					<!--
                     <cell type="label" labelfor="3"/>
                     <cell type="field" id="3" name="township" uitype="text"/>
                     <cell type="label" labelfor="2"/>
                     <cell type="field" id="2" name="rangeDesc" uitype="text"/>-->
-                    <cell type="label" labelfor="t1"/>
-                    <cell type="field" id="t1" name="text1" uitype="text"/>
-                    <cell type="label" labelfor="t2"/>
-                    <cell type="field" id="t2" name="text2" uitype="text"/>
-                    <cell type="label" labelfor="1"/>
-                    <cell type="field" id="1" name="section" uitype="text"/>
-                    <cell type="label" labelfor="sp"/>
-                    <cell type="field" id="sp" name="sectionPart" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="wb"/>
-                    <cell type="field" id="wb" name="waterBody" uitype="text"/>
-                    <cell type="label" labelfor="plat"/>
-                    <cell type="field" id="plat" name="paleoLat" uitype="text"/>
-                    <cell type="label" labelfor="plng"/>
-                    <cell type="field" id="plng" name="paleoLng" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="sd"/>
-                    <cell type="field" id="sd" name="startDepth" uitype="text"/>
-                    <cell type="label" labelfor="sdu"/>
-                    <cell type="field" id="sdu" name="startDepthUnit" uitype="text"/>
-                    <cell type="label" labelfor="sdv"/>
-                    <cell type="field" id="sdv" name="startDepthVerbatim" uitype="text"/>
-                </row>
-                <row>
-                    <cell type="label" labelfor="ed"/>
-                    <cell type="field" id="ed" name="endDepth" uitype="text"/>
-                    <cell type="label" labelfor="edu"/>
-                    <cell type="field" id="edu" name="endDepthUnit" uitype="text"/>
-                    <cell type="label" labelfor="edv"/>
-                    <cell type="field" id="edv" name="endDepthVerbatim" uitype="text"/>
-                </row>
-                <!--<row>
+					<cell type="label" labelfor="t1"/>
+					<cell type="field" id="t1" name="text1" uitype="text"/>
+					<cell type="label" labelfor="t2"/>
+					<cell type="field" id="t2" name="text2" uitype="text"/>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="section" uitype="text"/>
+					<cell type="label" labelfor="sp"/>
+					<cell type="field" id="sp" name="sectionPart" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="wb"/>
+					<cell type="field" id="wb" name="waterBody" uitype="text"/>
+					<cell type="label" labelfor="plat"/>
+					<cell type="field" id="plat" name="paleoLat" uitype="text"/>
+					<cell type="label" labelfor="plng"/>
+					<cell type="field" id="plng" name="paleoLng" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="sd"/>
+					<cell type="field" id="sd" name="startDepth" uitype="text"/>
+					<cell type="label" labelfor="sdu"/>
+					<cell type="field" id="sdu" name="startDepthUnit" uitype="text"/>
+					<cell type="label" labelfor="sdv"/>
+					<cell type="field" id="sdv" name="startDepthVerbatim" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="ed"/>
+					<cell type="field" id="ed" name="endDepth" uitype="text"/>
+					<cell type="label" labelfor="edu"/>
+					<cell type="field" id="edu" name="endDepthUnit" uitype="text"/>
+					<cell type="label" labelfor="edv"/>
+					<cell type="field" id="edv" name="endDepthVerbatim" uitype="text"/>
+				</row>
+				<!--<row>
                     <cell type="label" labelfor="bm"/>
                     <cell type="field" id="bm" name="baseMeridian" uitype="text"/>
                     <cell type="label" labelfor="dra"/>
@@ -1403,7 +1222,8 @@
                     <cell type="field" id="n1" name="number1" uitype="text"/>
                     <cell type="label" labelfor="n2"/>
                     <cell type="field" id="n2" name="number2" uitype="text"/>
-                </row>--><!--
+                </row>-->
+				<!--
                 <row>
                     <cell type="label" labelfor="4"/>
                     <cell type="field" id="4" name="rangeDirection" uitype="text"/>
@@ -1450,8 +1270,140 @@
                     <cell type="label" labelfor="12"/>
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
-            </rows>
-        </viewdef>
-       
-    </viewdefs>
+			</rows>
+		</viewdef>
+		<viewdef name="Accession" class="edu.ku.brc.specify.datamodel.Accession" type="form" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+			<desc>The Accession form.</desc>
+			<enableRules/>
+			<columnDef>p,0px,190px,5px,130px,2px,141px,5px,110px,2px,140px,0px,15px,p:g</columnDef>
+			<columnDef os="lnx">135px,2px,200px,5px,135px,2px,153px,5px,125px,2px,153px,0px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,220px,5px,153px,2px,189px,5px,133px,2px,189px,0px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,p:g,5px:g,p,2px,p:g(2),5px:g,p,2px,p:g(2),0px,p,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="1px"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="accessionNumber" uitype="formattedtext"/>
+					<cell type="label" labelfor="32"/>
+					<cell type="field" id="32" name="text2" uitype="text" colspan="3"/>
+					<!--<cell type="label" labelfor="attachments"/>-->
+					<cell type="subview" id="attachments" viewname="ObjectAttachment" name="accessionAttachments" initialize="btn=true;icon=AccessionAttachment;hc=xxx"/>
+				</row>
+				<row>
+					<cell type="panel" id="acin" name="accessionInfo" coldef="p,2px,p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+						<rows>
+							<row>
+								<cell type="label" labelfor="31"/>
+								<cell type="field" id="31" name="text1" uitype="text"/>
+							</row>
+							<row>
+								<cell type="label" id="divLabel" label=" " initialize="align=right"/>
+								<cell type="field" id="4" name="divisionCBX" uitype="combobox" ignore="true"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="3"/>
+								<cell type="field" id="3" name="type" uitype="combobox"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="an1"/>
+								<cell type="field" id="an1" name="text4" uitype="text"/>
+							</row>
+						</rows>
+					</cell>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="remarks" uitype="textareabrief" rows="7" colspan="7"/>
+				</row>
+				<row>
+					<cell type="separator" label="" colspan="13"/>
+				</row>
+				<row>
+					<cell type="panel" id="acdt" name="accessionDetail" coldef="p,2px,p:g" rowdef="p,4px,p,4px,p,4px,p,4px,p" colspan="3">
+						<rows>
+							<row>
+								<cell type="label" labelfor="2"/>
+								<cell type="field" id="2" name="status" uitype="combobox"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="5"/>
+								<cell type="field" id="5" name="dateAccessioned" uitype="formattedtext" uifieldformatter="Date" default="today"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="6"/>
+								<cell type="field" id="6" name="dateReceived" uitype="formattedtext" uifieldformatter="Date" default="today"/>
+							</row>
+							<row>
+								<cell type="label" labelfor="33"/>
+								<cell type="field" id="33" name="text3" uitype="textareabrief" rows="5"/>
+							</row>
+						</rows>
+					</cell>
+					<cell type="subview" viewname="AccessionAgent" id="8" name="accessionAgents" desc="Agents" colspan="7" rows="3" defaulttype="table"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="28"/>
+					<cell type="field" id="28" name="accessionCondition" uitype="textareabrief" rows="2" colspan="10"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="AccessionAuthorization" id="9" desc="Authorization" name="accessionAuthorizations" colspan="13"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="rag"/>
+					<cell type="field" id="rag" name="repositoryAgreement" uitype="querycbx" initialize="name=RepositoryAgreement" colspan="10"/>
+				</row>
+				<row>
+					<cell type="subview" viewname="AccessionItems" id="25" desc="Collection Object" name="collectionObjects" colspan="13" rows="10" initialize="addsearch=true" defaulttype="table"/>
+				</row>
+				<row>
+					<cell type="separator" label="" colspan="13"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="10"/>
+					<cell type="field" id="10" name="modifiedByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
+					<cell type="label" labelfor="11"/>
+					<cell type="field" id="11" name="timestampModified" uitype="label" readonly="true"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="createdAgent"/>
+					<cell type="field" id="createdAgent" name="createdByAgent" uitype="label" readonly="true" uifieldformatter="Agent"/>
+					<cell type="label" labelfor="timestampCreated"/>
+					<cell type="field" id="timestampCreated" name="timestampCreated" uitype="label" readonly="true"/>
+				</row>
+				<!-- <row>
+          <cell type="label" labelfor="99"/>
+          <cell type="field" id="99" name="this" uitype="plugin" initialize="name=WebLinkButton;weblink=AccessionNumber"/>
+        </row>
+        <row>
+          <cell type="label" labelfor="26"/>
+          <cell type="field" id="26" name="dateAcknowledged" uitype="formattedtext" uifieldformatter="Date" default="today"/>
+        </row>
+        <row>
+          <cell type="label" labelfor="29"/>
+          <cell type="field" id="29" name="number1" uitype="text"/>
+          <cell type="label" labelfor="30"/>
+          <cell type="field" id="30" name="number2" uitype="text"/>
+        </row>
+        <row>
+          <cell type="field" id="34" uitype="checkbox" name="yesNo1" label="yesNo1"/>
+          <cell type="field" id="35" uitype="checkbox" name="yesNo2" label="yesNo2"/>
+        </row>
+        <row>
+          <cell type="label" labelfor="27"/>
+          <cell type="field" id="27" name="verbatimDate" uitype="text"/>
+        <row>
+          <cell type="subview" viewname="Appraisal" id="appr" name="appraisals" colspan="14"/>
+        </row>
+        <row>
+          <cell type="subview" id="addr" name="addressOfRecord" viewname="AddressOfRecord" colspan="14"/>
+        </row>
+        <row>
+          <cell type="subview" viewname="TreatmentEventForAccession" id="13" name="treatmentEvents" colspan="12" initialize="btn=true"/>
+        </row>
+              <row>
+                <cell type="label" labelfor="tv"/>
+                <cell type="field" id="tv" name="totalValue" uitype="text"/>
+              </row>
+        </row>-->
+			</rows>
+		</viewdef>
+	</viewdefs>
 </viewset>
