@@ -143,6 +143,8 @@
 				<row>
 					<cell type="label" labelfor="fn"/>
 					<cell type="field" id="fn" name="fieldNumber" uitype="text"/>
+					<cell type="label" labelfor="datasub"/>
+					<cell type="field" id="datasub" name="text3" uitype="text"/>
 				</row>
 				<row>
 					<cell type="label" label="" colspan="9"/>
@@ -339,6 +341,9 @@
 					<cell type="label" labelfor="t1"/>
 					<!-- Foraminifera Ecology Picklist -->
 					<cell type="field" id="t1" name="text1" uitype="combobox"/>
+					<cell type="label" labelfor="structure"/>
+					<!-- Foraminifera Structure Picklist -->
+					<cell type="field" id="structure" name="text2" uitype="combobox"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="12"/>
