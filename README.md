@@ -84,63 +84,7 @@ When a ticket is created you will then be able to track progress on our project 
 
 ## I need to (re)install Specify 6
 
-Remember that you can always access your data online, without having to install anything, using Specify7. See URLs above. 
-
-For features that are not yet, or not fully, supported in Specify 7, please follow the below instructions for installing Specify6: 
-
-**NOTE:** We're currently experiencing problems for users that are not employed at Copenhagen University. In order to be able to use Specify6 you need a VPN connection first and only registered employees or associates are allowed to do so. Please contact our office if you need to use Specify6 and we'll see what we can do.
-
-**NOTE:** When installing software on a Copenhagen University computer, remember to "Request Administrator Access". For more information on how to do so [read this guide](https://kunet.ku.dk/employee-guide/ITvejl/Admin%20by%20request%20-%20KUcomputer%20-%20Windows%2010.pdf). 
-
-### Download Java (64-bits) 
-
-If the correct version of Java hasn't already been installed on your system, please do so with below link: 
-
-https://java.com/en/download/
-
-Remember that you need the 64-bits version of Java for using the 64-bits version of Specify. At Copenhagen University, we're currently experiencing issues with an automated organisation-wide update uninstalling all versions of Java and the reinstalling only the 32-bits version. If one day, Specify6 stops working on your computer, please try to reinstall the correct version of Java. Alternatively, you can install the 32-bits version of Specify6. 
-
-### Download Specify6 
-
-You can download the right version here:  
-
-http://update.specifysoftware.org/6802/ 
-
-When you've finished installing start Specify6 to log in to the database. 
-
-**NOTE: Do NOT run the Specify Wizard!!!** That is only for creating a new database from scratch. You should run the ordinary Specify6 client.
-
-At the login screen, open the "More information" tab and enter the following info: 
-
-* Username: The username that was assigned to you by the Specify team
-* Password: Your password. Contact the team, if you've forgotten it. 
-* Database - The name of the database for your institution: 
-   * Copenhagen: NHMD
-   * Aarhus: NHMA
-   * Fur & Mors: Muserum
-   * Gram: MSJN
-   * Faxe: OESM
-   * Esbjerg: FIMUS
-   * Svendborg: Naturama
-   * Test: NHMDtest
-* Server: specify-db.science.domain
-* Port: 3306
-
-<img src="https://user-images.githubusercontent.com/10909008/158856731-1553a336-54e0-40f0-81c0-1aa0e80fb3d5.png" width="512">
-
-### Configure Master Key 
-
-Before you can log in, you need to configure the Master Key for security reasons. The Master Key is a long string of characters generated through encryption, which is needed by Specify6 to verify your identity. The easiest way to acquire your masterkey is by logging in to Specify7 using one of the links listed above. When you've logged in, you click on your username shown at the top right inside your window to summon the User Tools menu. Here you can click on "Generate Master Key" and enter your password again. 
-
-<img src="https://user-images.githubusercontent.com/10909008/158857981-a1137e71-04ac-467e-b0da-cbabe8a2b453.png" width="400">
-
-<img src="https://user-images.githubusercontent.com/10909008/158858077-84438d7a-93c8-41f4-be9e-7234113aec3b.png" width="400">
-
-Copy the Master Key that is generated using the key combination 'Ctrl' and 'C'. Back to Specify6, click on the button "Configure Master Key" and paste the copied Master Key into the respective field using the key combination 'Ctrl' and 'V'. 
-
-Now you can log on to Specify6!
-
-**NOTE:** If you aren't able to acquire your Master Key through Specify7, please contact the team. 
+Specify6 is no longer supported, unfortunately. If there are certain features from Specify6 that you believe the current version of Specify7 does not support, please let us know:  specify@snm.ku.dk 
 
 ## Why use Specify? 
 
