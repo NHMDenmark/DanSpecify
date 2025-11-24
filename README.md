@@ -11,6 +11,7 @@ This is the user guide with a brief and focused introduction to how to use vario
 1. [Labels & Reports](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/7.%20Labels%20%26%20Reports.md) (coming soon)
 1. [Importing Data (Workbench)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/8.%20Importing%20Data%20(Workbench).md)
 1. [Data Cleaning (OpenRefine)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/9.%20Data%20Cleaning.md) - (coming soon)
+1. [Batch Edit](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/10.%20Batch%20Edit.md)
 
 # Workshops 
 
