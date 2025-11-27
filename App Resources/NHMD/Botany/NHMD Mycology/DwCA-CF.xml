@@ -11,7 +11,7 @@
                 <field term="http://rs.tdwg.org/dwc/terms/institutionCode" stringId="1,23,26,96,94.institution.code" oper="8" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/collectionCode" stringId="1,23.collection.code" oper="0" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/datasetName" stringId="1.collectionobject.text3" oper="11" value="" isNot="false" isRelFld="false"/>
-                <field term="http://rs.tdwg.org/dwc/terms/catalogNumber" stringId="1,9-determinations,1.collectionobject.collectionObject"  value="" oper="1" isNot="false" isRelFld="true"  />
+                <field term="http://rs.tdwg.org/dwc/terms/catalogNumber" stringId="1.collectionobject." oper="8" value="" isNot="false" isRelFld="false"/>
                 <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers" stringId="1.collectionobject.altCatalogNumber" oper="12" value="" isNot="true" isRelFld="false"/>
                 <!-- Determination & Taxonomy -->
                 <field stringId="1,9-determinations.determination.isCurrent" oper="13" value="" isNot="false" isRelFld="false"/>

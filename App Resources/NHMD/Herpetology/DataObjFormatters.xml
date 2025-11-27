@@ -131,7 +131,7 @@
 	<format name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true">
 		<switch single="true">
 			<fields>
-				<field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
+				<field sep="NHMD" uifieldformatter="CatalogNumber" trimzeros="true">catalogNumber</field>
 			</fields>
 		</switch>
 	</format>
@@ -455,41 +455,48 @@
 			</fields>
 		</switch>
 	</format>
+	<format name="Attachment_mediaURL" title="Attachment_mediaURL" class="edu.ku.brc.specify.datamodel.Attachment" default="">
+		<switch single="true" field="isPublic">
+			<fields value="true">
+				<field sep="https://specify-media.science.ku.dk/fileget?coll=NHMD+Herpetology&amp;type=O&amp;filename=">attachmentLocation</field>
+			</fields>
+		</switch>
+	</format>
 	<aggregators>
-		<aggregator name="AccessionAgent" title="AccessionAgent" class="edu.ku.brc.specify.datamodel.AccessionAgent" default="true" separator="" ending="" format="AccessionAgent"/>
-		<aggregator name="AccessionAttachment" title="AccessionAttachment" class="edu.ku.brc.specify.datamodel.AccessionAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="AccessionAuthorization" title="AccessionAuthorization" class="edu.ku.brc.specify.datamodel.AccessionAuthorization" default="true" separator="" ending="" format="AccessionAuthorization"/>
-		<aggregator name="Address" title="Address" class="edu.ku.brc.specify.datamodel.Address" default="true" separator="" ending="" format="Address"/>
-		<aggregator name="AgentAttachment" title="AgentAttachment" class="edu.ku.brc.specify.datamodel.AgentAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="Author" title="Author" class="edu.ku.brc.specify.datamodel.Author" default="true" separator="" ending="" format="Author" orderfieldname="orderNumber"/>
-		<aggregator name="BorrowAttachment" title="BorrowAttachment" class="edu.ku.brc.specify.datamodel.BorrowAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="CollectingEventAttachment" title="CollectingEventAttachment" class="edu.ku.brc.specify.datamodel.CollectingEventAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator="" ending="" format="CollectionObject"/>
-		<aggregator name="CollectionObjectAttachment" title="CollectionObjectAttachment" class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="Collector" title="Collector" class="edu.ku.brc.specify.datamodel.Collector" default="true" separator="" ending="" format="Collector" orderfieldname="orderNumber"/>
-		<aggregator name="ConservDescriptionAttachment" title="ConservDescriptionAttachment" class="edu.ku.brc.specify.datamodel.ConservDescriptionAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="ConservEventAttachment" title="ConservEventAttachment" class="edu.ku.brc.specify.datamodel.ConservEventAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="DNASequenceAttachment" title="DNASequenceAttachment" class="edu.ku.brc.specify.datamodel.DNASequenceAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="DNASequencingRunAttachment" title="DNASequencingRunAttachment" class="edu.ku.brc.specify.datamodel.DNASequencingRunAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="Determination" title="Determination" class="edu.ku.brc.specify.datamodel.Determination" default="true" separator="" ending="" count="1" format="Determination"/>
+		<aggregator name="AccessionAgent" title="AccessionAgent" class="edu.ku.brc.specify.datamodel.AccessionAgent" default="true" separator="; " ending="" format="AccessionAgent"/>
+		<aggregator name="AccessionAttachment" title="AccessionAttachment" class="edu.ku.brc.specify.datamodel.AccessionAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="AccessionAuthorization" title="AccessionAuthorization" class="edu.ku.brc.specify.datamodel.AccessionAuthorization" default="true" separator="; " ending="" format="AccessionAuthorization"/>
+		<aggregator name="Address" title="Address" class="edu.ku.brc.specify.datamodel.Address" default="true" separator="; " ending="" format="Address"/>
+		<aggregator name="AgentAttachment" title="AgentAttachment" class="edu.ku.brc.specify.datamodel.AgentAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="Author" title="Author" class="edu.ku.brc.specify.datamodel.Author" default="true" separator="; " ending="" format="Author" orderfieldname="orderNumber"/>
+		<aggregator name="BorrowAttachment" title="BorrowAttachment" class="edu.ku.brc.specify.datamodel.BorrowAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="CollectingEventAttachment" title="CollectingEventAttachment" class="edu.ku.brc.specify.datamodel.CollectingEventAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator="; " ending="" format="CollectionObject"/>
+		<aggregator name="CollectionObjectAttachment" title="CollectionObjectAttachment" class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="Collector" title="Collector" class="edu.ku.brc.specify.datamodel.Collector" default="true" separator="; " ending="" format="Collector" orderfieldname="orderNumber"/>
+		<aggregator name="ConservDescriptionAttachment" title="ConservDescriptionAttachment" class="edu.ku.brc.specify.datamodel.ConservDescriptionAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="ConservEventAttachment" title="ConservEventAttachment" class="edu.ku.brc.specify.datamodel.ConservEventAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="DNASequenceAttachment" title="DNASequenceAttachment" class="edu.ku.brc.specify.datamodel.DNASequenceAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="DNASequencingRunAttachment" title="DNASequencingRunAttachment" class="edu.ku.brc.specify.datamodel.DNASequencingRunAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="Determination" title="Determination" class="edu.ku.brc.specify.datamodel.Determination" default="true" separator="; " ending="" count="1" format="Determination"/>
 		<aggregator name="DeterminationCitation" title="DeterminationCitation" class="edu.ku.brc.specify.datamodel.DeterminationCitation" default="true" separator=" | " ending="" count="1" format="DeterminationCitation"/>
 		<aggregator name="DwC Media" title="DwC Media" class="edu.ku.brc.specify.datamodel.Attachment" default="true" separator="|" ending="" count="0" format="Public Media"/>
-		<aggregator name="FieldNotebookAttachment" title="FieldNotebookAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="FieldNotebookPageAttachment" title="FieldNotebookPageAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookPageAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="FieldNotebookPageSetAttachment" title="FieldNotebookPageSetAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookPageSetAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="FundingAgent" title="FundingAgent" class="edu.ku.brc.specify.datamodel.FundingAgent" default="true" separator="" ending="" format="FundingAgent" orderfieldname="orderNumber"/>
-		<aggregator name="GiftAttachment" title="GiftAttachment" class="edu.ku.brc.specify.datamodel.GiftAttachment" default="true" separator="" ending="" format="LoanAgent"/>
-		<aggregator name="LoanAgent" title="LoanAgent" class="edu.ku.brc.specify.datamodel.LoanAgent" default="true" separator="" ending="" format="LoanAgent"/>
-		<aggregator name="LoanAttachment" title="LoanAttachment" class="edu.ku.brc.specify.datamodel.LoanAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="LoanPrep" title="LoanPrep" class="edu.ku.brc.specify.datamodel.LoanPreparation" default="true" separator="" ending="" count="0" format="LoanPreparation"/>
-		<aggregator name="LoanReturnPrep" title="Loan Return Prep" class="edu.ku.brc.specify.datamodel.LoanReturnPreparation" default="true" separator="" ending="" count="0" format="LoanReturnPreparation"/>
-		<aggregator name="LocalityAttachment" title="LocalityAttachment" class="edu.ku.brc.specify.datamodel.LocalityAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="PermitAttachment" title="PermitAttachment" class="edu.ku.brc.specify.datamodel.PermitAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="Preparation" title="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" default="true" separator="" ending="" format="Preparation"/>
-		<aggregator name="PreparationAttachment" title="PreparationAttachment" class="edu.ku.brc.specify.datamodel.PreparationAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="ReferenceWorkAttachment" title="ReferenceWorkAttachment" class="edu.ku.brc.specify.datamodel.ReferenceWorkAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="RepositoryAgreementAttachment" title="RepositoryAgreementAttachment" class="edu.ku.brc.specify.datamodel.RepositoryAgreementAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="TaxonAttachment" title="TaxonAttachment" class="edu.ku.brc.specify.datamodel.TaxonAttachment" default="true" separator="" ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="FieldNotebookAttachment" title="FieldNotebookAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="FieldNotebookPageAttachment" title="FieldNotebookPageAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookPageAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="FieldNotebookPageSetAttachment" title="FieldNotebookPageSetAttachment" class="edu.ku.brc.specify.datamodel.FieldNotebookPageSetAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="FundingAgent" title="FundingAgent" class="edu.ku.brc.specify.datamodel.FundingAgent" default="true" separator="; " ending="" format="FundingAgent" orderfieldname="orderNumber"/>
+		<aggregator name="GiftAttachment" title="GiftAttachment" class="edu.ku.brc.specify.datamodel.GiftAttachment" default="true" separator="; " ending="" format="LoanAgent"/>
+		<aggregator name="LoanAgent" title="LoanAgent" class="edu.ku.brc.specify.datamodel.LoanAgent" default="true" separator="; " ending="" format="LoanAgent"/>
+		<aggregator name="LoanAttachment" title="LoanAttachment" class="edu.ku.brc.specify.datamodel.LoanAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="LoanPrep" title="LoanPrep" class="edu.ku.brc.specify.datamodel.LoanPreparation" default="true" separator="; " ending="" count="0" format="LoanPreparation"/>
+		<aggregator name="LoanReturnPrep" title="Loan Return Prep" class="edu.ku.brc.specify.datamodel.LoanReturnPreparation" default="true" separator="; " ending="" count="0" format="LoanReturnPreparation"/>
+		<aggregator name="LocalityAttachment" title="LocalityAttachment" class="edu.ku.brc.specify.datamodel.LocalityAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="PermitAttachment" title="PermitAttachment" class="edu.ku.brc.specify.datamodel.PermitAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="Preparation" title="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" default="true" separator="; " ending="" format="Preparation"/>
+		<aggregator name="PreparationAttachment" title="PreparationAttachment" class="edu.ku.brc.specify.datamodel.PreparationAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="ReferenceWorkAttachment" title="ReferenceWorkAttachment" class="edu.ku.brc.specify.datamodel.ReferenceWorkAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="RepositoryAgreementAttachment" title="RepositoryAgreementAttachment" class="edu.ku.brc.specify.datamodel.RepositoryAgreementAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="TaxonAttachment" title="TaxonAttachment" class="edu.ku.brc.specify.datamodel.TaxonAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="other_identifiers" title="other_identifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier" default="true" separator=", " ending="" count="0" format="other_identifier"/>
 		<aggregator name="Determiner" title="Determiner" class="edu.ku.brc.specify.datamodel.Determiner" default="true" separator=";" ending="" format=""/>
 	</aggregators>

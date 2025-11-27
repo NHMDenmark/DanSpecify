@@ -147,7 +147,7 @@
 	<format name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true">
 		<switch single="true">
 			<fields>
-				<field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
+				<field sep="NHMD" uifieldformatter="CatalogNumber" trimzeros="true">catalogNumber</field>
 			</fields>
 		</switch>
 	</format>

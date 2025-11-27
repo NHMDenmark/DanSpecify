@@ -1,56 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <channel>
-    <title>NHMD Collections DarwinCore RSS Feed</title>  
-    <description>RSS Feed for collection data of the Natural Museum of Denmark, Copenhagen</description>
-    <item collectionId="720897" userId="64" notifyUserId="64" definition="DwCA-BC" metadata="DwCA-BC.eml" days="1" filename="DwCA-BC.zip" publish="true">
-      <title>BHMD Biocultural Botany Collection</title>
-      <id>2dd8f3fe-da1e-4a97-9e84-9a652845913d</id>
-    </item>
-    <item collectionId="589825" userId="64" notifyUserId="64" definition="DwCA-HP" metadata="DwCA-HP.eml" days="1" filename="DwCA-HP.zip" publish="true">
-      <title>NHMD Herpetology Collection</title>
-      <id>46055d79-4602-4bc6-99bc-e7036054a4ec</id>
-    </item>
-    <item collectionId="688130" userId="71" notifyUserId="64" definition="DwCA-CB" metadata="DwCA-CB.eml" days="1" filename="DwCA-CB.zip" publish="true">
-      <title>NHMD Vascular Plants Collection</title>
-      <id>641ebd3f-f8d5-460b-86c4-e2ffff4fd952</id>
-    </item>
-    <item collectionId="753665" userId="64" notifyUserId="64" definition="DwCA-DK" metadata="DwCA-DK.eml" days="1" filename="DwCA-DK.zip" publish="true">
-      <title>NHMD Danekræ Fossil Trove Collection</title>
-      <id>d9c16c4c-7102-4783-9225-4eb0ab079eb2</id>
-    </item>
-    <item collectionId="4" userId="64" notifyUserId="64" definition="DwCA-VP" metadata="DwCA-VP.eml" days="1" filename="DwCA-VP.zip" publish="true">
-      <title>NHMD Vertebrate Paleontology Collection</title>
-      <id>4159fce0-b720-425d-8020-7c76d1636490</id>
-    </item>
-    <item collectionId="491522" userId="64" notifyUserId="64" definition="DwCA-MM" metadata="DwCA-MM.eml" days="1" filename="DwCA-MM.zip" publish="true">
-      <title>NHMD Mammalogy Collection</title>
-      <id>c37f3fc6-919b-4e82-aa9f-fc815512422e</id>
-    </item>
-    <item collectionId="425985" userId="64" notifyUserId="64" definition="DwCA-IV" metadata="DwCA-IV.eml" days="1" filename="DwCA-IV.zip" publish="true">
-      <title>NHMD Invertebrate Zoology Collection</title>
-      <id>83e2601a-a820-11eb-bcbc-0242ac130002</id>
-    </item>
-    <item collectionId="458754" userId="64" notifyUserId="64" definition="DwCA-AV" metadata="DwCA-AV.eml" days="1" filename="DwCA-AV.zip" publish="true">
-      <title>NHMD Ornithology Collection</title>
-      <id>fc69d180-c4f9-11eb-8529-0242ac130003</id>
-    </item>
-    <item collectionId="786432" userId="64" notifyUserId="64" definition="DwCA-AM" metadata="DwCA-AM.eml" days="1" filename="DwCA-AM.zip" publish="true">
-      <title>NHMD Amber Collection</title>
-      <id>a5325c5f-0705-4d07-86d5-6dd79050739a</id>
-    </item>
-    <item collectionId="163841" userId="64" notifyUserId="64" definition="DwCA EN" metadata="DwCA EN.eml" days="1" filename="DwCA-EN.zip" publish="true">
-      <title>NHMD Entomology Collection</title>
-      <id>40d23ef2-c4f5-11eb-8529-0242ac130003</id>
-    </item>
-    <item collectionId="557056" userId="64" notifyUserId="64" definition="DwCA-QZ" metadata="DwCA-QZ.eml" days="1" filename="DwCA-QZ.zip" publish="true">
-      <title>NHMD Quaternary Zoology</title>
-      <id>d5aab4ae-2a87-4ba9-8ffb-b504f7a44611</id>
-    </item>
-    <item collectionId="851970" userId="64" notifyUserId="64" definition="DwCA-PI" metadata="DwCA-PI.eml" days="1" filename="DwCA-PI.zip" publish="true">
-      <title>NHMD Ichthyology Collection</title>
-      <id>4e763ba7-f3b0-4896-823d-e0c067c17b3c</id>
-    </item>
-	<item collectionId="884736" userId="71" notifyUserId="71" definition="DwCA-CF" metadata="DwCA-CF.eml" days="1" filename="DwCA-CF.zip" publish="true">
-      <title>NHMD Mycology Collection</title>
-      <id>f7b7749f-d243-4f64-9fc1-b9b34c690acb</id>
-    </item>
+	<title>NHMD Collections DarwinCore RSS Feed</title>
+	<description>RSS Feed for collection data of the Natural Museum of Denmark, Copenhagen</description>
+	<item collectionid="884736" userid="71" notifyuserid="71" definition="DwCA-CF" metadata="DwCA-CF.eml" days="1" filename="DwCA-CF.zip" publish="true">
+		<title>NHMD Mycology Collection</title>
+		<id>f7b7749f-d243-4f64-9fc1-b9b34c690acb</id>
+	</item>
+	<item collectionid="720897" userid="64" notifyuserid="64" definition="DwCA-BC" metadata="DwCA-BC.eml" days="1" filename="DwCA-BC.zip" publish="true">
+		<title>BHMD Biocultural Botany Collection</title>
+		<id>2dd8f3fe-da1e-4a97-9e84-9a652845913d</id>
+	</item>
+  <item collectionid="589825" userid="64" notifyuserid="64" definition="DwCA-HP" metadata="DwCA-HP.eml" days="1" filename="DwCA-HP.zip" publish="true">
+		<title>NHMD Herpetology Collection</title>
+		<id>46055d79-4602-4bc6-99bc-e7036054a4ec</id>
+	</item>
+	<item collectionid="688130" userid="71" notifyuserid="71" definition="DwCA-CB" metadata="DwCA-CB.eml" days="1" filename="DwCA-CB.zip" publish="true">
+		<title>NHMD Vascular Plants Collection</title>
+		<id>641ebd3f-f8d5-460b-86c4-e2ffff4fd952</id>
+	</item>
+	<item collectionid="753665" userid="64" notifyuserid="64" definition="DwCA-DK" metadata="DwCA-DK.eml" days="1" filename="DwCA-DK.zip" publish="true">
+		<title>NHMD Danekræ Fossil Trove Collection</title>
+		<id>d9c16c4c-7102-4783-9225-4eb0ab079eb2</id>
+	</item>
+	<item collectionid="4" userid="64" notifyuserid="64" definition="DwCA-VP" metadata="DwCA-VP.eml" days="1" filename="DwCA-VP.zip" publish="true">
+		<title>NHMD Vertebrate Paleontology Collection</title>
+		<id>4159fce0-b720-425d-8020-7c76d1636490</id>
+	</item>
+	<item collectionid="491522" userid="64" notifyuserid="64" definition="DwCA-MM" metadata="DwCA-MM.eml" days="1" filename="DwCA-MM.zip" publish="true">
+		<title>NHMD Mammalogy Collection</title>
+		<id>c37f3fc6-919b-4e82-aa9f-fc815512422e</id>
+	</item>
+	<item collectionid="425985" userid="64" notifyuserid="64" definition="DwCA-IV" metadata="DwCA-IV.eml" days="1" filename="DwCA-IV.zip" publish="true">
+		<title>NHMD Invertebrate Zoology Collection</title>
+		<id>83e2601a-a820-11eb-bcbc-0242ac130002</id>
+	</item>
+	<item collectionid="458754" userid="64" notifyuserid="64" definition="DwCA-AV" metadata="DwCA-AV.eml" days="1" filename="DwCA-AV.zip" publish="true">
+		<title>NHMD Ornithology Collection</title>
+		<id>fc69d180-c4f9-11eb-8529-0242ac130003</id>
+	</item>
+	<item collectionid="786432" userid="64" notifyuserid="64" definition="DwCA-AM" metadata="DwCA-AM.eml" days="1" filename="DwCA-AM.zip" publish="true">
+		<title>NHMD Amber Collection</title>
+		<id>a5325c5f-0705-4d07-86d5-6dd79050739a</id>
+	</item>
+	<item collectionid="557056" userid="64" notifyuserid="64" definition="DwCA-QZ" metadata="DwCA-QZ.eml" days="1" filename="DwCA-QZ.zip" publish="true">
+		<title>NHMD Quaternary Zoology</title>
+		<id>d5aab4ae-2a87-4ba9-8ffb-b504f7a44611</id>
+	</item>
+	<item collectionid="851970" userid="64" notifyuserid="64" definition="DwCA-PI" metadata="DwCA-PI.eml" days="1" filename="DwCA-PI.zip" publish="true">
+		<title>NHMD Ichthyology Collection</title>
+		<id>4e763ba7-f3b0-4896-823d-e0c067c17b3c</id>
+	</item>
+	<item collectionid="163841" userid="64" notifyuserid="64" definition="DwCA-EN" metadata="DwCA-EN.eml" days="1" filename="DwCA-EN.zip" publish="true">
+		<title>NHMD Entomology Collection</title>
+		<id>40d23ef2-c4f5-11eb-8529-0242ac130003</id>
+	</item>
 </channel>

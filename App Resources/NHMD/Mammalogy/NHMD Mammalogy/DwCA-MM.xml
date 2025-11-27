@@ -11,7 +11,7 @@
         <query contextTableId="1" name="CollObjectsMM.csv">
             <id term="http://rs.tdwg.org/dwc/terms/occurrenceID"             isNot="false" isRelFld="false" oper="11" stringId="1.collectionobject.guid" value=""/>
             <!-- Collection object -->
-            <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         isNot="false" isRelFld="true" oper="1" stringId="1,9-determinations,1.collectionobject.collectionObject" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/catalogNumber"         stringId="1.collectionobject." oper="8" value="" isNot="false" isRelFld="false"/>
             <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"   isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.altCatalogNumber" value=""/>
             <field term="http://purl.org/dc/terms/modified"                  isNot="false" isRelFld="false" oper="1"  stringId="1.collectionobject.timestampModified" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/occurrenceRemarks"     isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.remarks" value=""/>
@@ -81,7 +81,6 @@
             </query>
         </queries>
     </extension>
-
     <!-- Identification History Extension -->
     <extension rowType="http://rs.tdwg.org/dwc/terms/Identification">
         <queries>

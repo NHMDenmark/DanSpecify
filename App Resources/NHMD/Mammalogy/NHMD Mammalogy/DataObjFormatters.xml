@@ -143,7 +143,7 @@
 	<format name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true">
 		<switch single="true">
 			<fields>
-				<field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
+				<field sep="NHMD" uifieldformatter="CatalogNumber" trimzeros="true">catalogNumber</field>
 			</fields>
 		</switch>
 	</format>
@@ -471,6 +471,13 @@
 		<switch single="true">
 			<fields>
 				<field>primerDesignator</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="Attachment_mediaURL" title="Attachment_mediaURL" class="edu.ku.brc.specify.datamodel.Attachment" default="">
+		<switch single="true" field="isPublic">
+			<fields value="true">
+				<field sep="https://specify-media.science.ku.dk/fileget?coll=NHMD+Mammalogy&amp;type=O&amp;filename=">attachmentLocation</field>
 			</fields>
 		</switch>
 	</format>
