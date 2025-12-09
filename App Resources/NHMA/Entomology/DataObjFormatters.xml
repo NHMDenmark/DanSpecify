@@ -230,7 +230,6 @@
         <switch single="true">
             <fields>
                 <field formatter="Agent">agent</field>
-                <field sep=" , ">text1</field>
             </fields>
         </switch>
     </format>
