@@ -18,11 +18,12 @@ This is the user guide with a brief and focused introduction to how to use vario
 We have started keeping regular workshops to get both incipient and experienced users up to speed with the latest version of Specify. 
 The workshops are recorded and can be accessed online via below links: 
 
-- Entire workshop series: https://vimeo.com/showcase/10375769 
+- Entire workshop series: https://vimeo.com/showcase/12072283 
 
 1. Getting Started: https://vimeo.com/813495735
-1. Data Import Basics: https://vimeo.com/823612618
-1. Data Cleaning with OpenRefine: https://vimeo.com/846255679  
+2. Data Import Basics: https://vimeo.com/823612618
+3. Data Cleaning with OpenRefine: https://vimeo.com/846255679
+4. Batch Edit Feature: https://vimeo.com/1141175467 
 
 # Frequently Asked Questions
 
