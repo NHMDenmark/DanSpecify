@@ -329,7 +329,9 @@
 				</row>
 				<row>
 					<cell type="label" labelfor="34"/>
-					<cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" colspan="5"/>
+					<cell type="field" id="34" name="container" uitype="querycbx" initialize="name=Container" />
+					<cell type="label" labelfor="fn"/>
+					<cell type="field" id="fn" name="fieldNumber" uitype="text"/>			
 					<cell type="label" label=""/>
 					<cell type="field" id="Unlabelled" name="yesNo2" uitype="checkbox" initialize="editable=true"/>
 				</row>
@@ -1114,6 +1116,10 @@
 					<cell type="label" labelfor="4"/>
 					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
 				</row>
+                <row>
+                    <cell type="label" labelfor="sn"/>
+                    <cell type="field" id="sn" name="sampleNumber" uitype="text"/>
+                </row>				
 				<!--<row>
                     <cell type="label" labelfor="desc"/>
                     <cell type="field" id="desc" name="description" uitype="text"/>
