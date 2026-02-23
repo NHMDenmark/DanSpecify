@@ -1265,7 +1265,7 @@
                 <cell type="label" labelfor="tv"/>
                 <cell type="field" id="tv" name="totalValue" uitype="text"/>
               </row>
-        </row>-->
+        </row>--> 
 			</rows>
 		</viewdef>
 	</viewdefs>
