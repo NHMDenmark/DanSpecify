@@ -859,7 +859,9 @@
 				</row>
 				<row>
 					<cell type="label" labelfor="verbataxon"/>
-					<cell type="field" id="verbataxon" name="text3" uitype="text" colspan="7"/>
+					<cell type="field" id="verbataxon" name="text3" uitype="text" colspan="5"/>
+					<cell type="label" labelfor="8"/>
+					<cell type="field" id="8" name="qualifier" uitype="text"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="7"/>
