@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Loan Form" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="85fe5a64-0da0-4f16-968a-344ec9944fea">
 	<import value="net.sf.jasperreports.engine.*"/>
-	<import value="java.util.*"/>
+	<import value="java.util.*"/> 
 	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="52.loan.loanNumber" class="java.lang.String"/>
 	<field name="52.loan.loanDate" class="java.lang.String"/>
