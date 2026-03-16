@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Loan Form" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="85fe5a64-0da0-4f16-968a-344ec9944fea">
 	<import value="net.sf.jasperreports.engine.*"/>
-	<import value="java.util.*"/>
+	<import value="java.util.*"/> 
 	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="52.loan.loanNumber" class="java.lang.String"/>
 	<field name="52.loan.loanDate" class="java.lang.String"/>
@@ -13,6 +13,8 @@
 	<field name="52,54-loanPreparations.loanpreparation.descriptionOfMaterial" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1,9-determinations,4.taxon.author" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
 	<field name="52,54-loanPreparations,63,1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1,10,2,3.geography.Country" class="java.lang.String"/>
@@ -436,8 +438,10 @@ MUSEUM DENMARK
 				</textElement>
 				<textFieldExpression><![CDATA["Scientific name: "
 + ($F{52,54-loanPreparations,63,1,9-determinations,4.taxon.Genus} != null ?
-    "<i>" + $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon}.replace("&", "&amp;") + "</i>" :
-    $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.taxon}.replace("&", "&amp;"))]]></textFieldExpression>
+	"<i>" + $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.fullName}.replace("&","&amp;") + "</i>" :
+	$F{52,54-loanPreparations,63,1,9-determinations,4.taxon.fullName}.replace("&","&amp;"))
++ ($F{52,54-loanPreparations,63,1,9-determinations,4.taxon.author} != null ? 
+" " + $F{52,54-loanPreparations,63,1,9-determinations,4.taxon.author}.replace("&","&amp;"): "")]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement key="textField" x="139" y="22" width="429" height="11" isRemoveLineWhenBlank="true" uuid="680ce1a8-40e9-449a-ba69-f9bc49caf79e">
