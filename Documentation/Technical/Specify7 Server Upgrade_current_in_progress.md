@@ -115,6 +115,29 @@ That will delete all the unused images, stopped containers, and unused networks.
 
 Repeat on web-replica.
 
+## 7. Deploy Updated Containers
+
+On web-master:
+
+```
+docker compose pull
+```
+
+when it's ready,  start the container. It will automatically run any necessary database migrations.
+Meanwhile montor the logs.
+
+```
+docker compose up -d
+docker compose logs -f specify7 nginx
+```
+
+Repeat on web-replica.
+
+
+
+
+
+
 --------------------------------------------------------------------------------------------------------
 
 
