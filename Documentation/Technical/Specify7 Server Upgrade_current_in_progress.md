@@ -188,12 +188,11 @@ SHOW SLAVE STATUS\G
 
 Once the containers are running, log in to the Specify 7 web interface and test key functionality:
 
-• Perform a record search.
-• Open and save a record.
-• Upload or view an attachment.
-• Generate a label or report.
-• Conduct an edit on one of the trees.
-
+* Perform a record search.
+* Open and save a record.
+* Upload or view an attachment.
+* Generate a label or report.
+* Conduct an edit on one of the trees.
 
 --------------------------------------------------------------------------------------------------------
 
