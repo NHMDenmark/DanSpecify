@@ -102,6 +102,18 @@ Compare your `docker-compose.yml` and `nginx.conf` files with the latest example
 ```
 nano nginx/specify.conf
 ```
+Repeat the previous steps on web-replica.
+
+## 6. Clean Docker Images
+
+On web-master:
+```
+docker images
+docker system prune -a
+```
+That will delete all the unused images, stopped containers, and unused networks.
+
+Repeat on web-replica.
 
 --------------------------------------------------------------------------------------------------------
 
