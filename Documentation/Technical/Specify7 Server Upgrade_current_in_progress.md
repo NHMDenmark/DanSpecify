@@ -134,8 +134,65 @@ docker compose logs -f specify7 nginx
 Repeat on web-replica.
 
 
+## 8. Restart Database Replication
 
+Log into db-master and check the master file and the position:
 
+```
+ssh abc123@specifydb02fl
+sudo su
+mariadb
+SHOW MASTER STATUS
+```
+Repeat with db-replica.
+
+**Synchronize the two servers:**
+
+On db-replica (specifydb03fl):
+
+```
+CHANGE MASTER TO
+  MASTER_HOST='specifydb02fl',
+  MASTER_USER='master',
+  MASTER_PASSWORD='XXXXXXXXXXXX',
+  MASTER_LOG_FILE='master1-bin.XXXXXX',
+  MASTER_LOG_POS=XXXXXXXXX;
+```
+On main server (specifydb02fl):
+
+```
+CHANGE MASTER TO
+  MASTER_HOST='specifydb03fl',
+  MASTER_USER='master',
+  MASTER_PASSWORD='XXXXXXXXXXXX',
+  MASTER_LOG_FILE='master2-bin.XXXXXX',
+  MASTER_LOG_POS=XXXXXXXXX;
+```
+**Start replication**
+
+On db-replica (specifydb03fl):
+
+```
+START SLAVE;
+SHOW SLAVE STATUS\G
+``
+
+On main server (specifydb02fl):
+
+```
+START SLAVE;
+SHOW SLAVE STATUS\G
+```
+
+## 9. Verify Functionality
+
+Once the containers are running, log in to the Specify 7 web interface and test key functionality:
+
+• Perform a record search.
+• Open and save a record.
+• Upload or view an attachment.
+• Generate a label or report.
+• Conduct an edit on one of the trees.
 
 
 --------------------------------------------------------------------------------------------------------
