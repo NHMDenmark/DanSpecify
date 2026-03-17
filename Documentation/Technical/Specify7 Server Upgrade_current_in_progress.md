@@ -175,7 +175,7 @@ On db-replica (specifydb03fl):
 ```
 START SLAVE;
 SHOW SLAVE STATUS\G
-``
+```
 
 On main server (specifydb02fl):
 
