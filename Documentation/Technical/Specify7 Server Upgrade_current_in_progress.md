@@ -6,7 +6,7 @@ The following is a local specification of the general update instructions found 
 The server upgrade is done through a command prompt or terminal window. 
 
 The old upgrade instructions have been archived here: 
-PLACEHOLDER
+Documentation/Technical/Archived/Specify7 Server Upgrade_v2.md
 
 ## Naming of the relevant servers in this guide: ##
 
