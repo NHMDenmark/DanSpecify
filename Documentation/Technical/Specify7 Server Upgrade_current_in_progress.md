@@ -90,10 +90,18 @@ nano docker-compose.yml
 
 ```
 
-Change the image to the latest version both for service and the worker process:
+Change the image to the desired version both for service and the worker process, in this case:
+```
+specifyconsortium/specify7-service:v7.11.2.1
 ```
 
-```
+Compare your `docker-compose.yml` and `nginx.conf` files with the latest examples in the [specify/docker-compositions repository](https://github.com/specify/docker-compositions). Add or update any new environment variables or Nginx proxy rules as noted in the release announcement.
+
+During updates that require migrations, **set** `MASTER_NAME` and `MASTER_PASSWORD` to the **root** username and password of your database. 
+After launching Specify and confirming that the update is complete, you can safely replace these credentials with your regular master SQL username and password.
+
+
+
 
 --------------------------------------------------------------------------------------------------------
 
