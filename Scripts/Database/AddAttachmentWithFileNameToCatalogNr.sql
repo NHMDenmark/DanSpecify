@@ -1,7 +1,7 @@
 DELIMITER //
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `AddAttachmentWithFileNameToCatalogNr`(
-	IN `AltCatNr` VARCHAR(50),
+	IN `CatalogNr` VARCHAR(50),
 	IN `FileName` VARCHAR(255),
 	IN `CollectionId` INT
 )

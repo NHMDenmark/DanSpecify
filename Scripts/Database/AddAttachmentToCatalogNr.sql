@@ -1,8 +1,9 @@
 DELIMITER //
 
-CREATE DEFINER=`root`@`%` PROCEDURE `AddAttachmentToCatalogNr`(
+CREATE OR REPLACE DEFINER=`root`@`%` PROCEDURE `AddAttachmentToCatalogNr`(
 	IN `CatalogNr` VARCHAR(50),
-	IN `ContainerName` VARCHAR(50)
+	IN `ContainerName` VARCHAR(50),
+	IN `CollectionId` INT
 )
 LANGUAGE SQL
 NOT DETERMINISTIC
@@ -19,7 +20,7 @@ END IF;
 
 INSERT INTO attachment 
        (TimestampCreated, Version, AttachmentLocation, FileCreatedDate, GUID, License, MimeType, origFilename, ScopeID, ScopeType, TableID, Title, CreatedByAgentID, IsPublic)
-VALUES (CURRENT_TIMESTAMP(), 0, @filename, DATE(CURRENT_TIMESTAMP()), (select md5(UUID())), 'CC BY 4.0', 'image/jpeg', @filename, 688130, 0, 1, @filename, 10215, 1);
+VALUES (CURRENT_TIMESTAMP(), 0, @filename, DATE(CURRENT_TIMESTAMP()), (select md5(UUID())), 'CC BY 4.0', 'image/jpeg', @filename, CollectionId, 0, 1, @filename, 10215, 1);
 
 INSERT INTO collectionobjectattachment  
 		 (Timestampcreated, Version, CollectionMemberID, Ordinal, CreatedByAgentID, AttachmentID, CollectionobjectID) 
