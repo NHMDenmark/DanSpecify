@@ -17,7 +17,7 @@
             <field term="http://rs.tdwg.org/dwc/terms/occurrenceRemarks"     isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.remarks" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/fieldNumber"           isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.fieldNumber" value=""/>
             <!-- Collecting event -->
-            <field term="http://rs.tdwg.org/dwc/terms/EarliestDateCollected" isNot="false" isRelFld="false" oper="1"  stringId="1,10.collectingevent.startDate" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/eventDate"             isNot="false" isRelFld="false" oper="1"  stringId="1,10.collectingevent.startDate" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/eventRemarks"          isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.remarks" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/recordedBy"            isNot="false" isRelFld="true"  oper="11" stringId="1,10,30-collectors.collector.collectors" value=""/> 
             <!-- Locality & Geography  -->
