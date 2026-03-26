@@ -15,11 +15,11 @@
             <field term="http://rs.tdwg.org/dwc/terms/otherCatalogNumbers"   isNot="false" isRelFld="false" oper="1" stringId="1.collectionobject.altCatalogNumber" value=""/>
             <field term="http://purl.org/dc/terms/modified"                  isNot="false" isRelFld="false" oper="1"  stringId="1.collectionobject.timestampModified" value=""/>
             <!-- Collecting event -->
-            <field term="http://rs.tdwg.org/dwc/terms/EarliestDateCollected" isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.startDate" value=""/>
-            <field term="http://rs.tdwg.org/dwc/terms/LatestDateCollected"   isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.endDate" value=""/>
+            <field term="http://rs.tdwg.org/dwc/terms/eventDate" isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.startDate" value=""/>
+            <!-- <field term="http://rs.tdwg.org/dwc/terms/LatestDateCollected"   isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.endDate" value=""/> -->
             <field term="http://rs.tdwg.org/dwc/terms/eventRemarks"          isNot="false" isRelFld="false" oper="1" stringId="1,10.collectingevent.remarks" value=""/>
             <!-- <field term="http://rs.tdwg.org/dwc/terms/recordedBy"       isNot="false" isRelFld="true"  oper="11" stringId="1,10,30-collectors.collector.collectors" value=""/>  --> 
-            <!-- Locality & Geography  -->
+            <!-- Locality & Geography  --> 
             <field term="http://rs.tdwg.org/dwc/terms/locality"              isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.localityName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/continent"             isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Continent" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/country"               isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.Country" value=""/>

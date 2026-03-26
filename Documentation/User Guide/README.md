@@ -12,6 +12,7 @@ This is the user guide with a brief and focused introduction to how to use vario
 1. [Importing Data (Workbench)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/8.%20Importing%20Data%20(Workbench).md)
 1. [Data Cleaning (OpenRefine)](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/9.%20Data%20Cleaning.md)
 1. [Batch Edit](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/10.%20Batch%20Edit.md)
+1. [Shared attachments between multiple COs](https://github.com/NHMDenmark/DanSpecify/blob/master/Documentation/User%20Guide/11.%20Shared%20attachment%20between%20multiple%20collection%20objects.md)
 
 # Frequently Asked Questions
 
