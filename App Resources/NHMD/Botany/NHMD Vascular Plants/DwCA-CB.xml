@@ -32,6 +32,11 @@
             <field term="http://rs.tdwg.org/dwc/terms/higherGeography"       isNot="false" isRelFld="false" oper="1" stringId="1,10,2,3.geography.fullName" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/higherGeographyId"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2.locality.text5" value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/georeferencedDate"     isNot="false" isRelFld="false" oper="1" stringId="1,10,2,123-geoCoordDetails.geocoorddetail.geoRefDetDate" value=""/>
+			<field term="http://rs.tdwg.org/dwc/terms/footprintWKT"			oper="8"  isNot="false" isRelFld="false"
+			stringId="1,10,2,123-geoCoordDetails.geocoorddetail.text1" value=""/> 
+			<field term="http://rs.tdwg.org/dwc/terms/footprintSRS"			oper="8"  isNot="false" isRelFld="false"
+			stringId="1,10,2,123-geoCoordDetails.geocoorddetail.text2" value=""/>						
+			
             <!-- Determination & Taxonomy -->
             <field term="http://rs.tdwg.org/dwc/terms/kingdom"               isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Kingdom"    value=""/>
             <field term="http://rs.tdwg.org/dwc/terms/phylum"                isNot="false" isRelFld="false" oper="1" stringId="1,9-determinations,4-preferredTaxon.taxon.Division"   value=""/>
