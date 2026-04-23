@@ -153,7 +153,7 @@ On db-replica (specifydb03fl):
 ```
 CHANGE MASTER TO
   MASTER_HOST='specifydb02fl',
-  MASTER_USER='master',
+  MASTER_USER='specify',
   MASTER_PASSWORD='XXXXXXXXXXXX',
   MASTER_LOG_FILE='master1-bin.XXXXXX',
   MASTER_LOG_POS=XXXXXXXXX;
@@ -163,7 +163,7 @@ On main server (specifydb02fl):
 ```
 CHANGE MASTER TO
   MASTER_HOST='specifydb03fl',
-  MASTER_USER='master',
+  MASTER_USER='specify',
   MASTER_PASSWORD='XXXXXXXXXXXX',
   MASTER_LOG_FILE='master2-bin.XXXXXX',
   MASTER_LOG_POS=XXXXXXXXX;
