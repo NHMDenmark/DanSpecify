@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="INV_label_slides" columnCount="7" printOrder="Horizontal" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="76" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a78c29b6-c87f-44b4-97ec-d3d5108b1852">
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
+	<field name="1,9-determinations,4.taxon.author" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
+	<field name="1,93.collectionobjectattribute.text1" class="java.lang.String"/>
+	<field name="1,93.collectionobjectattribute.text4" class="java.lang.String"/>
+	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
+	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
+	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
+	<field name="1,10,2,3.geography.fullName" class="java.lang.String"/>
+	<field name="1,10,2.locality.lat1text" class="java.lang.String"/>
+	<field name="1,10,2.locality.long1text" class="java.lang.String"/>
+	<field name="1,10,2,124-localityDetails.localitydetail.startDepth" class="java.math.BigDecimal"/>
+	<field name="1,10,2,124-localityDetails.localitydetail.endDepth" class="java.math.BigDecimal"/>
+	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1,10.collectingevent.endDate" class="java.lang.String"/>
+	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<detail>
+		<band height="141" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+			<rectangle>
+				<reportElement x="1" y="1" width="75" height="70" uuid="970a9600-cd84-4391-b2a3-dd2dce3ef250">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-1" x="1" y="2" width="75" height="10" uuid="668b1243-7a62-4664-8876-ccacafd5e75c">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Georgia" size="3"/>
+				</textElement>
+				<text><![CDATA[NATURAL HISTORY MUSEUM DENMARK]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="12" width="75" height="11" uuid="e4cb40c7-1bdf-4325-83be-a9ba65892b5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Georgia" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD-"+ $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="1" y="71" width="75" height="70" uuid="b391e726-7a9a-4866-b065-4bdc842edb35">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+			</rectangle>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="2" y="23" width="73" height="18" uuid="a5a378a5-555c-4dc1-91c2-7d8749c70f5c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.fullName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="2" y="41" width="73" height="13" uuid="c524a21e-01ee-4a39-8fcd-9d3c5211dcf5"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.author}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="54" width="75" height="8" uuid="436798a5-4bf2-401b-b1e1-964dc382d60b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,93.collectionobjectattribute.text1} != null ? $F{1,93.collectionobjectattribute.text1} : $F{1,93.collectionobjectattribute.text4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="62" width="75" height="8" uuid="194d8c7c-749e-4361-b185-346f15c32e81"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,63-preparations,65.preptype.name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="2" y="72" width="74" height="24" uuid="905427ca-2a99-422f-bdf5-bf75fe7d9b22"/>
+				<textElement>
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Loc.:"
++ ($F{1,10.collectingevent.stationFieldNumber} != null && !$F{1,10.collectingevent.stationFieldNumber}.isEmpty()
+    ? " " + $F{1,10.collectingevent.stationFieldNumber}
+    : "")
++ (
+    ($F{1,10.collectingevent.stationFieldNumber} != null && !$F{1,10.collectingevent.stationFieldNumber}.isEmpty()
+     && $F{1,10,2.locality.localityName} != null && !$F{1,10,2.locality.localityName}.isEmpty())
+    ? ", "
+    : ""
+  )
++ ($F{1,10,2.locality.localityName} != null && !$F{1,10,2.locality.localityName}.isEmpty()
+    ? " " + $F{1,10,2.locality.localityName}
+    : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="2" y="96" width="73" height="11" uuid="618fc440-af63-4396-a2b8-6542cf8780ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,10,2.locality.lat1text} != null && !$F{1,10,2.locality.lat1text}.isEmpty()
+    ? $F{1,10,2.locality.lat1text}
+    : "")
++
+(
+    ($F{1,10,2.locality.lat1text} != null && !$F{1,10,2.locality.lat1text}.isEmpty()
+     && $F{1,10,2.locality.long1text} != null && !$F{1,10,2.locality.long1text}.isEmpty())
+    ? ", "
+    : ""
+)
++
+($F{1,10,2.locality.long1text} != null && !$F{1,10,2.locality.long1text}.isEmpty()
+    ? $F{1,10,2.locality.long1text}
+    : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="2" y="107" width="74" height="11" uuid="c772da41-9d9b-4464-835b-12291b40b9c4"/>
+				<textElement>
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Depth: " + ($F{1,10,2,124-localityDetails.localitydetail.startDepth} != null
+    ? new java.text.DecimalFormat("#.#").format($F{1,10,2,124-localityDetails.localitydetail.startDepth})
+    : "")
++
+(
+    ($F{1,10,2,124-localityDetails.localitydetail.startDepth} != null
+     && $F{1,10,2,124-localityDetails.localitydetail.endDepth} != null)
+    ? " - "
+    : ""
+)
++
+($F{1,10,2,124-localityDetails.localitydetail.endDepth} != null
+    ? new java.text.DecimalFormat("#.#").format($F{1,10,2,124-localityDetails.localitydetail.endDepth})
+    : "")
++
+(
+    ($F{1,10,2,124-localityDetails.localitydetail.startDepth} != null
+     || $F{1,10,2,124-localityDetails.localitydetail.endDepth} != null)
+    ? " m"
+    : ""
+)]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="2" y="118" width="74" height="8" uuid="49288994-554e-44d1-adec-b681e2650045"/>
+				<textElement>
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Date: "+ ($F{1,10.collectingevent.startDate} != null
+    ? $F{1,10.collectingevent.startDate}
+    : "")
++
+(
+    ($F{1,10.collectingevent.startDate} != null
+     && $F{1,10.collectingevent.endDate} != null)
+    ? "- "
+    : ""
+)
++
+($F{1,10.collectingevent.endDate} != null
+    ? $F{1,10.collectingevent.endDate}
+    : "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="2" y="126" width="74" height="11" uuid="0fa5329e-9ede-42d1-8291-ede6faf3a6cb"/>
+				<textElement>
+					<font fontName="Georgia" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Coll.: " + $F{1,10,30-collectors.collector.collectors}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
