@@ -46,8 +46,8 @@ SELECT DISTINCT
 	FROM spauditlog spa
 	LEFT JOIN spauditlogfield spf ON spf.SpAuditLogID = spa.SpAuditLogID
 	LEFT JOIN agent a ON a.AgentID = spa.CreatedByAgentID 
-	WHERE spa.TimestampCreated > SUBTIME(NOW(),"8:00:00")
-	  AND spa.CreatedByAgentID IS NOT NULL 
+	WHERE spa.CreatedByAgentID IS NOT NULL 
+	  AND spa.TimestampCreated > SUBTIME(NOW(),"8:00:00") 
 	  GROUP BY a.AgentID -- , spf.FieldName
 	ORDER BY spa.TimestampModified DESC
 LIMIT 128
