@@ -42,11 +42,10 @@ SELECT ttd.TaxonTreeDefID, col.CollectionName, dsc.disciplineId, dsc.`Name` Disc
 	FROM taxontreedef ttd 
 	LEFT JOIN discipline dsc ON dsc.DisciplineID = ttd.DisciplineID 
 	LEFT JOIN division dv    ON dv.divisionId = dsc.DivisionID
-	JOIN collection col ON col.DisciplineID = dsc.disciplineId
+	LEFT JOIN collection col ON col.DisciplineID = dsc.disciplineId
 	ORDER BY dsc.taxontreedefid;
 -- 327681
 
-SELECT * FROM taxon t WHERE t.TaxonTreeDefID = 7;
 SELECT * FROM collection;
 SELECT * FROM discipline; 
 
