@@ -180,6 +180,7 @@
 | AT-01 | All / Collection Object / Accession | Download/Open in New Tab | Open and download attachments | Attachments open/download correctly |        |                   |          |        |       |
 | AT-02 | Collection Object                   | Edit Metadata            | Modify attachment metadata    | Metadata updates correctly          |        |                   |          |        |       |
 | AT-03 | Collection Object                   | Import                   | Import attachments            | Attachments imported successfully   |        |                   |          |        |       |
+| AT-04 | Collecting Information                   | Open                   |  Clicking on Attachments Icon in top menu, when added new Collecting Information Attachments            | Open related attachments   | error message       | Message:Cannot destructure property 'models' of 'undefined' as it is undefined.                  |  Low        |   Zs     |    report to Kansas   |
 
 
 ## Statistics
