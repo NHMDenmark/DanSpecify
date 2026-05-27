@@ -2,13 +2,13 @@
 
 |  |  |
 |---|---|
-| Previous Specify 7 version |  |
-| Current Specify 7 version |  |
-| Previous database version |  |
-| Current database version |  |
-| Previous DB schema version |  |
-| Current DB schema version |  |
-| Database Name |  |
+| Previous Specify 7 version | v7.11.3 |
+| Current Specify 7 version | v7_12_0_5(debug) |
+| Previous database version |6.8.03  |
+| Current database version | 6.8.03 |
+| Previous DB schema version |2.10 |
+| Current DB schema version | ? |
+| Database Name | NHMD |
 
 ---
 
