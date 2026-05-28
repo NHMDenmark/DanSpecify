@@ -17,7 +17,7 @@
 | Severity | Meaning |
 |---|---|
 | Critical | Prevents work or risks data loss |
-| High | Major functionality broken |
+| High | Functionality broken |
 | Medium | Function partially works or workaround exists |
 | Low | Minor issue or cosmetic problem |
 
