@@ -125,7 +125,7 @@
 | ID    | Module/Form         | Action          | Test Description            | Expected Result                | Result | Issue Description | Severity | Tester | Notes |
 | ----- | ------------------- | --------------- | --------------------------- | ------------------------------ | ------ | ----------------- | -------- | ------ | ----- |
 | IN-01 | Accession           | New             | Create accession record     | Accession saves correctly      |        |                   |          |        |       |
-| IN-02 | Accession           | Add Record Sets | Add record set to accession | COs of the Record set linked successfully | Failed       |    I could query and select the record set, but nothing happened after clicking on 'Add'.               | Major         | Zs       | report to Kansas      |
+| IN-02 | Accession           | Add Record Sets | Add record set to accession | COs of the Record set linked successfully | Failed       |    I could query and select the record set, but nothing happened after clicking on 'Add'.               | High         | Zs       | report to Kansas      |
 | IN-03 | Loan                | New             | Create loan record          | Loan saves correctly           |        |                   |          |        |       |
 | IN-04 | Return Loan Records | New             | Return loaned records       | Records returned successfully  |        |                   |          |        |       |
 
