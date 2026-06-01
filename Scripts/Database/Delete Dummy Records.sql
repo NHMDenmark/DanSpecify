@@ -7,13 +7,12 @@
 -- UPDATE collectionobject AS co SET co.projectnumber = 'Reserved Dummy Records'
 	WHERE 
 	   co.ProjectNumber IN ('Reserved Dummy Records','Reserved for DaSSCo', 'Mass digitization init', 'Exh. Pollinating beetles 3.7D.2', 'Reserved for båndfluesamling')
-	   AND (
-				catalogNumber BETWEEN 002046814 AND 002047813 
-			 ) 
-       /* AND
+	   /*AND (
+				catalogNumber BETWEEN 0 AND 0 
+			 )*/ 
+        AND
 		 catalogNumber IN (
 		 0
-		 )
-	      ;
-	      */
+		 );
+	      
 	      
