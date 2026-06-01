@@ -151,7 +151,7 @@
 
 | ID    | Module/Form            | Action     | Test Description     | Expected Result            | Result | Issue Description | Severity | Tester | Notes |
 | ----- | ---------------------- | ---------- | -------------------- | -------------------------- | ------ | ----------------- | -------- | ------ | ----- |
-| RE-01 | Standard Loan Form SP7 | Run Report | Generate loan report | Report generated correctly |        |                   |          |        |       |
+| RE-01 | Standard Loan Form SP7 | Run Report | Generate loan report | Report generated correctly |        |  Generating loan report s very slow, but it's working.            |   Low       |   F and Zs     |       |
 | RE-02 | Label                  | Run Report | Generate labels      | Labels generated correctly |        |                   |          |        |       |
 
 
