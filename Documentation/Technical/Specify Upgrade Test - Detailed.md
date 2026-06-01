@@ -170,7 +170,7 @@
 | WB-01 | Import File        | Map & Validate     | Validate import mapping | Validation completes successfully |        |                   |          |        |       |
 | WB-02 | Import File        | Upload             | Upload import file      | Upload completes successfully     |        |                   |          |        |       |
 | WB-03 | Import File        | Roll Back          | Roll back import        | Import rollback works correctly   |        |                   |          |        |       |
-| WB-04 | Import Attachments | Test Functionality | Import attachments      | Attachments imported correctly    |        |                   |          |        |       |
+| WB-04 | Import Attachments | Test Functionality | Import attachments      | Attachments imported correctly    |       I couldn't figure it out. |                   |          |        |       |
 
 
 ## Attachments
