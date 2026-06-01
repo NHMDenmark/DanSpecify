@@ -170,7 +170,7 @@
 | WB-01 | Import File        | Map & Validate     | Validate import mapping | Validation completes successfully |    Passed, small issue    |           Ordering by one of the columns fails most of the time.        |   Low       |   Zs     |     will report to Kansas  |
 | WB-02 | Import File        | Upload             | Upload import file      | Upload completes successfully     |        |                   |          |        |       |
 | WB-03 | Import File        | Roll Back          | Roll back import        | Import rollback works correctly   |        |                   |          |        |       |
-| WB-04 | Import Attachments | Test Functionality | Import attachments      | Attachments imported correctly    |        |                   |          |        |       |
+| WB-04 | Import Attachments | Test Functionality | Import attachments      | Attachments imported correctly    |     ?   |   I couldn't find it out how it works.                |      ?    |   Zs     |       |
 
 
 ## Attachments
