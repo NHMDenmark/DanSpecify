@@ -1,8 +1,9 @@
 DELIMITER //
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `AddAttachmentWithFileNameToCatalogNr`(
+CREATE OR REPLACE DEFINER=`root`@`localhost` PROCEDURE `AddAttachmentWithFileNameToCatalogNr`(
 	IN `CatalogNr` VARCHAR(50),
 	IN `FileName` VARCHAR(255),
+	IN `Ordinal` INT,
 	IN `CollectionId` INT
 )
 LANGUAGE SQL
@@ -22,9 +23,10 @@ VALUES (CURRENT_TIMESTAMP(), 0, FileName, DATE(CURRENT_TIMESTAMP()), (select md5
 
 INSERT INTO collectionobjectattachment  
 		 (Timestampcreated, Version, CollectionMemberID, Ordinal, CreatedByAgentID, AttachmentID, CollectionobjectID) 
-VALUES (CURRENT_TIMESTAMP(), 0, CollectionId, 0, 10215, LAST_INSERT_ID(), 
+VALUES (CURRENT_TIMESTAMP(), 0, CollectionId, Ordinal, 10215, LAST_INSERT_ID(), 
         (SELECT collectionobjectid FROM collectionobject WHERE catalognumber = @catnr LIMIT 1));
 
-END
+-- END
 
+END
 //

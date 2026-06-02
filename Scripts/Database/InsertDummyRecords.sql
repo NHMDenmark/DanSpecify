@@ -1,10 +1,10 @@
 SET @projectName   = 'Reserved for DaSSCo'; 
 SET @remark        = 'Reserved dummy records to be deleted before import'; 
 SET @collection    = 'NHMD Entomology'; 
-SET @catalogerMail = 'fedor.steeman@snm.ku.dk'; 
+SET @catalogerMail = 'rml@snm.ku.dk'; 
 SET @creatorMail   = 'fedor.steeman@snm.ku.dk'; 
-SET @amount        = 1000;
-SET @baseline      = 0;
+SET @amount        = 20000;
+SET @baseline      = 0; -- 002016041
 
 SET @collectionid = 0;
 SELECT collectionid INTO @collectionid FROM collection WHERE collectionname = @collection LIMIT 1;
@@ -19,8 +19,12 @@ SET @creatorid = 0;
 SELECT a.AgentID INTO @creatorid FROM agent a WHERE a.DivisionID = @divisionid AND a.Email = @creatorMail;
 
 CALL `InsertDummyRecords`(@amount, @baseline, @collectionid, @catalogerid, @creatorid, @projectName, @remark);
-SELECT co.CollectionObjectID, co.CatalogNumber, co.ProjectNumber, co.Remarks 
+
+SELECT co.CollectionObjectID, co.CatalogNumber, co.ProjectNumber, c.CollectionName, 
+	    CONCAT(COALESCE(a.FirstName,''), ' ', COALESCE(a.LastName,'')) AS cataloger, co.Remarks 
 	FROM collectionobject co 
+	LEFT JOIN collection c ON c.collectionId = co.CollectionID 
+	LEFT JOIN agent a ON a.AgentID = co.CatalogerID 
 	WHERE co.ProjectNumber = @projectName AND co.Remarks = @remark
 	ORDER BY co.CatalogNumber;
 
