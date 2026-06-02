@@ -101,6 +101,15 @@
 				<altview name="LocalityDetail Edit" viewdef="LocalityDetail" mode="edit" default="true"/>
 			</altviews>
 		</view>
+		<view name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier">
+			<desc>Subform within the collectionObject form.</desc>
+			<altviews>
+				<altview name="OtherIdentifiers Table View" viewdef="OtherIdentifiers Table" mode="view"/>
+				<altview name="OtherIdentifiers Table Edit" viewdef="OtherIdentifiers Table" mode="edit"/>
+				<altview name="OtherIdentifiers View" viewdef="OtherIdentifiers" mode="view"/>
+				<altview name="OtherIdentifiers Edit" viewdef="OtherIdentifiers" mode="edit" default="true"/>
+			</altviews>
+		</view>		
 		<view name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules" resourcelabels="false">
 			<desc>Subform within the Preparation form.</desc>
 			<altviews>
@@ -416,7 +425,7 @@
 					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
 				</row>
 				<row>
-					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="12" rows="3"/>
+					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="form" colspan="12" rows="3"/>
 				</row>
 				<row>
 					<cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5"/>
@@ -1058,6 +1067,28 @@
         </row>-->
 			</rows>
 		</viewdef>
+		<viewdef type="form" name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
+			<desc>subform on the Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,473px,5px,120px,2px,125px,0px,15px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,510px,5px,85px,2px,198px,0px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,530px,5px,105px,2px,218px,0px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,473px,5px:g,p,2px,125px,0px,15px,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="identifier" uitype="text"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="institution" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="remarks" uitype="textareabrief" rows="2" colspan="6"/>
+				</row>
+			</rows>
+		</viewdef>		
+		
 		<viewdef type="formtable" name="Preparation Table" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>Preparation subform table for Collection Object form.</desc>
 			<definition>Preparation</definition>
