@@ -94,6 +94,8 @@ Change the image to the desired version both for service and the worker process,
 ```
 specifyconsortium/specify7-service:v7.11.2.1
 ```
+Use only the tagged release (i.e., v7 or v7.12) or the full, dot-separated version (i.e., v7.12.0.6)!
+
 During updates that require migrations, **set** `MASTER_NAME` and `MASTER_PASSWORD` to the **root** username and password of your database. 
 After launching Specify and confirming that the update is complete, you can safely replace these credentials with your regular master SQL username and password.
 
@@ -147,6 +149,8 @@ SHOW MASTER STATUS
 Repeat with db-replica.
 
 **Synchronize the two servers:**
+
+In this case, you'll find information on master user under REPLICATION section in the documentation.
 
 On db-replica (specifydb03fl):
 
