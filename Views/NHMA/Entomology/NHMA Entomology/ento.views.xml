@@ -112,10 +112,10 @@
 		</view>
 	</views>
 	<viewdefs>
-		<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+  	<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>Accession Items</desc>
 			<definition>AccessionItems</definition>
-		</viewdef>
+  	</viewdef>
 		<viewdef type="form" name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>The Collection Object Subform for Accessions.</desc>
 			<enableRules/>
@@ -1079,7 +1079,6 @@
           <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
         </row>-->
 			</rows>
-		</viewdef>
 		</viewdef>
 		<viewdef type="form" name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
 			<desc>subform on the Collection Object form.</desc>
