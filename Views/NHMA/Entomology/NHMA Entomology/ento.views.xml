@@ -285,6 +285,8 @@
 				<row>
 					<cell type="label" labelfor=""/>
 					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+					<cell type="label" labelfor=""/>
+					<cell type="field" id="yn1" name="yesNo4" uitype="checkbox" initialize="editable=true" default="false />
 				</row>
 				<row>
 					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="form" colspan="12" rows="3"/>
