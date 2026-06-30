@@ -1413,7 +1413,7 @@
 				<!-- <row>
           <cell type="label" labelfor="99"/>
           <cell type="field" id="99" name="this" uitype="plugin" initialize="name=WebLinkButton;weblink=AccessionNumber"/>
-        </row>
+        </row> 
         <row>
           <cell type="label" labelfor="26"/>
           <cell type="field" id="26" name="dateAcknowledged" uitype="formattedtext" uifieldformatter="Date" default="today"/>
