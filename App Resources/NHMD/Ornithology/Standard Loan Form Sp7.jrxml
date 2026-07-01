@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Loan Form" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="85fe5a64-0da0-4f16-968a-344ec9944fea">
 	<import value="net.sf.jasperreports.engine.*"/>
-	<import value="java.util.*"/> 
+	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="52.loan.loanNumber" class="java.lang.String"/>
 	<field name="52.loan.loanDate" class="java.lang.String"/>
@@ -152,7 +152,7 @@
 				<imageExpression><![CDATA[new java.net.URL("https://specify-snm.science.ku.dk/static/img/logo/NHMD.png")]]></imageExpression>
 			</image>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-1" x="439" y="259" width="130" height="18" forecolor="#000000" uuid="4553b2ea-3328-47bb-b59e-7eadfa23edac">
+				<reportElement key="textField-1" x="435" y="259" width="138" height="18" forecolor="#000000" uuid="4553b2ea-3328-47bb-b59e-7eadfa23edac">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="html">
@@ -188,7 +188,7 @@
 				<text><![CDATA[U N I V E R S I T Y   OF   C O P E N H A G E N]]></text>
 			</staticText>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-11" positionType="Float" x="439" y="487" width="130" height="32" forecolor="#000000" uuid="3c0678af-7f47-47f1-8331-dda7375f761d">
+				<reportElement key="textField-11" positionType="Float" x="435" y="487" width="138" height="32" forecolor="#000000" uuid="3c0678af-7f47-47f1-8331-dda7375f761d">
 					<printWhenExpression><![CDATA[$V{isPreparerRow}]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -197,7 +197,7 @@
 				</textElement>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-24" positionType="Float" x="439" y="374" width="16" height="10" forecolor="#000000" uuid="cef4268d-9008-46b7-a81e-d1d4b9d21d15">
+				<reportElement key="staticText-24" positionType="Float" x="435" y="382" width="24" height="10" forecolor="#000000" uuid="cef4268d-9008-46b7-a81e-d1d4b9d21d15">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -206,7 +206,7 @@
 				<text><![CDATA[TEL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-25" positionType="Float" x="439" y="303" width="26" height="10" forecolor="#000000" uuid="75ce06c5-4b55-4663-81df-33c3c788c88d">
+				<reportElement key="staticText-25" positionType="Float" x="435" y="303" width="34" height="10" forecolor="#000000" uuid="75ce06c5-4b55-4663-81df-33c3c788c88d">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -215,7 +215,7 @@
 				<text><![CDATA[E-MAIL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-28" positionType="Float" x="456" y="374" width="104" height="10" forecolor="#000000" uuid="d4ff592e-ee8d-4adb-a882-1a7b7ffa3d9e">
+				<reportElement key="staticText-28" positionType="Float" x="452" y="382" width="122" height="10" forecolor="#000000" uuid="d4ff592e-ee8d-4adb-a882-1a7b7ffa3d9e">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -224,7 +224,7 @@
 				<text><![CDATA[+ 45 35 32 22 22]]></text>
 			</staticText>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-15" positionType="Float" x="439" y="404" width="130" height="64" forecolor="#000000" uuid="f47763b9-8048-4758-918d-0f3c021a20ff">
+				<reportElement key="textField-15" positionType="Float" x="435" y="404" width="138" height="64" forecolor="#000000" uuid="f47763b9-8048-4758-918d-0f3c021a20ff">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -293,19 +293,18 @@
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-24" positionType="Float" x="439" y="327" width="130" height="44" forecolor="#000000" uuid="17cc6587-e180-4659-889c-cff0e4740510">
+				<reportElement key="staticText-24" positionType="Float" x="435" y="327" width="139" height="17" forecolor="#000000" uuid="17cc6587-e180-4659-889c-cff0e4740510">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
 					<font fontName="Arial" size="7"/>
+					<paragraph lineSpacingSize="1.0"/>
 				</textElement>
-				<text><![CDATA[NATURAL HISTORY 
-MUSEUM DENMARK
-ØSTER VOLDGADE 5-7 
-1350 COPENHAGEN K]]></text>
+				<text><![CDATA[UNIVERSITY OF COPENHAGEN
+NATURAL HISTORY MUSEUM DENMARK]]></text>
 			</staticText>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-14" positionType="Float" x="439" y="290" width="131" height="11" forecolor="#000000" uuid="48183d3f-42ef-45a0-b6a4-bb3a40608c62">
+				<reportElement key="textField-14" positionType="Float" x="435" y="290" width="139" height="11" forecolor="#000000" uuid="48183d3f-42ef-45a0-b6a4-bb3a40608c62">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -322,8 +321,8 @@ MUSEUM DENMARK
     $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- authoriser", "").split("\\|")[0].trim()
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
-			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
-				<reportElement key="textField-14" positionType="Float" x="439" y="313" width="131" height="10" forecolor="#000000" uuid="1c94859a-1cd9-4363-b76f-aefd4e9870d5">
+			<textField textAdjust="ScaleFont" isBlankWhenNull="false">
+				<reportElement key="textField-14" positionType="Float" x="435" y="313" width="139" height="10" forecolor="#000000" uuid="1c94859a-1cd9-4363-b76f-aefd4e9870d5">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -341,7 +340,7 @@ MUSEUM DENMARK
 : "- No authoriser defined! - "]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-25" positionType="Float" x="439" y="280" width="36" height="10" forecolor="#000000" uuid="a4df93d2-21a9-4dbd-ae02-9ab463b70f61">
+				<reportElement key="staticText-25" positionType="Float" x="435" y="280" width="44" height="10" forecolor="#000000" uuid="a4df93d2-21a9-4dbd-ae02-9ab463b70f61">
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
 				</reportElement>
 				<textElement>
@@ -356,6 +355,35 @@ MUSEUM DENMARK
 				</textElement>
 				<text><![CDATA[Return of the material is expected no later than:]]></text>
 			</staticText>
+			<staticText>
+				<reportElement key="staticText-24" positionType="Float" x="435" y="353" width="139" height="18" forecolor="#000000" uuid="c99eb372-9766-44bf-9fb2-63e83586042b">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[ØSTER FARIMAGSGADE 2D 
+1353 COPENHAGEN K]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
+				<reportElement key="textField-14" positionType="Float" x="435" y="344" width="139" height="9" forecolor="#000000" uuid="dd1c1cc5-8368-4e89-ab38-d390e9e3c8f2">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ATT: " +
+($F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[0].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[1].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[2].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().contains("authoriser") ? 
+    $F{52,53-loanAgents.loanagent.loanAgents}.split(";")[3].trim().replace("- authoriser", "").split("\\|")[0].trim()
+: "- No authoriser defined! - ")]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
