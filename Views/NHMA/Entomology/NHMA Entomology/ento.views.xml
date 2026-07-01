@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Ento Views" i18nresname="views">
+<viewset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ento.views" i18nresname="views">
 	<views>
 		<view name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules">
 			<desc>The Collection Object Subform for Accessions.</desc>
@@ -92,6 +92,15 @@
 				<altview name="LocalityDetail Edit" viewdef="LocalityDetail" mode="edit" default="true"/>
 			</altviews>
 		</view>
+		<view name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier">
+			<desc>Subform within the collectionObject form.</desc>
+			<altviews>
+				<altview name="OtherIdentifiers Table View" viewdef="OtherIdentifiers Table" mode="view"/>
+				<altview name="OtherIdentifiers Table Edit" viewdef="OtherIdentifiers Table" mode="edit"/>
+				<altview name="OtherIdentifiers View" viewdef="OtherIdentifiers" mode="view"/>
+				<altview name="OtherIdentifiers Edit" viewdef="OtherIdentifiers" mode="edit" default="true"/>
+			</altviews>
+		</view>		
 		<view name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules" resourcelabels="false">
 			<desc>Subform within the Preparation form.</desc>
 			<altviews>
@@ -103,10 +112,10 @@
 		</view>
 	</views>
 	<viewdefs>
-		<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
+  	<viewdef type="formtable" name="AccessionItems Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>Accession Items</desc>
 			<definition>AccessionItems</definition>
-		</viewdef>
+  	</viewdef>
 		<viewdef type="form" name="AccessionItems" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>The Collection Object Subform for Accessions.</desc>
 			<enableRules/>
@@ -231,7 +240,7 @@
 				</row>
 				<row>
 					<cell type="label" labelfor="vl"/>
-					<cell type="field" id="vl" name="verbatimLocality" uitype="text" colspan="10" isrequired="true"/>
+					<cell type="field" id="vl" name="verbatimLocality" uitype="text" colspan="10" isrequired="false"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="6"/>
@@ -271,12 +280,17 @@
 					<cell type="label" labelfor="5"/>
 					<cell type="field" id="5" uitype="plugin" name="this" initialize="name=PartialDateUI;df=catalogedDate;tp=catalogedDatePrecision" uifieldformatter="Date" default="today"/>
 					<cell type="label" labelfor="excoll"/>
-					<cell type="field" id="excoll" name="text3" uitype="text" isrequired="true"/>
+					<cell type="field" id="excoll" name="text3" uitype="text" isrequired="false"/>
 				</row>
 				<row>
 					<cell type="label" labelfor=""/>
 					<cell type="field" id="yn1" name="yesNo1" uitype="checkbox" initialize="editable=true" default="true"/>
+					<cell type="label" labelfor=""/>
+					<cell type="field" id="yn1" name="yesNo4" uitype="checkbox" initialize="editable=true" default="false />
 				</row>
+				<row>
+					<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="form" colspan="12" rows="3"/>
+				</row>				
 				<row>
 					<cell type="subview" viewname="Determination" id="6" name="determinations" colspan="12" rows="5" isrequired="true"/>
 				</row>
@@ -1068,6 +1082,27 @@
         </row>-->
 			</rows>
 		</viewdef>
+		<viewdef type="form" name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
+			<desc>subform on the Collection Object form.</desc>
+			<enableRules/>
+			<columnDef>100px,2px,473px,5px,120px,2px,125px,0px,15px,p:g</columnDef>
+			<columnDef os="lnx">115px,2px,510px,5px,85px,2px,198px,0px,15px,p:g</columnDef>
+			<columnDef os="mac">130px,2px,530px,5px,105px,2px,218px,0px,15px,p:g</columnDef>
+			<columnDef os="exp">p,2px,473px,5px:g,p,2px,125px,0px,15px,p:g</columnDef>
+			<rowDef auto="true" cell="p" sep="2dlu"/>
+			<rows>
+				<row>
+					<cell type="label" labelfor="1"/>
+					<cell type="field" id="1" name="identifier" uitype="text"/>
+					<cell type="label" labelfor="2"/>
+					<cell type="field" id="2" name="institution" uitype="text"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="7"/>
+					<cell type="field" id="7" name="remarks" uitype="textareabrief" rows="2" colspan="6"/>
+				</row>
+			</rows>
+		</viewdef>				
 		<viewdef type="formtable" name="Preparation Table" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
 			<desc>Preparation subform table for Collection Object form.</desc>
 			<definition>Preparation</definition>
@@ -1083,7 +1118,7 @@
 			<rows>
 				<row>
 					<cell type="label" labelfor="4"/>
-					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="13" isrequired="true"/>
+					<cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="13" isrequired="false"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="3"/>
