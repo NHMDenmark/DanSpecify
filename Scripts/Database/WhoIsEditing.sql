@@ -48,6 +48,7 @@ SELECT DISTINCT
 	LEFT JOIN agent a ON a.AgentID = spa.CreatedByAgentID 
 	WHERE spa.CreatedByAgentID IS NOT NULL 
 	  AND spa.TimestampCreated > SUBTIME(NOW(),"10:00:00") 
+	  -- AND spa.TimestampCreated > '2026-06-02 10:00:00'
 	  GROUP BY a.AgentID -- , spf.FieldName
 	ORDER BY spa.TimestampModified DESC
-LIMIT 128
+LIMIT 2000

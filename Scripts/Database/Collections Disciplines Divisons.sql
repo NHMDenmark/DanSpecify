@@ -3,7 +3,7 @@ SELECT
 	c.collectionid, c.code, c.collectionname, -- c.DisciplineId, 
 	-- dsc.disciplineId, 
 	dsc.Name discipline, -- dsc.TaxonTreeDefID, dsc.GeographyTreeDefID, dsc.GeologicTimePeriodTreeDefID, -- dsc.RegNumber, dsc.`Type`, dsc.UserGroupScopeId, dsc.DivisionID, dsc.TaxonTreeDefID, dsc.GeographyTreeDefID, 
-	-- dv.divisionId, 
+	dv.divisionId, 
 	dv.Name division, dsc.Type DisciplineType, dv.DisciplineType -- , dv.UserGroupScopeId, dv.RegNumber
 	FROM collection c
 	LEFT JOIN discipline dsc ON dsc.DisciplineID = c.DisciplineID 

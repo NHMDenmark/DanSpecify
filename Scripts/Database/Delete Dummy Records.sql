@@ -8,11 +8,11 @@
 	WHERE 
 	   co.ProjectNumber IN ('Reserved Dummy Records','Reserved for DaSSCo', 'Mass digitization init', 'Exh. Pollinating beetles 3.7D.2', 'Reserved for båndfluesamling')
 	   /*AND (
-				catalogNumber BETWEEN 0 AND 0 
+				catalogNumber BETWEEN 000 AND 000 
 			 )*/ 
         AND
 		 catalogNumber IN (
-		 0
+		 
 		 );
 	      
 	      
