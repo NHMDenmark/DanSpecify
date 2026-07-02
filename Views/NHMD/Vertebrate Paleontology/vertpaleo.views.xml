@@ -1147,10 +1147,14 @@
           <cell type="label" labelfor="4"/>
           <cell type="field" id="4" name="storage" uitype="querycbx" initialize="name=Storage" colspan="3"/>
         </row>
-        <row>
+		<row>
+			<cell type="label" labelfor="prepremarks"/>
+			<cell type="field" id="prepremarks" name="remarks" uitype="textareabrief" rows="2" colspan="12"/>
+		</row>
+        <!--<row>
           <cell type="label" labelfor="desc"/>
           <cell type="field" id="desc" name="description" uitype="textareabrief" rows="2" colspan="12"/>
-        </row>
+        </row>-->
         <row>
           <cell type="label" labelfor="1"/>
           <cell type="field" id="1" uitype="plugin" name="this" initialize="name=PartialDateUI;df=preparedDate;tp=preparedDatePrecision" uifieldformatter="Date" colspan="3"/>
