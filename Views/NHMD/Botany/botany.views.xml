@@ -314,7 +314,7 @@
 					<cell type="label" labelfor="1"/>
 					<cell type="field" id="1" name="catalogNumber" uitype="formattedtext"/>
 					<cell type="label" labelfor="3"/>
-					<cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO" isrequired="false"/>
+					<cell type="field" id="3" name="accession" uitype="querycbx" initialize="name=AccessionCO;title=AccessionCO;viewbtn=true" isrequired="false"/>
 					<cell type="label" labelfor="14"/>
 					<cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
 				</row>
