@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewset name="Bird Views" i18nresname="views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
   <views>
     <!-- Common Views -->
-
     <view name="Accession" class="edu.ku.brc.specify.datamodel.Accession" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionBusRules">
       <desc><![CDATA[The Accession form.]]></desc>
       <altviews>
@@ -11,7 +9,6 @@
         <altview name="Accession Edit" viewdef="Accession" mode="edit"/>
       </altviews>
     </view>
-
     <view name="AccessionCO" class="edu.ku.brc.specify.datamodel.Accession" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionBusRules">
       <desc><![CDATA[The Accession form as seen in the CO form.]]></desc>
       <altviews>
@@ -19,7 +16,6 @@
         <altview name="AccessionCO Edit" viewdef="AccessionCO" mode="edit"/>
       </altviews>
     </view>
-
 <!--
     <view name="AccessionAuthorization" objtitle="Accession Authorization" class="edu.ku.brc.specify.datamodel.AccessionAuthorization" busrules="edu.ku.brc.specify.datamodel.busrules.AccessionAuthorizationBusRules">
       <desc><![CDATA[Permit subform within the Accession form.]]></desc>
@@ -33,9 +29,7 @@
       </altviews>
     </view>
  -->
-
     <!-- Collection Specific Views -->
-
     <view name="BirdAttributes" class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute" resourcelabels="false">
       <desc><![CDATA[Subform within the Collection Object form.]]></desc>
       <altviews>
@@ -43,7 +37,6 @@
         <altview name="BirdAttributes Edit" viewdef="BirdAttributes" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" isinternal="false" resourcelabels="false">
       <desc><![CDATA[CollectingEvent Form]]></desc>
       <altviews>
@@ -51,7 +44,6 @@
         <altview name="CollectingEvent Edit" viewdef="CollectingEvent" mode="edit"/>
       </altviews>
     </view>
-
     <view name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingEventBusRules" resourcelabels="false">
       <desc><![CDATA[CollectingEvent SubForm]]></desc>
       <altviews>
@@ -59,7 +51,6 @@
         <altview name="CollectingEventSub Edit" viewdef="CollectingEventSub" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="CollectingEventAttribute" class="edu.ku.brc.specify.datamodel.CollectingEventAttribute" resourcelabels="false">
       <desc><![CDATA[CollectingEventAttribute Form]]></desc>
       <altviews>
@@ -67,7 +58,6 @@
         <altview name="CollectingEventAttribute Edit" viewdef="CollectingEventAttribute" mode="edit"/>
       </altviews>
     </view>
-
     <view name="CollectingTrip" class="edu.ku.brc.specify.datamodel.CollectingTrip" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingTripBusRules" resourelabels="false">
       <desc><![CDATA[CollectingTrip Form]]></desc>
       <altviews>
@@ -75,7 +65,6 @@
         <altview name="CollectingTrip Edit" viewdef="CollectingTrip" mode="edit"/>
       </altviews>
     </view>
-
     <view name="CollectingTripForm" class="edu.ku.brc.specify.datamodel.CollectingTrip" busrules="edu.ku.brc.specify.datamodel.busrules.CollectingTripBusRules" isinternal="false" resourelabels="false">
       <desc><![CDATA[CollectingTrip Form]]></desc>
       <altviews>
@@ -83,7 +72,6 @@
         <altview name="CollectingTripForm Edit" viewdef="CollectingTripForm" mode="edit"/>
       </altviews>
     </view>
-
     <view name="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" busrules="edu.ku.brc.specify.datamodel.busrules.CollectionObjectBusRules" isinternal="false" resourcelabels="false">
       <desc><![CDATA[The Collection Object form.]]></desc>
       <altviews>
@@ -91,7 +79,6 @@
         <altview name="Collection Object Edit" viewdef="Collection Object" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="CollectionObjectSub" class="edu.ku.brc.specify.datamodel.CollectionObject" usedefbusrule="false" resourcelabels="false">
       <desc><![CDATA[The Collection Object Subform for Accessions.]]></desc>
       <altviews>
@@ -101,7 +88,6 @@
         <altview name="COS Table View" viewdef="CollectionObjectSub Table" mode="view"/>-->
       </altviews>
     </view>
-
     <view name="Determination" class="edu.ku.brc.specify.datamodel.Determination" busrules="edu.ku.brc.specify.datamodel.busrules.DeterminationBusRules" isexternal="true" resourcelabels="false">
       <desc><![CDATA[Subform within the Collection Object form.]]></desc>
       <altviews>
@@ -111,14 +97,12 @@
         <altview name="Determination Table Edit" viewdef="Determination Table" mode="edit"/>
       </altviews>
     </view>
-
     <view name="DeterminationViewOnly" class="edu.ku.brc.specify.datamodel.Determination" isexternal="true" resourcelabels="false">
       <desc><![CDATA[Subform within the Collection Object form.]]></desc>
       <altviews>
         <altview name="Determination View" viewdef="Determination" mode="view" default="true"/>
       </altviews>
     </view>
-
     <view name="Locality" class="edu.ku.brc.specify.datamodel.Locality" busrules="edu.ku.brc.specify.datamodel.busrules.LocalityBusRules" isinternal="false">
       <desc><![CDATA[Locality form.]]></desc>
       <altviews>
@@ -126,7 +110,6 @@
         <altview name="Locality Edit" viewdef="Locality" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="LocalityDetail" class="edu.ku.brc.specify.datamodel.LocalityDetail">
       <desc><![CDATA[LocalityDetail form.]]></desc>
       <altviews>
@@ -134,7 +117,6 @@
         <altview name="LocalityDetail Edit" viewdef="LocalityDetail" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="LocalityNameAlias" class="edu.ku.brc.specify.datamodel.LocalityNameAlias" resourcelabels="false">
       <desc><![CDATA[Locality Name Alias subform for the Locality form.]]></desc>
       <altviews>
@@ -142,7 +124,6 @@
         <altview name="LocalityNameAlias Edit" viewdef="LocalityNameAlias" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier">
       <desc><![CDATA[Subform within the collectionObject form.]]></desc>
       <altviews>
@@ -152,7 +133,6 @@
         <altview name="OtherIdentifiers Edit" viewdef="OtherIdentifiers" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" busrules="edu.ku.brc.specify.datamodel.busrules.PreparationBusRules" resourcelabels="false">
       <desc><![CDATA[Subform within the Preparation form.]]></desc>
       <altviews>
@@ -162,7 +142,6 @@
         <altview name="Preparation Edit" viewdef="Preparation" mode="edit" default="true"/>
       </altviews>
     </view>
-
     <view name="TaxonCitation" class="edu.ku.brc.specify.datamodel.TaxonCitation" resourcelabels="false">
       <desc><![CDATA[Taxon data entry form.]]></desc>
       <altviews>
@@ -171,10 +150,8 @@
       </altviews>
     </view>
   </views>
-
   <viewdefs>
     <!-- Common Views -->
-
     <viewdef type="form" name="Accession" class="edu.ku.brc.specify.datamodel.Accession" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[The Accession form.]]></desc>
       <enableRules/>
@@ -310,8 +287,6 @@
       <desc><![CDATA[Determination subform table for Collection Object form.]]></desc>
       <definition>AccessionAuthorization</definition>
     </viewdef>
-
-
     <viewdef type="form" name="AccessionAuthorization" class="edu.ku.brc.specify.datamodel.AccessionAuthorization" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Permit subform for AccessionAuthorization.]]></desc>
       <enableRules/>
@@ -330,7 +305,6 @@
       </rows>
     </viewdef>
  -->
-
     <viewdef type="form" name="AccessionCO" class="edu.ku.brc.specify.datamodel.Accession" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[The Accession form.]]></desc>
       <enableRules/>
@@ -383,9 +357,7 @@
         </row>
       </rows>
     </viewdef>
-
     <!-- Collection Specific Views -->
-
     <viewdef type="form" name="BirdAttributes" class="edu.ku.brc.specify.datamodel.CollectionObjectAttribute" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Form For OtherIdentifier]]></desc>
       <columnDef>100px,2px,115px,5px,75px,2px,115px,5px,109px,2px,115px,5px,60px,2px,115px,0px,p:g</columnDef>
@@ -404,7 +376,6 @@
           <cell type="label" labelfor="feetclr"/>
           <cell type="field" id="feetclr" name="text9" uitype="combobox" picklist="feet_color"/>
         </row>		  
-
 	    <row>		  
           <cell type="label" labelfor="irisclr"/>
           <cell type="field" id="irisclr" name="text10" uitype="combobox" picklist="iris_color"/>
@@ -472,7 +443,6 @@
           <cell type="field" id="hallux" name="number11" uitype="text" />
         </row>
 		
-
         <row>
           <cell type="label" labelfor="22"/>
           <cell type="field" id="22" name="remarks" uitype="textareabrief" rows="2" colspan="15"/>
@@ -600,7 +570,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="CollectingEvent" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Collecting Event]]></desc>
       <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
@@ -637,7 +606,6 @@
         </row>
       </rows>
     </viewdef>
-
     <viewdef type="form" name="CollectingEventSub" class="edu.ku.brc.specify.datamodel.CollectingEvent" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Collecting Event]]></desc>
       <columnDef>100px,2px,210px,5px,75px,2px,210px,5px,90px,2px,126px,0px,p:g</columnDef>
@@ -674,7 +642,6 @@
         </row>
       </rows>
     </viewdef>
-
     <viewdef type="form" name="CollectingEventAttribute" class="edu.ku.brc.specify.datamodel.CollectingEventAttribute" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Collecting Event]]></desc>
       <columnDef>100px,2px,108px,0px,p:g</columnDef>
@@ -804,7 +771,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="CollectingTrip" class="edu.ku.brc.specify.datamodel.CollectingTrip" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[CollectingTrip Form - unknown use in database]]></desc>
       <columnDef>100px,2px,291px,5px,100px,2px,110px,5px,100px,2px,110px,0px,p:g</columnDef>
@@ -840,7 +806,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="CollectingTripForm" class="edu.ku.brc.specify.datamodel.CollectingTrip" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[CollectingTrip Form]]></desc>
       <columnDef>100px,2px,291px,5px,100px,2px,110px,5px,100px,2px,110px,0px,15px,p:g</columnDef>
@@ -905,7 +870,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="Collection Object" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[The Collection Object form.]]></desc>
       <enableRules/>
@@ -926,7 +890,6 @@
           <cell type="field" id="14" name="altCatalogNumber" uitype="text"/>
         </row>
 		
-
 		
 		
         <row>
@@ -961,7 +924,6 @@
         <!--<row>
           <cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="11" rows="3"/>
         </row>-->
-
 			
 		
         <row>
@@ -1110,12 +1072,10 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="formtable" name="CollectionObjectSub Table" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Collection Object subform table for appraisal and Project forms.]]></desc>
       <definition>CollectionObjectSub</definition>
     </viewdef>
-
     <viewdef type="form" name="CollectionObjectSub" class="edu.ku.brc.specify.datamodel.CollectionObject" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[The Collection Object Subform for appraisal and project forms.]]></desc>
       <enableRules/>
@@ -1137,12 +1097,10 @@
         </row>
       </rows>
     </viewdef>
-
     <viewdef type="formtable" name="Determination Table" class="edu.ku.brc.specify.datamodel.Determination" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Determination subform table for Collection Object form.]]></desc>
       <definition>Determination</definition>
     </viewdef>
-
     <viewdef name="Determination" type="form" class="edu.ku.brc.specify.datamodel.Determination" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Determination subform for Collection Object form.]]></desc>
       <enableRules/>
@@ -1228,7 +1186,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="Locality" class="edu.ku.brc.specify.datamodel.Locality" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Locality]]></desc>
       <columnDef>100px,2px,90px,5px,90px,2px,90px,5px,105px,2px,126px,5px,105px,2px,98px,0px,15px,p:g</columnDef>
@@ -1328,7 +1285,6 @@
         </row>
       </rows>
     </viewdef>
-
     <viewdef type="form" name="LocalityDetail" class="edu.ku.brc.specify.datamodel.LocalityDetail" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[LocalityDetail subform for Locality]]></desc>
       <columnDef>100px,2px,100px,5px,80px,2px,120px,5px,65px,2px,116px,5px,105px,2px,118px,p:g</columnDef>
@@ -1445,7 +1401,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="form" name="LocalityNameAlias" class="edu.ku.brc.specify.datamodel.LocalityNameAlias" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Locality]]></desc>
       <columnDef>130px,2px,305px,5px,128px,2px,460px,p:g</columnDef>
@@ -1459,12 +1414,10 @@
         </row>
       </rows>
     </viewdef>
-
     <viewdef type="formtable" name="OtherIdentifiers Table" class="edu.ku.brc.specify.datamodel.OtherIdentifier" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
       <definition>OtherIdentifiers</definition>
     </viewdef>
-
     <viewdef type="form" name="OtherIdentifiers" class="edu.ku.brc.specify.datamodel.OtherIdentifier" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
       <desc><![CDATA[subform on the Collection Object form.]]></desc>
       <enableRules/>
@@ -1498,12 +1451,10 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef type="formtable" name="Preparation Table" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[Preparation subform table for Collection Object form.]]></desc>
       <definition>Preparation</definition>
     </viewdef>
-
     <viewdef type="form" name="Preparation" class="edu.ku.brc.specify.datamodel.Preparation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
       <desc><![CDATA[Preparation for Collection Object form.]]></desc>
       <enableRules/>
@@ -1586,7 +1537,6 @@
         </row>-->
       </rows>
     </viewdef>
-
     <viewdef name="TaxonCitation" type="form" class="edu.ku.brc.specify.datamodel.TaxonCitation" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj">
       <desc><![CDATA[The ReferenceWork form]]></desc>
       <columnDef>110px,2px,390px,325px,p:g</columnDef>
