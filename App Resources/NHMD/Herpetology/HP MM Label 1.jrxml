@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HP MM Label 1" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="188" leftMargin="15" rightMargin="5" topMargin="20" bottomMargin="20" uuid="7a824ecc-d107-41f5-8c0e-bcd8544b73ed">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -204,7 +204,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["NHMD" + String.format("%09d", Long.parseLong($F{1.collectionobject.catalogNumber}))]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="0" y="176" width="178" height="1" uuid="b26953c2-c649-46c8-83a9-733937cc2b53"/>
