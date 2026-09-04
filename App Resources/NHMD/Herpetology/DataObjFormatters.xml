@@ -131,7 +131,7 @@
 	<format name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true">
 		<switch single="true">
 			<fields>
-				<field sep="NHMD" uifieldformatter="CatalogNumber" trimzeros="true">catalogNumber</field>
+				<field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
 			</fields>
 		</switch>
 	</format>
@@ -292,6 +292,7 @@
 			<fields>
 				<field formatter="Agent">agent</field>
 				<field sep=" - ">role</field>
+				<field sep=" | ">agent.email</field>
 			</fields>
 		</switch>
 	</format>
@@ -311,8 +312,11 @@
 			<fields>
 				<field>localityName</field>
 				<field sep="; ">geography.fullName</field>
-				<field type="bigdecimal" sep="; ">latitude1</field>
-				<field type="bigdecimal" sep=", ">longitude1</field>
+				<field type="bigdecimal" sep="; ">lat1text</field>
+				<field type="bigdecimal" sep=", ">long1text</field>
+				<field sep=" ; " trimzeros="true" uifieldformatter="NumericInteger">minElevation</field>
+				<field sep=" -" trimzeros="true" uifieldformatter="NumericInteger">maxElevation</field>
+				<field sep=" ">originalElevationUnit</field>
 			</fields>
 		</switch>
 	</format>
@@ -462,6 +466,15 @@
 			</fields>
 		</switch>
 	</format>
+	<format name="CollectionObject+AltCatNr" title="Collection Object+AltCatNr" class="edu.ku.brc.specify.datamodel.CollectionObject" default="">
+		<switch single="true">
+			<fields>
+				<field sep=" NHMD">catalogNumber</field>
+				<field sep=" (">altCatalogNumber</field>
+				<field>text8</field>
+			</fields>
+		</switch>
+	</format>
 	<aggregators>
 		<aggregator name="AccessionAgent" title="AccessionAgent" class="edu.ku.brc.specify.datamodel.AccessionAgent" default="true" separator="; " ending="" format="AccessionAgent"/>
 		<aggregator name="AccessionAttachment" title="AccessionAttachment" class="edu.ku.brc.specify.datamodel.AccessionAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
@@ -471,7 +484,7 @@
 		<aggregator name="Author" title="Author" class="edu.ku.brc.specify.datamodel.Author" default="true" separator="; " ending="" format="Author" orderfieldname="orderNumber"/>
 		<aggregator name="BorrowAttachment" title="BorrowAttachment" class="edu.ku.brc.specify.datamodel.BorrowAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="CollectingEventAttachment" title="CollectingEventAttachment" class="edu.ku.brc.specify.datamodel.CollectingEventAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator="; " ending="" format="CollectionObject"/>
+		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator=";" ending="" format="CollectionObject+AltCatNr"/>
 		<aggregator name="CollectionObjectAttachment" title="CollectionObjectAttachment" class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="Collector" title="Collector" class="edu.ku.brc.specify.datamodel.Collector" default="true" separator="; " ending="" format="Collector" orderfieldname="orderNumber"/>
 		<aggregator name="ConservDescriptionAttachment" title="ConservDescriptionAttachment" class="edu.ku.brc.specify.datamodel.ConservDescriptionAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>

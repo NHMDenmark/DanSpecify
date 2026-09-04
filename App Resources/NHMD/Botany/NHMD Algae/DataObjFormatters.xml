@@ -292,7 +292,7 @@
 			<fields>
 				<field formatter="Agent">agent</field>
 				<field sep=" - ">role</field>
-				<field sep=" | ">agent.email</field>
+				<field sep="|  ">agent.email</field>
 			</fields>
 		</switch>
 	</format>
@@ -341,9 +341,6 @@
 		<switch single="true">
 			<fields>
 				<field>paleoContextName</field>
-				<!-- sep is apparently ignored if formatter is set? -->
-				<!--field sep=", " formatter="GeologicTimePeriod">chronosStrat</field>
-                <field sep=", " formatter="LithoStrat">lithoStrat</field-->
 				<field sep=", ">chronosStrat.fullName</field>
 				<field sep=", ">lithoStrat.fullName</field>
 			</fields>
@@ -419,7 +416,6 @@
 		<switch single="true">
 			<fields>
 				<field>fullName</field>
-				<field sep=" ">author</field>
 			</fields>
 		</switch>
 	</format>
@@ -444,11 +440,75 @@
 			</fields>
 		</switch>
 	</format>
+	<format name="SpecifyUser" title="Specify User" class="edu.ku.brc.specify.datamodel.SpecifyUser" default="true">
+		<switch single="true">
+			<fields>
+				<field>name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="CollectionObjectType" title="Collection Object Type" class="edu.ku.brc.specify.datamodel.CollectionObjectType" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="CollectionObjectGroup" title="Collection Object Group" class="edu.ku.brc.specify.datamodel.CollectionObjectGroup" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="CollectionObjectGroupType" title="Collection Object Group Type" class="edu.ku.brc.specify.datamodel.CollectionObjectGroupType" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="CollectionObjectGroupJoin" title="Collection Object Group Join" class="edu.ku.brc.specify.datamodel.CollectionObjectGroupJoin" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">childCo.catalogNumber</field>
+				<field sep=" ">childCog.name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="AgentIdentifier" title="Agent Identifier" class="edu.ku.brc.specify.datamodel.AgentIdentifier" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">identifier</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="TectonicUnit" title="Tectonic Unit" class="edu.ku.brc.specify.datamodel.TectonicUnit" default="true">
+		<switch single="true">
+			<fields>
+				<field sep=" ">fullName</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="TectonicUnitTreeDef" title="TectonicUnitTreeDef" class="edu.ku.brc.specify.datamodel.TectonicUnitTreeDef" default="true">
+		<switch single="true">
+			<fields>
+				<field>name</field>
+			</fields>
+		</switch>
+	</format>
+	<format name="TectonicUnitTreeDefItem" title="TectonicUnitTreeDefItem" class="edu.ku.brc.specify.datamodel.TectonicUnitTreeDefItem" default="true">
+		<switch single="true">
+			<fields>
+				<field>name</field>
+			</fields>
+		</switch>
+	</format>
 	<format name="Determiner" title="Determiner" class="edu.ku.brc.specify.datamodel.Determiner" default="true">
 		<switch single="true">
 			<fields>
 				<field sep=" ">agent.lastName</field>
-				<field sep=" ,">agent.firstName</field>
+				<field sep=", ">agent.firstName</field>
 				<field sep="  ">agent.middleInitial</field>
 			</fields>
 		</switch>
@@ -462,7 +522,7 @@
 		<aggregator name="Author" title="Author" class="edu.ku.brc.specify.datamodel.Author" default="true" separator="; " ending="" format="Author" orderfieldname="orderNumber"/>
 		<aggregator name="BorrowAttachment" title="BorrowAttachment" class="edu.ku.brc.specify.datamodel.BorrowAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="CollectingEventAttachment" title="CollectingEventAttachment" class="edu.ku.brc.specify.datamodel.CollectingEventAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
-		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator=";NHMD" ending="" format="CollectionObject"/>
+		<aggregator name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true" separator="; " ending="" format="CollectionObject"/>
 		<aggregator name="CollectionObjectAttachment" title="CollectionObjectAttachment" class="edu.ku.brc.specify.datamodel.CollectionObjectAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="Collector" title="Collector" class="edu.ku.brc.specify.datamodel.Collector" default="true" separator="; " ending="" format="Collector" orderfieldname="orderNumber"/>
 		<aggregator name="ConservDescriptionAttachment" title="ConservDescriptionAttachment" class="edu.ku.brc.specify.datamodel.ConservDescriptionAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
@@ -488,6 +548,8 @@
 		<aggregator name="RepositoryAgreementAttachment" title="RepositoryAgreementAttachment" class="edu.ku.brc.specify.datamodel.RepositoryAgreementAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
 		<aggregator name="PcrPerson" title="PcrPerson" class="edu.ku.brc.specify.datamodel.PcrPerson" default="true" separator="; " ending="" format="PcrPerson" orderfieldname="orderNumber"/>
 		<aggregator name="TaxonAttachment" title="TaxonAttachment" class="edu.ku.brc.specify.datamodel.TaxonAttachment" default="true" separator="; " ending="" format="identity" orderfieldname="ordinal"/>
+		<aggregator name="CollectionObjectGroupJoin" title="Collection Object Group Join" class="edu.ku.brc.specify.datamodel.CollectionObjectGroupJoin" default="true" separator="; " ending="" format=""/>
+		<aggregator name="AgentIdentifier" title="Agent Identifier" class="edu.ku.brc.specify.datamodel.AgentIdentifier" default="true" separator="; " ending="" format=""/>
 		<aggregator name="Determiner" title="Determiner" class="edu.ku.brc.specify.datamodel.Determiner" default="true" separator="; " ending="" format=""/>
 	</aggregators>
 </formatters>
