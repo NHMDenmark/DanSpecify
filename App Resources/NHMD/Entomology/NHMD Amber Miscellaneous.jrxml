@@ -8,6 +8,7 @@
 	<field name="1,9-determinations.determination.remarks" class="java.lang.String"/>
 	<field name="1.collectionobject.remarks" class="java.lang.String"/>
 	<field name="1.collectionobject." class="java.lang.Object"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1.collectionobject.projectNumber" class="java.lang.String"/>
 	<field name="1.collectionobject.catalogedDate" class="java.lang.String"/>

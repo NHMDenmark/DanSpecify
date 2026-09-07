@@ -27,6 +27,7 @@
 	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Class" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Subspecies Author" class="java.lang.String"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Species" class="java.lang.String"/>

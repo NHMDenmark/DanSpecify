@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NHMD Entomology CO Barcodes" columnCount="5" pageWidth="535" pageHeight="842" whenNoDataType="NoPages" columnWidth="101" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="ec70a2e9-f089-4f1a-903e-663694b9d331">
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
@@ -25,7 +26,7 @@
 				<componentElement>
 					<reportElement stretchType="ElementGroupBottom" x="2" y="1" width="95" height="29" uuid="1633291f-b1a6-457e-bf49-a95079d0d1ee"/>
 					<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false">
-						<jr:codeExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></jr:codeExpression>
+						<jr:codeExpression><![CDATA[$F{1.collectionobject.}]]></jr:codeExpression>
 					</jr:barbecue>
 				</componentElement>
 			</frame>
@@ -35,7 +36,7 @@
 					<font size="6"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
