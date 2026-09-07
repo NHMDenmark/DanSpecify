@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HP MM Label 1" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="188" leftMargin="15" rightMargin="5" topMargin="20" bottomMargin="20" uuid="7a824ecc-d107-41f5-8c0e-bcd8544b73ed">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -13,6 +13,7 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.String"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="1,5-cataloger.agent.firstName" class="java.lang.String"/>
 	<field name="1,5-cataloger.agent.lastName" class="java.lang.String"/>
@@ -66,7 +67,7 @@
 				<text><![CDATA[Loc.:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="117" width="22" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
+				<reportElement x="0" y="106" width="22" height="11" uuid="1525801b-9b8a-461a-8805-e3c0be3dcd77"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -138,7 +139,7 @@
 				<textFieldExpression><![CDATA[$F{1,10,2.locality.minElevation} != null ? $F{1,10,2.locality.minElevation}.setScale(0, BigDecimal.ROUND_HALF_UP) + " m" : ""]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="22" y="117" width="153" height="11" uuid="1733c77c-5223-4706-ad8d-fdd6cc8fefc1">
+				<reportElement x="22" y="106" width="105" height="11" uuid="1733c77c-5223-4706-ad8d-fdd6cc8fefc1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2377e4e-c33d-4d61-95d4-67042ba5253c"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -148,14 +149,14 @@
 				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDate} != null ? $F{1,10.collectingevent.startDate} : ""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="128" width="22" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
+				<reportElement x="0" y="117" width="22" height="11" uuid="418c1f78-92c5-465f-8669-dcc50856bd31"/>
 				<textElement markup="styled">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Coll.:]]></text>
 			</staticText>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="22" y="128" width="153" height="22" uuid="7b6e2200-c6c5-4706-935b-b0513a137274">
+				<reportElement x="22" y="117" width="105" height="33" uuid="7b6e2200-c6c5-4706-935b-b0513a137274">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92c92239-f129-4622-bdee-05fb4f45ee41"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -204,7 +205,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="0" y="176" width="178" height="1" uuid="b26953c2-c649-46c8-83a9-733937cc2b53"/>
@@ -257,14 +258,14 @@
 				<text><![CDATA[Curr.:]]></text>
 			</staticText>
 			<textField textAdjust="ScaleFont">
-				<reportElement x="0" y="105" width="175" height="11" uuid="1de1338c-c3d4-496c-b756-e1fcdf71cbd4">
+				<reportElement x="127" y="117" width="48" height="33" uuid="1de1338c-c3d4-496c-b756-e1fcdf71cbd4">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2c02ca0-7e90-4df7-8088-5dac0896ddb6"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement markup="html">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null ? "<b>Field nr: </b> " + $F{1.collectionobject.fieldNumber} : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null ? "<b>Field nr: </b><br/> " + $F{1.collectionobject.fieldNumber} : ""]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
