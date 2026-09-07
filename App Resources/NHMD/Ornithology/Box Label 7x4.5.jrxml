@@ -1,26 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="Box Label 7x4.5"
-		 columnCount="3"
-		 printOrder="Vertical"
-		 orientation="Portrait"
-		 pageWidth="595"
-		 pageHeight="842"
-		 columnWidth="189"
-		 columnSpacing="0"
-		 leftMargin="14"
-		 rightMargin="14"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Box Label 7x4.5" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="189" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" scriptletClass="edu.ku.brc.specify.config.Scriptlet" uuid="f0ef6c4f-0945-4203-acaf-e102d539b93a">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
 	<field name="1,63-preparations.preparation.countAmt" class="java.lang.Integer"/>
 	<field name="1,9-determinations,5-determiner.agent.determiner" class="java.lang.String"/>
@@ -47,73 +31,46 @@
 	<field name="1.collectionobject.modifier" class="java.lang.String"/>
 	<field name="1,63-preparations.preparation.integer2" class="java.lang.Integer"/>
 	<field name="1,9-determinations.determination.determinations" class="java.lang.String"/>
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="127"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="15"
-						width="189"
-						height="13"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD-"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="0"
-						y="1"
-						width="189"
-						height="13"
-						key="staticText-1"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font pdfFontName="Helvetica" size="6" isBold="true"/>
-					</textElement>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="127" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="15" width="189" height="13" uuid="68992519-1c83-4eb1-a558-e7c20a297fab"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="1" width="189" height="13" uuid="6245e571-9b3a-46c0-81cd-a5ced4a14429"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
 				<text><![CDATA[NATURAL HISTORY MUSEUM OF DENMARK ORNITHOLOGY]]></text>
-				</staticText>
-				<line direction="TopDown">
-					<reportElement
-						x="0"
-						y="10"
-						width="189"
-						height="0"
-						key="line-1"/>
-					<graphicElement stretchType="NoStretch">
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="0" y="10" width="189" height="1" uuid="fc1ef9c5-dddd-4768-bb08-4a5c24950787"/>
+				<graphicElement>
 					<pen lineWidth="0.2" lineStyle="Solid"/>
-</graphicElement>
-				</line>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="1"
-						y="39"
-						width="187"
-						height="13"
-						key="textField"/>
-					<box></box>
-					<textElement textAlignment="Center" markup="html">
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["<html>" +
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="39" width="187" height="13" uuid="ccb89952-3bf0-4fe5-8f67-9ebe394c5f2b"/>
+				<textElement textAlignment="Center" markup="html">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<html>" +
 	($F{1,9-determinations,4.taxon.Genus} != null ? "<i>" + ($F{1,9-determinations,4,4-acceptedTaxon.taxon.fullName} != null ? $F{1,9-determinations,4,4-acceptedTaxon.taxon.fullName} : $F{1,9-determinations,4.taxon.fullName}) + "</i>" : $F{1,9-determinations,4.taxon.fullName}) +
 	($F{1,93.collectionobjectattribute.text1} != null ? (" " + ($F{1,93.collectionobjectattribute.text1}.startsWith("Female")
 		? "\u2640" : $F{1,93.collectionobjectattribute.text1}.startsWith("F-gonads")
@@ -123,204 +80,122 @@
 						? "\u2642" : $F{1,93.collectionobjectattribute.text1}.startsWith("M-verified")
 							? "\u2642" : "")) : "") +
 "</html>"]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="53"
-						width="36"
-						height="9"
-						key="staticText-3"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-3" x="1" y="53" width="36" height="9" uuid="c45f1f6b-85f2-4922-a7da-d74e235884df"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Locality:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="53"
-						width="148"
-						height="23"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,2,3.geography.fullName}
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="40" y="53" width="148" height="23" uuid="0f02042d-2eef-42fb-9c94-507201549cbd"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,2,3.geography.fullName}
 + "\n"
 + $F{1,10,2.locality.localityName}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="77"
-						width="36"
-						height="9"
-						key="staticText-4"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-4" x="1" y="77" width="36" height="9" uuid="b7dddd5a-062f-4833-a58b-9b411502f9ae"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Date:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" pattern="dd MMMMM yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="77"
-						width="148"
-						height="9"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10.collectingevent.startDateNumericDay} != null ?
+			</staticText>
+			<textField pattern="dd MMMMM yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" x="40" y="77" width="148" height="9" uuid="514c6fd9-92bc-4c5f-9116-fad43cb6a6ae"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10.collectingevent.startDateNumericDay} != null ?
 	new SimpleDateFormat("dd/MM/yyyy").parse($F{1,10.collectingevent.startDate})
 	: $F{1,10.collectingevent.startDate}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="87"
-						width="36"
-						height="9"
-						key="staticText-5"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-5" x="1" y="87" width="36" height="9" uuid="48632e68-5c15-4965-9121-dd8b292d28db"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Collector:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="87"
-						width="148"
-						height="9"
-						key="textField-2"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10,30-collectors.collector.collectors}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="97"
-						width="36"
-						height="9"
-						key="staticText-6"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-2" x="40" y="87" width="148" height="9" uuid="1eeb2dab-5372-40fd-870a-5ae9eeb9d8f1"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,10,30-collectors.collector.collectors}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-6" x="1" y="97" width="36" height="9" uuid="c6b62da3-3545-48af-964e-4c25401baeeb"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Preparation:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="97"
-						width="148"
-						height="9"
-						key="textField-3"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,63-preparations,65.preptype.name}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="117"
-						width="36"
-						height="9"
-						key="staticText-7">
-							<printWhenExpression><![CDATA[$F{1,63-preparations.preparation.integer1} != null]]></printWhenExpression>
-						</reportElement>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="40" y="97" width="148" height="9" uuid="ce9d9220-42b5-4fe4-a787-ebec5668d28d"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,63-preparations,65.preptype.name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" x="1" y="117" width="36" height="9" uuid="45b5ec9c-ae24-424d-94fb-fc45e664d060">
+					<printWhenExpression><![CDATA[$F{1,63-preparations.preparation.integer1} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Clutch size:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="117"
-						width="147"
-						height="9"
-						key="textField-4">
-							<printWhenExpression><![CDATA[$F{1,63-preparations.preparation.integer1} != null]]></printWhenExpression>
-						</reportElement>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,63-preparations.preparation.integer1}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="29"
-						width="189"
-						height="9"
-						key="textField-5">
-							<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
-						</reportElement>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font size="5" isItalic="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["(" + ($F{1.collectionobject.modifier} != null ? $F{1.collectionobject.modifier} + " " : "") + $F{1.collectionobject.altCatalogNumber} + ")"]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="1"
-						y="107"
-						width="36"
-						height="9"
-						key="staticText-8">
-							<printWhenExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null]]></printWhenExpression>
-						</reportElement>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-4" x="40" y="117" width="147" height="9" uuid="a6ada73c-d85b-4b41-8b73-15dd5a12cbe5">
+					<printWhenExpression><![CDATA[$F{1,63-preparations.preparation.integer1} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,63-preparations.preparation.integer1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-5" x="0" y="29" width="189" height="9" uuid="774a1ffb-d3b9-4139-88cc-78bd5504d994">
+					<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="5" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(" + ($F{1.collectionobject.modifier} != null ? $F{1.collectionobject.modifier} + " " : "") + $F{1.collectionobject.altCatalogNumber} + ")"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-8" x="1" y="107" width="36" height="9" uuid="4e54dd17-99d2-41a1-9f90-6bfa334ecb0a">
+					<printWhenExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="6"/>
+				</textElement>
 				<text><![CDATA[Field No:]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="40"
-						y="107"
-						width="148"
-						height="9"
-						key="textField-6"/>
-					<box></box>
-					<textElement>
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.fieldNumber}]]></textFieldExpression>
-				</textField>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageFooter>
-		<lastPageFooter>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</lastPageFooter>
-		<summary>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</summary>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-6" x="40" y="107" width="148" height="9" uuid="9c9251a7-931c-4706-a8d5-818fe8fa8ae2"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.fieldNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>
