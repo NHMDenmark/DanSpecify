@@ -41,6 +41,7 @@
 	<field name="1,93.collectionobjectattribute.text1" class="java.lang.String"/>
 	<field name="1,10,2,124-localityDetails.localitydetail.startDepth" class="java.lang.Double"/>
 	<field name="1,10.collectingevent.startDate" class="java.lang.String"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,10,30-collectors,5.agent.lastName" class="java.lang.String"/>
 	<field name="1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
@@ -77,7 +78,7 @@
 					<textElement>
 						<font size="7"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD-"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

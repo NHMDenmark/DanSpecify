@@ -26,6 +26,7 @@
 	<field name="1,10.collectingevent.text3" class="java.lang.String"/>
 	<field name="1,10,2,124-localityDetails.localitydetail.endDepthUnit" class="java.lang.String"/>
 	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
 	<field name="1,10,2.locality.longitude1" class="java.math.BigDecimal"/>
@@ -121,7 +122,7 @@
 					<textElement textAlignment="Center">
 						<font size="6"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD-"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -185,7 +186,7 @@
 						<font size="5"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,10.collectingevent.startDateNumericDay} != null ?
-	new SimpleDateFormat("dd/MM/yyyy").parse($F{1,10.collectingevent.startDate})
+	new SimpleDateFormat("yyyy-MM-dd").parse($F{1,10.collectingevent.startDate})
 	: $F{1,10.collectingevent.startDate}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >

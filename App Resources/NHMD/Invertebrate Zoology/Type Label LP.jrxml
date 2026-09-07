@@ -1,27 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="EtichettaTypes"
-		 columnCount="4"
-		 printOrder="Vertical"
-		 orientation="Portrait"
-		 pageWidth="595"
-		 pageHeight="842"
-		 columnWidth="133"
-		 columnSpacing="0"
-		 leftMargin="30"
-		 rightMargin="30"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EtichettaTypes" columnCount="4" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="133" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="9cdfeff8-1d88-4d98-942d-79b00221d19c">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
 	<field name="1,9-determinations.determination.isCurrent" class="java.lang.Boolean"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,9-determinations,4-preferredTaxon.taxon.Phylum" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Species Author" class="java.lang.String"/>
@@ -29,136 +14,76 @@
 	<field name="1,9-determinations.determination.determinations" class="java.lang.String"/>
 	<field name="id" class="java.lang.Integer"/>
 	<field name="resultsetsize" class="java.lang.String"/>
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="54"  isSplitAllowed="true" >
-				<staticText>
-					<reportElement
-						x="3"
-						y="5"
-						width="129"
-						height="7"
-						key="staticText-1"/>
-					<box></box>
-					<textElement textAlignment="Center">
-						<font size="5"/>
-					</textElement>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="3" y="5" width="129" height="7" uuid="a1976866-5339-4eea-a2b0-bcd1ea73f887"/>
+				<textElement textAlignment="Center">
+					<font size="5"/>
+				</textElement>
 				<text><![CDATA[NATURAL HISTORY MUSEUM OF DENMARK]]></text>
-				</staticText>
-				<staticText>
-					<reportElement
-						x="3"
-						y="14"
-						width="25"
-						height="11"
-						key="staticText-2"/>
-					<box></box>
-					<textElement>
-						<font size="7" isBold="false"/>
-					</textElement>
-				<text><![CDATA[NHMD-]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="29"
-						y="14"
-						width="38"
-						height="11"
-						key="textField-1"/>
-					<box></box>
-					<textElement>
-						<font size="7" isBold="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[""+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
-				</textField>
-				<line direction="TopDown">
-					<reportElement
-						x="1"
-						y="3"
-						width="131"
-						height="0"
-						key="line-1"/>
-					<graphicElement stretchType="NoStretch">
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-1" x="2" y="14" width="65" height="11" uuid="6aa1c46c-425b-43d7-9abc-1e95584347ba"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{1.collectionobject.}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-1" x="1" y="3" width="131" height="1" uuid="7c1cb202-55cf-4b92-acf1-de5811e48f9a"/>
+				<graphicElement>
 					<pen lineWidth="0.1" lineStyle="Solid"/>
-</graphicElement>
-				</line>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="2"
-						y="36"
-						width="86"
-						height="10"
-						key="textField-3"/>
-					<box></box>
-					<textElement textAlignment="Left">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,9-determinations,4.taxon.Species Author}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="78"
-						y="12"
-						width="54"
-						height="9"
-						key="textField-6"/>
-					<box></box>
-					<textElement textAlignment="Left">
-						<font size="6"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,9-determinations.determination.typeStatusName}==null?"":$F{1,9-determinations.determination.typeStatusName}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="3"
-						y="25"
-						width="129"
-						height="11"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="6" isBold="true" isItalic="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1,9-determinations,4.taxon.fullName}]]></textFieldExpression>
-				</textField>
-				<line direction="TopDown">
-					<reportElement
-						x="1"
-						y="48"
-						width="131"
-						height="0"
-						key="line-2"/>
-					<graphicElement stretchType="NoStretch">
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-3" x="2" y="36" width="86" height="10" uuid="f4b10d39-899d-4cdf-a1a8-a7d67f346848"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.Species Author}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-6" x="78" y="12" width="54" height="9" uuid="7a6ebe77-a8e1-4c95-9a22-1136f88ff1ef"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations.determination.typeStatusName}==null?"":$F{1,9-determinations.determination.typeStatusName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="2" y="25" width="130" height="11" uuid="d1567cd5-365e-4213-9069-86b1ce6d9386"/>
+				<textElement>
+					<font size="6" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1,9-determinations,4.taxon.fullName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-2" x="1" y="48" width="131" height="1" uuid="e904207d-72d1-46de-b061-f010e189b100"/>
+				<graphicElement>
 					<pen lineWidth="0.1" lineStyle="Solid"/>
-</graphicElement>
-				</line>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageFooter>
-		<summary>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</summary>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

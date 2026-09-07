@@ -5,6 +5,7 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.String"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.author" class="java.lang.String"/>
@@ -51,7 +52,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Georgia" size="7" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD-"+ $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="1" y="71" width="75" height="70" uuid="b391e726-7a9a-4866-b065-4bdc842edb35">
