@@ -13,6 +13,7 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.String"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="1,5-cataloger.agent.firstName" class="java.lang.String"/>
 	<field name="1,5-cataloger.agent.lastName" class="java.lang.String"/>
