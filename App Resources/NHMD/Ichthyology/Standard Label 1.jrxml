@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Label 1" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="178" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="b2830d7c-6475-47a9-900d-77990efb1ea7">
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.String"/>
 	<field name="1.collectionobject.altCatalogNumber" class="java.lang.String"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
@@ -58,7 +59,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD" + $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="100" y="87" width="25" height="11" uuid="0bd563ae-a5d8-4afc-a858-ef6a82a6018d"/>
@@ -151,8 +152,7 @@ $F{1,10,92.collectingeventattribute.number2} != null ?
 				</textElement>
 				<textFieldExpression><![CDATA[($F{1,10,87.collectingtrip.cruise} != null ? "Cr.: " + $F{1,10,87.collectingtrip.cruise} : "") + 
 ($F{1,10.collectingevent.stationFieldNumber} != null ? "St.: " + $F{1,10.collectingevent.stationFieldNumber} : "") +
-($F{1,10,92.collectingeventattribute.text10} != null ? ", " + $F{1,10,92.collectingeventattribute.text10} : "")
-]]></textFieldExpression>
+($F{1,10,92.collectingeventattribute.text10} != null ? ", " + $F{1,10,92.collectingeventattribute.text10} : "")]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="87" width="100" height="11" uuid="4c2c0777-c7fc-4d6f-80c2-548e86e4c050">

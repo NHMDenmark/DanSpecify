@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <formatters>
-	<format name="AttachmentURI" title="AttachmentURI" class="edu.ku.brc.specify.datamodel.Attachment" default="">
+	<format name="AttachmentURI" title="AttachmentURI" class="edu.ku.brc.specify.datamodel.Attachment" default="true">
 		<switch single="true" field="isPublic">
 			<fields value="true">
 				<field sep="https://specify-media.science.ku.dk/fileget?coll=NHMD+Ichthyology&amp;type=O&amp;filename=">attachmentLocation</field>
@@ -69,7 +69,7 @@
 			</fields>
 		</switch>
 	</format>
-	<format name="Attachment" title="Attachment" class="edu.ku.brc.specify.datamodel.Attachment" default="true">
+	<format name="Attachment" title="Attachment" class="edu.ku.brc.specify.datamodel.Attachment" default="">
 		<switch single="true">
 			<fields>
 				<field>title</field>
@@ -146,7 +146,7 @@
 	<format name="CollectionObject" title="CollectionObject" class="edu.ku.brc.specify.datamodel.CollectionObject" default="true">
 		<switch single="true">
 			<fields>
-				<field sep="NHMD" uifieldformatter="CatalogNumber" trimzeros="true">catalogNumber</field>
+				<field sep="NHMD" uifieldformatter="CatalogNumber">catalogNumber</field>
 			</fields>
 		</switch>
 	</format>
@@ -314,6 +314,7 @@
 			<fields>
 				<field formatter="Agent">agent</field>
 				<field sep=" - ">role</field>
+				<field sep=" | ">agent.email</field>
 			</fields>
 		</switch>
 	</format>

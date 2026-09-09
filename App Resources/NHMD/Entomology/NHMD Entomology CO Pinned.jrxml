@@ -1,29 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="NHMD Entomology CO Pinned"
-		 columnCount="16"
-		 printOrder="Vertical"
-		 orientation="Portrait"
-		 pageWidth="595"
-		 pageHeight="842"
-		 columnWidth="31"
-		 columnSpacing="2"
-		 leftMargin="30"
-		 rightMargin="30"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NHMD Entomology CO Pinned" columnCount="16" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="31" columnSpacing="2" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="bfcf1e62-2a60-4eb7-b911-fc9c8308fea9">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="1,9-determinations,4.taxon.Subfamily" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Species Author" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Tribe" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Species" class="java.lang.String"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,9-determinations,4.taxon.Family" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Order" class="java.lang.String"/>
@@ -50,75 +35,52 @@
 	<field name="1,10,2,3.geography.State" class="java.lang.String"/>
 	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
 	<field name="1,63-preparations,65.preptype.name" class="java.lang.String"/>
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="10"  isSplitAllowed="true" >
-				<line direction="TopDown">
-					<reportElement
-						x="32"
-						y="0"
-						width="0"
-						height="10"
-						key="line-1"/>
-					<graphicElement stretchType="NoStretch">
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="10" splitType="Stretch">
+			<line>
+				<reportElement key="line-1" x="32" y="0" width="1" height="10" uuid="18ee6e26-1ba6-448d-a4e9-eaad580106a2"/>
+				<graphicElement>
 					<pen lineWidth="0.05" lineStyle="Solid"/>
-</graphicElement>
-				</line>
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="16"  isSplitAllowed="true" >
-				<line direction="TopDown">
-					<reportElement
-						x="32"
-						y="0"
-						width="0"
-						height="16"
-						key="line-2"/>
-					<graphicElement stretchType="NoStretch">
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement key="line-2" x="32" y="0" width="1" height="16" uuid="7b1d31d4-f02a-4dfb-8b6b-0cda0de28d79"/>
+				<graphicElement>
 					<pen lineWidth="0.05" lineStyle="Solid"/>
-</graphicElement>
-				</line>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="1"
-						width="31"
-						height="14"
-						key="textField"/>
-					<box></box>
-					<textElement>
-						<font size="5"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD "+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
-				</textField>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="10"  isSplitAllowed="true" >
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</pageFooter>
-		<lastPageFooter>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</lastPageFooter>
-		<summary>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</summary>
+				</graphicElement>
+			</line>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="1" width="31" height="14" uuid="6b5bfdb7-98f0-47aa-a42d-bb2e9850e7bc"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="50" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band height="50" splitType="Stretch"/>
+	</summary>
 </jasperReport>

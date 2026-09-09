@@ -4,7 +4,7 @@
   <autonumber>edu.ku.brc.specify.dbsupport.AccessionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="IP"/>
+    <field type="alphanumeric" size="2" value="AV"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
@@ -12,7 +12,7 @@
   <autonumber>edu.ku.brc.specify.dbsupport.AccessionAutoNumberAlphaNum</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="IP"/>
+    <field type="alphanumeric" size="2" value="AV"/>
     <field type="separator" size="1" value="-"/>
     <field type="alphanumeric" size="3" value="AAA"/>
   </format>
@@ -43,7 +43,7 @@
   <format system="true" name="DeaccessionNumber" class="edu.ku.brc.specify.datamodel.Deaccession" fieldname="deaccessionNumber">
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="alphanumeric" size="2" value="IP"/>
+    <field type="alphanumeric" size="2" value="AV"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3"/>
   </format>
@@ -59,17 +59,17 @@
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-  <format system="true" name="LoanNumber" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
+  <format system="false" name="Loan Number AV" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
+    <field type="separator" size="1" value="-"/>
+    <field type="constant" size="2" value="AV"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
-  <format system="false" name="LoanNumberInvertebrate" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
+  <format system="true" name="LoanNumber" class="edu.ku.brc.specify.datamodel.Loan" fieldname="loanNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
-    <field type="separator" size="1" value="-"/>
-    <field type="constant" size="2" value="IV"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
@@ -100,14 +100,22 @@
   </format>
   <format system="false" name="PartialDateYear" class="java.util.Date" type="date" partialdate="Year">
   </format>
-  <format system="false" name="PermitNumber" class="edu.ku.brc.specify.datamodel.Permit" fieldname="permitNumber">
+  <format system="false" name="RANumber" class="edu.ku.brc.specify.datamodel.RepositoryAgreement" fieldname="repositoryAgreementNumber">
   <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
     <field type="year" size="4" value="YEAR" byyear="true"/>
     <field type="separator" size="1" value="-"/>
-    <field type="constant" size="2" value="IV"/>
+    <field type="constant" size="2" value="AV"/>
     <field type="separator" size="1" value="-"/>
     <field type="numeric" size="3" inc="true"/>
   </format>
   <format system="true" name="SearchDate" class="java.util.Date" type="date" partialdate="Search">
+  </format>
+  <format system="false" name="permit_number_av" class="edu.ku.brc.specify.datamodel.Permit" fieldname="permitNumber">
+  <autonumber>edu.ku.brc.af.core.db.AutoNumberGeneric</autonumber>
+    <field type="year" size="4" value="YEAR" byyear="true"/>
+    <field type="separator" size="1" value="-"/>
+    <field type="constant" size="2" value="AV"/>
+    <field type="separator" size="1" value="-"/>
+    <field type="numeric" size="3" inc="true"/>
   </format>
 </formats>

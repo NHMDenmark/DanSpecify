@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Standard Loan Form" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="85fe5a64-0da0-4f16-968a-344ec9944fea">
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
@@ -7,6 +7,7 @@
 	<field name="52.loan.loanNumber" class="java.lang.String"/>
 	<field name="52.loan.loanDate" class="java.lang.String"/>
 	<field name="52.loan.currentDueDate" class="java.lang.String"/>
+	<field name="52,54-loanPreparations,63,1.collectionobject.collectionObject" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="52,54-loanPreparations,63,1.collectionobject.altCatalogNumber" class="java.lang.String"/>
 	<field name="52,54-loanPreparations.loanpreparation.quantity" class="java.lang.Integer"/>
@@ -456,7 +457,7 @@ NATURAL HISTORY MUSEUM DENMARK]]></text>
 				<textElement textAlignment="Left">
 					<font fontName="Times New Roman" size="9" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD "+$F{52,54-loanPreparations,63,1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{52,54-loanPreparations,63,1.collectionobject.collectionObject}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="false">
 				<reportElement key="textField" x="139" y="0" width="429" height="11" uuid="8309922c-bc06-4461-9571-0102055b0139"/>

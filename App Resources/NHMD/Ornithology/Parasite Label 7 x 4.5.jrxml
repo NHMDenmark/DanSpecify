@@ -21,6 +21,7 @@
 	<import value="java.util.*" />
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1,10,2,3.geography.fullName" class="java.lang.String"/>
 	<field name="1,10,2.locality.localityName" class="java.lang.String"/>
 	<field name="1.collectionobject.fieldNumber" class="java.lang.String"/>
@@ -97,7 +98,7 @@
 					<textElement textAlignment="Center">
 						<font size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD-"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

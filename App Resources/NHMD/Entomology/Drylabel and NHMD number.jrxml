@@ -1,26 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"  ?>
-<!-- Created with iReport - A designer for JasperReports -->
-<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
-<jasperReport
-		 name="Drylabel and NHMD number"
-		 columnCount="4"
-		 printOrder="Vertical"
-		 orientation="Portrait"
-		 pageWidth="595"
-		 pageHeight="842"
-		 columnWidth="133"
-		 columnSpacing="0"
-		 leftMargin="30"
-		 rightMargin="30"
-		 topMargin="20"
-		 bottomMargin="20"
-		 whenNoDataType="NoPages"
-		 scriptletClass="edu.ku.brc.specify.config.Scriptlet"
-		 isTitleNewPage="false"
-		 isSummaryNewPage="false">
-	<import value="java.util.*" />
-	<import value="net.sf.jasperreports.engine.*" />
-	<import value="net.sf.jasperreports.engine.data.*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Drylabel and NHMD number" columnCount="4" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="133" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" scriptletClass="edu.ku.brc.specify.config.Scriptlet" uuid="46089c15-27ad-489c-9720-3e89dc6e4d70">
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
 	<field name="1,10,2.locality.longitude1" class="java.math.BigDecimal"/>
 	<field name="1,10,2.locality.latitude1" class="java.math.BigDecimal"/>
 	<field name="1,10,30-collectors,5.agent.lastName" class="java.lang.String"/>
@@ -47,72 +30,49 @@
 	<field name="1,10.collectingevent.stationFieldNumber" class="java.lang.String"/>
 	<field name="1,10,2.locality.maxElevation" class="java.lang.Double"/>
 	<field name="1,10,30-collectors.collector.collectors" class="java.lang.String"/>
-	<variable name="Latitude" class="java.lang.String" resetType="Report" calculation="Nothing">
+	<variable name="Latitude" class="java.lang.String">
 		<variableExpression><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.latitude1}, $F{1,10,2.locality.originalLatLongUnit}, true) +
 ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.latitude1}, true)]]></variableExpression>
 		<initialValueExpression><![CDATA[""]]></initialValueExpression>
 	</variable>
-	<variable name="Longitude" class="java.lang.String" resetType="Report" calculation="Nothing">
+	<variable name="Longitude" class="java.lang.String">
 		<variableExpression><![CDATA[((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).formatLatLon($F{1,10,2.locality.longitude1}, $F{1,10,2.locality.originalLatLongUnit}, false) +
 ((edu.ku.brc.specify.config.Scriptlet)$P{REPORT_SCRIPTLET}).getDirChar($F{1,10,2.locality.longitude1},false)]]></variableExpression>
 		<initialValueExpression><![CDATA[""]]></initialValueExpression>
 	</variable>
-		<background>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</background>
-		<title>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</title>
-		<pageHeader>
-			<band height="26"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="1"
-						y="0"
-						width="368"
-						height="20"
-						key="textField-4"/>
-					<box></box>
-					<textElement>
-						<font size="10"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{1,7.accession.accessionNumber}==null?($F{1,10.collectingevent.stationFieldNumber}==null?"":$F{1,10.collectingevent.stationFieldNumber}):$F{1,7.accession.accessionNumber}) + " - " + $F{1,10,2,3.geography.Country}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="394"
-						y="0"
-						width="141"
-						height="21"
-						key="textField-5"/>
-					<box></box>
-					<textElement textAlignment="Right">
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-			</band>
-		</pageHeader>
-		<columnHeader>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnHeader>
-		<detail>
-			<band height="29"  isSplitAllowed="true" >
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="0"
-						width="58"
-						height="29"
-						key="textField-1"/>
-					<box></box>
-					<textElement isStyledText="true">
-						<font size="3"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{1,10.collectingevent.stationFieldNumber}==null?"": "<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">" + $F{1,10.collectingevent.stationFieldNumber}+ "</style>" + "\n")+
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-4" x="1" y="0" width="368" height="20" uuid="880c40c1-118c-45f9-abd0-2d9518e3809e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,7.accession.accessionNumber}==null?($F{1,10.collectingevent.stationFieldNumber}==null?"":$F{1,10.collectingevent.stationFieldNumber}):$F{1,7.accession.accessionNumber}) + " - " + $F{1,10,2,3.geography.Country}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-5" x="394" y="0" width="141" height="21" uuid="80544a7a-3112-4a5b-9beb-65304ac4cd67"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-1" x="0" y="0" width="58" height="29" uuid="0e9fdd9c-9c7c-4e52-8244-717a4a91ce95"/>
+				<textElement markup="styled">
+					<font size="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{1,10.collectingevent.stationFieldNumber}==null?"": "<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">" + $F{1,10.collectingevent.stationFieldNumber}+ "</style>" + "\n")+
 "<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">" + $F{1,10,2,3.geography.Country}+ "</style>" +": " + 
 $F{1,10,2,3.geography.name}+ ", " + $F{1,10,2.locality.localityName} + ", " +
 ($F{1,10.collectingevent.endDateNumericYear}!=null && $F{1,10.collectingevent.startDateNumericYear}!=null?  /* Test if end and start year are null*/
@@ -151,64 +111,42 @@ $F{1,10,2,3.geography.name}+ ", " + $F{1,10,2.locality.localityName} + ", " +
 : "") + ", " + ($F{1,10,2.locality.maxElevation}==null?(($F{1,10,2.locality.minElevation}==null?"":$F{1,10,2.locality.minElevation} + "m,")): $F{1,10,2.locality.minElevation} + "-" + $F{1,10,2.locality.maxElevation} + "m,") + "\n" +
 $F{1,10,30-collectors.collector.collectors} + " leg. " + 
 "<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">NHMD</style>"]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="101"
-						y="14"
-						width="31"
-						height="7"
-						key="textField-2"/>
-					<box></box>
-					<textElement>
-						<font size="5" isBold="false"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD"]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="101"
-						y="20"
-						width="32"
-						height="8"
-						key="textField-3"/>
-					<box></box>
-					<textElement>
-						<font size="5"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="62"
-						y="0"
-						width="58"
-						height="29"
-						key="textField-6"/>
-					<box></box>
-					<textElement>
-						<font size="3"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["\n" + ($F{1,10.collectingevent.method}==null?"":$F{1,10.collectingevent.method} + ", ") +
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-2" x="101" y="14" width="31" height="7" uuid="55eeb5e8-7f9f-4e35-9f24-2285c0b4f1c2"/>
+				<textElement>
+					<font size="5" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NHMD"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="101" y="20" width="32" height="8" uuid="d7c03ce3-b221-409c-9259-e46554eb2904"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("000000000").format(Long.parseLong($F{1.collectionobject.catalogNumber}.toString()))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-6" x="62" y="0" width="71" height="14" uuid="56b393e0-b432-44e4-baab-a583d12aea3b"/>
+				<textElement>
+					<font size="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\n" + ($F{1,10.collectingevent.method}==null?"":$F{1,10.collectingevent.method} + ", ") +
 ($F{1,10.collectingevent.text2}==null?"":$F{1,10.collectingevent.text2} + ", ") +
 ($F{1,10.collectingevent.remarks}==null?"":$F{1,10.collectingevent.remarks})]]></textFieldExpression>
-				</textField>
-			</band>
-		</detail>
-		<columnFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</columnFooter>
-		<pageFooter>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</pageFooter>
-		<lastPageFooter>
-			<band height="50"  isSplitAllowed="true" >
-			</band>
-		</lastPageFooter>
-		<summary>
-			<band height="0"  isSplitAllowed="true" >
-			</band>
-		</summary>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50" splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
 </jasperReport>

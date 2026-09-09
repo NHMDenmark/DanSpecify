@@ -27,6 +27,7 @@
 	<field name="1,9-determinations,4.taxon.Subclass" class="java.lang.String"/>
 	<field name="1,10,2,3.geography.Country" class="java.lang.String"/>
 	<field name="1,10,2.locality.originalLatLongUnit" class="java.lang.Integer"/>
+	<field name="1.collectionobject." class="java.lang.Object"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.Object"/>
 	<field name="1,9-determinations,4.taxon.Subtribe" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.Subspecies Author" class="java.lang.String"/>
@@ -128,7 +129,7 @@
 					<textElement>
 						<font fontName="Arial" size="9"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["NHMD-"+$F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 				</textField>
 				<line direction="TopDown">
 					<reportElement

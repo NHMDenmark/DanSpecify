@@ -1,7 +1,7 @@
 -- Overview
 SELECT  
 	c.collectionid, c.code, c.collectionname, -- c.DisciplineId, 
-	-- dsc.disciplineId, 
+	dsc.disciplineId, 
 	dsc.Name discipline, -- dsc.TaxonTreeDefID, dsc.GeographyTreeDefID, dsc.GeologicTimePeriodTreeDefID, -- dsc.RegNumber, dsc.`Type`, dsc.UserGroupScopeId, dsc.DivisionID, dsc.TaxonTreeDefID, dsc.GeographyTreeDefID, 
 	dv.divisionId, 
 	dv.Name division, dsc.Type DisciplineType, dv.DisciplineType -- , dv.UserGroupScopeId, dv.RegNumber
@@ -20,8 +20,8 @@ SELECT
 
 -- disciplines
 SELECT 
--- * 
-		d.disciplineId, d.Name, d.RegNumber, d.`Type`, d.UserGroupScopeId, d.DivisionID, d.TaxonTreeDefID, d.GeographyTreeDefID, d.GeologicTimePeriodTreeDefID, d.LithoStratTreeDefID
+ * 
+-- 	d.disciplineId, d.Name, d.RegNumber, d.`Type`, d.UserGroupScopeId, d.DivisionID, d.TaxonTreeDefID, d.GeographyTreeDefID, d.GeologicTimePeriodTreeDefID, d.LithoStratTreeDefID
 	FROM discipline d ORDER BY d.DivisionID; -- WHERE divisionid = 2; 
 
 -- divisions 

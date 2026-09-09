@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Crustacea_Annelida Label 1" columnCount="3" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="175" columnSpacing="5" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="d3de27d9-c828-42dc-a49f-4afa7f6d41af">
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1.collectionobject." class="java.lang.String"/>
 	<field name="1.collectionobject.catalogNumber" class="java.lang.String"/>
 	<field name="1,9-determinations.determination.typeStatusName" class="java.lang.String"/>
 	<field name="1,9-determinations,4.taxon.fullName" class="java.lang.String"/>
@@ -48,7 +49,7 @@
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["NHMD"+ $F{1.collectionobject.catalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="92" y="13" width="83" height="11" uuid="0a15620a-2a50-4662-b30f-468eedd99277">
