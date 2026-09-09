@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Crate_label_v2" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoPages" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="3ff07324-9619-4c87-a3cf-3fe4a1a626f0">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="1,153-collectionObjectProperties.collectionobjectproperty.text5" class="java.lang.String"/>
+	<field name="1,63-preparations,58.storage.Aisle" class="java.lang.String"/>
+	<field name="1,63-preparations,58.storage.Cabinet" class="java.lang.String"/>
+	<field name="1,63-preparations,58.storage.Shelf" class="java.lang.String"/>
+	<field name="1,63-preparations,58.storage.Box" class="java.lang.String"/>
+	<field name="1.collectionobject.reservedText3" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.text3" class="java.lang.String"/>
+	<field name="1,9-determinations.determination.text2" class="java.lang.String"/>
+	<field name="1,111-collectionObjectAttachments,41.attachment.origFilename" class="java.lang.String"/>
+	<field name="1,111-collectionObjectAttachments,41.attachment.attachmentLocation" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="resultsetsize" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{1.collectionobject.reservedText3}]]></groupExpression>
+	</group>
+	<group name="testgroup">
+		<groupExpression><![CDATA[$F{1.collectionobject.reservedText3}]]></groupExpression>
+		<groupHeader>
+			<band height="100">
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField>
+					<reportElement x="0" y="0" width="100" height="100" uuid="ce0c70c3-bccd-4b69-9926-e3b4dd6f4d7b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a0d3592-ad32-407a-9254-99b29510031a"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,63-preparations,58.storage.Aisle}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="0" width="100" height="100" uuid="91cf724a-63d3-4723-a2a8-0930bc2946ff">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ab53a54-58b9-4950-b58b-dcbd269e5cf5"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,63-preparations,58.storage.Shelf}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="200" y="0" width="100" height="100" uuid="a56bea70-e196-4af4-89b4-2c3ce0fdd4e9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="158584ce-d421-4c37-bd3f-dd55c4162e7d"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,63-preparations,58.storage.Cabinet}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="300" y="0" width="60" height="100" uuid="102c9b99-1cc3-4c85-a1a3-b10a61639a58">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd7cc632-3c81-4046-874c-61c0e1285d84"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,63-preparations,58.storage.Box}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="360" y="0" width="75" height="100" uuid="d9216852-1e7a-41bf-aef6-c99cc0b54f96">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28a8ce01-a455-4d51-829b-138577ba1989"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1.collectionobject.reservedText3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="435" y="0" width="100" height="100" uuid="4e70ee8b-3db0-49e3-b497-a26bfa1b6023">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14707557-3463-4b86-b3b1-7e265f448ffa"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,9-determinations.determination.text3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="535" y="0" width="100" height="100" uuid="ee9dcc4b-eda3-4717-83e2-cb83b9965d01">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d99cd850-7d57-4a90-b723-8f6d9b98532b"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{1,9-determinations.determination.text2}]]></textFieldExpression>
+				</textField>
+				<image hAlign="Center" onErrorType="Blank">
+					<reportElement x="635" y="0" width="180" height="100" uuid="8b60b03c-cd07-48e2-b734-c16e3bb2cb80">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA["https://specify-media.science.ku.dk/fileget?coll=NHMD+Exhibitions&type=O&filename=" + $F{1,111-collectionObjectAttachments,41.attachment.attachmentLocation} + "&downloadname=" + java.net.URLEncoder.encode($F{1,111-collectionObjectAttachments,41.attachment.origFilename}, "UTF-8")]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="100" y="0" width="100" height="28" uuid="c946321c-2614-4111-afba-42f666b3a733"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="28" uuid="2825fa5a-9dbc-46f2-8126-c98c3d5018d5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Printing date: ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="700" y="5" width="100" height="30" uuid="dd1323d9-604d-41cf-a30e-be8781ae88f4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("life1") ? "3.7_Life_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("life2") ? "3.7_Life_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("life3") ? "3.7_Life_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("life4") ? "3.7_Life_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("olp1") ? "3.6_Our_Living_Planet_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("olp2") ? "3.6_Our_Living_Planet_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("olp3") ? "3.6_Our_Living_Planet_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("olp4") ? "3.6_Our_Living_Planet_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("opu1") ? "3.5_Universe_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("opu2") ? "3.5_Universe_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("opu3") ? "3.5_Universe_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("opu4") ? "3.5_Universe_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ohf1") ? "2.6_Our_Human_Family_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ohf2") ? "2.6_Our_Human_Family_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ohf3") ? "2.6_Our_Human_Family_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ohf4") ? "2.6_Our_Human_Family_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("biodiv1") ? "2.5_Biodiversity_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("biodiv2") ? "2.5_Biodiversity_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("biodiv3") ? "2.5_Biodiversity_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("biodiv4") ? "2.5_Biodiversity_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("denmark1") ? "2.3_Denmark_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("denmark2") ? "2.3_Denmark_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("denmark3") ? "2.3_Denmark_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("denmark4") ? "2.3_Denmark_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("arctic1") ? "2.4_Arctic_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("arctic2") ? "2.4_Arctic_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("arctic3") ? "2.4_Arctic_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("arctic4") ? "2.4_Arctic_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ocean1") ? "0.1_Oceans_Hall_Crate_001" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ocean2") ? "0.1_Oceans_Hall_Crate_002" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ocean3") ? "0.1_Oceans_Hall_Crate_003" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.equals("ocean4") ? "0.1_Oceans_Hall_Crate_004" :
+$F{1,153-collectionObjectProperties.collectionobjectproperty.text5}.toString()
+]]>
+        </textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="38" height="30" uuid="d6bbde98-ef72-4530-aaed-607f52328736"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="30" y="0" width="50" height="30" uuid="bac3905c-a5ee-4831-a758-d002e9ba7334"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
