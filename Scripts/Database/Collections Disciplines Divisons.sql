@@ -32,7 +32,7 @@ SELECT -- * --
 -- agents
 SELECT a.AgentID, a.FirstName, a.LastName, a.Email, a.Remarks, a.SpecifyUserID, a.DivisionID FROM agent a 
 	WHERE (a.LastName = 'Steeman')
-	AND a.DivisionID = 688128
+	-- AND a.DivisionID = 688128
 	;
 -- Natural History Museum of Denmark
 
