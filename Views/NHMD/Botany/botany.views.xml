@@ -369,7 +369,10 @@
             </rows>
           </cell>            
         </row>-->
-				<row>
+			<row>
+    			<cell type="subview" viewname="OtherIdentifiers" id="44" name="otherIdentifiers" defaulttype="table" colspan="13" rows="3"/>
+    		</row>
+			<row>
 					<cell type="subview" viewname="Determination" id="6" name="determinations" colspan="13" rows="5"/>
 				</row>
 				<row>
@@ -1038,6 +1041,12 @@
 					<cell type="field" id="5" name="this" uitype="plugin" initialize="name=LatLonUI" colspan="11"/>
 				</row>
 				<row>
+					<cell type="label" labelfor="verblat"/>
+					<cell type="field" id="verblat" name="verbatimLatitude" uitype="text" colspan="3"/>
+					<cell type="label" labelfor="verblong"/>
+					<cell type="field" id="verblong" name="verbatimLongitude" uitype="text" colspan="3"/>
+				</row>
+				<row>
 					<cell type="label" labelfor="text5"/>
 					<cell type="field" id="text5" name="text5" uitype="text" colspan="3"/>
 				</row>
@@ -1052,13 +1061,17 @@
 				</row>
 				<row>
 					<cell type="label" labelfor="9"/>
-					<cell type="field" id="9" name="minElevation" uitype="text"/>
+					<cell type="field" id="9" name="minElevation" uitype="text" colspan="5"/>
 					<cell type="label" labelfor="10"/>
-					<cell type="field" id="10" name="maxElevation" uitype="text"/>
+					<cell type="field" id="10" name="maxElevation" uitype="text" colspan="5"/>
+				</row>
+				<row>
 					<cell type="label" labelfor="11"/>
 					<cell type="field" id="11" name="elevationMethod" uitype="text"/>
 					<cell type="label" labelfor="1"/>
 					<cell type="field" id="1" name="elevationAccuracy" uitype="text"/>
+					<cell type="label" labelfor="verbel"/>
+					<cell type="field" id="verbel" name="verbatimElevation" colspan="5" uitype="text"/>
 				</row>
 				<row>
 					<cell type="separator" label="Plugins" colspan="17"/>
