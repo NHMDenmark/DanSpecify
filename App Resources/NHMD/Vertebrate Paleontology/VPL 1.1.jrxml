@@ -40,7 +40,7 @@
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="144" splitType="Stretch">
+		<band height="150" splitType="Stretch">
 			<rectangle>
 				<reportElement key="rectangle-1" mode="Transparent" x="1" y="1" width="263" height="143" uuid="d18b7c20-3291-4a41-b1d7-510e1ccce1e4"/>
 				<graphicElement>
@@ -48,7 +48,7 @@
 				</graphicElement>
 			</rectangle>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="5" y="5" width="123" height="12" uuid="71e7df19-875d-45bf-91d0-b6ee698bd95c"/>
+				<reportElement key="textField" x="5" y="4" width="123" height="12" uuid="71e7df19-875d-45bf-91d0-b6ee698bd95c"/>
 				<textElement textAlignment="Left">
 					<font fontName="Arial" size="10" isBold="true"/>
 				</textElement>
@@ -62,7 +62,7 @@
 				<text><![CDATA[NATURAL HISTORY MUSEUM DENMARK]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" mode="Transparent" x="5" y="35" width="256" height="12" uuid="86e8af1f-ff38-486d-b015-acd421d2304d"/>
+				<reportElement key="textField" mode="Transparent" x="5" y="32" width="256" height="12" uuid="86e8af1f-ff38-486d-b015-acd421d2304d"/>
 				<textElement textAlignment="Left" markup="styled">
 					<font fontName="Arial" size="10"/>
 				</textElement>
@@ -71,40 +71,57 @@
 	: "indet"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="5" y="76" width="256" height="10" uuid="645a0560-36e0-434a-93ea-54169e0a0291"/>
+				<reportElement key="textField" x="5" y="70" width="256" height="10" uuid="645a0560-36e0-434a-93ea-54169e0a0291"/>
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,10,2.locality.localityName}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="5" y="89" width="256" height="10" uuid="9895997c-a6e1-4402-957b-58d8e05a8f9d"/>
+				<reportElement key="textField" x="5" y="82" width="256" height="10" uuid="9895997c-a6e1-4402-957b-58d8e05a8f9d"/>
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{1,10,2,3.geography.fullName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1,10,2,3.geography.fullName} != null ? $F{1,10,2,3.geography.fullName} : ""]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="5" y="102" width="255" height="10" uuid="fcf91047-a416-4924-a33f-dfa215359852">
+				<reportElement key="textField" x="5" y="94" width="255" height="20" uuid="fcf91047-a416-4924-a33f-dfa215359852">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[!$F{1,10,30-collectors.collector.collectors}.isEmpty() || !$F{1,10.collectingevent.startDate}.isEmpty()]]></printWhenExpression>
 				</reportElement>
-				<textElement>
+				<textElement markup="html">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Leg: "+$F{1,10,30-collectors.collector.collectors} +
-( $F{1,10.collectingevent.startDate}.isEmpty() ? "" : ", " + $F{1,10.collectingevent.startDate} + ( $F{1,10.collectingevent.endDate}.isEmpty() ? "" : "-" + $F{1,10.collectingevent.endDate} ) )]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<b>Leg:</b> "
++ (
+    $F{1,10,30-collectors.collector.collectors} == null
+        ? ""
+        : $F{1,10,30-collectors.collector.collectors}
+  )
++ (
+    $F{1,10.collectingevent.startDate} == null
+        ? ""
+        : ", "
+          + $F{1,10.collectingevent.startDate}
+          + (
+              $F{1,10.collectingevent.endDate} == null
+              || $F{1,10.collectingevent.startDate}.equals($F{1,10.collectingevent.endDate})
+                  ? ""
+                  : " / " + $F{1,10.collectingevent.endDate}
+            )
+  )]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement key="textField" x="5" y="115" width="168" height="10" uuid="6977e77b-b87d-4e66-a905-394d9adc3743">
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement key="textField" x="5" y="115" width="255" height="10" uuid="6977e77b-b87d-4e66-a905-394d9adc3743">
 					<printWhenExpression><![CDATA[$F{1,9-determinations,5-determiner.agent.determiner} != null]]></printWhenExpression>
 				</reportElement>
-				<textElement>
+				<textElement markup="html">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Det: " + $F{1,9-determinations,5-determiner.agent.determiner} + ( $F{1,9-determinations.determination.determinedDate}.isEmpty() ? "" : ", " + $F{1,9-determinations.determination.determinedDate})]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<b>Det:</b> " + ($F{1,9-determinations,5-determiner.agent.determiner}.isEmpty() ? "" : $F{1,9-determinations,5-determiner.agent.determiner}) + ( $F{1,9-determinations.determination.determinedDate}.isEmpty() ? "" : ", " + $F{1,9-determinations.determination.determinedDate})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="141" y="5" width="120" height="10" uuid="2ff3cb9f-08b0-4398-be84-2ca9cc691a69">
+				<reportElement key="textField" x="141" y="4" width="120" height="10" uuid="2ff3cb9f-08b0-4398-be84-2ca9cc691a69">
 					<printWhenExpression><![CDATA[$F{1.collectionobject.altCatalogNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -113,7 +130,7 @@
 				<textFieldExpression><![CDATA["ex-" + $F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField-1" x="141" y="19" width="120" height="10" uuid="9084ecfd-1083-4ddb-9be8-7f8932dd2f95">
+				<reportElement key="textField-1" x="141" y="18" width="120" height="10" uuid="9084ecfd-1083-4ddb-9be8-7f8932dd2f95">
 					<printWhenExpression><![CDATA[$F{1.collectionobject.fieldNumber} != null]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -122,21 +139,21 @@
 				<textFieldExpression><![CDATA["Field no. " + $F{1.collectionobject.fieldNumber}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-2" x="5" y="50" width="256" height="10" uuid="93fb3fd3-4c83-415f-a5ea-3a5a71e5f1ad"/>
+				<reportElement key="textField-2" x="5" y="46" width="256" height="10" uuid="93fb3fd3-4c83-415f-a5ea-3a5a71e5f1ad"/>
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,32,46-chronosStrat.geologictimeperiod.fullName}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-3" x="5" y="63" width="256" height="10" uuid="0e275aea-4442-4da3-8c69-fcd91e0d6bac"/>
+				<reportElement key="textField-3" x="5" y="58" width="256" height="10" uuid="0e275aea-4442-4da3-8c69-fcd91e0d6bac"/>
 				<textElement>
 					<font fontName="Arial" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{1,32,100.lithostrat.fullName}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-4" x="5" y="19" width="123" height="12" uuid="c36e7e51-8444-48d2-89a1-e25d18cc4a04"/>
+				<reportElement key="textField-4" x="5" y="18" width="123" height="12" uuid="c36e7e51-8444-48d2-89a1-e25d18cc4a04"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
