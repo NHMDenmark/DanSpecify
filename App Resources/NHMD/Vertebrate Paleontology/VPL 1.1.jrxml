@@ -127,7 +127,7 @@
 				<textElement textAlignment="Right">
 					<font fontName="Arial" size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA["ex-" + $F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{1.collectionobject.altCatalogNumber}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="false">
 				<reportElement key="textField-1" x="141" y="18" width="120" height="10" uuid="9084ecfd-1083-4ddb-9be8-7f8932dd2f95">
