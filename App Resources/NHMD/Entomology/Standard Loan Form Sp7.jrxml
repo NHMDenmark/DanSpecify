@@ -29,6 +29,7 @@
 	<field name="52,53-loanAgents,5.agent.firstName" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5.agent.middleInitial" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5.agent.lastName" class="java.lang.String"/>
+	<field name="52,53-loanAgents,5.agent.text1" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5,8-addresses.address.addresses" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5,8-addresses.address.address" class="java.lang.String"/>
 	<field name="52,53-loanAgents,5,8-addresses.address.address2" class="java.lang.String"/>
