@@ -1322,6 +1322,6 @@
 					<cell type="field" id="author" uitype="text" name="author"/>
 				</row>
 			</rows>
-		</viewdef>
+		</viewdef> 
 	</viewdefs>
 </viewset>
