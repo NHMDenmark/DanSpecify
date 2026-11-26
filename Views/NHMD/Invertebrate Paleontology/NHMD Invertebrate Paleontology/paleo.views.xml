@@ -1235,20 +1235,28 @@
 					<cell type="field" id="ID" name="text1" uitype="text"/>
 					<cell type="label" labelfor="d1"/>
 					<cell type="field" id="d1" name="date1" uitype="formattedtext" uifieldformatter="Date"/>
+					<cell type="label" labelfor="inRock" align="left"/>
+					<cell type="field" id="inRock" name="yesNo5" uitype="checkbox" label="" initialize="editable=true"/>
 				</row>
 				<row>
-					<cell type="label" labelfor="shape"/>
-					<cell type="field" id="shape" name="text2" uitype="combobox"/>
-					<cell type="label" labelfor="condition"/>
-					<cell type="field" id="condition" name="text3" uitype="combobox"/>
+					<cell type="label" labelfor="complete"/>
+					<cell type="field" id="complete" name="text2" uitype="combobox"/>
 					<cell type="label" labelfor="size"/>
-					<cell type="field" id="size" name="text4" uitype="combobox"/>
+					<cell type="field" id="size" name="text3" uitype="combobox"/>
+					<cell type="label" labelfor="shape" align="left"/>
+					<cell type="field" id="shape" name="text4" uitype="combobox"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="decor"/>
-					<cell type="field" id="decor" name="text31" uitype="text"/>
-					<cell type="label" labelfor="encrusties"/>
-					<cell type="field" id="encrusties" name="text32" uitype="text"/>
+					<cell type="field" id="decor" name="text5" uitype="textareabrief" colspan="10"/>
+					<cell type="label" labelfor="decorloc"/>
+					<cell type="field" id="decorloc" name="text6" uitype="combobox"/>
+				</row>
+				<row>
+					<cell type="label" labelfor="encruster"/>
+					<cell type="field" id="encruster" name="text16" uitype="textareabrief" colspan="10"/>
+					<cell type="label" labelfor="encrustpos"/>
+					<cell type="field" id="encrustpos" name="text7" uitype="combobox"/>
 				</row>
 				<row>
 					<cell type="label" labelfor="10"/>
@@ -1357,7 +1365,6 @@
                     <cell type="field" id="yn2" name="yesNo2" uitype="checkbox" initialize="editable=true"/>
                     <cell type="field" id="yn3" name="yesNo3" uitype="checkbox" initialize="editable=true"/>
                     <cell type="field" id="yn4" name="yesNo4" uitype="checkbox" initialize="editable=true"/>
-                    <cell type="field" id="yn5" name="yesNo5" uitype="checkbox" initialize="editable=true"/>
                     <cell type="field" id="yn6" name="yesNo6" uitype="checkbox" initialize="editable=true"/>
                     <cell type="field" id="yn7" name="yesNo7" uitype="checkbox" initialize="editable=true"/>
                     <cell type="field" id="yn8" name="yesNo8" uitype="checkbox" initialize="editable=true"/>
@@ -1375,8 +1382,7 @@
                     <cell type="field" id="12" name="timestampCreated" uitype="label" readonly="true"/>
                 </row>-->
 			</rows>
-		</viewdef>
-		
+		</viewdef>		
 		<viewdef name="Taxon" type="form" class="edu.ku.brc.specify.datamodel.Taxon" gettable="edu.ku.brc.af.ui.forms.DataGetterForObj" settable="edu.ku.brc.af.ui.forms.DataSetterForObj" useresourcelabels="true">
 			<desc>New Taxon Node Form</desc>
 			<enableRules>
